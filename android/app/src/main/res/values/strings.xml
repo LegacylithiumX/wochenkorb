@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wochenkorb</string>
+    <string name="teilen_titel">Einkaufsliste teilen</string>
+    <string name="kein_ziel">Keine App zum Öffnen gefunden</string>
+</resources>

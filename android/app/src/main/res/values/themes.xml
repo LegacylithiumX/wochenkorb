@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Framework-Theme ohne AppCompat; windowBackground verhindert weisses Aufblitzen beim Start. -->
+    <style name="Theme.Wochenkorb" parent="android:Theme.DeviceDefault.Light.NoActionBar">
+        <item name="android:windowBackground">@color/gruen</item>
+        <item name="android:colorBackground">@color/gruen</item>
+    </style>
+</resources>

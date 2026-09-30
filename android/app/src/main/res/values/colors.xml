@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Markenfarbe, gleich theme-color der Web-App -->
+    <color name="gruen">#0b6b5d</color>
+    <color name="ic_launcher_background">#0b6b5d</color>
+</resources>

@@ -6,3 +6,15 @@ daten/preise-*.json
 _site/
 __pycache__/
 _cache_marktguru.json
+
+# Android-Huelle (android/): Schluessel und Build-Ausgaben nie versionieren
+android/wochenkorb-release.jks
+android/keystore.properties
+*.jks
+*.keystore
+android/local.properties
+local.properties
+build/
+.gradle/
+android/tools/_vorschau.png
+Wochenkorb.apk
