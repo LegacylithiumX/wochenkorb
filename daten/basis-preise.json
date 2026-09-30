@@ -2,56 +2,87 @@
  "stand": "2026-09-30",
  "preise": {
   "bananen-1-kg": {
-   "aldi": 1.29
+   "aldi": 1.29,
+   "edeka": 1.29,
+   "kaufland": 1.29,
+   "lidl": 1.29,
+   "netto": 1.29,
+   "rewe": 1.99
   },
   "aepfel-1-kg": {
-   "aldi": 1.79
+   "aldi": 1.79,
+   "netto": 1.29
   },
   "zitronen-500-g": {
-   "aldi": 0.95
+   "aldi": 0.95,
+   "netto": 1.49
   },
   "weintrauben-hell-500-g": {
-   "aldi": 2.24
+   "aldi": 2.24,
+   "edeka": 2.19,
+   "netto": 1.89,
+   "rewe": 1.69
   },
   "salatgurke-stueck": {
-   "aldi": 0.79
+   "aldi": 0.79,
+   "edeka": 0.55,
+   "kaufland": 0.79,
+   "lidl": 0.99,
+   "netto": 0.89,
+   "rewe": 0.95
   },
   "kartoffeln-festkochend-2-5-kg": {
-   "aldi": 1.5
+   "aldi": 1.5,
+   "kaufland": 2.49
   },
   "zwiebeln-1-kg": {
-   "aldi": 0.6
+   "aldi": 0.6,
+   "edeka": 0.84,
+   "kaufland": 0.99
   },
   "moehren-1-kg": {
-   "aldi": 0.85
+   "aldi": 0.85,
+   "lidl": 1.69,
+   "netto": 0.84
   },
   "champignons-400-g": {
    "aldi": 1.79
   },
   "buttertoast-500-g": {
    "aldi": 0.89,
-   "kaufland": 0.89
+   "kaufland": 0.89,
+   "rewe": 0.79
   },
   "vollkorntoast-500-g": {
    "aldi": 0.79,
-   "edeka": 1.09
+   "edeka": 1.09,
+   "kaufland": 0.79,
+   "lidl": 0.79,
+   "rewe": 0.79
   },
   "mischbrot-750-g": {
-   "aldi": 1.39
+   "aldi": 1.39,
+   "netto": 1.49
   },
   "aufbackbroetchen-10-stueck": {
    "aldi": 1.61
   },
   "weizenbroetchen-frisch-stueck": {
-   "aldi": 0.19
+   "aldi": 0.19,
+   "edeka": 0.19,
+   "netto": 0.19,
+   "rewe": 0.29
   },
   "butter-croissant-stueck": {
-   "aldi": 0.49
+   "aldi": 0.49,
+   "kaufland": 0.39,
+   "lidl": 0.49
   },
   "knaeckebrot-250-g": {
    "aldi": 1.29,
    "lidl": 1.29,
    "netto": 1.39,
+   "edeka": 1.3,
    "rewe": 1.29,
    "rossmann": 1.69
   },
@@ -64,11 +95,16 @@
    "aldi": 0.95,
    "lidl": 0.95,
    "netto": 0.95,
+   "edeka": 0.95,
+   "kaufland": 0.95,
+   "rewe": 0.94,
    "rossmann": 1.29
   },
   "fettarme-milch-1-5-1-l": {
    "aldi": 0.85,
    "lidl": 0.85,
+   "edeka": 0.85,
+   "netto": 0.85,
    "rossmann": 1.19
   },
   "h-milch-1-5-1-l": {
@@ -84,36 +120,49 @@
   },
   "deutsche-markenbutter-250-g": {
    "aldi": 1.19,
-   "lidl": 1.05
+   "lidl": 1.05,
+   "edeka": 1.19,
+   "kaufland": 1.19
   },
   "joghurt-natur-3-5-500-g": {
    "aldi": 0.89,
-   "lidl": 0.89
+   "lidl": 0.89,
+   "kaufland": 1.19,
+   "netto": 0.89
   },
   "fruchtjoghurt-250-g": {
    "aldi": 0.59
   },
   "speisequark-magerstufe-500-g": {
-   "aldi": 1.19
+   "aldi": 1.19,
+   "edeka": 1.38,
+   "netto": 1.38
   },
   "skyr-natur-450-g": {
-   "aldi": 1.16
+   "aldi": 1.16,
+   "lidl": 1.16,
+   "netto": 1.16
   },
   "schlagsahne-30-200-g": {
    "aldi": 0.89
   },
   "schmand-200-g": {
    "aldi": 0.79,
+   "kaufland": 0.79,
    "rewe": 0.79
   },
   "gouda-jung-in-scheiben-400-g": {
    "aldi": 2.45,
    "kaufland": 3.81,
-   "lidl": 2.45
+   "lidl": 2.45,
+   "edeka": 2.45,
+   "netto": 2.45
   },
   "emmentaler-gerieben-200-g": {
    "aldi": 1.43,
-   "lidl": 1.43
+   "lidl": 1.43,
+   "netto": 1.2,
+   "rewe": 1.43
   },
   "mozzarella-125-g": {
    "aldi": 0.85,
@@ -125,13 +174,20 @@
   },
   "frischkaese-200-g": {
    "aldi": 1.06,
-   "lidl": 1.49
+   "lidl": 1.49,
+   "edeka": 1.19,
+   "netto": 1.06,
+   "rewe": 1.06
   },
   "eier-freilandhaltung-10-stueck": {
-   "aldi": 2.99
+   "aldi": 2.99,
+   "kaufland": 2.99,
+   "lidl": 2.69,
+   "netto": 2.99
   },
   "haehnchenbrustfilet-400-g": {
-   "aldi": 4.53
+   "aldi": 4.53,
+   "rewe": 5.99
   },
   "hackfleisch-gemischt-500-g": {
    "aldi": 4.49,
@@ -139,7 +195,9 @@
    "netto": 4.79
   },
   "rinderhackfleisch-400-g": {
-   "aldi": 4.63
+   "aldi": 4.63,
+   "kaufland": 4.63,
+   "rewe": 5.19
   },
   "schweineschnitzel-500-g": {
    "aldi": 4.49,
@@ -167,7 +225,8 @@
   },
   "lachsfilet-250-g": {
    "aldi": 4.99,
-   "lidl": 4.99
+   "lidl": 4.99,
+   "netto": 4.99
   },
   "steinofenpizza-salami-350-g": {
    "aldi": 1.33
@@ -179,7 +238,8 @@
    "aldi": 0.89
   },
   "fischstaebchen-15-stueck": {
-   "aldi": 2.99
+   "aldi": 2.99,
+   "netto": 2.49
   },
   "vanilleeis-1-l": {
    "aldi": 1.89
@@ -200,6 +260,7 @@
   "basmatireis-1-kg": {
    "aldi": 2.49,
    "lidl": 2.49,
+   "netto": 3.98,
    "rossmann": 3.19
   },
   "passierte-tomaten-500-g": {
@@ -208,14 +269,18 @@
   },
   "gehackte-tomaten-400-g": {
    "aldi": 0.65,
+   "lidl": 0.65,
+   "rewe": 0.59,
    "rossmann": 0.69
   },
   "tomatenmark-200-g": {
    "aldi": 0.89,
+   "netto": 0.95,
    "rossmann": 0.99
   },
   "kidneybohnen-400-g": {
-   "aldi": 0.69
+   "aldi": 0.69,
+   "kaufland": 0.86
   },
   "gemuesemais-285-g": {
    "aldi": 0.89,
@@ -224,19 +289,25 @@
   },
   "thunfisch-in-eigenem-saft-150-g": {
    "aldi": 1.29,
+   "lidl": 0.99,
+   "netto": 1.05,
    "rossmann": 3.45
   },
   "pesto-alla-genovese-190-g": {
    "aldi": 0.99,
    "kaufland": 0.99,
+   "lidl": 0.99,
    "rossmann": 3.15
   },
   "weizenmehl-type-405-1-kg": {
    "aldi": 0.59,
+   "rewe": 0.59,
    "rossmann": 0.89
   },
   "speisesalz-500-g": {
    "aldi": 0.29,
+   "lidl": 0.29,
+   "netto": 0.28,
    "rewe": 0.29
   },
   "sonnenblumenoel-1-l": {
@@ -256,7 +327,8 @@
   },
   "mayonnaise-500-ml": {
    "aldi": 1.69,
-   "kaufland": 1.69
+   "kaufland": 1.69,
+   "rewe": 1.69
   },
   "senf-mittelscharf-200-ml": {
    "aldi": 0.47
@@ -264,6 +336,7 @@
   "haferflocken-500-g": {
    "aldi": 0.69,
    "kaufland": 0.69,
+   "netto": 0.59,
    "rossmann": 0.85
   },
   "knuspermuesli-750-g": {
@@ -272,6 +345,8 @@
   },
   "cornflakes-750-g": {
    "aldi": 2.39,
+   "kaufland": 2.38,
+   "netto": 2.38,
    "rossmann": 4.46
   },
   "nuss-nougat-creme-400-g": {
@@ -279,7 +354,9 @@
    "rossmann": 3.19
   },
   "nutella-450-g": {
-   "aldi": 3.99
+   "aldi": 3.99,
+   "edeka": 3.79,
+   "rewe": 3.99
   },
   "erdbeerkonfituere-450-g": {
    "aldi": 1.59,
@@ -287,10 +364,13 @@
   },
   "bluetenhonig-500-g": {
    "aldi": 2.69,
+   "edeka": 2.69,
+   "kaufland": 2.69,
    "rossmann": 3.79
   },
   "roestkaffee-gemahlen-500-g": {
    "aldi": 4.49,
+   "netto": 5.49,
    "rossmann": 5.49
   },
   "kaffeebohnen-crema-1-kg": {
@@ -309,6 +389,7 @@
   "vollmilchschokolade-100-g": {
    "aldi": 0.79,
    "lidl": 0.79,
+   "netto": 0.99,
    "rossmann": 1.99
   },
   "milka-alpenmilch-100-g": {
@@ -331,6 +412,7 @@
   "kartoffelchips-paprika-175-g": {
    "aldi": 0.87,
    "lidl": 0.87,
+   "netto": 0.87,
    "rossmann": 2.32
   },
   "salzstangen-250-g": {
@@ -349,10 +431,12 @@
    "aldi": 1.74
   },
   "cola-1-5-l": {
-   "aldi": 0.65
+   "aldi": 0.65,
+   "rewe": 0.65
   },
   "coca-cola-1-25-l": {
-   "aldi": 1.59
+   "aldi": 1.59,
+   "netto": 1.59
   },
   "orangensaft-1-l": {
    "aldi": 1.39,
@@ -365,7 +449,8 @@
    "rossmann": 2.29
   },
   "pils-0-5-l-dose": {
-   "aldi": 0.55
+   "aldi": 0.55,
+   "lidl": 0.55
   },
   "rotwein-trocken-0-75-l": {
    "aldi": 1.99,
@@ -374,6 +459,7 @@
   },
   "zahnpasta-75-ml": {
    "aldi": 0.33,
+   "netto": 0.33,
    "rossmann": 0.33
   },
   "zahnbuersten-2-stueck": {
@@ -386,6 +472,7 @@
   },
   "shampoo-300-ml": {
    "aldi": 0.57,
+   "netto": 0.57,
    "rossmann": 0.65
   },
   "deospray-200-ml": {
@@ -400,6 +487,8 @@
   "toilettenpapier-3-lagig-8-rollen": {
    "aldi": 2.55,
    "lidl": 2.55,
+   "edeka": 2.45,
+   "rewe": 2.65,
    "rossmann": 2.39
   },
   "kuechentuecher-4-rollen": {
@@ -466,6 +555,39 @@
   "sonnenmilch-lsf-30-200-ml": {
    "lidl": 2.2,
    "rossmann": 2.99
+  },
+  "avocado-stueck": {
+   "edeka": 0.69,
+   "lidl": 0.99,
+   "rewe": 1.39
+  },
+  "brokkoli-500-g": {
+   "edeka": 1.39,
+   "netto": 1.49
+  },
+  "erdbeeren-500-g": {
+   "edeka": 2.49
+  },
+  "heidelbeeren-250-g": {
+   "netto": 2.0,
+   "rewe": 2.0
+  },
+  "laugenbrezel-stueck": {
+   "lidl": 0.39,
+   "netto": 0.39
+  },
+  "paprika-mix-500-g": {
+   "netto": 1.35,
+   "rewe": 1.49
+  },
+  "tomaten-500-g": {
+   "edeka": 1.25,
+   "kaufland": 0.99,
+   "netto": 1.5,
+   "rewe": 0.99
+  },
+  "zucker-1-kg": {
+   "rewe": 0.99
   },
   "kaffeepads-16-stueck": {
    "rossmann": 1.89

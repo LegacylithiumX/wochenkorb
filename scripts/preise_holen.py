@@ -303,29 +303,56 @@ def lade_json(pfad, standard):
 
 
 def main():
+    # --nur-zusammenfuehren: kein Netzabruf, nur Basis + Kassenbons + Live-Daten des letzten Laufs neu mischen
+    # (laeuft bei jedem Push, damit neue Kassenbon-Preise sofort online sind)
+    nur_mischen = '--nur-zusammenfuehren' in sys.argv
     vorher = lade_json(ZIEL, {})
     basis = lade_json(DATEN / 'basis-preise.json', {'preise': {}})
-    preise = {pid: dict(v) for pid, v in basis.get('preise', {}).items() if pid in PMAP}
     status = {}
 
-    angebote, live = [], set()
-    for name, (holen, laeden) in QUELLEN.items():
-        try:
-            neue_preise, neu = holen()
-            for pid, je_laden in neue_preise.items():
-                preise.setdefault(pid, {}).update(je_laden)
-            angebote += neu
-            live |= laeden
-            status[name] = f'ok, {sum(len(v) for v in neue_preise.values())} Preise, {len(neu)} Angebote'
-        except Exception as e:
-            # Quelle ausgefallen: Preise des letzten Laufs behalten, noch gueltige Angebote auch
-            for pid, je_laden in (vorher.get('preise') or {}).items():
-                for laden in laeden & set(je_laden):
-                    preise.setdefault(pid, {})[laden] = je_laden[laden]
-            alt = [a for a in vorher.get('angebote', []) if a.get('q') == name and a.get('bis', '') >= HEUTE.isoformat()]
-            angebote += alt
-            status[name] = f'Fehler ({e}), {len(alt)} alte Angebote behalten'
-        log(f'{name}: {status[name]}')
+    angebote, live, live_preise = [], set(), {}
+    if nur_mischen:
+        live_preise = vorher.get('live_preise') or {}
+        angebote = [a for a in vorher.get('angebote', []) if a.get('q') in QUELLEN and a.get('bis', '') >= HEUTE.isoformat()]
+        live = set().union(*(laeden for _, laeden in QUELLEN.values()))
+        status = vorher.get('quellen') or {}
+    else:
+        for name, (holen, laeden) in QUELLEN.items():
+            try:
+                neue_preise, neu = holen()
+                for pid, je_laden in neue_preise.items():
+                    live_preise.setdefault(pid, {}).update(je_laden)
+                angebote += neu
+                live |= laeden
+                status[name] = f'ok, {sum(len(v) for v in neue_preise.values())} Preise, {len(neu)} Angebote'
+            except Exception as e:
+                # Quelle ausgefallen: ihre Preise und noch gueltigen Angebote aus dem letzten Lauf behalten
+                for pid, je_laden in (vorher.get('live_preise') or {}).items():
+                    for laden in laeden & set(je_laden):
+                        live_preise.setdefault(pid, {})[laden] = je_laden[laden]
+                alt = [a for a in vorher.get('angebote', []) if a.get('q') == name and a.get('bis', '') >= HEUTE.isoformat()]
+                angebote += alt
+                status[name] = f'Fehler ({e}), {len(alt)} alte Angebote behalten'
+            log(f'{name}: {status[name]}')
+
+    # Regalpreise: Recherche < Kassenbon < Live-Abruf von heute (Aldi). Bons aelter als 180 Tage zaehlen nicht mehr.
+    preise, herkunft = {}, {}
+    def setze(pid, laden, preis, woher):
+        if pid in PMAP:
+            preise.setdefault(pid, {})[laden] = preis
+            herkunft.setdefault(pid, {})[laden] = woher
+    for pid, je in basis.get('preise', {}).items():
+        for laden, preis in je.items():
+            setze(pid, laden, preis, 'recherche')
+    bons = lade_json(DATEN / 'kassenbon-preise.json', {'preise': {}})
+    grenze = (HEUTE - dt.timedelta(days=180)).isoformat()
+    for pid, je in (bons.get('preise') or {}).items():
+        for laden, e in je.items():
+            if e.get('datum', '') >= grenze:
+                setze(pid, laden, e['preis'], 'bon:' + e['datum'])
+    for pid, je in live_preise.items():
+        for laden, preis in je.items():
+            setze(pid, laden, preis, 'live')
     # Recherche-Angebote nur fuer Laeden ohne erfolgreiche Live-Quelle (z. B. Edeka)
     angebote += [a for a in basis.get('angebote', []) if a['laden'] not in live and (a.get('bis') or '') >= HEUTE.isoformat()]
 
@@ -337,8 +364,9 @@ def main():
             gesehen.add(k)
             eindeutig.append(a)
 
-    ergebnis = {'stand': HEUTE.isoformat(), 'plz': EINST.get('plz'), 'quellen': status,
-                'preise': preise, 'angebote': eindeutig}
+    ergebnis = {'stand': vorher.get('stand', HEUTE.isoformat()) if nur_mischen else HEUTE.isoformat(),
+                'plz': EINST.get('plz'), 'quellen': status, 'bons_stand': bons.get('stand'),
+                'preise': preise, 'herkunft': herkunft, 'live_preise': live_preise, 'angebote': eindeutig}
     ZIEL.write_text(json.dumps(ergebnis, ensure_ascii=False, separators=(',', ':')), 'utf-8')
     zugeordnet = sum(1 for a in eindeutig if a['pid'])
     log(f'geschrieben: {ZIEL.name} mit {sum(len(v) for v in preise.values())} Regalpreisen, '

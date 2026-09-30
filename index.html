@@ -248,6 +248,7 @@ button.preis:hover{background:var(--surface-2)}
 .s-fuss{font-size:13px;opacity:.85}
 .s-fuss a{color:inherit}
 .zelle.echt::after{content:"✓";font:700 10px var(--f-body);color:var(--good);margin-left:2px;vertical-align:super}
+.zelle.bon::after{content:"B";font:800 9px var(--f-body);color:var(--accent-ink);background:var(--accent);border-radius:3px;padding:0 2px;margin-left:3px;vertical-align:super}
 .s-akt{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
 .s-akt button{border:1.5px solid var(--tag-ink);background:none;color:var(--tag-ink);border-radius:999px;padding:5px 10px;font-weight:700;font-size:13px}
 .s-akt button.voll{background:var(--tag-ink);color:var(--tag)}
@@ -345,8 +346,8 @@ const LAEDEN = [
   {id:'rossmann', name:'Rossmann', art:'Drogerie',   farbe:'#c0266d', url:'https://www.rossmann.de/de/angebote'}
 ];
 const LMAP = Object.fromEntries(LAEDEN.map(l => [l.id, l]));
-const ROSSMANN_KAT = new Set(['Nudeln, Reis & Konserven','Öl, Gewürze & Backen','Frühstück & Aufstriche','Kaffee & Tee','Süßigkeiten','Snacks & Knabbern','Drogerie & Hygiene','Baby','Haushalt & Putzen']);
-const NONFOOD = new Set(['Drogerie & Hygiene','Baby','Haushalt & Putzen']);
+const ROSSMANN_KAT = new Set(['Nudeln, Reis & Konserven','Öl, Gewürze & Backen','Frühstück & Aufstriche','Kaffee & Tee','Süßigkeiten','Snacks & Knabbern','Drogerie & Hygiene','Baby','Haushalt & Putzen','Tierbedarf']);
+const NONFOOD = new Set(['Drogerie & Hygiene','Baby','Haushalt & Putzen','Tierbedarf']);
 const UMWEG = 1.5; // ein zweiter Laden muss mindestens so viel sparen
 
 // [Name, Einheit, Richtpreis Discounter in EUR, Flags (b = Preiseinstieg ueberall gleich, m = Marke, x = nicht bei Rossmann), Pfand, Suchwoerter]
@@ -413,7 +414,7 @@ const DATEN = {
     ['Kaffeepads','16 Stück',1.99,'',0,'Kaffee Pads'], ['Schwarzer Tee','25 Beutel',0.99,'',0,'Tee'], ['Kräutertee','20 Beutel',0.89,'',0,'Tee Pfefferminz']
   ],
   'Süßigkeiten': [
-    ['Vollmilchschokolade','100 g',1.19,'b',0,'Schokolade'], ['Milka Alpenmilch','100 g',1.99,'m',0,'Schokolade'],
+    ['Vollmilchschokolade','100 g',1.19,'b',0,'Schokolade Schoki'], ['Milka Alpenmilch','100 g',1.99,'m',0,'Schokolade'],
     ['Fruchtgummi','200 g',0.89,'',0,'Gummibärchen'], ['Haribo Goldbären','175 g',1.39,'m',0,'Gummibärchen'],
     ['Butterkekse','200 g',0.89,'',0,'Kekse']
   ],
@@ -443,12 +444,298 @@ const DATEN = {
     ['Batterien AA','8 Stück',2.99,'',0,'Mignon']
   ]
 };
-const KATS = Object.keys(DATEN);
+// Erweiterter Katalog, erzeugt aus daten/katalog-erweiterung.json (python scripts/katalog_einbauen.py): [Name, Einheit, Preis, Flags, Pfand, Suchwoerter, Gang]
+const DATEN_PLUS = /*KATALOG-ERWEITERUNG*/[
+  ["Birnen", "1 kg", 1.35, "b", 0, "Birne Obst", "Obst"],
+  ["Mandarinen", "1 kg", 1.99, "b", 0, "Clementinen Satsumas Mandarine Obst", "Obst"],
+  ["Kiwi grün", "6 Stück", 1.99, "", 0, "Kiwis Kiwi Obst", "Obst"],
+  ["Ananas", "Stück", 1.81, "", 0, "Obst exotisch Früchte", "Obst"],
+  ["Himbeeren", "125 g", 1.99, "", 0, "Beeren Obst", "Obst"],
+  ["Weintrauben dunkel", "500 g", 2.15, "", 0, "Trauben Weintrauben rot blau Obst", "Obst"],
+  ["Mango", "Stück", 1.49, "", 0, "Obst exotisch Früchte", "Obst"],
+  ["Limetten", "Stück", 0.39, "", 0, "Limette Zitrusfrüchte Obst", "Obst"],
+  ["Nektarinen", "500 g", 2.29, "", 0, "Pfirsiche Nektarine Obst Steinobst", "Obst"],
+  ["Pflaumen", "500 g", 1.99, "", 0, "Zwetschgen Zwetschen Pflaume Obst Steinobst", "Obst"],
+  ["Grapefruit", "Stück", 0.79, "", 0, "Pampelmuse Zitrusfrüchte Obst", "Obst"],
+  ["Zucchini", "500 g", 1.19, "b", 0, "Zucchinis Zucchine Gemüse", "Gemüse"],
+  ["Auberginen", "500 g", 0.95, "", 0, "Aubergine Gemüse", "Gemüse"],
+  ["Kohlrabi", "Stück", 0.44, "", 0, "Kohl Gemüse", "Gemüse"],
+  ["Radieschen", "Bund", 0.45, "", 0, "Radies Gemüse", "Gemüse"],
+  ["Lauchzwiebeln", "Bund", 0.45, "", 0, "Frühlingszwiebeln Fruehlingszwiebeln Zwiebeln Gemüse", "Gemüse"],
+  ["Porree", "Stück", 0.49, "", 0, "Lauch Gemüse", "Gemüse"],
+  ["Weißkohl", "1 kg", 0.69, "b", 0, "Weisskohl Kohl Kraut Gemüse", "Gemüse"],
+  ["Rotkohl", "1 kg", 1.29, "", 0, "Blaukraut Rotkraut Kohl Gemüse", "Gemüse"],
+  ["Blumenkohl", "Stück", 1.49, "", 0, "Kohl Gemüse", "Gemüse"],
+  ["Babyspinat", "125 g", 1.29, "", 0, "Spinat Blattspinat Salat Gemüse", "Gemüse"],
+  ["Rucola", "100 g", 1.19, "", 0, "Rauke Salat Gemüse", "Gemüse"],
+  ["Feldsalat", "100 g", 1.49, "", 0, "Rapunzel Nüsslisalat Salat Gemüse", "Gemüse"],
+  ["Romanasalatherzen", "2 Stück", 0.79, "", 0, "Salat Romana Salatherzen Gemüse", "Gemüse"],
+  ["Salatmischung", "350 g", 2.99, "", 0, "Fertigsalat Salat Salatmix Menü Gemüse", "Gemüse"],
+  ["Süßkartoffeln", "500 g", 1.29, "", 0, "Suesskartoffeln Süßkartoffel Batate Gemüse", "Gemüse"],
+  ["Kürbis Hokkaido", "Stück", 1.49, "", 0, "Kuerbis Gemüse", "Gemüse"],
+  ["Suppengrün", "Bund", 0.99, "", 0, "Suppengemüse Suppengruen Gemüse", "Gemüse"],
+  ["Ingwer", "100 g", 0.79, "", 0, "Ingwerwurzel Gemüse", "Gemüse"],
+  ["Cherrytomaten", "200 g", 1.99, "", 0, "Tomaten Kirschtomaten Cherrytomate Gemüse", "Gemüse"],
+  ["Cocktailtomaten", "350 g", 1.99, "", 0, "Tomaten Cocktailrispentomaten Gemüse", "Gemüse"],
+  ["Petersilie", "Bund", 0.79, "", 0, "Kräuter Kraeuter Gemüse", "Gemüse"],
+  ["Kartoffeln mehligkochend", "2,5 kg", 1.69, "b", 0, "Kartoffel Speisekartoffeln Gemüse", "Gemüse"],
+  ["Rote Zwiebeln", "500 g", 1.19, "", 0, "Zwiebeln Zwiebel Gemüse", "Gemüse"],
+  ["Vollkornbrot", "500 g", 0.89, "b", 0, "Brot Roggenvollkornbrot Schnittbrot", "Brot & Backwaren"],
+  ["Roggenmischbrot", "500 g", 0.99, "b", 0, "Brot Bauernbrot Roggenbrot Schnittbrot", "Brot & Backwaren"],
+  ["Dinkelbrot", "750 g", 2.49, "", 0, "Brot Dinkel", "Brot & Backwaren"],
+  ["Mehrkornbrot", "750 g", 1.79, "", 0, "Brot Körnerbrot Koernerbrot", "Brot & Backwaren"],
+  ["Toastbrötchen", "6 Stück", 0.99, "", 0, "Brötchen Sandwichbrötchen Toast", "Brot & Backwaren"],
+  ["Baguette", "300 g", 0.79, "", 0, "Brot Stangenbrot Weißbrot", "Brot & Backwaren"],
+  ["Ciabatta", "300 g", 0.79, "", 0, "Brot Weißbrot", "Brot & Backwaren"],
+  ["Kaiserbrötchen", "4 Stück", 0.79, "", 0, "Brötchen Semmeln Aufbacken", "Brot & Backwaren"],
+  ["Vollkornbrötchen", "Stück", 0.49, "", 0, "Brötchen Körnerbrötchen Semmel", "Brot & Backwaren"],
+  ["Burgerbrötchen", "4 Stück", 0.99, "", 0, "Hamburgerbrötchen Burger Brötchen Buns", "Brot & Backwaren"],
+  ["Hot-Dog-Brötchen", "4 Stück", 0.99, "", 0, "Brötchen Hotdog Würstchenbrötchen", "Brot & Backwaren"],
+  ["Zwieback", "450 g", 2.19, "", 0, "Gebäck Knabbern Babygebäck", "Brot & Backwaren"],
+  ["Pizzateig", "600 g", 1.99, "", 0, "Teig Fertigteig Pizza Kühlregal", "Brot & Backwaren"],
+  ["Blätterteig", "275 g", 0.95, "", 0, "Teig Backen Kühlregal", "Brot & Backwaren"],
+  ["Flammkuchenteig", "280 g", 1.39, "", 0, "Teig Fertigteig Kühlregal", "Brot & Backwaren"],
+  ["Rührkuchen", "400 g", 1.69, "", 0, "Kuchen Sandkuchen Gebäck", "Brot & Backwaren"],
+  ["Butterkäse in Scheiben", "400 g", 2.45, "b", 0, "Käse Butterkaese Scheibenkäse Scheiben", "Milch, Käse & Eier"],
+  ["Emmentaler in Scheiben", "250 g", 2.29, "", 0, "Käse Scheibenkäse Scheiben", "Milch, Käse & Eier"],
+  ["Maasdamer in Scheiben", "300 g", 2.39, "", 0, "Käse Scheibenkäse Scheiben", "Milch, Käse & Eier"],
+  ["Camembert", "250 g", 2.49, "", 0, "Käse Weichkäse Weichkaese", "Milch, Käse & Eier"],
+  ["Brie", "200 g", 1.89, "", 0, "Käse Weichkäse Weichkaese", "Milch, Käse & Eier"],
+  ["Grana Padano", "200 g", 3.99, "", 0, "Parmesan Hartkäse Käse", "Milch, Käse & Eier"],
+  ["Parmesan gerieben", "100 g", 1.79, "", 0, "Käse Reibekäse Parmigiano Hartkäse", "Milch, Käse & Eier"],
+  ["Gratinkäse gerieben", "250 g", 1.79, "", 0, "Reibekäse Käse Überbackkäse", "Milch, Käse & Eier"],
+  ["Mozzarella gerieben", "250 g", 1.79, "", 0, "Pizzakäse Reibekäse Käse", "Milch, Käse & Eier"],
+  ["Schmelzkäsescheiben", "250 g", 1.49, "", 0, "Käse Toastkäse Scheiben Sandwichkäse Schmelzkaese", "Milch, Käse & Eier"],
+  ["Schmelzkäse-Ecken", "250 g", 1.99, "", 0, "Käse Ecken Streichkäse Schmelzkaese", "Milch, Käse & Eier"],
+  ["Körniger Frischkäse", "200 g", 1.19, "", 0, "Käse Hüttenkäse Huettenkaese Frischkaese", "Milch, Käse & Eier"],
+  ["Hirtenkäse", "250 g", 1.49, "", 0, "Käse Salatkäse Schafskäse Hirtenkaese", "Milch, Käse & Eier"],
+  ["Mascarpone", "250 g", 1.79, "", 0, "Käse Frischkäse Tiramisu", "Milch, Käse & Eier"],
+  ["Gorgonzola", "200 g", 2.99, "", 0, "Käse Blauschimmelkäse Edelpilzkäse", "Milch, Käse & Eier"],
+  ["Cheddar", "200 g", 2.19, "", 0, "Käse Cheddarkäse", "Milch, Käse & Eier"],
+  ["Kaffeesahne", "200 g", 0.69, "", 0, "Sahne Kaffeemilch Kännchen", "Milch, Käse & Eier"],
+  ["Buttermilch", "500 g", 0.59, "", 0, "Milch Milchgetränk Sauermilch", "Milch, Käse & Eier"],
+  ["Kefir", "500 g", 0.79, "", 0, "Milch Joghurt Sauermilch", "Milch, Käse & Eier"],
+  ["Laktosefreie Milch 1,5 %", "1 l", 1.05, "", 0, "Milch laktosefrei Laktosefrei H-Milch", "Milch, Käse & Eier"],
+  ["Mandeldrink", "1 l", 2.99, "", 0, "Mandelmilch Pflanzendrink Milch vegan", "Milch, Käse & Eier"],
+  ["Sojadrink", "1 l", 1.15, "", 0, "Sojamilch Pflanzendrink Milch vegan", "Milch, Käse & Eier"],
+  ["Crème fraîche", "200 g", 0.99, "", 0, "Creme fraiche Sahne Sauerrahm", "Milch, Käse & Eier"],
+  ["Saure Sahne", "200 g", 0.59, "", 0, "Sauerrahm Sahne", "Milch, Käse & Eier"],
+  ["Kochsahne", "250 ml", 0.89, "", 0, "Sahne Kochcreme Cremefine Cuisine", "Milch, Käse & Eier"],
+  ["Margarine", "500 g", 1.59, "b", 0, "Butter Streichfett Backmargarine", "Milch, Käse & Eier"],
+  ["Kräuterbutter", "100 g", 0.99, "", 0, "Butter Knoblauchbutter Grillen", "Milch, Käse & Eier"],
+  ["Joghurt griechischer Art", "1 kg", 2.19, "", 0, "Joghurt Naturjoghurt Griechischer Joghurt", "Milch, Käse & Eier"],
+  ["Milchreis", "200 g", 0.39, "", 0, "Dessert Reis Pudding Reisbrei Nachtisch", "Milch, Käse & Eier"],
+  ["Pudding-Becher", "4 × 125 g", 0.99, "", 0, "Dessert Vanillepudding Schokopudding Pudding Nachtisch", "Milch, Käse & Eier"],
+  ["Dessert mit Sahnehaube", "200 g", 0.39, "", 0, "Pudding Schokopudding Nachtisch", "Milch, Käse & Eier"],
+  ["Zaziki", "500 g", 1.65, "", 0, "Tzatziki Dip Joghurt Grillen", "Milch, Käse & Eier"],
+  ["Eier Bodenhaltung", "10 Stück", 2.49, "b", 0, "Eier Hühnereier", "Milch, Käse & Eier"],
+  ["Fleischwurst", "400 g", 2.79, "", 0, "Wurst Aufschnitt Ring Lyoner", "Fleisch, Wurst & Fisch"],
+  ["Schinken-Lyoner", "200 g", 0.89, "", 0, "Wurst Aufschnitt Lyoner", "Fleisch, Wurst & Fisch"],
+  ["Leberwurst", "175 g", 1.29, "", 0, "Wurst Streichwurst Brotaufstrich Aufschnitt", "Fleisch, Wurst & Fisch"],
+  ["Teewurst", "125 g", 1.29, "", 0, "Wurst Streichwurst Brotaufstrich Aufschnitt", "Fleisch, Wurst & Fisch"],
+  ["Zwiebelmettwurst", "120 g", 1.79, "", 0, "Wurst Mettwurst Streichwurst Aufschnitt", "Fleisch, Wurst & Fisch"],
+  ["Fleischsalat", "200 g", 0.99, "", 0, "Salat Wurstsalat Aufschnitt Wurst", "Fleisch, Wurst & Fisch"],
+  ["Putenbrust Aufschnitt", "100 g", 1.59, "", 0, "Wurst Aufschnitt Geflügel Pute Putenbrustaufschnitt", "Fleisch, Wurst & Fisch"],
+  ["Bacon", "100 g", 1.39, "", 0, "Speck Frühstücksspeck Schinken", "Fleisch, Wurst & Fisch"],
+  ["Schinkenwürfel", "2 × 125 g", 2.29, "", 0, "Schinken Speckwürfel Würfel Schinkenwuerfel", "Fleisch, Wurst & Fisch"],
+  ["Rohschinken", "175 g", 2.99, "", 0, "Schinken Aufschnitt Wurst Parmaschinken", "Fleisch, Wurst & Fisch"],
+  ["Schwarzwälder Schinken", "200 g", 2.49, "", 0, "Schinken Aufschnitt Wurst Schwarzwaelder", "Fleisch, Wurst & Fisch"],
+  ["Nürnberger Rostbratwürstchen", "250 g", 3.99, "", 0, "Würstchen Bratwurst Nürnberger Nuernberger Wurst", "Fleisch, Wurst & Fisch"],
+  ["Leberkäse", "400 g", 3.49, "", 0, "Wurst Leberkaese Fleischkäse Fleischkaese", "Fleisch, Wurst & Fisch"],
+  ["Mettenden", "300 g", 2.79, "", 0, "Wurst Kohlwurst Räucherwurst Würstchen", "Fleisch, Wurst & Fisch"],
+  ["Putenbrustfilet", "500 g", 4.85, "", 0, "Pute Geflügel Putenbrust Fleisch", "Fleisch, Wurst & Fisch"],
+  ["Putenschnitzel", "500 g", 5.59, "", 0, "Pute Schnitzel Geflügel Fleisch", "Fleisch, Wurst & Fisch"],
+  ["Hähnchen-Geschnetzeltes", "400 g", 4.99, "", 0, "Geflügel Hähnchen Huhn Fleisch Haehnchen", "Fleisch, Wurst & Fisch"],
+  ["Hähnchenunterkeulen", "600 g", 3.99, "", 0, "Hähnchen Geflügel Keulen Huhn Hühnchen Haehnchen", "Fleisch, Wurst & Fisch"],
+  ["Hähnchenflügel", "500 g", 3.19, "", 0, "Hähnchen Chicken Wings Geflügel Huhn Haehnchen", "Fleisch, Wurst & Fisch"],
+  ["Chicken-Nuggets", "500 g", 3.49, "", 0, "Hähnchen Nuggets Geflügel Haehnchen", "Fleisch, Wurst & Fisch"],
+  ["Brathähnchen", "1,4 kg", 5.99, "", 0, "Hähnchen ganz Hühnchen Huhn Geflügel Brathaehnchen", "Fleisch, Wurst & Fisch"],
+  ["Nackensteaks", "500 g", 4.49, "", 0, "Schwein Steaks Grillfleisch Fleisch Steak", "Fleisch, Wurst & Fisch"],
+  ["Schweinehackfleisch", "500 g", 2.49, "", 0, "Hack Gehacktes Mett Fleisch", "Fleisch, Wurst & Fisch"],
+  ["Schweinegulasch", "500 g", 3.79, "", 0, "Gulasch Schwein Fleisch Schinkengulasch", "Fleisch, Wurst & Fisch"],
+  ["Gyros", "500 g", 3.79, "", 0, "Fleisch Schwein Gyrospfanne", "Fleisch, Wurst & Fisch"],
+  ["Rindergulasch", "500 g", 7.79, "", 0, "Gulasch Rind Fleisch", "Fleisch, Wurst & Fisch"],
+  ["Hamburger-Patties", "400 g", 5.49, "", 0, "Burger Rind Hackfleisch Fleisch Frikadellen", "Fleisch, Wurst & Fisch"],
+  ["Schweinekoteletts", "700 g", 4.29, "", 0, "Kotelett Koteletts Schwein Fleisch", "Fleisch, Wurst & Fisch"],
+  ["Kasseler", "500 g", 3.75, "", 0, "Kassler Nacken Braten Fleisch", "Fleisch, Wurst & Fisch"],
+  ["Räucherlachs", "200 g", 4.29, "", 0, "Fisch Lachs geräuchert Raeucherlachs", "Fleisch, Wurst & Fisch"],
+  ["Matjesfilets", "200 g", 1.69, "", 0, "Fisch Hering Matjes", "Fleisch, Wurst & Fisch"],
+  ["Heringssalat", "250 g", 1.49, "", 0, "Fisch Salat Hering", "Fleisch, Wurst & Fisch"],
+  ["Gemüsemischung", "1 kg", 2.39, "", 0, "TK Gemüse Tiefkühlgemüse Suppengemüse", "Tiefkühl"],
+  ["Pfannengemüse", "750 g", 1.99, "", 0, "TK Gemüse Gemüsepfanne", "Tiefkühl"],
+  ["Blattspinat", "450 g", 1.15, "", 0, "Spinat TK Gemüse", "Tiefkühl"],
+  ["Kartoffel-Wedges", "750 g", 1.59, "", 0, "TK Kartoffeln Ofenkartoffeln Country Potatoes", "Tiefkühl"],
+  ["Kroketten", "750 g", 1.59, "", 0, "TK Kartoffeln Rösti Beilage", "Tiefkühl"],
+  ["Steinofenpizza Margherita", "300 g", 1, "", 0, "Pizza TK Tiefkühlpizza", "Tiefkühl"],
+  ["Pizza Hawaii", "355 g", 1.75, "", 0, "Pizza TK Tiefkühlpizza", "Tiefkühl"],
+  ["Pizza-Baguettes", "6 Stück", 2.99, "", 0, "Pizzabaguette Baguette TK Snack", "Tiefkühl"],
+  ["Lasagne Bolognese", "400 g", 2.19, "", 0, "Fertiggericht Lasagne Nudelauflauf TK", "Tiefkühl"],
+  ["Schlemmerfilet", "380 g", 4.89, "", 0, "Fisch TK Seelachs Fischfilet", "Tiefkühl"],
+  ["Seelachsfilet", "500 g", 3, "", 0, "Fisch TK Alaska Seelachs Fischfilet", "Tiefkühl"],
+  ["Garnelen", "450 g", 7.99, "", 0, "Shrimps Meeresfrüchte Fisch TK", "Tiefkühl"],
+  ["Stieleis", "6 Stück", 2.99, "", 0, "Eis Speiseeis TK", "Tiefkühl"],
+  ["Waffelhörnchen", "6 Stück", 1.99, "", 0, "Eis Speiseeis TK Hörnchen Waffelhoernchen", "Tiefkühl"],
+  ["Fusilli", "500 g", 0.69, "b", 0, "Nudeln Pasta Spirelli", "Nudeln, Reis & Konserven"],
+  ["Farfalle", "500 g", 0.69, "b", 0, "Nudeln Pasta Schmetterlinge", "Nudeln, Reis & Konserven"],
+  ["Makkaroni", "500 g", 0.69, "b", 0, "Nudeln Pasta Macaroni Hörnchennudeln", "Nudeln, Reis & Konserven"],
+  ["Bandnudeln", "500 g", 1.69, "", 0, "Nudeln Pasta Tagliatelle Eiernudeln", "Nudeln, Reis & Konserven"],
+  ["Spätzle", "500 g", 1.39, "", 0, "Nudeln Eierspätzle Knöpfle Spaetzle", "Nudeln, Reis & Konserven"],
+  ["Lasagneblätter", "500 g", 1.19, "", 0, "Nudeln Lasagne Pasta Lasagneplatten", "Nudeln, Reis & Konserven"],
+  ["Dinkelnudeln", "500 g", 1.29, "", 0, "Nudeln Pasta Dinkel Vollkorn", "Nudeln, Reis & Konserven"],
+  ["Jasminreis", "1 kg", 1.99, "", 0, "Reis Duftreis Jasmin", "Nudeln, Reis & Konserven"],
+  ["Rundkornreis", "500 g", 0.99, "", 0, "Reis Milchreis Reispudding", "Nudeln, Reis & Konserven"],
+  ["Kochbeutelreis", "4 × 125 g", 0.79, "", 0, "Reis Beutelreis Langkornreis", "Nudeln, Reis & Konserven"],
+  ["Express-Reis", "250 g", 1.19, "", 0, "Reis Fertigreis Mikrowellenreis Beilage", "Nudeln, Reis & Konserven"],
+  ["Couscous", "500 g", 1.29, "", 0, "Getreide Bulgur Beilage", "Nudeln, Reis & Konserven"],
+  ["Rote Linsen", "500 g", 1.69, "", 0, "Linsen Hülsenfrüchte Huelsenfruechte Suppe", "Nudeln, Reis & Konserven"],
+  ["Kichererbsen", "400 g", 0.59, "x", 0, "Dose Konserve Hummus Hülsenfrüchte", "Nudeln, Reis & Konserven"],
+  ["Erbsen und Möhren", "425 ml", 0.89, "x", 0, "Dose Konserve Gemüse Erbsen Karotten", "Nudeln, Reis & Konserven"],
+  ["Rotkohl im Glas", "720 ml", 1.19, "x", 0, "Rotkohl Kohl Blaukraut Glas Beilage Konserve", "Nudeln, Reis & Konserven"],
+  ["Sauerkraut", "520 g", 0.79, "x", 0, "Kraut Kohl Konserve Beutel", "Nudeln, Reis & Konserven"],
+  ["Gurkenscheiben im Glas", "370 ml", 1.09, "x", 0, "Gurken Burgergurken Glas Konserve Essiggurken", "Nudeln, Reis & Konserven"],
+  ["Gewürzgurken", "720 ml", 1.19, "x", 0, "Gurken Gurkenfässchen Essiggurken Glas Konserve", "Nudeln, Reis & Konserven"],
+  ["Rote Bete im Glas", "370 ml", 1.19, "x", 0, "Rote Beete Rüben Glas Konserve", "Nudeln, Reis & Konserven"],
+  ["Champignons in Scheiben", "314 ml", 0.95, "x", 0, "Pilze Dose Glas Konserve", "Nudeln, Reis & Konserven"],
+  ["Ananasstücke", "580 ml", 1.79, "x", 0, "Ananas Dose Obst Konserve", "Nudeln, Reis & Konserven"],
+  ["Apfelmus", "710 g", 0.99, "x", 0, "Obst Mus Kompott Apfelkompott", "Nudeln, Reis & Konserven"],
+  ["Oliven", "370 ml", 1.29, "x", 0, "Antipasti Glas Konserve", "Nudeln, Reis & Konserven"],
+  ["Geschälte Tomaten", "425 ml", 0.59, "x", 0, "Dose Tomaten Konserve Pizza Geschaelte", "Nudeln, Reis & Konserven"],
+  ["Pasta-Sauce Tomate", "400 ml", 1.45, "", 0, "Tomatensauce Soße Nudelsoße Sauce Glas", "Nudeln, Reis & Konserven"],
+  ["Thunfisch in Öl", "185 g", 1.29, "x", 0, "Thunfisch Fisch Dose Konserve", "Nudeln, Reis & Konserven"],
+  ["Kokosmilch", "400 ml", 1.19, "x", 0, "Kokosnussmilch Dose Asia Curry", "Nudeln, Reis & Konserven"],
+  ["Backpulver", "10 Beutel", 0.55, "b", 0, "Backen Backzutat Triebmittel", "Öl, Gewürze & Backen"],
+  ["Trockenhefe", "6 × 7 g", 0.69, "b", 0, "Hefe Backhefe Backen", "Öl, Gewürze & Backen"],
+  ["Vanillezucker", "15 Beutel", 0.45, "b", 0, "Vanillinzucker Backen Zucker", "Öl, Gewürze & Backen"],
+  ["Puderzucker", "250 g", 0.49, "b", 0, "Zucker Backen Staubzucker", "Öl, Gewürze & Backen"],
+  ["Rohrzucker", "500 g", 1.49, "", 0, "Zucker brauner Zucker Braunzucker", "Öl, Gewürze & Backen"],
+  ["Speisestärke", "400 g", 0.79, "b", 0, "Stärke Maisstärke Backen Kochen Speisestaerke", "Öl, Gewürze & Backen"],
+  ["Paniermehl", "500 g", 0.85, "", 0, "Semmelbrösel Semmelbroesel Panade Brösel", "Öl, Gewürze & Backen"],
+  ["Dinkelmehl", "1 kg", 1.09, "", 0, "Mehl Backen Dinkel", "Öl, Gewürze & Backen"],
+  ["Puddingpulver Vanille", "5 Beutel", 0.39, "b", 0, "Pudding Backen Dessert Vanillepudding", "Öl, Gewürze & Backen"],
+  ["Sahnesteif", "5 Beutel", 0.35, "", 0, "Sahne Backen Sahnefestiger", "Öl, Gewürze & Backen"],
+  ["Sultaninen", "250 g", 1.29, "", 0, "Rosinen Trockenfrüchte Backen", "Öl, Gewürze & Backen"],
+  ["Pfeffer schwarz gemahlen", "50 g", 0.75, "", 0, "Pfeffer Gewürz Gewürze Schwarzer Pfeffer", "Öl, Gewürze & Backen"],
+  ["Paprikapulver edelsüß", "50 g", 0.75, "", 0, "Paprika Gewürz Gewürze Paprikagewürz", "Öl, Gewürze & Backen"],
+  ["Oregano", "12 g", 0.75, "", 0, "Gewürz Gewürze Kräuter Pizzagewürz", "Öl, Gewürze & Backen"],
+  ["Zimt gemahlen", "40 g", 0.69, "", 0, "Zimt Gewürz Gewürze Backen Zimtpulver", "Öl, Gewürze & Backen"],
+  ["Currypulver", "40 g", 0.75, "", 0, "Curry Gewürz Gewürze", "Öl, Gewürze & Backen"],
+  ["Röstzwiebeln", "150 g", 1.19, "x", 0, "Zwiebeln Gewürz Zwiebelröster Topping Roestzwiebeln", "Öl, Gewürze & Backen"],
+  ["Branntweinessig", "1 l", 0.59, "bx", 0, "Essig Haushaltsessig Weinessig", "Öl, Gewürze & Backen"],
+  ["Balsamico-Essig", "500 ml", 1.49, "x", 0, "Essig Balsamico Aceto", "Öl, Gewürze & Backen"],
+  ["Rapsöl", "1 l", 1.69, "b", 0, "Öl Speiseöl Pflanzenöl Rapsoel", "Öl, Gewürze & Backen"],
+  ["Butterschmalz", "250 g", 2.75, "", 0, "Fett Braten Schmalz Ghee", "Öl, Gewürze & Backen"],
+  ["Remoulade", "500 ml", 1.69, "x", 0, "Soße Sauce Dip Fischstäbchen", "Öl, Gewürze & Backen"],
+  ["Salatdressing", "500 ml", 1.49, "x", 0, "Dressing Salatsoße Soße Sauce Salatsosse", "Öl, Gewürze & Backen"],
+  ["Sojasauce", "250 ml", 1.39, "", 0, "Sojasoße Soße Sauce Asia", "Öl, Gewürze & Backen"],
+  ["Bratensoße", "3 Beutel", 0.69, "x", 0, "Soße Sauce Soßenbinder Trockensoße Bratensosse", "Öl, Gewürze & Backen"],
+  ["Porridge", "325 g", 1.89, "", 0, "Haferbrei Haferflocken Frühstück Müsli", "Frühstück & Aufstriche"],
+  ["Schoko-Cerealien", "750 g", 2.79, "", 0, "Cerealien Choco Balls Frühstück Cornflakes Müsli Schokokugeln", "Frühstück & Aufstriche"],
+  ["Vollkornmüsli", "1 kg", 2.59, "", 0, "Müsli Muesli Frühstück", "Frühstück & Aufstriche"],
+  ["Erdnussbutter", "350 g", 1.75, "", 0, "Erdnusscreme Aufstrich Peanutbutter Brotaufstrich", "Frühstück & Aufstriche"],
+  ["Hummus", "200 g", 0.99, "x", 0, "Aufstrich Kichererbsen Dip Brotaufstrich", "Frühstück & Aufstriche"],
+  ["Chia-Samen", "300 g", 1.69, "", 0, "Samen Superfood Frühstück", "Frühstück & Aufstriche"],
+  ["Kirschkonfitüre", "450 g", 1.79, "", 0, "Marmelade Konfitüre Aufstrich Brotaufstrich Kirsche", "Frühstück & Aufstriche"],
+  ["Instantkaffee", "200 g", 4.99, "", 0, "Kaffee löslich Pulverkaffee Nescafé", "Kaffee & Tee"],
+  ["Cappuccino-Pulver", "200 g", 2.29, "", 0, "Kaffee Cappuccino Getränkepulver Instant", "Kaffee & Tee"],
+  ["Espressobohnen", "1 kg", 9.99, "", 0, "Kaffee Espresso Bohnen Kaffeebohnen", "Kaffee & Tee"],
+  ["Kaffeefilter", "120 Stück", 0.95, "b", 0, "Filtertüten Kaffee Filter Größe 4", "Kaffee & Tee"],
+  ["Kakaopulver", "800 g", 3.99, "", 0, "Kakao Trinkschokolade Getränkepulver Kakaogetränk", "Kaffee & Tee"],
+  ["Früchtetee", "25 Beutel", 1.39, "", 0, "Tee Teebeutel Fruechtetee", "Kaffee & Tee"],
+  ["Kamillentee", "25 Beutel", 0.89, "", 0, "Tee Kräutertee Teebeutel", "Kaffee & Tee"],
+  ["Ostfriesische Teemischung", "250 g", 1.99, "", 0, "Tee Ostfriesentee schwarzer Tee lose", "Kaffee & Tee"],
+  ["Grüner Tee", "20 Beutel", 0.99, "", 0, "Tee Teebeutel Green Tea Gruener Tee", "Kaffee & Tee"],
+  ["Zartbitterschokolade", "100 g", 0.89, "b", 0, "Schokolade Tafel dunkle Schokolade", "Süßigkeiten"],
+  ["Haselnussschokolade", "100 g", 0.79, "b", 0, "Schokolade Nussschokolade Tafel", "Süßigkeiten"],
+  ["Toffifee", "125 g", 1.49, "m", 0, "Pralinen Süßes Haselnuss Karamell", "Süßigkeiten"],
+  ["Kinder Bueno", "6 Riegel", 3.29, "m", 0, "Schokoriegel Riegel Süßes", "Süßigkeiten"],
+  ["Hanuta", "220 g", 3.29, "m", 0, "Haselnussschnitte Waffel Riegel Süßes", "Süßigkeiten"],
+  ["Lakritz", "500 g", 2.59, "", 0, "Lakritzkonfekt Süßes Bonbons Konfekt", "Süßigkeiten"],
+  ["Kaugummi", "50 Stück", 1.55, "", 0, "Kaugummis zuckerfrei Dose", "Süßigkeiten"],
+  ["Schokoküsse", "300 g", 2.49, "", 0, "Mohrenköpfe Schaumküsse Süßes Schokokuesse", "Süßigkeiten"],
+  ["Doppelkekse", "500 g", 1.79, "", 0, "Kekse Plätzchen Keks Schokocreme", "Süßigkeiten"],
+  ["Cookies", "225 g", 1.49, "", 0, "Kekse Keks Schokocookies", "Süßigkeiten"],
+  ["Prinzenrolle", "400 g", 2.59, "m", 0, "Kekse Doppelkekse Keks", "Süßigkeiten"],
+  ["Schokoriegel", "200 g", 1.99, "", 0, "Riegel Mini Schokolade Süßes", "Süßigkeiten"],
+  ["Tortilla Chips", "300 g", 1.49, "", 0, "Chips Nachos Knabbern Snack", "Snacks & Knabbern"],
+  ["Stapelchips", "175 g", 1.49, "", 0, "Chips Pringles Knabbern Snack", "Snacks & Knabbern"],
+  ["Erdnussflips", "200 g", 0.99, "", 0, "Flips Knabbern Snack Erdnuss", "Snacks & Knabbern"],
+  ["Salzbrezeln", "250 g", 0.89, "", 0, "Brezeln Salzgebäck Knabbern Salzgebaeck", "Snacks & Knabbern"],
+  ["Cashewkerne", "200 g", 2.89, "", 0, "Nüsse Cashews Knabbern Nuesse", "Snacks & Knabbern"],
+  ["Mandeln", "200 g", 2.99, "", 0, "Nüsse Mandelkerne Backen Nuesse", "Snacks & Knabbern"],
+  ["Walnusskerne", "200 g", 2.49, "", 0, "Nüsse Walnüsse Backen Nuesse", "Snacks & Knabbern"],
+  ["Studentenfutter", "200 g", 2.29, "", 0, "Nüsse Nussmischung Trockenfrüchte Knabbern", "Snacks & Knabbern"],
+  ["Cracker", "3 × 75 g", 1.49, "", 0, "Salzgebäck Knabbern Kekse Salzcracker", "Snacks & Knabbern"],
+  ["Reiswaffeln", "135 g", 0.65, "", 0, "Waffeln Knabbern Snack Reis", "Snacks & Knabbern"],
+  ["Müsliriegel", "8 × 25 g", 1.49, "", 0, "Riegel Snack Müsli Frühstück Muesliriegel", "Snacks & Knabbern"],
+  ["Mineralwasser medium", "1,5 l", 0.29, "b", 0.25, "Wasser Sprudel Medium Mineralwasser", "Getränke"],
+  ["Fanta", "1,25 l", 1.59, "m", 0.25, "Limo Limonade Orangenlimonade Orangenlimo", "Getränke"],
+  ["Limonade", "1,5 l", 0.65, "b", 0.25, "Limo Zitronenlimonade Orangenlimonade Erfrischungsgetränk", "Getränke"],
+  ["Cola Zero", "1,5 l", 0.65, "", 0.25, "Cola zuckerfrei Light Softdrink", "Getränke"],
+  ["Apfelschorle", "1,5 l", 0.99, "", 0.25, "Schorle Apfelsaftschorle Saftschorle Apfelspritzer", "Getränke"],
+  ["Multivitaminsaft", "1 l", 1.39, "b", 0, "Saft Mehrfruchtsaft Multivitamin", "Getränke"],
+  ["Eistee", "1,5 l", 0.79, "", 0.25, "Tee Erfrischungsgetränk Pfirsich Zitrone", "Getränke"],
+  ["Energy Drink", "0,25 l", 0.29, "", 0.25, "Energydrink Energy Red Bull Dose", "Getränke"],
+  ["Radler", "0,5 l Dose", 0.49, "", 0.25, "Bier Biermischgetränk Alsterwasser", "Getränke"],
+  ["Bier alkoholfrei", "0,5 l Dose", 0.55, "", 0.25, "Bier Pils alkoholfrei", "Getränke"],
+  ["Helles", "0,5 l Dose", 0.55, "", 0.25, "Bier Lager Export", "Getränke"],
+  ["Sekt trocken", "0,75 l", 2.99, "", 0, "Schaumwein Sekt Sekt halbtrocken", "Getränke"],
+  ["Prosecco", "0,75 l", 3.49, "", 0, "Perlwein Secco Sekt", "Getränke"],
+  ["Weißwein trocken", "0,75 l", 2.29, "", 0, "Wein Weisswein Chardonnay", "Getränke"],
+  ["Rosé", "0,75 l", 2.49, "", 0, "Wein Roséwein Rosewein", "Getränke"],
+  ["Wasser mit Geschmack", "1,5 l", 0.55, "", 0.25, "Wasser Aromawasser Zitrone Erfrischungsgetränk", "Getränke"],
+  ["Weizenbier", "0,5 l", 0.79, "", 0.08, "Bier Weißbier Weissbier Hefeweizen Weizen", "Getränke"],
+  ["Conditioner", "300 ml", 1.65, "", 0, "Haarpflege Spülung Haarspülung Haarkur", "Drogerie & Hygiene"],
+  ["Haargel", "150 ml", 0.85, "", 0, "Haarpflege Styling Gel", "Drogerie & Hygiene"],
+  ["Haarspray", "400 ml", 1.49, "", 0, "Haarlack Haarpflege Styling", "Drogerie & Hygiene"],
+  ["Dusche & Shampoo 3 in 1", "300 ml", 0.55, "b", 0, "Duschgel Herren Shampoo Dusche Duschshampoo", "Drogerie & Hygiene"],
+  ["Deo Roll-on", "50 ml", 0.6, "", 0, "Deo Deoroller Deodorant Roller", "Drogerie & Hygiene"],
+  ["Körperlotion", "500 ml", 1.19, "", 0, "Bodylotion Körpermilch Hautpflege Body Milk Lotion", "Drogerie & Hygiene"],
+  ["Handcreme", "100 ml", 0.7, "", 0, "Hautpflege Creme Hände", "Drogerie & Hygiene"],
+  ["Abschminktücher", "25 Stück", 0.75, "", 0, "Reinigungstücher Gesichtsreinigung Kosmetik Make-up Abschminken", "Drogerie & Hygiene"],
+  ["Wattestäbchen", "300 Stück", 0.7, "", 0, "Ohrenstäbchen Q-Tips Kosmetik Wattestaebchen", "Drogerie & Hygiene"],
+  ["Rasierschaum", "300 ml", 0.95, "", 0, "Rasur Rasieren Herren", "Drogerie & Hygiene"],
+  ["Einwegrasierer", "10 Stück", 1.15, "", 0, "Rasierer Rasur Damen", "Drogerie & Hygiene"],
+  ["Damenbinden ultradünn", "20 Stück", 0.99, "", 0, "Binden Hygiene Periode Damenhygiene", "Drogerie & Hygiene"],
+  ["Slipeinlagen", "45 Stück", 0.99, "", 0, "Einlagen Hygiene Damenhygiene", "Drogerie & Hygiene"],
+  ["Mundspülung", "750 ml", 1.25, "", 0, "Mundwasser Zahnpflege Mundspuelung", "Drogerie & Hygiene"],
+  ["Stückseife", "150 g", 0.55, "", 0, "Seife Handseife Seifenstück Cremeseife Stueckseife", "Drogerie & Hygiene"],
+  ["Kosmetiktücher Box", "100 Stück", 0.85, "", 0, "Taschentücher Tücher Box Kleenex Kosmetiktuecher", "Drogerie & Hygiene"],
+  ["Feuchtes Toilettenpapier", "2 × 70 Stück", 1.25, "", 0, "Klopapier Toilettenpapier feucht Feuchttücher", "Drogerie & Hygiene"],
+  ["Tampons", "32 Stück", 1.79, "", 0, "Damenhygiene Hygiene Periode Tampon", "Drogerie & Hygiene"],
+  ["Pflaster", "20 Stück", 0.85, "", 0, "Wundpflaster Heftpflaster Erste Hilfe", "Drogerie & Hygiene"],
+  ["Fruchtpüree", "100 g", 0.75, "", 0, "Quetschie Quetschies Fruchtmus Babynahrung Obstpüree", "Baby"],
+  ["Baby-Reiswaffeln", "50 g", 0.9, "", 0, "Babysnack Reiswaffeln Babynahrung", "Baby"],
+  ["Windelcreme", "100 ml", 1.49, "", 0, "Wundschutzcreme Babypflege Babycreme Windeln", "Baby"],
+  ["Baby-Waschlotion", "300 ml", 1.29, "", 0, "Babyshampoo Babybad Babypflege Baby Duschgel", "Baby"],
+  ["Frischhaltefolie", "75 m", 0.99, "", 0, "Folie Klarsichtfolie Haushaltsfolie", "Haushalt & Putzen"],
+  ["Backpapier", "30 Blatt", 0.95, "", 0, "Backen Papier Backtrennpapier Zuschnitte", "Haushalt & Putzen"],
+  ["Bioabfall-Beutel", "15 Stück", 2.29, "", 0, "Bio Müllbeutel Biomüll Mülltüten Kompost Biomuell", "Haushalt & Putzen"],
+  ["Gefrierbeutel", "50 Stück", 1.29, "", 0, "Beutel Frischhalten Tiefkühlbeutel Gefrierbeutel", "Haushalt & Putzen"],
+  ["Servietten", "30 Stück", 0.75, "", 0, "Papierservietten Tisch", "Haushalt & Putzen"],
+  ["Klarspüler", "1 l", 0.85, "", 0, "Spülmaschine Geschirrspüler Klarspueler", "Haushalt & Putzen"],
+  ["Spülmaschinensalz", "1 kg", 0.69, "", 0, "Regeneriersalz Geschirrspüler Salz Spuelmaschinensalz", "Haushalt & Putzen"],
+  ["WC-Reiniger", "750 ml", 0.95, "", 0, "Toilettenreiniger Klo Reiniger Putzmittel", "Haushalt & Putzen"],
+  ["WC-Duftspüler", "3 × 55 ml", 0.95, "", 0, "WC-Stein Toilette Duft Klo Duftspueler", "Haushalt & Putzen"],
+  ["Essigreiniger", "1 l", 0.75, "", 0, "Reiniger Essig Kalk Putzmittel", "Haushalt & Putzen"],
+  ["Mikrofasertücher", "4 Stück", 1.99, "", 0, "Putztücher Tuch Putzlappen Mikrofaser", "Haushalt & Putzen"],
+  ["Haushaltstücher", "6 Stück", 0.95, "", 0, "Putztücher Tuch Putzlappen Wischtücher Haushaltstuecher", "Haushalt & Putzen"],
+  ["Feuchte Reinigungstücher", "80 Stück", 1.49, "", 0, "Putztücher Reinigungstücher Reiniger", "Haushalt & Putzen"],
+  ["Feinwaschmittel", "1,5 l", 2.85, "", 0, "Waschmittel Wolle Seide Wäsche", "Haushalt & Putzen"],
+  ["Batterien AAA", "10 Stück", 1.59, "", 0, "Micro Batterie Batterien", "Haushalt & Putzen"],
+  ["Katzenfutter nass", "415 g", 0.55, "", 0, "Katze Katzennahrung Nassfutter Dose Tierfutter Haustier", "Tierbedarf"],
+  ["Katzenfutter trocken", "2 kg", 2.29, "", 0, "Katze Trockenfutter Katzennahrung Tierfutter Haustier", "Tierbedarf"],
+  ["Katzenstreu", "6 l", 3.95, "", 0, "Katzenklo Streu Klumpstreu Tierbedarf Haustier", "Tierbedarf"],
+  ["Katzensnacks", "50 g", 0.85, "", 0, "Katze Leckerli Sticks Tierfutter Haustier", "Tierbedarf"],
+  ["Hundefutter nass", "400 g", 0.99, "", 0, "Hund Hundenahrung Nassfutter Dose Tierfutter Haustier", "Tierbedarf"],
+  ["Hundefutter trocken", "3 kg", 3.75, "", 0, "Hund Trockenfutter Hundenahrung Tierfutter Haustier", "Tierbedarf"],
+  ["Hundesnacks", "180 g", 0.79, "", 0, "Hund Leckerli Kauknochen Dentalsnacks Tierfutter Haustier", "Tierbedarf"]
+]/*ENDE*/;
+const KATS = [...Object.keys(DATEN), 'Tierbedarf'];
 const ALLE_KATS = [...KATS, 'Sonstiges'];
 // Typischer Laufweg: frisch am Eingang, Trockenes in der Mitte, Kühl- und Tiefkühlware zum Schluss
 const STANDARD_GANG = ['Obst','Gemüse','Brot & Backwaren','Frühstück & Aufstriche','Kaffee & Tee','Nudeln, Reis & Konserven','Öl, Gewürze & Backen',
-  'Süßigkeiten','Snacks & Knabbern','Drogerie & Hygiene','Baby','Haushalt & Putzen','Getränke','Milch, Käse & Eier','Fleisch, Wurst & Fisch','Tiefkühl','Sonstiges'];
-const ROSSMANN_GANG = ['Drogerie & Hygiene','Baby','Haushalt & Putzen','Süßigkeiten','Snacks & Knabbern','Kaffee & Tee','Frühstück & Aufstriche',
+  'Süßigkeiten','Snacks & Knabbern','Drogerie & Hygiene','Baby','Haushalt & Putzen','Tierbedarf','Getränke','Milch, Käse & Eier','Fleisch, Wurst & Fisch','Tiefkühl','Sonstiges'];
+const ROSSMANN_GANG = ['Drogerie & Hygiene','Baby','Haushalt & Putzen','Tierbedarf','Süßigkeiten','Snacks & Knabbern','Kaffee & Tee','Frühstück & Aufstriche',
   'Nudeln, Reis & Konserven','Öl, Gewürze & Backen','Getränke','Sonstiges'];
 
 // Stichwoerter fuer Artikel, die nicht in der Preisliste stehen (normalisiert: ae/oe/ue/ss)
@@ -468,34 +755,43 @@ const RATEN = Object.entries({
   'Getränke': 'wasser sprudel saft cola limo limonade bier wein sekt schorle getraenke eistee radler energy',
   'Drogerie & Hygiene': 'zahnpasta zahnbuerste shampoo duschgel seife deo creme rasierer klopapier toilettenpapier taschentuecher watte pflaster tampons binden kosmetik',
   'Baby': 'windel windeln baby feuchttuecher schnuller',
-  'Haushalt & Putzen': 'spuelmittel waschmittel reiniger putzmittel muellbeutel folie schwamm batterie batterien kerze gluehbirne tabs'
+  'Haushalt & Putzen': 'spuelmittel waschmittel reiniger putzmittel muellbeutel folie schwamm batterie batterien kerze gluehbirne tabs',
+  'Tierbedarf': 'katzenfutter hundefutter tierfutter katzenstreu leckerli kauknochen vogelfutter'
 }).map(([k, w]) => [k, w.split(' ')]);
 
 const norm = s => String(s).toLowerCase().replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss').replace(/[^a-z0-9]+/g,' ').trim();
 const slug = s => norm(s).replace(/ /g,'-');
 const PRODUKTE = [];
-KATS.forEach(kat => DATEN[kat].forEach(([name, einheit, preis, fl = '', pfand = 0, syn = '']) => {
+[...Object.keys(DATEN).flatMap(kat => DATEN[kat].map(e => [e[0], e[1], e[2], e[3] ?? '', e[4] ?? 0, e[5] ?? '', kat])), ...DATEN_PLUS]
+  .forEach(([name, einheit, preis, fl = '', pfand = 0, syn = '', kat]) => {
   PRODUKTE.push({ id: slug(name + ' ' + einheit), idx: PRODUKTE.length, kat, name, einheit, basis: preis,
     basic: fl.includes('b'), marke: fl.includes('m'), pfand: pfand || 0,
-    ross: ROSSMANN_KAT.has(kat) && !fl.includes('x'), kern: norm(name + ' ' + syn), such: norm(name + ' ' + syn + ' ' + kat) });
-}));
+    ross: ROSSMANN_KAT.has(kat) && !fl.includes('x'), syn, kern: norm(name + ' ' + syn), such: norm(name + ' ' + syn + ' ' + kat) });
+});
 const PMAP = Object.fromEntries(PRODUKTE.map(p => [p.id, p]));
 
 /* ---------- Richtpreise ---------- */
 function hash(s){ let h = 2166136261; for (let i = 0; i < s.length; i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return (h >>> 0) / 4294967295; }
 function rund(p){ const r = Math.round(p * 10) / 10 - 0.01; return Math.max(0.09, Math.round(r * 100) / 100); }
 // Online gepruefte Preise und Prospekt-Angebote kommen aus daten/preise.json (woechentlich aktualisiert)
-let ECHT = {}, LIVE = [], DATEN_INFO = null;
+let ECHT = {}, HERKUNFT = {}, LIVE = [], DATEN_INFO = null;
+const BON_UPLOAD = 'https://github.com/LegacylithiumX/wochenkorb-kassenbons/upload/main/eingang';
+function herkunftText(pid, lid){
+  const h = HERKUNFT[pid] && HERKUNFT[pid][lid];
+  if (h && h.startsWith('bon:')) return 'vom Kassenbon (' + tagKurz(h.slice(4)) + ')';
+  if (h === 'live') return 'online geprüft (' + (DATEN_INFO && DATEN_INFO.stand ? tagKurz(DATEN_INFO.stand) : 'aktuell') + ')';
+  if (istEcht(pid, lid)) return 'online recherchiert';
+  return 'geschätzt: Eigenmarken kosten überall etwa so viel wie bei Aldi';
+}
 const referenz = p => { const e = ECHT[p.id]; return (e && (e.aldi ?? e.lidl)) ?? p.basis; };
+// Belegt mit Open-Prices-Daten 2025-10 bis 2026-09: Eigenmarken-Preiseinstieg (ja!, gut & guenstig, K-Classic, Milbona ...)
+// kostet bei Lidl, Netto, Kaufland, Rewe und Edeka genau so viel wie bei Aldi, gleiche Markenartikel ebenfalls.
+// Ohne echten Preis gilt daher der Aldi-Preis - keine erfundenen Unterschiede. Rossmann: Drogerie wie Aldi, Lebensmittel meist Bio/Marke.
 function schaetzung(p, lid){
   if (lid === 'rossmann' && !p.ross) return null;
-  const n = hash(p.id + '|' + lid) * 2 - 1, b = referenz(p);
-  let f;
-  if (lid === 'rossmann') f = NONFOOD.has(p.kat) ? (p.basic ? 0.97 : 0.96 + n * 0.03) : 1.12 + n * 0.06;
-  else if (lid === 'aldi' || lid === 'lidl'){ if (p.basic) return b; f = 1 + n * 0.035; }
-  else if (lid === 'netto'){ if (p.basic) return b; f = 1.02 + n * 0.035; }
-  else { if (p.basic) return b; const auf = {kaufland:0.04, combi:0.09, rewe:0.15, edeka:0.17}[lid]; f = 1 + (p.marke ? auf * 0.5 : auf) + n * 0.05; }
-  return rund(b * f);
+  const b = referenz(p);
+  if (lid === 'rossmann' && !NONFOOD.has(p.kat)) return rund(b * 1.35);
+  return b;
 }
 const SCHAETZ = {};
 const istEcht = (pid, lid) => ECHT[pid] != null && ECHT[pid][lid] != null;
@@ -533,27 +829,76 @@ const ICON = {
 };
 
 /* ---------- Suche und Einsortieren ---------- */
-// feld 'such' = Name, Suchwoerter und Gang (fuer die Vorschlagsliste); 'kern' = ohne Gang (fuer automatisches Zuordnen)
-function suche(text, max = 8, feld = 'such'){
-  const t = norm(text).split(' ').filter(Boolean);
-  if (!t.length) return [];
-  const res = [];
-  for (const p of PRODUKTE){
-    const s = p[feld];
-    if (!t.every(w => s.includes(w))) continue;
-    const woerter = s.split(' ');
-    let sc = p.idx / 10000;
-    if (norm(p.name).startsWith(t[0])) sc -= 10;
-    if (woerter.includes(t[0])) sc -= 5; else if (woerter.some(x => x.startsWith(t[0]))) sc -= 4;
-    res.push([sc, p]);
-  }
-  return res.sort((a, b) => a[0] - b[0]).slice(0, max).map(x => x[1]);
+// Oberbegriff -> Standardartikel, damit "Käse" zuerst Käse bringt und "Milch" die Vollmilch
+const GATTUNG = {
+  kaese: 'gouda-jung-in-scheiben-400-g', milch: 'vollmilch-3-5-1-l', butter: 'deutsche-markenbutter-250-g', brot: 'mischbrot-750-g',
+  toast: 'buttertoast-500-g', broetchen: 'aufbackbroetchen-10-stueck', wasser: 'mineralwasser-classic-6-1-5-l', bier: 'pils-0-5-l-dose',
+  kaffee: 'roestkaffee-gemahlen-500-g', tee: 'schwarzer-tee-25-beutel', nudeln: 'spaghetti-500-g', pasta: 'spaghetti-500-g',
+  reis: 'langkornreis-1-kg', oel: 'sonnenblumenoel-1-l', saft: 'orangensaft-1-l', eier: 'eier-freilandhaltung-10-stueck',
+  hack: 'hackfleisch-gemischt-500-g', hackfleisch: 'hackfleisch-gemischt-500-g', schokolade: 'vollmilchschokolade-100-g',
+  chips: 'kartoffelchips-paprika-175-g', joghurt: 'joghurt-natur-3-5-500-g', sahne: 'schlagsahne-30-200-g', quark: 'speisequark-magerstufe-500-g',
+  wurst: 'salami-in-scheiben-100-g', aufschnitt: 'salami-in-scheiben-100-g', kekse: 'butterkekse-200-g', salat: 'eisbergsalat-stueck',
+  waschmittel: 'colorwaschmittel-fluessig-20-wl', klopapier: 'toilettenpapier-3-lagig-8-rollen', tomaten: 'tomaten-500-g',
+  kartoffeln: 'kartoffeln-festkochend-2-5-kg', aepfel: 'aepfel-1-kg', apfel: 'aepfel-1-kg', cola: 'cola-1-5-l', wein: 'rotwein-trocken-0-75-l',
+  zucker: 'zucker-1-kg', pudding: 'pudding-becher-4-125-g', mehl: 'weizenmehl-type-405-1-kg', salz: 'speisesalz-500-g', pizza: 'steinofenpizza-salami-350-g', eis: 'vanilleeis-1-l'
+};
+const locker = s => s.replace(/ae/g, 'a').replace(/oe/g, 'o').replace(/ue/g, 'u').replace(/ss/g, 's'); // "kase" findet "Käse"
+const GATTUNG_LOCKER = Object.fromEntries(Object.entries(GATTUNG).map(([k, v]) => [locker(k), v]));
+function gattungVon(t){ // auch mit einem Tippfehler: "kaffe" -> Kaffee
+  const l = locker(t);
+  if (GATTUNG_LOCKER[l]) return GATTUNG_LOCKER[l];
+  if (l.length < 5) return null;
+  const k = Object.keys(GATTUNG_LOCKER).find(x => x.length >= 5 && einAbstand(l, x));
+  return k ? GATTUNG_LOCKER[k] : null;
 }
+function einAbstand(a, b){ // hoechstens ein Tippfehler (ersetzt, fehlt, zu viel, vertauscht)?
+  if (Math.abs(a.length - b.length) > 1) return false;
+  let i = 0; while (i < a.length && a[i] === b[i]) i++;
+  const r = s => s.slice(i + 1);
+  return r(a) === r(b) || a.slice(i + 1) === b.slice(i) || a.slice(i) === b.slice(i + 1) || (a[i] === b[i + 1] && a[i + 1] === b[i] && a.slice(i + 2) === b.slice(i + 2));
+}
+// Wertung eines getippten Worts gegen ein Wort des Artikels. Deutsch: das Grundwort steht hinten (Frisch|käse ist Käse, Käse|kuchen nicht).
+function wortWert(t, w){
+  const a = locker(t), b = locker(w);
+  if (a === b) return 100;
+  if (a.length >= 3 && b.endsWith(a)) return 85;
+  if (a.length >= 2 && b.startsWith(a)) return 60;
+  if (a.length >= 4 && b.includes(a)) return 35;
+  if (a.length >= 5 && einAbstand(a, b)) return 30;
+  return 0;
+}
+function suchIndex(p){
+  if (!p._idx) p._idx = {name: norm(p.name).split(' '), syn: norm(p.syn || '').split(' ').filter(Boolean), kat: norm(p.kat).split(' ')};
+  return p._idx;
+}
+function trefferWert(p, woerter){
+  const ix = suchIndex(p), letztes = ix.name[ix.name.length - 1];
+  let summe = 0, nurGang = true;
+  for (const t of woerter){
+    let best = 0;
+    for (const w of ix.name) best = Math.max(best, wortWert(t, w) + (w === letztes && wortWert(t, w) >= 85 ? 5 : 0));
+    for (const w of ix.syn) best = Math.max(best, wortWert(t, w));
+    if (best > 0) nurGang = false;
+    else for (const w of ix.kat) best = Math.max(best, wortWert(t, w) * 0.2);
+    if (!best) return null;
+    summe += best + (gattungVon(t) === p.id ? 40 : 0);
+  }
+  return {wert: summe / woerter.length, nurGang};
+}
+function suche(text, max = 8){
+  const woerter = norm(text).split(' ').filter(Boolean);
+  if (!woerter.length) return [];
+  const treffer = [];
+  for (const p of PRODUKTE){ const t = trefferWert(p, woerter); if (t) treffer.push({p, ...t}); }
+  const echte = treffer.filter(t => !t.nurGang);
+  return (echte.length ? echte : treffer)
+    .sort((a, b) => (b.wert - a.wert) || (a.p.name.length - b.p.name.length) || (a.p.idx - b.p.idx))
+    .slice(0, max).map(t => Object.assign(t.p, {_wert: t.wert}));
+}
+// Fuer Mehrfach-Eingabe und Gang-Raten: nur sichere Treffer (ganzes Wort, Grundwort oder klarer Wortanfang)
 function besterTreffer(text){
-  const t0 = norm(text).split(' ')[0];
-  if (!t0) return null;
-  const p = suche(text, 1, 'kern')[0];
-  return p && p.kern.split(' ').some(w => w.startsWith(t0)) ? p : null;
+  const p = suche(text, 1)[0];
+  return p && p._wert >= 60 ? p : null;
 }
 function rateKat(text){
   const p = besterTreffer(text);
@@ -700,7 +1045,8 @@ function rechne(ls){
   for (const it of state.liste){
     const fl = festLaden(it);
     let bl = null, bp = null;
-    if (fl){ r.fest++; const p = posten(it, fl); if (!p.fehlt){ bl = fl; bp = p; } }
+    // Fest zugeordnet: bleibt in seinem Laden, auch ohne bekannten Preis (dann "Preis?" zum Nachtragen)
+    if (fl){ r.fest++; const p = posten(it, fl); bl = fl; bp = p.fehlt ? {preis: 0, reg: 0, ang: null, pfand: 0, ohne: true, nv: true} : p; }
     else { let bv = Infinity; for (const l of ls){ const p = posten(it, l); if (p.fehlt) continue; const v = p.preis + p.pfand; if (v < bv - 1e-9){ bv = v; bl = l; bp = p; } } }
     if (!bp){ r.fehlt.push(it); continue; }
     const m = it.menge, zeile = (bp.preis + bp.pfand) * m;
@@ -756,7 +1102,7 @@ ANSICHTEN.liste = {
       <div class="liste-layout">
         <section class="zettel" aria-label="Einkaufsliste">
           <div id="hinweis"></div>
-          <div class="abschnitt-kopf"><h2>Einkaufen bei</h2><span class="klein">Summe je Laden, ca.</span></div>
+          <div class="abschnitt-kopf"><h2>Laden wählen</h2><span class="klein">Summe je Laden, ca.</span></div>
           <div class="wahl" id="wahl"></div>
           <p class="eingabe-tipp" id="fest-hinweis" style="margin-top:8px" hidden></p>
           <div class="suche">
@@ -786,9 +1132,12 @@ ANSICHTEN.liste = {
   },
   update(){
     $('#hinweis').innerHTML = state.beispielListe && state.liste.length ? `<div class="banner"><span>Das ist eine Beispielliste. So sieht dein Einkauf mit Preisen aus.</span><div class="aktionen"><button class="knopf haupt" data-act="beispiel-leeren">Leere Liste starten</button><button class="knopf" data-act="beispiel-behalten">Behalten</button></div></div>` : '';
-    const fh = $('#fest-hinweis');
-    fh.hidden = !R.fest;
-    fh.textContent = R.fest ? `${R.fest} ${R.fest === 1 ? 'Artikel ist' : 'Artikel sind'} fest einem Laden zugeordnet. Die Wahl oben gilt für den Rest.` : '';
+    const fh = $('#fest-hinweis'), ziel = zielLaden();
+    fh.hidden = false;
+    fh.textContent = ziel
+      ? `Neue Artikel kommen zu ${LMAP[ziel].name}. Für einen anderen Laden oben umschalten oder einen Artikel antippen und verschieben.`
+      : 'Beste Wahl: Jeder neue Artikel geht in den Laden, in dem er am günstigsten ist.';
+    $('#eingabe').placeholder = ziel ? `Artikel für ${LMAP[ziel].name}, z. B. 2 Milch, Käse` : 'Artikel hinzufügen, z. B. 2 Milch, Käse, Bier';
     zeichneWahl(); zeichnePosten(); zeichneAktionen(); zeichneBon();
   }
 };
@@ -827,10 +1176,10 @@ function zeileHTML(it){
     preisHTML = `<span class="preis">–</span>`;
   } else {
     const p = z.p;
-    if (z.fest) meta.push(`<span class="fest">${dot(z.l)}fest: ${LMAP[z.l].name}</span>`);
+    if (p.nv) meta.push(`<span class="fehlt">Preis bei ${LMAP[z.l].name} unbekannt</span>`);
     if (p.ang) meta.push(`<span class="tag">Angebot −${Math.round((1 - p.preis / p.reg) * 100)} %</span>`);
     if (p.pfand) meta.push(`<span>+ ${euro(p.pfand * m)} Pfand</span>`);
-    if (state.modus !== 'kombi' && !it.ok && !z.fest){ const b = billiger(it, z.l, p.preis + p.pfand); if (b) meta.push(`<span class="tipp">bei ${LMAP[b.l].name} ${euro((p.preis + p.pfand - b.v) * m)} günstiger</span>`); }
+    if (!it.ok && !p.ohne && (z.fest || state.modus !== 'kombi')){ const b = billiger(it, z.l, p.preis + p.pfand); if (b) meta.push(`<span class="tipp">bei ${LMAP[b.l].name} ${euro((p.preis + p.pfand - b.v) * m)} günstiger</span>`); }
     if (bearbeite && bearbeite.art === 'liste' && bearbeite.id === it.id)
       preisHTML = `<input class="preis-edit" id="pe-${it.id}" inputmode="decimal" value="${p.ohne ? '' : komma(p.ang ? p.reg : p.preis)}" placeholder="0,00" aria-label="Stückpreis ${esc(it.name)} bei ${LMAP[z.l].name}">`;
     else if (p.ohne) preisHTML = `<button class="preis offen" data-act="preis" data-id="${it.id}" data-l="${z.l}">Preis?</button>`;
@@ -863,8 +1212,8 @@ function stationHTML(l, i, anzahl, items){
       <span class="nr">${erledigt ? '✓' : i + 1}</span>
       <div class="st-titel"><strong>${dot(l)}${LMAP[l].name}</strong><span class="klein">${erledigt ? 'erledigt' : `${fertig} von ${n} im Wagen`} · ${euro(summeVon(items))}</span></div>
       <div class="st-akt">
-        <button class="mini" data-act="tour-hoch" data-id="${l}" ${i === 0 ? 'disabled' : ''} aria-label="${LMAP[l].name} früher besuchen">↑</button>
-        <button class="mini" data-act="tour-runter" data-id="${l}" ${i === anzahl - 1 ? 'disabled' : ''} aria-label="${LMAP[l].name} später besuchen">↓</button>
+        ${anzahl > 1 ? `<button class="mini" data-act="tour-hoch" data-id="${l}" ${i === 0 ? 'disabled' : ''} aria-label="${LMAP[l].name} früher besuchen">↑</button>
+        <button class="mini" data-act="tour-runter" data-id="${l}" ${i === anzahl - 1 ? 'disabled' : ''} aria-label="${LMAP[l].name} später besuchen">↓</button>` : ''}
         <button class="knopf klein-k" data-act="laufweg" data-id="${l}">Laufweg</button>
       </div>
     </div>
@@ -879,19 +1228,16 @@ function zeichnePosten(){
     el.innerHTML = `<div class="leer"><strong>Der Zettel ist leer</strong>Tipp oben ein, was du brauchst, zum Beispiel „2 Milch, Brot, Bier“. Die Artikel landen sortiert in ihren Gängen, die Summe rechnet sich sofort aus.</div>`;
     return;
   }
+  // Immer erst nach Laden, darin nach Gaengen im Laufweg des Ladens
   const st = R.stationen, html = [];
-  if (st.length <= 1){
-    const lid = st[0] || R.basis[0];
-    html.push(`<div class="laufweg-zeile"><span>Sortiert nach deinem Laufweg bei <strong>${LMAP[lid].name}</strong></span><button class="knopf klein-k" data-act="laufweg" data-id="${lid}">Laufweg ändern</button></div>`);
-    html.push(gaengeHTML(imLaden(lid), lid));
-  } else {
-    if (tourFilter !== 'alle' && !st.includes(tourFilter)) tourFilter = 'alle';
+  if (tourFilter !== 'alle' && !st.includes(tourFilter)) tourFilter = 'alle';
+  if (st.length > 1){
     html.push(`<div class="tour-kopf"><h2>Deine Tour</h2><span class="klein">${st.length} Läden · Reihenfolge mit ↑ ↓</span></div>`);
     html.push(`<div class="tour-tabs"><button data-act="tour-filter" data-id="alle" aria-pressed="${tourFilter === 'alle'}">Ganze Tour</button>` +
       st.map((l, i) => { const its = imLaden(l), f = its.filter(x => x.ok).length; return `<button data-act="tour-filter" data-id="${l}" aria-pressed="${tourFilter === l}"><b>${i + 1}</b>${dot(l)}${LMAP[l].name}<small>${f}/${its.length}</small></button>`; }).join('') + `</div>`);
-    st.forEach((l, i) => { if (tourFilter === 'alle' || tourFilter === l) html.push(stationHTML(l, i, st.length, imLaden(l))); });
   }
-  if (R.fehlt.length && (st.length <= 1 || tourFilter === 'alle'))
+  st.forEach((l, i) => { if (tourFilter === 'alle' || tourFilter === l) html.push(stationHTML(l, i, st.length, imLaden(l))); });
+  if (R.fehlt.length && tourFilter === 'alle')
     html.push(`<div class="gang"><div class="gang-kopf"><span class="gl fehlt">Nicht erhältlich</span><span class="gs">${R.fehlt.length}</span></div><ul class="posten">${R.fehlt.map(zeileHTML).join('')}</ul></div>`);
   el.innerHTML = html.join('');
   if (bearbeite && bearbeite.art === 'liste'){ const inp = $('#pe-' + bearbeite.id); if (inp){ inp.focus(); inp.select(); } }
@@ -1028,8 +1374,11 @@ function zeigeVorschlaege(){
   }
   const {text} = zerlege(ein.value);
   if (!text){ schliesseVorschlaege(); return; }
-  vsTreffer = suche(text).map(p => ({typ: 'p', p}));
-  vsTreffer.push({typ: 'eigen', name: text});
+  const gefunden = suche(text, 10);
+  vsTreffer = gefunden.map(p => ({typ: 'p', p}));
+  // Nichts Sicheres gefunden: der eigene Artikel steht oben, Enter legt genau das Getippte an
+  const eigen = {typ: 'eigen', name: text};
+  if (!gefunden.length || gefunden[0]._wert < 60) vsTreffer.unshift(eigen); else vsTreffer.push(eigen);
   if (vsIndex >= vsTreffer.length) vsIndex = 0;
   zeichneVorschlaege();
 }
@@ -1061,18 +1410,21 @@ function waehle(i){
   ein.value = ''; vsTreffer = []; schliesseVorschlaege();
   if (!(bearbeite && bearbeite.art === 'liste')) ein.focus();
 }
+// Laden fuer neue Artikel: der oben gewaehlte Laden, bei "Beste Wahl" keiner (automatisch der guenstigste)
+const zielLaden = () => state.modus !== 'kombi' && state.aktiv.includes(state.modus) ? state.modus : null;
 // nur innerhalb von aendern() aufrufen
-function neuerPosten({pid, name, einheit}, menge){
-  const da = state.liste.find(i => !i.ok && (pid ? i.pid === pid : (!i.pid && norm(i.name) === norm(name))));
+function neuerPosten({pid, name, einheit}, menge, laden = zielLaden()){
+  const da = state.liste.find(i => !i.ok && (i.laden || null) === laden && (pid ? i.pid === pid : (!i.pid && norm(i.name) === norm(name))));
   if (da){ da.menge += menge; return {it: da, neu: false}; }
-  const it = {id: uid(), pid: pid || null, name, einheit: einheit || '', menge, ok: false, preis: null, laden: null, kat: pid ? null : rateKat(name)};
+  const it = {id: uid(), pid: pid || null, name, einheit: einheit || '', menge, ok: false, preis: null, laden, kat: pid ? null : rateKat(name)};
   state.liste.push(it);
   return {it, neu: true};
 }
-function hinzufuegen(art, menge = 1){
+function hinzufuegen(art, menge = 1, laden = zielLaden()){
   let r = null;
-  aendern(() => { r = neuerPosten(art, menge); });
-  toast(`${menge > 1 ? menge + ' × ' : ''}${art.name} → ${katVon(r.it)}`);
+  aendern(() => { r = neuerPosten(art, menge, laden); });
+  const z = R.zu[r.it.id];
+  toast(`${menge > 1 ? menge + ' × ' : ''}${art.name} → ${z ? LMAP[z.l].name + ', ' : ''}${katVon(r.it)}`);
   if (r.neu && !r.it.pid && reiter === 'liste' && R.zu[r.it.id]){ bearbeite = {art: 'liste', id: r.it.id, l: R.zu[r.it.id].l}; zeichnePosten(); }
 }
 function mehrereHinzufuegen(text){
@@ -1204,7 +1556,7 @@ ANSICHTEN.preise = {
           <input id="pr-suche" type="search" placeholder="Artikel suchen" aria-label="Artikel suchen" value="${esc(prSuche)}">
           <select id="pr-kat" aria-label="Gang"><option value="">Alle Gänge</option>${KATS.map(k => `<option${k === prKat ? ' selected' : ''}>${esc(k)}</option>`).join('')}</select>
         </div>
-        <div class="leg"><span><i style="background:var(--accent-soft);box-shadow:inset 0 0 0 1px var(--accent)"></i>günstigster Preis</span><span><i style="box-shadow:inset 0 -2px 0 var(--deal)"></i>eigener Preis</span><span><b style="color:var(--good)">✓</b>online geprüft</span><span><b class="mini" style="width:18px;height:18px;font-size:12px">+</b>setzt den Artikel auf die Liste</span></div>
+        <div class="leg"><span><i style="background:var(--accent-soft);box-shadow:inset 0 0 0 1px var(--accent)"></i>günstigster Preis</span><span><i style="box-shadow:inset 0 -2px 0 var(--deal)"></i>eigener Preis</span><span><b style="color:var(--good)">✓</b>echter Preis</span><span><b style="background:var(--accent);color:var(--accent-ink);border-radius:3px;padding:0 3px;font-size:10px">B</b>vom Kassenbon</span><span><b class="mini" style="width:18px;height:18px;font-size:12px">+</b>setzt den Artikel auf die Liste</span></div>
         <div class="tabelle-wrap" id="pr-tabelle"></div>
       </section>`;
     $('#pr-suche').addEventListener('input', e => { prSuche = e.target.value; zeichneTabelle(); });
@@ -1213,8 +1565,8 @@ ANSICHTEN.preise = {
   update(){
     const gesamt = PRODUKTE.length * state.aktiv.length;
     const echt = PRODUKTE.reduce((s, p) => s + state.aktiv.filter(l => istEcht(p.id, l)).length, 0);
-    $('#pr-info').textContent = (echt ? `${echt} von ${gesamt} Preisen sind online geprüft (Stand ${DATEN_INFO && DATEN_INFO.stand ? tagKurz(DATEN_INFO.stand) : 'unbekannt'}), der Rest ist geschätzt. ` : `Richtpreise für ${PRODUKTE.length} Artikel, geschätzt nach typischen Preisen der Eigenmarken. `) +
-      'Discounter und die Preiseinstiegsmarken der Supermärkte liegen oft gleich auf. Tippe auf einen Preis, um ihn mit dem Preis aus deinem Laden zu ersetzen. Ein leeres Feld stellt den ursprünglichen Preis wieder her.';
+    $('#pr-info').textContent = (echt ? `${echt} von ${gesamt} Preisen für ${PRODUKTE.length} Artikel sind echte Preise aus dem Netz oder von Kassenbons (Stand ${DATEN_INFO && DATEN_INFO.stand ? tagKurz(DATEN_INFO.stand) : 'unbekannt'}). ` : `Richtpreise für ${PRODUKTE.length} Artikel. `) +
+      'Ohne echten Preis zeigt die App den Aldi-Preis: Eigenmarken wie ja!, gut & günstig, K-Classic oder Milbona kosten nachweislich überall gleich viel. Preis antippen, um ihn durch deinen zu ersetzen; ein leeres Feld stellt ihn wieder her. Wo ein Preis herkommt, zeigt der Hinweis beim Draufhalten.';
     zeichneTabelle();
   }
 };
@@ -1236,7 +1588,7 @@ function zeichneTabelle(){
         return `<td><input class="preis-edit" id="pt-edit" inputmode="decimal" value="${komma(regulaer(p.id, l))}" placeholder="0,00" aria-label="Preis ${esc(p.name)} bei ${LMAP[l].name}"></td>`;
       if (x.fehlt) return `<td class="nv"><button class="zelle" data-act="zelle" data-id="${p.id}" data-l="${l}" title="Preis eintragen">–</button></td>`;
       const eigen = state.preise[p.id] && state.preise[p.id][l] != null;
-      return `<td class="${x.preis <= min + 1e-9 && akt.length > 1 ? 'best' : ''}"><button class="zelle${eigen ? ' eigen' : istEcht(p.id, l) ? ' echt' : ''}" data-act="zelle" data-id="${p.id}" data-l="${l}">${zahl(x.preis)}${x.ang ? '<span class="ang">Angebot</span>' : ''}</button></td>`;
+      return `<td class="${x.preis <= min + 1e-9 && akt.length > 1 ? 'best' : ''}"><button class="zelle${eigen ? ' eigen' : (HERKUNFT[p.id] || {})[l]?.startsWith('bon:') ? ' echt bon' : istEcht(p.id, l) ? ' echt' : ''}" data-act="zelle" data-id="${p.id}" data-l="${l}" title="${esc(eigen ? 'dein eigener Preis' : herkunftText(p.id, l))}">${zahl(x.preis)}${x.ang ? '<span class="ang">Angebot</span>' : ''}</button></td>`;
     }).join('');
     body += `<tr><td><div class="art"><button class="mini" data-act="plus-produkt" data-id="${p.id}" aria-label="${esc(p.name)} zur Liste">+</button><div>${esc(p.name)}<small>${esc(p.einheit)}${p.pfand ? ' + ' + zahl(p.pfand) + ' Pfand' : ''}</small></div></div></td>${zellen}</tr>`;
   }
@@ -1270,7 +1622,9 @@ ANSICHTEN.laeden = {
     }).join('');
     const eigene = Object.values(state.preise).reduce((s, o) => s + Object.keys(o).length, 0);
     $('#daten').innerHTML = `
-      <p><strong>Deine Daten.</strong> ${$('#sync').textContent}. Eigene Preise: ${eigene}. Eigene Angebote: ${state.angebote.length}. Eigene Laufwege: ${Object.keys(state.gangfolge).length}.</p>
+      <p><strong>Preise vom Kassenbon.</strong> Fotografiere deinen Bon und lade das Foto hoch. Sobald Claude die Bons ausgewertet hat, sehen alle die Preise beim nächsten Öffnen der App. Das Hochladen geht nur mit dem Konto des App-Betreibers.${DATEN_INFO && DATEN_INFO.bons ? ' Zuletzt ausgewertet: Bon vom ' + tagKurz(DATEN_INFO.bons) + '.' : ''}</p>
+      <div class="aktionen" style="margin-top:0"><a class="knopf haupt" href="${BON_UPLOAD}" target="_blank" rel="noopener">Kassenbon hochladen</a></div>
+      <p style="margin-top:12px"><strong>Deine Daten.</strong> ${$('#sync').textContent}. Eigene Preise: ${eigene}. Eigene Angebote: ${state.angebote.length}. Eigene Laufwege: ${Object.keys(state.gangfolge).length}.</p>
       <div class="aktionen">
         ${eigene ? `<button class="knopf warn" data-act="preise-reset">Eigene Preise zurücksetzen</button>` : ''}
         ${state.angebote.length ? `<button class="knopf warn" data-act="angebote-reset">Eigene Angebote löschen</button>` : ''}
@@ -1440,7 +1794,7 @@ document.addEventListener('click', e => {
       break;
     case 'ang-filter': angFilter = id; angLimit = 60; aktualisiere(); break;
     case 'ang-mehr': angLimit += 60; aktualisiere(); break;
-    case 'ang-liste': { const a = ANGEBOTE.find(x => x.id === id); if (a) hinzufuegen({pid: a.pid, name: a.name, einheit: a.einheit}); break; }
+    case 'ang-liste': { const a = ANGEBOTE.find(x => x.id === id); if (a) hinzufuegen({pid: a.pid, name: a.name, einheit: a.einheit}, 1, a.laden); break; }
     case 'ang-weg': aendern(() => { state.angebote = state.angebote.filter(a => a.id !== id); }); break;
     case 'bsp-aus': aendern(() => { state.beispieleAus = true; }); break;
     case 'bsp-an': aendern(() => { state.beispieleAus = false; }); break;
@@ -1482,10 +1836,11 @@ async function datenLaden(){
     if (!r.ok) return;
     const d = await r.json();
     ECHT = d.preise && typeof d.preise === 'object' ? d.preise : {};
+    HERKUNFT = d.herkunft && typeof d.herkunft === 'object' ? d.herkunft : {};
     LIVE = (Array.isArray(d.angebote) ? d.angebote : []).filter(a => a && LMAP[a.laden] && a.preis > 0 && a.name).map((a, i) => ({
       id: 'live-' + i, laden: a.laden, pid: a.pid && PMAP[a.pid] ? a.pid : null, name: a.name, einheit: a.einheit || a.menge || '',
       preis: a.preis, alt: a.alt > a.preis ? a.alt : null, ab: a.ab || null, bis: a.bis || SAMSTAG_STR, quelle: a.quelle || '', live: true}));
-    DATEN_INFO = {stand: d.stand || '', anzahl: Object.values(ECHT).reduce((s, o) => s + Object.keys(o).length, 0)};
+    DATEN_INFO = {stand: d.stand || '', bons: d.bons_stand || null, anzahl: Object.values(ECHT).reduce((s, o) => s + Object.keys(o).length, 0)};
     berechneSchaetzungen();
     aktualisiere();
   } catch (e) { /* ohne Datendatei (lokal geoeffnet) rechnet die App mit Richtpreisen */ }

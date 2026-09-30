@@ -34,8 +34,14 @@ jobs:
           pip install -r scripts/requirements.txt
           python scripts/preise_holen.py
 
+      # Bei jedem Push (z. B. neue Kassenbon-Preise): ohne Netzabruf neu mischen, damit alles sofort online ist
+      - name: Kassenbons und Recherche einmischen
+        if: github.event_name == 'push'
+        run: |
+          pip install -r scripts/requirements.txt
+          python scripts/preise_holen.py --nur-zusammenfuehren
+
       - name: Daten speichern
-        if: github.event_name != 'push'
         run: |
           git config user.name "wochenkorb-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

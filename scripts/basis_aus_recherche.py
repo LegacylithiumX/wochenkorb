@@ -32,9 +32,15 @@ def main():
         n = 0
         # Online-Shop-Preise (z. B. combi.de) weichen vom Markt ab: nur die Angebote uebernehmen
         nur_shop = 'online' in json.dumps(d.get('preisbasis', ''), ensure_ascii=False).lower()
+        eintraege = []
         for pid, e in ({} if nur_shop else d.get('preise') or {}).items():
-            if pid in PRODUKTE and uebernehmen(PRODUKTE[pid], e):
-                preise.setdefault(pid, {})[laden] = round(float(e['preis']), 2)
+            if isinstance(e, dict) and 'preis' not in e:  # Format preise-offen.json: {pid: {laden: {...}}}
+                eintraege += [(pid, l, v) for l, v in e.items() if isinstance(v, dict)]
+            else:
+                eintraege.append((pid, laden, e))
+        for pid, l, e in eintraege:
+            if pid in PRODUKTE and uebernehmen(PRODUKTE[pid], e) and l not in preise.get(pid, {}):
+                preise.setdefault(pid, {})[l] = round(float(e['preis']), 2)
                 n += 1
         m = 0
         for a in d.get('angebote') or []:
