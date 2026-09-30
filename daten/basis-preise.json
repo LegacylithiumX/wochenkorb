@@ -1,0 +1,3107 @@
+{
+ "stand": "2026-09-30",
+ "preise": {
+  "bananen-1-kg": {
+   "aldi": 1.29
+  },
+  "aepfel-1-kg": {
+   "aldi": 1.79
+  },
+  "zitronen-500-g": {
+   "aldi": 0.95
+  },
+  "weintrauben-hell-500-g": {
+   "aldi": 2.24
+  },
+  "salatgurke-stueck": {
+   "aldi": 0.79
+  },
+  "kartoffeln-festkochend-2-5-kg": {
+   "aldi": 1.5
+  },
+  "zwiebeln-1-kg": {
+   "aldi": 0.6
+  },
+  "moehren-1-kg": {
+   "aldi": 0.85
+  },
+  "champignons-400-g": {
+   "aldi": 1.79
+  },
+  "buttertoast-500-g": {
+   "aldi": 0.89,
+   "kaufland": 0.89
+  },
+  "vollkorntoast-500-g": {
+   "aldi": 0.79,
+   "edeka": 1.09
+  },
+  "mischbrot-750-g": {
+   "aldi": 1.39
+  },
+  "aufbackbroetchen-10-stueck": {
+   "aldi": 1.61
+  },
+  "weizenbroetchen-frisch-stueck": {
+   "aldi": 0.19
+  },
+  "butter-croissant-stueck": {
+   "aldi": 0.49
+  },
+  "knaeckebrot-250-g": {
+   "aldi": 1.29,
+   "lidl": 1.29,
+   "netto": 1.39,
+   "rewe": 1.29,
+   "rossmann": 1.69
+  },
+  "tortilla-wraps-6-stueck": {
+   "aldi": 1.19,
+   "lidl": 1.19,
+   "netto": 1.29
+  },
+  "vollmilch-3-5-1-l": {
+   "aldi": 0.95,
+   "lidl": 0.95,
+   "netto": 0.95,
+   "rossmann": 1.29
+  },
+  "fettarme-milch-1-5-1-l": {
+   "aldi": 0.85,
+   "lidl": 0.85,
+   "rossmann": 1.19
+  },
+  "h-milch-1-5-1-l": {
+   "aldi": 0.85,
+   "edeka": 0.85,
+   "lidl": 0.85,
+   "rossmann": 1.19
+  },
+  "haferdrink-1-l": {
+   "aldi": 0.9,
+   "lidl": 0.85,
+   "rossmann": 0.89
+  },
+  "deutsche-markenbutter-250-g": {
+   "aldi": 1.19,
+   "lidl": 1.05
+  },
+  "joghurt-natur-3-5-500-g": {
+   "aldi": 0.89,
+   "lidl": 0.89
+  },
+  "fruchtjoghurt-250-g": {
+   "aldi": 0.59
+  },
+  "speisequark-magerstufe-500-g": {
+   "aldi": 1.19
+  },
+  "skyr-natur-450-g": {
+   "aldi": 1.16
+  },
+  "schlagsahne-30-200-g": {
+   "aldi": 0.89
+  },
+  "schmand-200-g": {
+   "aldi": 0.79,
+   "rewe": 0.79
+  },
+  "gouda-jung-in-scheiben-400-g": {
+   "aldi": 2.45,
+   "kaufland": 3.81,
+   "lidl": 2.45
+  },
+  "emmentaler-gerieben-200-g": {
+   "aldi": 1.43,
+   "lidl": 1.43
+  },
+  "mozzarella-125-g": {
+   "aldi": 0.85,
+   "kaufland": 0.85
+  },
+  "feta-200-g": {
+   "aldi": 2.69,
+   "lidl": 1.43
+  },
+  "frischkaese-200-g": {
+   "aldi": 1.06,
+   "lidl": 1.49
+  },
+  "eier-freilandhaltung-10-stueck": {
+   "aldi": 2.99
+  },
+  "haehnchenbrustfilet-400-g": {
+   "aldi": 4.53
+  },
+  "hackfleisch-gemischt-500-g": {
+   "aldi": 4.49,
+   "lidl": 2.69,
+   "netto": 4.79
+  },
+  "rinderhackfleisch-400-g": {
+   "aldi": 4.63
+  },
+  "schweineschnitzel-500-g": {
+   "aldi": 4.49,
+   "lidl": 4.49
+  },
+  "grobe-bratwurst-400-g": {
+   "aldi": 2.49,
+   "lidl": 2.59,
+   "netto": 3.21
+  },
+  "wiener-wuerstchen-6-stueck": {
+   "aldi": 2.99,
+   "lidl": 2.59,
+   "netto": 2.99
+  },
+  "salami-in-scheiben-100-g": {
+   "aldi": 0.99,
+   "lidl": 0.93,
+   "netto": 1.01
+  },
+  "kochschinken-200-g": {
+   "aldi": 1.49,
+   "kaufland": 1.49,
+   "netto": 1.49
+  },
+  "lachsfilet-250-g": {
+   "aldi": 4.99,
+   "lidl": 4.99
+  },
+  "steinofenpizza-salami-350-g": {
+   "aldi": 1.33
+  },
+  "pommes-frites-1-kg": {
+   "aldi": 1.49
+  },
+  "rahmspinat-450-g": {
+   "aldi": 0.89
+  },
+  "fischstaebchen-15-stueck": {
+   "aldi": 2.99
+  },
+  "vanilleeis-1-l": {
+   "aldi": 1.89
+  },
+  "spaghetti-500-g": {
+   "aldi": 0.69,
+   "rossmann": 0.89
+  },
+  "penne-500-g": {
+   "aldi": 0.69,
+   "rossmann": 0.99
+  },
+  "langkornreis-1-kg": {
+   "aldi": 1.39,
+   "lidl": 1.39,
+   "rossmann": 2.99
+  },
+  "basmatireis-1-kg": {
+   "aldi": 2.49,
+   "lidl": 2.49,
+   "rossmann": 3.19
+  },
+  "passierte-tomaten-500-g": {
+   "aldi": 0.65,
+   "rossmann": 0.69
+  },
+  "gehackte-tomaten-400-g": {
+   "aldi": 0.65,
+   "rossmann": 0.69
+  },
+  "tomatenmark-200-g": {
+   "aldi": 0.89,
+   "rossmann": 0.99
+  },
+  "kidneybohnen-400-g": {
+   "aldi": 0.69
+  },
+  "gemuesemais-285-g": {
+   "aldi": 0.89,
+   "kaufland": 0.89,
+   "rossmann": 1.49
+  },
+  "thunfisch-in-eigenem-saft-150-g": {
+   "aldi": 1.29,
+   "rossmann": 3.45
+  },
+  "pesto-alla-genovese-190-g": {
+   "aldi": 0.99,
+   "kaufland": 0.99,
+   "rossmann": 3.15
+  },
+  "weizenmehl-type-405-1-kg": {
+   "aldi": 0.59,
+   "rossmann": 0.89
+  },
+  "speisesalz-500-g": {
+   "aldi": 0.29,
+   "rewe": 0.29
+  },
+  "sonnenblumenoel-1-l": {
+   "aldi": 1.89,
+   "kaufland": 1.89,
+   "rewe": 1.89,
+   "rossmann": 3.99
+  },
+  "olivenoel-nativ-extra-750-ml": {
+   "aldi": 5.99,
+   "rossmann": 6.95
+  },
+  "tomatenketchup-500-ml": {
+   "aldi": 1.29,
+   "kaufland": 1.29,
+   "rossmann": 2.79
+  },
+  "mayonnaise-500-ml": {
+   "aldi": 1.69,
+   "kaufland": 1.69
+  },
+  "senf-mittelscharf-200-ml": {
+   "aldi": 0.47
+  },
+  "haferflocken-500-g": {
+   "aldi": 0.69,
+   "kaufland": 0.69,
+   "rossmann": 0.85
+  },
+  "knuspermuesli-750-g": {
+   "aldi": 2.49,
+   "rossmann": 4.38
+  },
+  "cornflakes-750-g": {
+   "aldi": 2.39,
+   "rossmann": 4.46
+  },
+  "nuss-nougat-creme-400-g": {
+   "aldi": 1.99,
+   "rossmann": 3.19
+  },
+  "nutella-450-g": {
+   "aldi": 3.99
+  },
+  "erdbeerkonfituere-450-g": {
+   "aldi": 1.59,
+   "rossmann": 2.8
+  },
+  "bluetenhonig-500-g": {
+   "aldi": 2.69,
+   "rossmann": 3.79
+  },
+  "roestkaffee-gemahlen-500-g": {
+   "aldi": 4.49,
+   "rossmann": 5.49
+  },
+  "kaffeebohnen-crema-1-kg": {
+   "aldi": 8.99,
+   "lidl": 10.99,
+   "rossmann": 10.99
+  },
+  "schwarzer-tee-25-beutel": {
+   "aldi": 0.5,
+   "rossmann": 1.24
+  },
+  "kraeutertee-20-beutel": {
+   "aldi": 0.95,
+   "rossmann": 0.99
+  },
+  "vollmilchschokolade-100-g": {
+   "aldi": 0.79,
+   "lidl": 0.79,
+   "rossmann": 1.99
+  },
+  "milka-alpenmilch-100-g": {
+   "aldi": 2.29,
+   "rossmann": 2.21
+  },
+  "fruchtgummi-200-g": {
+   "aldi": 0.79,
+   "rossmann": 1.29
+  },
+  "haribo-goldbaeren-175-g": {
+   "aldi": 1.19,
+   "rossmann": 1.19
+  },
+  "butterkekse-200-g": {
+   "aldi": 0.95,
+   "lidl": 0.9,
+   "rossmann": 1.19
+  },
+  "kartoffelchips-paprika-175-g": {
+   "aldi": 0.87,
+   "lidl": 0.87,
+   "rossmann": 2.32
+  },
+  "salzstangen-250-g": {
+   "aldi": 0.69,
+   "rewe": 0.69,
+   "rossmann": 2.29
+  },
+  "erdnuesse-geroestet-200-g": {
+   "aldi": 0.99,
+   "rossmann": 2.27
+  },
+  "mineralwasser-still-1-5-l": {
+   "aldi": 0.29
+  },
+  "mineralwasser-classic-6-1-5-l": {
+   "aldi": 1.74
+  },
+  "cola-1-5-l": {
+   "aldi": 0.65
+  },
+  "coca-cola-1-25-l": {
+   "aldi": 1.59
+  },
+  "orangensaft-1-l": {
+   "aldi": 1.39,
+   "lidl": 1.39
+  },
+  "apfelsaft-klar-1-l": {
+   "aldi": 0.99,
+   "kaufland": 1.19,
+   "lidl": 0.99,
+   "rossmann": 2.29
+  },
+  "pils-0-5-l-dose": {
+   "aldi": 0.55
+  },
+  "rotwein-trocken-0-75-l": {
+   "aldi": 1.99,
+   "lidl": 2.49,
+   "rossmann": 3.59
+  },
+  "zahnpasta-75-ml": {
+   "aldi": 0.33,
+   "rossmann": 0.33
+  },
+  "zahnbuersten-2-stueck": {
+   "aldi": 1.35,
+   "rossmann": 0.45
+  },
+  "duschgel-250-ml": {
+   "aldi": 0.43,
+   "rossmann": 0.46
+  },
+  "shampoo-300-ml": {
+   "aldi": 0.57,
+   "rossmann": 0.65
+  },
+  "deospray-200-ml": {
+   "aldi": 0.75,
+   "lidl": 0.75,
+   "rossmann": 0.75
+  },
+  "fluessigseife-500-ml": {
+   "aldi": 0.65,
+   "rossmann": 0.65
+  },
+  "toilettenpapier-3-lagig-8-rollen": {
+   "aldi": 2.55,
+   "lidl": 2.55,
+   "rossmann": 2.39
+  },
+  "kuechentuecher-4-rollen": {
+   "aldi": 2.65,
+   "lidl": 2.65,
+   "rewe": 2.75,
+   "rossmann": 2.65
+  },
+  "taschentuecher-15-paeckchen": {
+   "aldi": 1.38,
+   "lidl": 1.38,
+   "rossmann": 1.39
+  },
+  "wattepads-120-stueck": {
+   "aldi": 0.82,
+   "rossmann": 0.76
+  },
+  "feuchttuecher-80-stueck": {
+   "aldi": 1.15,
+   "lidl": 1.11,
+   "rossmann": 1.89
+  },
+  "spuelmittel-500-ml": {
+   "aldi": 0.95,
+   "rossmann": 0.43
+  },
+  "colorwaschmittel-fluessig-20-wl": {
+   "aldi": 3.15,
+   "rossmann": 3.15
+  },
+  "vollwaschmittel-pulver-20-wl": {
+   "aldi": 3.17,
+   "rossmann": 3.15
+  },
+  "spuelmaschinentabs-40-stueck": {
+   "aldi": 3.75,
+   "lidl": 3.7,
+   "rossmann": 3.45
+  },
+  "allzweckreiniger-1-l": {
+   "aldi": 0.93,
+   "rossmann": 0.99
+  },
+  "muellbeutel-35-l-30-stueck": {
+   "aldi": 1.79,
+   "rossmann": 1.07
+  },
+  "alufolie-30-m": {
+   "aldi": 1.75,
+   "rossmann": 1.95
+  },
+  "spuelschwaemme-10-stueck": {
+   "aldi": 1.08,
+   "rossmann": 1.08
+  },
+  "batterien-aa-8-stueck": {
+   "aldi": 1.27,
+   "rossmann": 1.11
+  },
+  "windeln-groesse-4-42-stueck": {
+   "lidl": 5.18,
+   "rossmann": 5.55
+  },
+  "sonnenmilch-lsf-30-200-ml": {
+   "lidl": 2.2,
+   "rossmann": 2.99
+  },
+  "kaffeepads-16-stueck": {
+   "rossmann": 1.89
+  },
+  "weichspueler-1-l": {
+   "rossmann": 1.29
+  }
+ },
+ "angebote": [
+  {
+   "laden": "aldi",
+   "pid": "salatgurke-stueck",
+   "name": "Gurke",
+   "einheit": "Stück",
+   "preis": 0.49,
+   "alt": 0.79,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "kartoffeln-festkochend-2-5-kg",
+   "name": "Speisekartoffeln",
+   "einheit": "5 kg Netz",
+   "preis": 2.99,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "zwiebeln-1-kg",
+   "name": "Zwiebeln",
+   "einheit": "5 kg Sack",
+   "preis": 2.99,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "zitronen-500-g",
+   "name": "Zitronen",
+   "einheit": "1 kg Netz",
+   "preis": 1.89,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "weintrauben-hell-500-g",
+   "name": "CRUNCHY DREAM Tafeltrauben hell",
+   "einheit": "400 g Schale",
+   "preis": 1.79,
+   "alt": null,
+   "ab": "2026-10-01",
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "fruchtjoghurt-250-g",
+   "name": "LANDLIEBE Fruchtjoghurt",
+   "einheit": "500 g",
+   "preis": 0.99,
+   "alt": 2.29,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "vollmilch-3-5-1-l",
+   "name": "WEIHENSTEPHAN Haltbare Milch",
+   "einheit": "1 l",
+   "preis": 0.99,
+   "alt": 1.59,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "vollmilch-3-5-1-l",
+   "name": "BÄRENMARKE Frische Milch",
+   "einheit": "1 l",
+   "preis": 0.99,
+   "alt": 1.59,
+   "ab": "2026-10-01",
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "h-milch-1-5-1-l",
+   "name": "WEIHENSTEPHAN Haltbare Milch",
+   "einheit": "1 l",
+   "preis": 0.99,
+   "alt": 1.59,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "skyr-natur-450-g",
+   "name": "EHRMANN Skyr",
+   "einheit": "450 g",
+   "preis": 1.49,
+   "alt": 1.99,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "feta-200-g",
+   "name": "GAZI Schaf- / Ziegenkäse",
+   "einheit": "150 g",
+   "preis": 1.79,
+   "alt": 3.19,
+   "ab": "2026-10-01",
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "gouda-jung-in-scheiben-400-g",
+   "name": "MILSANI Gouda XXL",
+   "einheit": "600 g",
+   "preis": 2.99,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "schweineschnitzel-500-g",
+   "name": "Schinken-Schnitzel XXL",
+   "einheit": "800 g",
+   "preis": 4.99,
+   "alt": null,
+   "ab": "2026-10-01",
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "haehnchenbrustfilet-400-g",
+   "name": "MEINE METZGEREI Hähnchen-Innenfilets",
+   "einheit": "600 g",
+   "preis": 5.69,
+   "alt": 6.99,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "lachsfilet-250-g",
+   "name": "GOLDEN SEAFOOD Lachsfilet",
+   "einheit": "300 g",
+   "preis": 4.79,
+   "alt": 5.79,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "salami-in-scheiben-100-g",
+   "name": "GUT DREI EICHEN Salami XXL",
+   "einheit": "240 g",
+   "preis": 1.69,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "kochschinken-200-g",
+   "name": "GUT DREI EICHEN Koch-Hinterschinken XXL",
+   "einheit": "250 g",
+   "preis": 1.49,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "steinofenpizza-salami-350-g",
+   "name": "Steinofenpizza Salami XXL",
+   "einheit": "4 x 350 g",
+   "preis": 4.69,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "spaghetti-500-g",
+   "name": "CUCINA Spaghetti XXL",
+   "einheit": "1 kg",
+   "preis": 1.19,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "penne-500-g",
+   "name": "CUCINA Penne XXL",
+   "einheit": "1 kg",
+   "preis": 1.19,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "basmatireis-1-kg",
+   "name": "BON-RI Basmati-Reis XXL",
+   "einheit": "2 kg",
+   "preis": 4.49,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "zucker-1-kg",
+   "name": "DIADEM Kristallzucker XXL",
+   "einheit": "2 kg",
+   "preis": 1.69,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "kaffeebohnen-crema-1-kg",
+   "name": "BARISSIMO Crema & Aroma XXL",
+   "einheit": "1,2 kg",
+   "preis": 10.99,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "haribo-goldbaeren-175-g",
+   "name": "Haribo",
+   "einheit": "Beutel (ca. 160 g)",
+   "preis": 0.79,
+   "alt": 1.19,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "kuechentuecher-4-rollen",
+   "name": "KOKETT Küchenrollen XXL",
+   "einheit": "12 x 64 Blatt",
+   "preis": 6.99,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "toilettenpapier-3-lagig-8-rollen",
+   "name": "KOKETT Toilettenpapier XXL",
+   "einheit": "20 x 220 Blatt",
+   "preis": 6.99,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "spuelmaschinentabs-40-stueck",
+   "name": "POWER FORCE Geschirr-Reiniger-Tabs Classic XXL",
+   "einheit": "100 Stück",
+   "preis": 4.49,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "weichspueler-1-l",
+   "name": "LENOR Weichspüler",
+   "einheit": "1,491 l",
+   "preis": 3.79,
+   "alt": 4.99,
+   "ab": null,
+   "bis": "2026-10-03",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "bananen-1-kg",
+   "name": "Bananen",
+   "einheit": "1 kg",
+   "preis": 0.99,
+   "alt": 1.29,
+   "ab": "2026-10-05",
+   "bis": "2026-10-10",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "moehren-1-kg",
+   "name": "Speisemöhren",
+   "einheit": "2 kg Beutel",
+   "preis": 1.11,
+   "alt": 1.69,
+   "ab": "2026-10-05",
+   "bis": "2026-10-10",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "aepfel-1-kg",
+   "name": "Tafeläpfel",
+   "einheit": "1 kg Schale",
+   "preis": 1.79,
+   "alt": null,
+   "ab": "2026-10-05",
+   "bis": "2026-10-10",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "champignons-400-g",
+   "name": "Kulturchampignons braun",
+   "einheit": "400 g Schale",
+   "preis": 1.79,
+   "alt": null,
+   "ab": "2026-10-05",
+   "bis": "2026-10-10",
+   "quelle": "https://www.aldi-nord.de/angebote.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "aldi",
+   "pid": "butterkekse-200-g",
+   "name": "BISCOTTO Butterkeks",
+   "einheit": "400 g",
+   "preis": 1.79,
+   "alt": 1.89,
+   "ab": null,
+   "bis": "2026-10-23",
+   "quelle": "https://www.aldi-nord.de/produkt/butterkeks-3489.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "combi",
+   "pid": "coca-cola-1-25-l",
+   "name": "Coca-Cola",
+   "einheit": "1,25 l (aus Grundpreis 1 l = 0,95)",
+   "preis": 1.19,
+   "alt": null,
+   "ab": "2026-09-28",
+   "bis": "2026-10-02",
+   "quelle": "https://www.kaufda.de/Bunde/combi/p-r173",
+   "q": "recherche"
+  },
+  {
+   "laden": "combi",
+   "pid": "orangen-1-5-kg",
+   "name": "Orangen",
+   "einheit": "1,5 kg (aus Grundpreis 1 kg = 1,48)",
+   "preis": 2.22,
+   "alt": null,
+   "ab": "2026-09-28",
+   "bis": "2026-10-02",
+   "quelle": "https://www.kaufda.de/Bunde/combi/p-r173",
+   "q": "recherche"
+  },
+  {
+   "laden": "combi",
+   "pid": "kartoffeln-festkochend-2-5-kg",
+   "name": "Speisekartoffeln",
+   "einheit": "2,5 kg (aus Grundpreis 1 kg = 0,80)",
+   "preis": 1.99,
+   "alt": null,
+   "ab": "2026-09-28",
+   "bis": "2026-10-02",
+   "quelle": "https://www.kaufda.de/Bunde/combi/p-r173",
+   "q": "recherche"
+  },
+  {
+   "laden": "combi",
+   "pid": "fruchtgummi-200-g",
+   "name": "Katjes Fruchtgummi",
+   "einheit": "210 g (aus Grundpreis 1 kg = 3,76)",
+   "preis": 0.79,
+   "alt": 1.39,
+   "ab": "2026-09-28",
+   "bis": "2026-10-02",
+   "quelle": "https://www.kaufda.de/Bunde/combi/p-r173",
+   "q": "recherche"
+  },
+  {
+   "laden": "combi",
+   "pid": "gouda-jung-in-scheiben-400-g",
+   "name": "Gouda Jung",
+   "einheit": "100 g (aus Grundpreis 1 kg = 6,90)",
+   "preis": 0.69,
+   "alt": 1.19,
+   "ab": "2026-09-28",
+   "bis": "2026-10-02",
+   "quelle": "https://www.kaufda.de/Bunde/combi/p-r173",
+   "q": "recherche"
+  },
+  {
+   "laden": "combi",
+   "pid": null,
+   "name": "Jeden Tag Weizenbroetchen",
+   "einheit": "k. A.",
+   "preis": 0.75,
+   "alt": 0.95,
+   "ab": "2026-09-28",
+   "bis": "2026-10-02",
+   "quelle": "https://www.kaufda.de/Bunde/combi/p-r173",
+   "q": "recherche"
+  },
+  {
+   "laden": "combi",
+   "pid": null,
+   "name": "Hackfleisch gemischt",
+   "einheit": "k. A.",
+   "preis": 6.99,
+   "alt": null,
+   "ab": "2026-09-28",
+   "bis": "2026-10-02",
+   "quelle": "https://www.kaufda.de/Bunde/combi/p-r173",
+   "q": "recherche"
+  },
+  {
+   "laden": "combi",
+   "pid": null,
+   "name": "Tafelaepfel Elstar",
+   "einheit": "k. A.",
+   "preis": 1.66,
+   "alt": 1.77,
+   "ab": "2026-09-28",
+   "bis": "2026-10-02",
+   "quelle": "https://www.kaufda.de/Bunde/combi/p-r173",
+   "q": "recherche"
+  },
+  {
+   "laden": "combi",
+   "pid": null,
+   "name": "Goldmarie Tafeltrauben hell oder rot",
+   "einheit": "k. A.",
+   "preis": 3.99,
+   "alt": null,
+   "ab": "2026-09-28",
+   "bis": "2026-10-02",
+   "quelle": "https://www.kaufda.de/Bunde/combi/p-r173",
+   "q": "recherche"
+  },
+  {
+   "laden": "combi",
+   "pid": null,
+   "name": "Ritter Sport Bunte Vielfalt",
+   "einheit": "k. A.",
+   "preis": 0.99,
+   "alt": 1.99,
+   "ab": "2026-09-28",
+   "bis": "2026-10-02",
+   "quelle": "https://www.prospektangebote.de/geschaefte/combi/angebote",
+   "q": "recherche"
+  },
+  {
+   "laden": "combi",
+   "pid": null,
+   "name": "Gurken",
+   "einheit": "k. A.",
+   "preis": 0.77,
+   "alt": null,
+   "ab": "2026-09-28",
+   "bis": "2026-10-02",
+   "quelle": "https://www.prospektangebote.de/geschaefte/combi/angebote",
+   "q": "recherche"
+  },
+  {
+   "laden": "combi",
+   "pid": null,
+   "name": "Nutella Nuss-Nougat-Creme",
+   "einheit": "k. A.",
+   "preis": 2.99,
+   "alt": 3.99,
+   "ab": "2026-09-28",
+   "bis": "2026-10-02",
+   "quelle": "https://www.prospektangebote.de/geschaefte/combi/angebote",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "avocado-stueck",
+   "name": "Peruan./südafrik. Avocado, lose",
+   "einheit": "Stück",
+   "preis": 0.49,
+   "alt": 1.49,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "bananen-1-kg",
+   "name": "CHIQUITA Costa-rican. Bananen",
+   "einheit": "kg",
+   "preis": 1.99,
+   "alt": 2.49,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "heidelbeeren-250-g",
+   "name": "Peruan. Kulturheidelbeeren",
+   "einheit": "300 g Schale",
+   "preis": 3.99,
+   "alt": 4.99,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "erdbeeren-500-g",
+   "name": "Dtsch. Erdbeeren",
+   "einheit": "400 g Pack.",
+   "preis": 2.49,
+   "alt": 2.99,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "zitronen-500-g",
+   "name": "Peruan./span. Bio-Zitronen",
+   "einheit": "500 g Netz",
+   "preis": 1.79,
+   "alt": 2.29,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "brokkoli-500-g",
+   "name": "Dtsch. Broccoli",
+   "einheit": "500 g Packg.",
+   "preis": 1.29,
+   "alt": 1.79,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "kartoffeln-festkochend-2-5-kg",
+   "name": "Dtsch. Speisekartoffeln XXL",
+   "einheit": "5 kg Sack",
+   "preis": 2.99,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "zwiebeln-1-kg",
+   "name": "Dtsch. Zwiebeln XXL",
+   "einheit": "5 kg Sack",
+   "preis": 2.99,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "moehren-1-kg",
+   "name": "Dtsch. Möhren XXL",
+   "einheit": "3 kg Beutel",
+   "preis": 1.99,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "rispentomaten-1-kg",
+   "name": "Niederl./belg. Rispentomaten, lose",
+   "einheit": "kg",
+   "preis": 1.99,
+   "alt": 2.49,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "aepfel-1-kg",
+   "name": "Bioland dtsch. Tafeläpfel",
+   "einheit": "1 kg Packg.",
+   "preis": 2.49,
+   "alt": 3.79,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "aepfel-1-kg",
+   "name": "Dtsch./ital. Tafeläpfel XXL",
+   "einheit": "5 kg Karton",
+   "preis": 4.99,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "weintrauben-hell-500-g",
+   "name": "SANLUCAR Ital./span. Tafeltrauben, hell oder rot",
+   "einheit": "600 g Packg.",
+   "preis": 2.49,
+   "alt": 3.49,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "schweineschnitzel-500-g",
+   "name": "K-WERTSCHÄTZE Schweineschnitzel",
+   "einheit": "100 g",
+   "preis": 0.99,
+   "alt": 1.29,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "hackfleisch-gemischt-500-g",
+   "name": "K-WERTSCHÄTZE Hackfleisch gemischt von Schwein und Rind",
+   "einheit": "100 g",
+   "preis": 0.99,
+   "alt": 1.29,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "rinderhackfleisch-400-g",
+   "name": "K-PURLAND WERTSCHÄTZE Rinderhackfleisch",
+   "einheit": "500 g Packg.",
+   "preis": 4.99,
+   "alt": 5.79,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "haehnchenbrustfilet-400-g",
+   "name": "K-WERTSCHÄTZE Hähnchenbrustfilet Teilstücke",
+   "einheit": "100 g",
+   "preis": 1.39,
+   "alt": 1.59,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "wiener-wuerstchen-6-stueck",
+   "name": "K-WERTSCHÄTZE Wiener",
+   "einheit": "100 g",
+   "preis": 0.89,
+   "alt": 1.59,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "wiener-wuerstchen-6-stueck",
+   "name": "K-CLASSIC Mini-Wiener oder -Puten-Wiener",
+   "einheit": "12 St. = 320 g Packg.",
+   "preis": 1.99,
+   "alt": 2.49,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "salami-in-scheiben-100-g",
+   "name": "MONTORSI Ital. Salami",
+   "einheit": "100 g Packg.",
+   "preis": 2.0,
+   "alt": 3.49,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "salami-in-scheiben-100-g",
+   "name": "GUTSMEISTER Salami",
+   "einheit": "100 g",
+   "preis": 1.49,
+   "alt": 2.19,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "fischstaebchen-15-stueck",
+   "name": "IGLO Fischstäbchen",
+   "einheit": "360 - 450 g Packg.",
+   "preis": 2.99,
+   "alt": 4.89,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "joghurt-natur-3-5-500-g",
+   "name": "WEIHENSTEPHAN Joghurt mild",
+   "einheit": "500 g Becher",
+   "preis": 1.0,
+   "alt": 1.49,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "joghurt-natur-3-5-500-g",
+   "name": "K-FREE LAKTOSEFREI Joghurt mild",
+   "einheit": "500 g Becher",
+   "preis": 0.89,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "vollmilch-3-5-1-l",
+   "name": "ARLA Bio-Weidemilch 3,8 % Fett",
+   "einheit": "1 l Packg.",
+   "preis": 1.29,
+   "alt": 1.99,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "fettarme-milch-1-5-1-l",
+   "name": "ARLA Bio-Weidemilch 1,5 % Fett",
+   "einheit": "1 l Packg.",
+   "preis": 1.29,
+   "alt": 1.89,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "mozzarella-125-g",
+   "name": "ZOTT Zottarella Mini",
+   "einheit": "250 g Packg.",
+   "preis": 1.69,
+   "alt": 2.29,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "frischkaese-200-g",
+   "name": "PHILADELPHIA Frischkäsezubereitung",
+   "einheit": "100 - 195 g Packg.",
+   "preis": 1.0,
+   "alt": 2.29,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "feta-200-g",
+   "name": "K-BIO Bioland Hirtenkäse",
+   "einheit": "200 g Packg.",
+   "preis": 4.0,
+   "alt": 5.67,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "fruchtjoghurt-250-g",
+   "name": "EHRMANN Almighurt",
+   "einheit": "150 g Becher",
+   "preis": 0.25,
+   "alt": 0.89,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "erbsen-1-kg",
+   "name": "K-BIO Bioland Erbsen oder Karottenmix",
+   "einheit": "750 g Beutel",
+   "preis": 1.99,
+   "alt": 2.69,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "steinofenpizza-salami-350-g",
+   "name": "DR. OETKER Die Ofenfrische oder Pizza Tradizionale",
+   "einheit": "385 - 415 g Packg.",
+   "preis": 2.0,
+   "alt": 3.69,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "tomatenmark-200-g",
+   "name": "K-BIO Bio-Tomatenmark",
+   "einheit": "200 g Tube",
+   "preis": 0.79,
+   "alt": 0.95,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "mayonnaise-500-ml",
+   "name": "K-CLASSIC Vegane Mayonnaise",
+   "einheit": "500 ml Fl.",
+   "preis": 1.29,
+   "alt": 1.69,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "sonnenblumenoel-1-l",
+   "name": "K-CLASSIC Sonnenblumenöl",
+   "einheit": "1 l Fl.",
+   "preis": 1.49,
+   "alt": 1.89,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "haferflocken-500-g",
+   "name": "K-CLASSIC Haferflocken",
+   "einheit": "500 g Packg.",
+   "preis": 0.49,
+   "alt": 0.69,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "weizenmehl-type-405-1-kg",
+   "name": "FRIESSINGER MÜHLE Haushaltsmehl",
+   "einheit": "1 kg Packg.",
+   "preis": 0.79,
+   "alt": 0.99,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "spaghetti-500-g",
+   "name": "BARILLA Classic Pasta",
+   "einheit": "500 g Packg.",
+   "preis": 1.59,
+   "alt": 1.99,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "mischbrot-750-g",
+   "name": "Weltmeisterbrot",
+   "einheit": "750 g Stück",
+   "preis": 1.49,
+   "alt": 1.99,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "roestkaffee-gemahlen-500-g",
+   "name": "MÖVENPICK Kaffee",
+   "einheit": "500 g Packg.",
+   "preis": 5.99,
+   "alt": 9.99,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "kaffeebohnen-crema-1-kg",
+   "name": "EDUSCHO Kaffee",
+   "einheit": "1 kg Beutel",
+   "preis": 12.99,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "kaffeebohnen-crema-1-kg",
+   "name": "KÄFER Caffè Crema Lungo oder Espresso Forte",
+   "einheit": "1 kg Packg.",
+   "preis": 9.99,
+   "alt": 14.99,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "kraeutertee-20-beutel",
+   "name": "TEEKANNE Kräuter- oder Früchtetee- Klassiker",
+   "einheit": "18 - 20 Btl. = 30 - 60 g Packg.",
+   "preis": 1.0,
+   "alt": 2.19,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "milka-alpenmilch-100-g",
+   "name": "MILKA Schokolade",
+   "einheit": "85 - 100 g Tafel",
+   "preis": 0.88,
+   "alt": 1.99,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "salzstangen-250-g",
+   "name": "LORENZ Saltletts",
+   "einheit": "175 - 250 g Packg.",
+   "preis": 1.11,
+   "alt": 2.29,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "cola-1-5-l",
+   "name": "PEPSI oder SCHWIP SCHWAP Erfrischungsgetränk",
+   "einheit": "1,25 l PET-Fl.",
+   "preis": 0.69,
+   "alt": 1.49,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "pils-kasten-20-0-5-l",
+   "name": "HASSERÖDER Premium Pils",
+   "einheit": "Ka. 20 x 0,5 l Fl.",
+   "preis": 7.99,
+   "alt": 17.89,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "duschgel-250-ml",
+   "name": "FA Duschgel",
+   "einheit": "250 ml Fl.",
+   "preis": 0.88,
+   "alt": 1.35,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "shampoo-300-ml",
+   "name": "L'ORÉAL PARIS Elvital Shampoo oder Spülung",
+   "einheit": "250 - 300 ml Fl.",
+   "preis": 2.99,
+   "alt": 3.99,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "toilettenpapier-3-lagig-8-rollen",
+   "name": "HAKLE Toilettenpapier Traumweich",
+   "einheit": "Packg. 8 x 130 Blatt",
+   "preis": 2.99,
+   "alt": 3.95,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "kuechentuecher-4-rollen",
+   "name": "DICK & DURSTIG Küchentücher",
+   "einheit": "4 x 43 Blatt",
+   "preis": 2.22,
+   "alt": 2.69,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "weichspueler-1-l",
+   "name": "KUSCHELWEICH Weichspüler Luxury Moments oder Oriental",
+   "einheit": "1 l Fl.",
+   "preis": 2.22,
+   "alt": 2.99,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "spuelmaschinentabs-40-stueck",
+   "name": "FROSCH All-in-1-Spültabs",
+   "einheit": "30 St. = 540 g Packg.",
+   "preis": 4.99,
+   "alt": 5.95,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "zahnbuersten-2-stueck",
+   "name": "DR. BEST Zahnbürste Hoch-Tief",
+   "einheit": "3 St. Packg.",
+   "preis": 2.99,
+   "alt": 3.85,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "fluessigseife-500-ml",
+   "name": "PALMOLIVE Flüssigseife",
+   "einheit": "300 ml Fl.",
+   "preis": 1.0,
+   "alt": 1.45,
+   "ab": null,
+   "bis": "2026-09-30",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "zitronen-500-g",
+   "name": "Südafrik. Zitronen",
+   "einheit": "500 g Netz",
+   "preis": 0.99,
+   "alt": 1.69,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "orangen-1-5-kg",
+   "name": "Südafrik. Orangen",
+   "einheit": "2 kg Netz",
+   "preis": 2.99,
+   "alt": 3.99,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "kartoffeln-festkochend-2-5-kg",
+   "name": "Dtsch. Speisekartoffeln",
+   "einheit": "2,5 kg Sack",
+   "preis": 2.49,
+   "alt": 3.99,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "aepfel-1-kg",
+   "name": "Dtsch.ital. Tafeläpfel",
+   "einheit": "2 kg Beutel",
+   "preis": 2.49,
+   "alt": 3.59,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "eisbergsalat-stueck",
+   "name": "Dtsch./span. Eisbergsalat",
+   "einheit": "Stück",
+   "preis": 0.69,
+   "alt": 1.29,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "weintrauben-hell-500-g",
+   "name": "Ital. Tafeltrauben, hell oder rot",
+   "einheit": "1 kg Packg",
+   "preis": 1.79,
+   "alt": 3.49,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "tomaten-500-g",
+   "name": "Span. Romatomaten",
+   "einheit": "500 g Schale",
+   "preis": 1.49,
+   "alt": 2.49,
+   "ab": "2026-10-01",
+   "bis": "2026-10-02",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "champignons-400-g",
+   "name": "Poln./kroat. Kulturchampignons, weiß XXL",
+   "einheit": "750 g Packg.",
+   "preis": 2.29,
+   "alt": null,
+   "ab": "2026-10-01",
+   "bis": "2026-10-02",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "heidelbeeren-250-g",
+   "name": "Peruan Kulturheidelbeeren",
+   "einheit": "300 g Schale",
+   "preis": 3.99,
+   "alt": null,
+   "ab": "2026-10-01",
+   "bis": "2026-10-02",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "rinderhackfleisch-400-g",
+   "name": "K-WERTSCHÄTZE Rinderhackfleisch vom Jungbullen",
+   "einheit": "100 g",
+   "preis": 1.19,
+   "alt": 1.49,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "haehnchenbrustfilet-400-g",
+   "name": "K-PURLAND Hähnchenbrustfilet- Teilstücke XXL",
+   "einheit": "1 kg Großpackg.",
+   "preis": 8.29,
+   "alt": 9.99,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "kochschinken-200-g",
+   "name": "K-CLASSIC Kochhinterschinken",
+   "einheit": "200 g Packg.",
+   "preis": 1.29,
+   "alt": 1.49,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "kochschinken-200-g",
+   "name": "K-WERTSCHÄTZE Kochhinterschinken",
+   "einheit": "100 g",
+   "preis": 1.29,
+   "alt": 1.99,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "salami-in-scheiben-100-g",
+   "name": "K-CLASSIC Salami XXL",
+   "einheit": "240 g Großpackg.",
+   "preis": 1.69,
+   "alt": null,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "wiener-wuerstchen-6-stueck",
+   "name": "MEICA Saft-Bockwurst oder Geflügel-Würstchen",
+   "einheit": "6 St. = 380 g Glas",
+   "preis": 1.79,
+   "alt": 2.79,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "deutsche-markenbutter-250-g",
+   "name": "K-CLASSIC Deutsche Markenbutter XXL",
+   "einheit": "500 g Stück",
+   "preis": 1.99,
+   "alt": null,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "mozzarella-125-g",
+   "name": "K-CLASSIC Mozzarella",
+   "einheit": "200 g Packg.",
+   "preis": 0.69,
+   "alt": 0.85,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "gouda-jung-in-scheiben-400-g",
+   "name": "K-CLASSIC Gouda mittelalt",
+   "einheit": "450 g Packg.",
+   "preis": 3.39,
+   "alt": 4.29,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "schlagsahne-30-200-g",
+   "name": "K-CLASSIC Haltbare Schlagsahne",
+   "einheit": "3 x 200 g Großpackg.",
+   "preis": 1.99,
+   "alt": null,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "schlagsahne-30-200-g",
+   "name": "WEIHENSTEPHAN Schlagsahne",
+   "einheit": "500 g Packg.",
+   "preis": 2.22,
+   "alt": 2.99,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "joghurt-natur-3-5-500-g",
+   "name": "LANDLIEBE Joghurt",
+   "einheit": "500 g Glas",
+   "preis": 0.99,
+   "alt": 2.39,
+   "ab": "2026-10-01",
+   "bis": "2026-10-02",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "frischkaese-200-g",
+   "name": "ALMETTE Alpenfrischkäse",
+   "einheit": "150 g Becher",
+   "preis": 0.99,
+   "alt": 1.99,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "rahmspinat-450-g",
+   "name": "IGLO Rahm-Spinat",
+   "einheit": "500 g Packg.",
+   "preis": 1.79,
+   "alt": 2.39,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "fischstaebchen-15-stueck",
+   "name": "K-CLASSIC Fischstäbchen XXL",
+   "einheit": "30 St. = 900 g Großpackg.",
+   "preis": 4.99,
+   "alt": null,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "pommes-frites-1-kg",
+   "name": "K-BIO Bioland Pommes Frites",
+   "einheit": "750 g Beutel",
+   "preis": 1.99,
+   "alt": 2.69,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "steinofenpizza-salami-350-g",
+   "name": "K-CLASSIC Steinofen-Pizza XXL",
+   "einheit": "4 St. = 1400 g Packg.",
+   "preis": 4.69,
+   "alt": null,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "steinofenpizza-salami-350-g",
+   "name": "ORIGINAL WAGNER Die Backfrische oder Big City Pizza",
+   "einheit": "310 - 445 g Packg.",
+   "preis": 1.99,
+   "alt": 3.69,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "gemuesemais-285-g",
+   "name": "K-CLASSIC Gemüsemais",
+   "einheit": "340 g Dose",
+   "preis": 0.69,
+   "alt": 0.89,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "tomatenketchup-500-ml",
+   "name": "K-CLASSIC Tomatenketchup",
+   "einheit": "500 ml Fl.",
+   "preis": 1.11,
+   "alt": 1.29,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "mayonnaise-500-ml",
+   "name": "K-CLASSIC Mayonnaise",
+   "einheit": "500 ml Fl.",
+   "preis": 1.39,
+   "alt": 1.69,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "senf-mittelscharf-200-ml",
+   "name": "THOMY Delikatess-Senf",
+   "einheit": "200 ml Tube",
+   "preis": 0.99,
+   "alt": 1.19,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "pesto-alla-genovese-190-g",
+   "name": "K-CLASSIC Pesto",
+   "einheit": "190 g Glas",
+   "preis": 0.79,
+   "alt": 0.99,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "butter-croissant-stueck",
+   "name": "Buttercroissant",
+   "einheit": "Stück",
+   "preis": 0.39,
+   "alt": 0.49,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "weizenbroetchen-frisch-stueck",
+   "name": "Rosenbrötchen",
+   "einheit": "Stück",
+   "preis": 0.25,
+   "alt": 0.39,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "buttertoast-500-g",
+   "name": "K-CLASSIC Toastbrot",
+   "einheit": "500 g Packg.",
+   "preis": 0.69,
+   "alt": 0.89,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "spaghetti-500-g",
+   "name": "BARILLA Classic Pasta",
+   "einheit": "500 g Packg.",
+   "preis": 0.75,
+   "alt": 1.59,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "langkornreis-1-kg",
+   "name": "REIS-FIT Spitzen-Langkorn-Reis",
+   "einheit": "500 g Packg.",
+   "preis": 1.39,
+   "alt": 1.99,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "bluetenhonig-500-g",
+   "name": "LANGNESE Bienenhonig",
+   "einheit": "500 g Glas",
+   "preis": 3.49,
+   "alt": 4.49,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "nutella-450-g",
+   "name": "NUTELLA Nuss-Nugat-Creme",
+   "einheit": "1 kg Glas",
+   "preis": 4.99,
+   "alt": 7.55,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "weizenmehl-type-405-1-kg",
+   "name": "AURORA Weizenmehl Klassik Type 405",
+   "einheit": "1 kg Packg.",
+   "preis": 0.99,
+   "alt": 1.49,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "speisesalz-500-g",
+   "name": "BAD REICHENHALLER Alpen-Jodsalz",
+   "einheit": "2 x 500 g Packg.",
+   "preis": 2.22,
+   "alt": null,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "knuspermuesli-750-g",
+   "name": "DR. OETKER Vitalis-Müsli",
+   "einheit": "1,05 - 1,125 kg Packg.",
+   "preis": 5.99,
+   "alt": 8.79,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "olivenoel-nativ-extra-750-ml",
+   "name": "SAF DOGA Türk. Olivenöl",
+   "einheit": "500 ml Fl.",
+   "preis": 5.99,
+   "alt": 7.99,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "kaffeepads-16-stueck",
+   "name": "MELITTA Kaffee-Pads",
+   "einheit": "16 St. = 107 - 112 g Packg.",
+   "preis": 1.99,
+   "alt": 2.99,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "kaffeebohnen-crema-1-kg",
+   "name": "JACOBS Kaffee Crema",
+   "einheit": "1 kg Packg.",
+   "preis": 11.99,
+   "alt": 17.99,
+   "ab": "2026-10-01",
+   "bis": "2026-10-02",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "salzstangen-250-g",
+   "name": "K-CLASSIC Käse- oder Salz-Stängli",
+   "einheit": "150 g Packg.",
+   "preis": 1.29,
+   "alt": 1.49,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "vollmilchschokolade-100-g",
+   "name": "RITTER SPORT Schokolade Bunte Vielfalt",
+   "einheit": "100 g Tafel",
+   "preis": 0.99,
+   "alt": 1.99,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "milka-alpenmilch-100-g",
+   "name": "MILKA Tafelschokolade",
+   "einheit": "5 x 90 g Tafel",
+   "preis": 4.44,
+   "alt": null,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "fruchtgummi-200-g",
+   "name": "KATJES Fruchtgummis oder Lakritze",
+   "einheit": "210 g Beutel",
+   "preis": 0.88,
+   "alt": 1.39,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "haribo-goldbaeren-175-g",
+   "name": "HARIBO Fruchtgummis oder Lakritze",
+   "einheit": "340 g Packg.",
+   "preis": 0.99,
+   "alt": 1.49,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "butterkekse-200-g",
+   "name": "LEIBNIZ Kekse",
+   "einheit": "150 - 200 g Packg.",
+   "preis": 1.19,
+   "alt": 1.99,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "apfelsaft-klar-1-l",
+   "name": "K-CLASSIC Apfelsaft",
+   "einheit": "1 l Packg.",
+   "preis": 0.88,
+   "alt": 1.19,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "apfelsaft-klar-1-l",
+   "name": "NEUHÖFER Apfelsaft",
+   "einheit": "1 l Fl.",
+   "preis": 1.19,
+   "alt": 1.55,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "pils-kasten-20-0-5-l",
+   "name": "BECK'S Pils oder Gold",
+   "einheit": "Ka. 20 x 0,5 l Fl.",
+   "preis": 9.66,
+   "alt": 19.89,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "pils-kasten-20-0-5-l",
+   "name": "RADEBERGER Pilsner oder Alkoholfrei",
+   "einheit": "Ka. 20 x 0,5 l Fl.",
+   "preis": 10.99,
+   "alt": 17.49,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "rotwein-trocken-0-75-l",
+   "name": "GOURMET PÈRE & FILS Entrecôte Merlot Cabernet Syrah",
+   "einheit": "0,75 l Fl.",
+   "preis": 3.99,
+   "alt": 5.99,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "duschgel-250-ml",
+   "name": "DUSCHDAS Duschgel",
+   "einheit": "225 ml Fl.",
+   "preis": 0.99,
+   "alt": 1.79,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "shampoo-300-ml",
+   "name": "PANTENE PRO-V Shampoo oder Spülung",
+   "einheit": "200 - 300 ml Fl.",
+   "preis": 2.99,
+   "alt": 3.95,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "zahnpasta-75-ml",
+   "name": "ODOL-MED3 Zahncreme",
+   "einheit": "75 ml Tube",
+   "preis": 1.88,
+   "alt": 2.45,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "deospray-200-ml",
+   "name": "NIVEA Deo-Spray",
+   "einheit": "150 ml Dose",
+   "preis": 2.22,
+   "alt": 2.55,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "feuchttuecher-80-stueck",
+   "name": "PAMPERS Feuchttücher",
+   "einheit": "3 x 80 St. Packg.",
+   "preis": 3.99,
+   "alt": 5.25,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "weichspueler-1-l",
+   "name": "SOFIN Weichspüler",
+   "einheit": "1,8 l Fl.",
+   "preis": 1.69,
+   "alt": null,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "weichspueler-1-l",
+   "name": "LENOR Weichspüler",
+   "einheit": "1,491 l Fl.",
+   "preis": 3.69,
+   "alt": 4.79,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "allzweckreiniger-1-l",
+   "name": "DER GENERAL Allzweckreiniger",
+   "einheit": "750 ml Fl.",
+   "preis": 1.59,
+   "alt": 1.95,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "kaufland",
+   "pid": "kartoffelchips-paprika-175-g",
+   "name": "K-CLASSIC Riffelchips Light",
+   "einheit": "150 g Packg.",
+   "preis": 1.11,
+   "alt": 1.39,
+   "ab": "2026-10-01",
+   "bis": "2026-10-07",
+   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "eisbergsalat-stueck",
+   "name": "Eisbergsalat Kl. I (Aktion)",
+   "einheit": "Stück",
+   "preis": 0.77,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "kartoffeln-festkochend-2-5-kg",
+   "name": "Deutsche Speisekartoffeln, vorwiegend festkochend (5-kg-Netz, 0.60/kg)",
+   "einheit": "5 kg",
+   "preis": 2.99,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "zitronen-500-g",
+   "name": "Zitronen im 500-g-Netz",
+   "einheit": "500 g",
+   "preis": 0.99,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "vollmilchschokolade-100-g",
+   "name": "Fin Carré Tafelschokolade Alpenmilch",
+   "einheit": "100 g",
+   "preis": 0.39,
+   "alt": 0.79,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "roestkaffee-gemahlen-500-g",
+   "name": "Melitta Kaffee Auslese klassisch",
+   "einheit": "500 g",
+   "preis": 4.99,
+   "alt": 8.49,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "toilettenpapier-3-lagig-8-rollen",
+   "name": "Floralys Toilettenpapier XXXL 3-lagig 32 x 200 Blatt",
+   "einheit": "32 Rollen",
+   "preis": 9.69,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "tortilla-wraps-6-stueck",
+   "name": "Grafschafter Weizen Tortilla Wraps XXL",
+   "einheit": "740 g",
+   "preis": 1.79,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "coca-cola-1-25-l",
+   "name": "Coca-Cola / Fanta / Mezzo Mix / Sprite (zzgl. 0.25 Pfand)",
+   "einheit": "1,25 l",
+   "preis": 1.19,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "pils-0-5-l-dose",
+   "name": "Beck's Pils Dosen 5+1 gratis (zzgl. 1.50 Pfand)",
+   "einheit": "6 x 0,5 l",
+   "preis": 3.99,
+   "alt": 5.4,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "weichspueler-1-l",
+   "name": "Softlan Weichspüler XXL",
+   "einheit": "2,25 l",
+   "preis": 2.59,
+   "alt": 3.99,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "bluetenhonig-500-g",
+   "name": "Maribel Blütenhonig XXL",
+   "einheit": "750 g",
+   "preis": 3.49,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "erdnuesse-geroestet-200-g",
+   "name": "Alesto Erdnüsse XXL geröstet & gesalzen",
+   "einheit": "1 kg",
+   "preis": 3.49,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "frischkaese-200-g",
+   "name": "Milbona Frischkäsebecher versch. Sorten (nur mit Lidl Plus App)",
+   "einheit": "200 g",
+   "preis": 1.19,
+   "alt": 1.49,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "gouda-jung-in-scheiben-400-g",
+   "name": "Milbona Gouda jung in Scheiben Maxi Pack",
+   "einheit": "600 g",
+   "preis": 2.79,
+   "alt": 3.49,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "frischkaese-200-g",
+   "name": "Philadelphia Frischkäse versch. Sorten",
+   "einheit": "150-195 g",
+   "preis": 0.99,
+   "alt": null,
+   "ab": "2026-10-01",
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "schweineschnitzel-500-g",
+   "name": "Metzgerfrisch Frische Schweineschnitzel XXL",
+   "einheit": "800 g",
+   "preis": 4.99,
+   "alt": null,
+   "ab": "2026-10-01",
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "thunfisch-in-eigenem-saft-150-g",
+   "name": "Nixe Thunfisch Filets im eigenen Saft (nur mit Lidl Plus App)",
+   "einheit": "185/195 g (Abtropfgewicht 150 g)",
+   "preis": 0.99,
+   "alt": 1.29,
+   "ab": "2026-10-01",
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "colorwaschmittel-fluessig-20-wl",
+   "name": "Coral Flüssigwaschmittel XXL",
+   "einheit": "60 WL",
+   "preis": 9.99,
+   "alt": null,
+   "ab": "2026-10-01",
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "kaffeebohnen-crema-1-kg",
+   "name": "Melitta BellaCrema La Crema ganze Bohnen (nur mit Lidl Plus App)",
+   "einheit": "1 kg",
+   "preis": 12.99,
+   "alt": 17.99,
+   "ab": "2026-10-01",
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": "vollmilch-3-5-1-l",
+   "name": "Bärenmarke Frische Milch 3,8 % Fett (Aktion)",
+   "einheit": "1 l",
+   "preis": 0.95,
+   "alt": null,
+   "ab": "2026-10-02",
+   "bis": "2026-10-03",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": null,
+   "name": "Bad Reichenhaller Alpen JodSalz",
+   "einheit": "500 g",
+   "preis": 0.69,
+   "alt": 0.89,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": null,
+   "name": "Barilla Pasta versch. Sorten",
+   "einheit": "500 g",
+   "preis": 0.99,
+   "alt": 1.99,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "lidl",
+   "pid": null,
+   "name": "Barilla Pesto versch. Sorten (Genovese/Rosso/Calabrese)",
+   "einheit": "190-200 g",
+   "preis": 1.99,
+   "alt": 3.49,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.lidl.de/l/prospekte/aktionsprospekt-28-09-2026-03-10-2026-918b16/ar/0",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "salatgurke-stueck",
+   "name": "Gurke Spanien Kl. I (Spar Star)",
+   "einheit": "Stück (350 g +)",
+   "preis": 0.55,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/spar-stars/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "hackfleisch-gemischt-500-g",
+   "name": "Meine Fleischerei Frisches Hackfleisch gemischt XXL (Spar Star)",
+   "einheit": "800 g",
+   "preis": 4.99,
+   "alt": 6.49,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/spar-stars/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "vollmilch-3-5-1-l",
+   "name": "frija H-Milch 3,5 % Fett, 12er-Karton (Spar Star)",
+   "einheit": "12 x 1 l",
+   "preis": 9.0,
+   "alt": 11.4,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/spar-stars/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "vollmilch-3-5-1-l",
+   "name": "GO BIO Frische Vollmilch 3,8 % (Hammer Mittwoch)",
+   "einheit": "1 l",
+   "preis": 0.99,
+   "alt": 1.39,
+   "ab": "2026-09-30",
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/hammer-mittwoch/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "avocado-stueck",
+   "name": "Avocado Hass Peru/Kolumbien Kl. I (Spar Star)",
+   "einheit": "Stück",
+   "preis": 0.99,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/spar-stars/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "aepfel-1-kg",
+   "name": "Deutsche Äpfel Golden Delicious, neue Ernte (Spar Star)",
+   "einheit": "1 kg",
+   "preis": 1.69,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/spar-stars/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "weintrauben-hell-500-g",
+   "name": "Trauben-Mix Italien Kl. I (Spar Star)",
+   "einheit": "500 g",
+   "preis": 1.39,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/spar-stars/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "kartoffeln-festkochend-2-5-kg",
+   "name": "GO Regio Deutsche Speisekartoffeln mehlig",
+   "einheit": "2,5 kg",
+   "preis": 1.99,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/regionale-produkte/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "erdbeeren-500-g",
+   "name": "GO Regio Erdbeeren Deutschland Kl. I",
+   "einheit": "500 g",
+   "preis": 2.99,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/regionale-produkte/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "roestkaffee-gemahlen-500-g",
+   "name": "Jacobs Krönung gemahlen oder ganze Bohne (Netto+ App-Preis)",
+   "einheit": "500 g",
+   "preis": 5.99,
+   "alt": 6.49,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/nettoplus/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "kaffeebohnen-crema-1-kg",
+   "name": "Dallmayr Crema d'Oro ganze Bohne (Hammer Mittwoch)",
+   "einheit": "1 kg",
+   "preis": 12.99,
+   "alt": 19.99,
+   "ab": "2026-09-30",
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/hammer-mittwoch/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "pils-kasten-20-0-5-l",
+   "name": "Wernesgrüner Pils Legende, zzgl. 3.10 Pfand (Hammer Mittwoch)",
+   "einheit": "20 x 0,5 l",
+   "preis": 9.99,
+   "alt": 16.8,
+   "ab": "2026-09-30",
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/hammer-mittwoch/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "pils-kasten-20-0-5-l",
+   "name": "Radeberger Pilsner, zzgl. 3.10 Pfand (Ost-Lieblinge)",
+   "einheit": "20 x 0,5 l",
+   "preis": 10.99,
+   "alt": 17.49,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/ost-lieblinge/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "fruchtjoghurt-250-g",
+   "name": "Der Große Bauer Joghurt versch. Sorten (Ost-Lieblinge)",
+   "einheit": "250 g",
+   "preis": 0.44,
+   "alt": 0.99,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/ost-lieblinge/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "deutsche-markenbutter-250-g",
+   "name": "Sachsenmilch Unsere Butter streichfein (Ost-Lieblinge)",
+   "einheit": "250 g",
+   "preis": 1.29,
+   "alt": 1.99,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/ost-lieblinge/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "fischstaebchen-15-stueck",
+   "name": "Iglo Fischstäbchen oder Backfischstäbchen (Knaller Freitag)",
+   "einheit": "364-450 g",
+   "preis": 2.22,
+   "alt": 4.89,
+   "ab": "2026-10-02",
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/knaller-wochenende/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "thunfisch-in-eigenem-saft-150-g",
+   "name": "NAVITO proteinreich Thunfisch versch. Sorten (Knaller Freitag)",
+   "einheit": "185 g (Abtropfgewicht 135 g)",
+   "preis": 0.99,
+   "alt": 1.29,
+   "ab": "2026-10-02",
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/knaller-wochenende/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": "haribo-goldbaeren-175-g",
+   "name": "Haribo Fruchtgummi versch. Sorten (Hammer Mittwoch)",
+   "einheit": "160-175 g",
+   "preis": 0.79,
+   "alt": 1.25,
+   "ab": "2026-09-30",
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/hammer-mittwoch/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": null,
+   "name": "la campagna Feta (Hammer Mittwoch)",
+   "einheit": "200 g",
+   "preis": 1.99,
+   "alt": 2.59,
+   "ab": "2026-09-30",
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/hammer-mittwoch/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": null,
+   "name": "Beck's Pils, zzgl. 0.25 Pfand (Hammer Mittwoch)",
+   "einheit": "0,5 l",
+   "preis": 0.79,
+   "alt": 1.09,
+   "ab": "2026-09-30",
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/hammer-mittwoch/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": null,
+   "name": "Leibniz Butterkeks versch. Sorten (Knaller Freitag)",
+   "einheit": "200 g",
+   "preis": 1.19,
+   "alt": 1.99,
+   "ab": "2026-10-02",
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/knaller-wochenende/",
+   "q": "recherche"
+  },
+  {
+   "laden": "netto",
+   "pid": null,
+   "name": "Almette / Almette Pur Frischkäse versch. Sorten (Spar Star)",
+   "einheit": "140-150 g",
+   "preis": 0.99,
+   "alt": 1.99,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.netto.de/angebote/spar-stars/",
+   "q": "recherche"
+  },
+  {
+   "laden": "rewe",
+   "pid": "aepfel-1-kg",
+   "name": "Äpfel rot",
+   "einheit": "1 kg",
+   "preis": 2.69,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.kaufda.de/Geschaefte/REWE",
+   "q": "recherche"
+  },
+  {
+   "laden": "rewe",
+   "pid": "weizenmehl-type-405-1-kg",
+   "name": "Diamant Weizenmehl (Packungsgroesse in der Quelle nicht angegeben)",
+   "einheit": "1 kg?",
+   "preis": 1.11,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.kaufda.de/Geschaefte/REWE",
+   "q": "recherche"
+  },
+  {
+   "laden": "rewe",
+   "pid": "mineralwasser-classic-6-1-5-l",
+   "name": "Gerolsteiner Mineralwasser (Sorte nicht angegeben)",
+   "einheit": "6 x 1,5 l (aus Literpreis 0,55 EUR abgeleitet)",
+   "preis": 4.99,
+   "alt": null,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.kaufda.de/Geschaefte/REWE",
+   "q": "recherche"
+  },
+  {
+   "laden": "rossmann",
+   "pid": "milka-alpenmilch-100-g",
+   "name": "Milka Schokolade Alpenmilch",
+   "einheit": "90 g",
+   "preis": 0.99,
+   "alt": 1.99,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.rossmann.de/de/p/7622202257124",
+   "q": "recherche"
+  },
+  {
+   "laden": "rossmann",
+   "pid": "kaffeebohnen-crema-1-kg",
+   "name": "Dallmayr Crema d'Oro Ganze Bohnen",
+   "einheit": "1.000 g",
+   "preis": 13.99,
+   "alt": 19.99,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.rossmann.de/de/p/4008167152729",
+   "q": "recherche"
+  },
+  {
+   "laden": "rossmann",
+   "pid": "kaffeebohnen-crema-1-kg",
+   "name": "Dallmayr Kaffee Crema d'Oro intensa ganze Bohne",
+   "einheit": "1.000 g",
+   "preis": 13.99,
+   "alt": 19.99,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.rossmann.de/de/p/4008167042709",
+   "q": "recherche"
+  },
+  {
+   "laden": "rossmann",
+   "pid": "roestkaffee-gemahlen-500-g",
+   "name": "Dallmayr Kaffee Classic gemahlen",
+   "einheit": "500 g",
+   "preis": 6.49,
+   "alt": 8.99,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.rossmann.de/de/p/4008167023609",
+   "q": "recherche"
+  },
+  {
+   "laden": "rossmann",
+   "pid": null,
+   "name": "Babydream Feuchttuecher mit 99% Wasser (60 Stueck)",
+   "einheit": "60 Stueck",
+   "preis": 1.29,
+   "alt": 1.49,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.rossmann.de/de/p/4068134201027",
+   "q": "recherche"
+  },
+  {
+   "laden": "rossmann",
+   "pid": null,
+   "name": "Babydream extra sensitiv Feuchttuecher",
+   "einheit": "30 Stueck",
+   "preis": 0.89,
+   "alt": 0.99,
+   "ab": null,
+   "bis": "2026-10-02",
+   "quelle": "https://www.rossmann.de/de/p/4305615544014",
+   "q": "recherche"
+  }
+ ]
+}

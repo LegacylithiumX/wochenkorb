@@ -1,0 +1,1199 @@
+[
+ {
+  "id": "bananen-1-kg",
+  "name": "Bananen",
+  "einheit": "1 kg",
+  "kat": "Obst",
+  "richtpreis": 1.39,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "aepfel-1-kg",
+  "name": "Äpfel",
+  "einheit": "1 kg",
+  "kat": "Obst",
+  "richtpreis": 2.29,
+  "marke": false,
+  "syn": "Apfel"
+ },
+ {
+  "id": "zitronen-500-g",
+  "name": "Zitronen",
+  "einheit": "500 g",
+  "kat": "Obst",
+  "richtpreis": 1.29,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "orangen-1-5-kg",
+  "name": "Orangen",
+  "einheit": "1,5 kg",
+  "kat": "Obst",
+  "richtpreis": 2.49,
+  "marke": false,
+  "syn": "Apfelsinen"
+ },
+ {
+  "id": "weintrauben-hell-500-g",
+  "name": "Weintrauben hell",
+  "einheit": "500 g",
+  "kat": "Obst",
+  "richtpreis": 2.29,
+  "marke": false,
+  "syn": "Trauben"
+ },
+ {
+  "id": "erdbeeren-500-g",
+  "name": "Erdbeeren",
+  "einheit": "500 g",
+  "kat": "Obst",
+  "richtpreis": 2.99,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "heidelbeeren-250-g",
+  "name": "Heidelbeeren",
+  "einheit": "250 g",
+  "kat": "Obst",
+  "richtpreis": 2.49,
+  "marke": false,
+  "syn": "Blaubeeren"
+ },
+ {
+  "id": "avocado-stueck",
+  "name": "Avocado",
+  "einheit": "Stück",
+  "kat": "Obst",
+  "richtpreis": 0.99,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "tomaten-500-g",
+  "name": "Tomaten",
+  "einheit": "500 g",
+  "kat": "Gemüse",
+  "richtpreis": 1.49,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "rispentomaten-1-kg",
+  "name": "Rispentomaten",
+  "einheit": "1 kg",
+  "kat": "Gemüse",
+  "richtpreis": 2.99,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "salatgurke-stueck",
+  "name": "Salatgurke",
+  "einheit": "Stück",
+  "kat": "Gemüse",
+  "richtpreis": 0.69,
+  "marke": false,
+  "syn": "Gurke"
+ },
+ {
+  "id": "paprika-mix-500-g",
+  "name": "Paprika-Mix",
+  "einheit": "500 g",
+  "kat": "Gemüse",
+  "richtpreis": 1.99,
+  "marke": false,
+  "syn": "Paprika"
+ },
+ {
+  "id": "kartoffeln-festkochend-2-5-kg",
+  "name": "Kartoffeln festkochend",
+  "einheit": "2,5 kg",
+  "kat": "Gemüse",
+  "richtpreis": 2.99,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "zwiebeln-1-kg",
+  "name": "Zwiebeln",
+  "einheit": "1 kg",
+  "kat": "Gemüse",
+  "richtpreis": 1.19,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "moehren-1-kg",
+  "name": "Möhren",
+  "einheit": "1 kg",
+  "kat": "Gemüse",
+  "richtpreis": 1.09,
+  "marke": false,
+  "syn": "Karotten Wurzeln"
+ },
+ {
+  "id": "knoblauch-200-g",
+  "name": "Knoblauch",
+  "einheit": "200 g",
+  "kat": "Gemüse",
+  "richtpreis": 0.99,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "eisbergsalat-stueck",
+  "name": "Eisbergsalat",
+  "einheit": "Stück",
+  "kat": "Gemüse",
+  "richtpreis": 1.19,
+  "marke": false,
+  "syn": "Salat"
+ },
+ {
+  "id": "champignons-400-g",
+  "name": "Champignons",
+  "einheit": "400 g",
+  "kat": "Gemüse",
+  "richtpreis": 1.79,
+  "marke": false,
+  "syn": "Pilze"
+ },
+ {
+  "id": "brokkoli-500-g",
+  "name": "Brokkoli",
+  "einheit": "500 g",
+  "kat": "Gemüse",
+  "richtpreis": 1.49,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "buttertoast-500-g",
+  "name": "Buttertoast",
+  "einheit": "500 g",
+  "kat": "Brot & Backwaren",
+  "richtpreis": 1.19,
+  "marke": false,
+  "syn": "Toast Toastbrot"
+ },
+ {
+  "id": "vollkorntoast-500-g",
+  "name": "Vollkorntoast",
+  "einheit": "500 g",
+  "kat": "Brot & Backwaren",
+  "richtpreis": 1.29,
+  "marke": false,
+  "syn": "Toast Toastbrot"
+ },
+ {
+  "id": "mischbrot-750-g",
+  "name": "Mischbrot",
+  "einheit": "750 g",
+  "kat": "Brot & Backwaren",
+  "richtpreis": 1.79,
+  "marke": false,
+  "syn": "Brot"
+ },
+ {
+  "id": "aufbackbroetchen-10-stueck",
+  "name": "Aufbackbrötchen",
+  "einheit": "10 Stück",
+  "kat": "Brot & Backwaren",
+  "richtpreis": 1.29,
+  "marke": false,
+  "syn": "Brötchen Semmeln"
+ },
+ {
+  "id": "weizenbroetchen-frisch-stueck",
+  "name": "Weizenbrötchen frisch",
+  "einheit": "Stück",
+  "kat": "Brot & Backwaren",
+  "richtpreis": 0.25,
+  "marke": false,
+  "syn": "Brötchen Semmel"
+ },
+ {
+  "id": "laugenbrezel-stueck",
+  "name": "Laugenbrezel",
+  "einheit": "Stück",
+  "kat": "Brot & Backwaren",
+  "richtpreis": 0.49,
+  "marke": false,
+  "syn": "Brezel Breze"
+ },
+ {
+  "id": "butter-croissant-stueck",
+  "name": "Butter-Croissant",
+  "einheit": "Stück",
+  "kat": "Brot & Backwaren",
+  "richtpreis": 0.59,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "knaeckebrot-250-g",
+  "name": "Knäckebrot",
+  "einheit": "250 g",
+  "kat": "Brot & Backwaren",
+  "richtpreis": 0.99,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "tortilla-wraps-6-stueck",
+  "name": "Tortilla-Wraps",
+  "einheit": "6 Stück",
+  "kat": "Brot & Backwaren",
+  "richtpreis": 1.49,
+  "marke": false,
+  "syn": "Wraps"
+ },
+ {
+  "id": "vollmilch-3-5-1-l",
+  "name": "Vollmilch 3,5 %",
+  "einheit": "1 l",
+  "kat": "Milch, Käse & Eier",
+  "richtpreis": 1.09,
+  "marke": false,
+  "syn": "Milch Frischmilch"
+ },
+ {
+  "id": "fettarme-milch-1-5-1-l",
+  "name": "Fettarme Milch 1,5 %",
+  "einheit": "1 l",
+  "kat": "Milch, Käse & Eier",
+  "richtpreis": 0.99,
+  "marke": false,
+  "syn": "Milch"
+ },
+ {
+  "id": "h-milch-1-5-1-l",
+  "name": "H-Milch 1,5 %",
+  "einheit": "1 l",
+  "kat": "Milch, Käse & Eier",
+  "richtpreis": 0.99,
+  "marke": false,
+  "syn": "Milch haltbar"
+ },
+ {
+  "id": "haferdrink-1-l",
+  "name": "Haferdrink",
+  "einheit": "1 l",
+  "kat": "Milch, Käse & Eier",
+  "richtpreis": 1.19,
+  "marke": false,
+  "syn": "Hafermilch"
+ },
+ {
+  "id": "deutsche-markenbutter-250-g",
+  "name": "Deutsche Markenbutter",
+  "einheit": "250 g",
+  "kat": "Milch, Käse & Eier",
+  "richtpreis": 1.99,
+  "marke": false,
+  "syn": "Butter"
+ },
+ {
+  "id": "joghurt-natur-3-5-500-g",
+  "name": "Joghurt natur 3,5 %",
+  "einheit": "500 g",
+  "kat": "Milch, Käse & Eier",
+  "richtpreis": 0.89,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "fruchtjoghurt-250-g",
+  "name": "Fruchtjoghurt",
+  "einheit": "250 g",
+  "kat": "Milch, Käse & Eier",
+  "richtpreis": 0.59,
+  "marke": false,
+  "syn": "Joghurt"
+ },
+ {
+  "id": "speisequark-magerstufe-500-g",
+  "name": "Speisequark Magerstufe",
+  "einheit": "500 g",
+  "kat": "Milch, Käse & Eier",
+  "richtpreis": 1.29,
+  "marke": false,
+  "syn": "Quark"
+ },
+ {
+  "id": "skyr-natur-450-g",
+  "name": "Skyr natur",
+  "einheit": "450 g",
+  "kat": "Milch, Käse & Eier",
+  "richtpreis": 1.29,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "schlagsahne-30-200-g",
+  "name": "Schlagsahne 30 %",
+  "einheit": "200 g",
+  "kat": "Milch, Käse & Eier",
+  "richtpreis": 1.09,
+  "marke": false,
+  "syn": "Sahne"
+ },
+ {
+  "id": "schmand-200-g",
+  "name": "Schmand",
+  "einheit": "200 g",
+  "kat": "Milch, Käse & Eier",
+  "richtpreis": 0.89,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "gouda-jung-in-scheiben-400-g",
+  "name": "Gouda jung in Scheiben",
+  "einheit": "400 g",
+  "kat": "Milch, Käse & Eier",
+  "richtpreis": 2.99,
+  "marke": false,
+  "syn": "Käse Scheiben"
+ },
+ {
+  "id": "emmentaler-gerieben-200-g",
+  "name": "Emmentaler gerieben",
+  "einheit": "200 g",
+  "kat": "Milch, Käse & Eier",
+  "richtpreis": 1.79,
+  "marke": false,
+  "syn": "Reibekäse Käse"
+ },
+ {
+  "id": "mozzarella-125-g",
+  "name": "Mozzarella",
+  "einheit": "125 g",
+  "kat": "Milch, Käse & Eier",
+  "richtpreis": 0.89,
+  "marke": false,
+  "syn": "Käse"
+ },
+ {
+  "id": "feta-200-g",
+  "name": "Feta",
+  "einheit": "200 g",
+  "kat": "Milch, Käse & Eier",
+  "richtpreis": 1.49,
+  "marke": false,
+  "syn": "Schafskäse Käse"
+ },
+ {
+  "id": "frischkaese-200-g",
+  "name": "Frischkäse",
+  "einheit": "200 g",
+  "kat": "Milch, Käse & Eier",
+  "richtpreis": 1.19,
+  "marke": false,
+  "syn": "Käse"
+ },
+ {
+  "id": "eier-freilandhaltung-10-stueck",
+  "name": "Eier Freilandhaltung",
+  "einheit": "10 Stück",
+  "kat": "Milch, Käse & Eier",
+  "richtpreis": 2.79,
+  "marke": false,
+  "syn": "Eier"
+ },
+ {
+  "id": "haehnchenbrustfilet-400-g",
+  "name": "Hähnchenbrustfilet",
+  "einheit": "400 g",
+  "kat": "Fleisch, Wurst & Fisch",
+  "richtpreis": 4.69,
+  "marke": false,
+  "syn": "Hähnchen Huhn Geflügel"
+ },
+ {
+  "id": "hackfleisch-gemischt-500-g",
+  "name": "Hackfleisch gemischt",
+  "einheit": "500 g",
+  "kat": "Fleisch, Wurst & Fisch",
+  "richtpreis": 4.29,
+  "marke": false,
+  "syn": "Hack Gehacktes"
+ },
+ {
+  "id": "rinderhackfleisch-400-g",
+  "name": "Rinderhackfleisch",
+  "einheit": "400 g",
+  "kat": "Fleisch, Wurst & Fisch",
+  "richtpreis": 4.79,
+  "marke": false,
+  "syn": "Hack Gehacktes"
+ },
+ {
+  "id": "schweineschnitzel-500-g",
+  "name": "Schweineschnitzel",
+  "einheit": "500 g",
+  "kat": "Fleisch, Wurst & Fisch",
+  "richtpreis": 4.99,
+  "marke": false,
+  "syn": "Schnitzel"
+ },
+ {
+  "id": "grobe-bratwurst-400-g",
+  "name": "Grobe Bratwurst",
+  "einheit": "400 g",
+  "kat": "Fleisch, Wurst & Fisch",
+  "richtpreis": 2.99,
+  "marke": false,
+  "syn": "Würstchen Grillwurst"
+ },
+ {
+  "id": "wiener-wuerstchen-6-stueck",
+  "name": "Wiener Würstchen",
+  "einheit": "6 Stück",
+  "kat": "Fleisch, Wurst & Fisch",
+  "richtpreis": 2.49,
+  "marke": false,
+  "syn": "Würstchen"
+ },
+ {
+  "id": "salami-in-scheiben-100-g",
+  "name": "Salami in Scheiben",
+  "einheit": "100 g",
+  "kat": "Fleisch, Wurst & Fisch",
+  "richtpreis": 1.29,
+  "marke": false,
+  "syn": "Aufschnitt Wurst"
+ },
+ {
+  "id": "kochschinken-200-g",
+  "name": "Kochschinken",
+  "einheit": "200 g",
+  "kat": "Fleisch, Wurst & Fisch",
+  "richtpreis": 1.99,
+  "marke": false,
+  "syn": "Schinken Aufschnitt"
+ },
+ {
+  "id": "lachsfilet-250-g",
+  "name": "Lachsfilet",
+  "einheit": "250 g",
+  "kat": "Fleisch, Wurst & Fisch",
+  "richtpreis": 4.99,
+  "marke": false,
+  "syn": "Lachs Fisch"
+ },
+ {
+  "id": "steinofenpizza-salami-350-g",
+  "name": "Steinofenpizza Salami",
+  "einheit": "350 g",
+  "kat": "Tiefkühl",
+  "richtpreis": 1.79,
+  "marke": false,
+  "syn": "Pizza TK"
+ },
+ {
+  "id": "pommes-frites-1-kg",
+  "name": "Pommes frites",
+  "einheit": "1 kg",
+  "kat": "Tiefkühl",
+  "richtpreis": 1.69,
+  "marke": false,
+  "syn": "Pommes TK"
+ },
+ {
+  "id": "rahmspinat-450-g",
+  "name": "Rahmspinat",
+  "einheit": "450 g",
+  "kat": "Tiefkühl",
+  "richtpreis": 1.19,
+  "marke": false,
+  "syn": "Spinat TK"
+ },
+ {
+  "id": "erbsen-1-kg",
+  "name": "Erbsen",
+  "einheit": "1 kg",
+  "kat": "Tiefkühl",
+  "richtpreis": 1.99,
+  "marke": false,
+  "syn": "TK Gemüse"
+ },
+ {
+  "id": "fischstaebchen-15-stueck",
+  "name": "Fischstäbchen",
+  "einheit": "15 Stück",
+  "kat": "Tiefkühl",
+  "richtpreis": 2.49,
+  "marke": false,
+  "syn": "Fisch TK"
+ },
+ {
+  "id": "vanilleeis-1-l",
+  "name": "Vanilleeis",
+  "einheit": "1 l",
+  "kat": "Tiefkühl",
+  "richtpreis": 1.89,
+  "marke": false,
+  "syn": "Eis Speiseeis"
+ },
+ {
+  "id": "beerenmischung-750-g",
+  "name": "Beerenmischung",
+  "einheit": "750 g",
+  "kat": "Tiefkühl",
+  "richtpreis": 3.29,
+  "marke": false,
+  "syn": "TK Beeren Früchte"
+ },
+ {
+  "id": "spaghetti-500-g",
+  "name": "Spaghetti",
+  "einheit": "500 g",
+  "kat": "Nudeln, Reis & Konserven",
+  "richtpreis": 0.79,
+  "marke": false,
+  "syn": "Nudeln Pasta"
+ },
+ {
+  "id": "penne-500-g",
+  "name": "Penne",
+  "einheit": "500 g",
+  "kat": "Nudeln, Reis & Konserven",
+  "richtpreis": 0.79,
+  "marke": false,
+  "syn": "Nudeln Pasta"
+ },
+ {
+  "id": "langkornreis-1-kg",
+  "name": "Langkornreis",
+  "einheit": "1 kg",
+  "kat": "Nudeln, Reis & Konserven",
+  "richtpreis": 1.59,
+  "marke": false,
+  "syn": "Reis"
+ },
+ {
+  "id": "basmatireis-1-kg",
+  "name": "Basmatireis",
+  "einheit": "1 kg",
+  "kat": "Nudeln, Reis & Konserven",
+  "richtpreis": 2.49,
+  "marke": false,
+  "syn": "Reis"
+ },
+ {
+  "id": "passierte-tomaten-500-g",
+  "name": "Passierte Tomaten",
+  "einheit": "500 g",
+  "kat": "Nudeln, Reis & Konserven",
+  "richtpreis": 0.59,
+  "marke": false,
+  "syn": "Tomatensoße Passata"
+ },
+ {
+  "id": "gehackte-tomaten-400-g",
+  "name": "Gehackte Tomaten",
+  "einheit": "400 g",
+  "kat": "Nudeln, Reis & Konserven",
+  "richtpreis": 0.55,
+  "marke": false,
+  "syn": "Dose Tomaten"
+ },
+ {
+  "id": "tomatenmark-200-g",
+  "name": "Tomatenmark",
+  "einheit": "200 g",
+  "kat": "Nudeln, Reis & Konserven",
+  "richtpreis": 0.59,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "kidneybohnen-400-g",
+  "name": "Kidneybohnen",
+  "einheit": "400 g",
+  "kat": "Nudeln, Reis & Konserven",
+  "richtpreis": 0.69,
+  "marke": false,
+  "syn": "Bohnen Dose"
+ },
+ {
+  "id": "gemuesemais-285-g",
+  "name": "Gemüsemais",
+  "einheit": "285 g",
+  "kat": "Nudeln, Reis & Konserven",
+  "richtpreis": 0.79,
+  "marke": false,
+  "syn": "Mais Dose"
+ },
+ {
+  "id": "thunfisch-in-eigenem-saft-150-g",
+  "name": "Thunfisch in eigenem Saft",
+  "einheit": "150 g",
+  "kat": "Nudeln, Reis & Konserven",
+  "richtpreis": 1.49,
+  "marke": false,
+  "syn": "Thunfisch Dose Fisch"
+ },
+ {
+  "id": "pesto-alla-genovese-190-g",
+  "name": "Pesto alla Genovese",
+  "einheit": "190 g",
+  "kat": "Nudeln, Reis & Konserven",
+  "richtpreis": 1.59,
+  "marke": false,
+  "syn": "Pesto"
+ },
+ {
+  "id": "weizenmehl-type-405-1-kg",
+  "name": "Weizenmehl Type 405",
+  "einheit": "1 kg",
+  "kat": "Öl, Gewürze & Backen",
+  "richtpreis": 0.69,
+  "marke": false,
+  "syn": "Mehl"
+ },
+ {
+  "id": "zucker-1-kg",
+  "name": "Zucker",
+  "einheit": "1 kg",
+  "kat": "Öl, Gewürze & Backen",
+  "richtpreis": 0.99,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "speisesalz-500-g",
+  "name": "Speisesalz",
+  "einheit": "500 g",
+  "kat": "Öl, Gewürze & Backen",
+  "richtpreis": 0.29,
+  "marke": false,
+  "syn": "Salz"
+ },
+ {
+  "id": "sonnenblumenoel-1-l",
+  "name": "Sonnenblumenöl",
+  "einheit": "1 l",
+  "kat": "Öl, Gewürze & Backen",
+  "richtpreis": 1.69,
+  "marke": false,
+  "syn": "Öl Speiseöl"
+ },
+ {
+  "id": "olivenoel-nativ-extra-750-ml",
+  "name": "Olivenöl nativ extra",
+  "einheit": "750 ml",
+  "kat": "Öl, Gewürze & Backen",
+  "richtpreis": 5.99,
+  "marke": false,
+  "syn": "Öl"
+ },
+ {
+  "id": "gemuesebruehe-250-g",
+  "name": "Gemüsebrühe",
+  "einheit": "250 g",
+  "kat": "Öl, Gewürze & Backen",
+  "richtpreis": 1.29,
+  "marke": false,
+  "syn": "Brühe Bouillon"
+ },
+ {
+  "id": "tomatenketchup-500-ml",
+  "name": "Tomatenketchup",
+  "einheit": "500 ml",
+  "kat": "Öl, Gewürze & Backen",
+  "richtpreis": 1.29,
+  "marke": false,
+  "syn": "Ketchup"
+ },
+ {
+  "id": "mayonnaise-500-ml",
+  "name": "Mayonnaise",
+  "einheit": "500 ml",
+  "kat": "Öl, Gewürze & Backen",
+  "richtpreis": 1.49,
+  "marke": false,
+  "syn": "Mayo"
+ },
+ {
+  "id": "senf-mittelscharf-200-ml",
+  "name": "Senf mittelscharf",
+  "einheit": "200 ml",
+  "kat": "Öl, Gewürze & Backen",
+  "richtpreis": 0.49,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "haferflocken-500-g",
+  "name": "Haferflocken",
+  "einheit": "500 g",
+  "kat": "Frühstück & Aufstriche",
+  "richtpreis": 0.69,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "knuspermuesli-750-g",
+  "name": "Knuspermüsli",
+  "einheit": "750 g",
+  "kat": "Frühstück & Aufstriche",
+  "richtpreis": 2.29,
+  "marke": false,
+  "syn": "Müsli"
+ },
+ {
+  "id": "cornflakes-750-g",
+  "name": "Cornflakes",
+  "einheit": "750 g",
+  "kat": "Frühstück & Aufstriche",
+  "richtpreis": 1.79,
+  "marke": false,
+  "syn": "Flakes"
+ },
+ {
+  "id": "nuss-nougat-creme-400-g",
+  "name": "Nuss-Nougat-Creme",
+  "einheit": "400 g",
+  "kat": "Frühstück & Aufstriche",
+  "richtpreis": 1.99,
+  "marke": false,
+  "syn": "Schokocreme Nutella"
+ },
+ {
+  "id": "nutella-450-g",
+  "name": "Nutella",
+  "einheit": "450 g",
+  "kat": "Frühstück & Aufstriche",
+  "richtpreis": 3.99,
+  "marke": true,
+  "syn": "Schokocreme"
+ },
+ {
+  "id": "erdbeerkonfituere-450-g",
+  "name": "Erdbeerkonfitüre",
+  "einheit": "450 g",
+  "kat": "Frühstück & Aufstriche",
+  "richtpreis": 1.49,
+  "marke": false,
+  "syn": "Marmelade"
+ },
+ {
+  "id": "bluetenhonig-500-g",
+  "name": "Blütenhonig",
+  "einheit": "500 g",
+  "kat": "Frühstück & Aufstriche",
+  "richtpreis": 3.49,
+  "marke": false,
+  "syn": "Honig"
+ },
+ {
+  "id": "roestkaffee-gemahlen-500-g",
+  "name": "Röstkaffee gemahlen",
+  "einheit": "500 g",
+  "kat": "Kaffee & Tee",
+  "richtpreis": 6.99,
+  "marke": false,
+  "syn": "Kaffee Filterkaffee"
+ },
+ {
+  "id": "kaffeebohnen-crema-1-kg",
+  "name": "Kaffeebohnen Crema",
+  "einheit": "1 kg",
+  "kat": "Kaffee & Tee",
+  "richtpreis": 13.99,
+  "marke": false,
+  "syn": "Kaffee Bohnen"
+ },
+ {
+  "id": "kaffeepads-16-stueck",
+  "name": "Kaffeepads",
+  "einheit": "16 Stück",
+  "kat": "Kaffee & Tee",
+  "richtpreis": 1.99,
+  "marke": false,
+  "syn": "Kaffee Pads"
+ },
+ {
+  "id": "schwarzer-tee-25-beutel",
+  "name": "Schwarzer Tee",
+  "einheit": "25 Beutel",
+  "kat": "Kaffee & Tee",
+  "richtpreis": 0.99,
+  "marke": false,
+  "syn": "Tee"
+ },
+ {
+  "id": "kraeutertee-20-beutel",
+  "name": "Kräutertee",
+  "einheit": "20 Beutel",
+  "kat": "Kaffee & Tee",
+  "richtpreis": 0.89,
+  "marke": false,
+  "syn": "Tee Pfefferminz"
+ },
+ {
+  "id": "vollmilchschokolade-100-g",
+  "name": "Vollmilchschokolade",
+  "einheit": "100 g",
+  "kat": "Süßigkeiten",
+  "richtpreis": 1.19,
+  "marke": false,
+  "syn": "Schokolade"
+ },
+ {
+  "id": "milka-alpenmilch-100-g",
+  "name": "Milka Alpenmilch",
+  "einheit": "100 g",
+  "kat": "Süßigkeiten",
+  "richtpreis": 1.99,
+  "marke": true,
+  "syn": "Schokolade"
+ },
+ {
+  "id": "fruchtgummi-200-g",
+  "name": "Fruchtgummi",
+  "einheit": "200 g",
+  "kat": "Süßigkeiten",
+  "richtpreis": 0.89,
+  "marke": false,
+  "syn": "Gummibärchen"
+ },
+ {
+  "id": "haribo-goldbaeren-175-g",
+  "name": "Haribo Goldbären",
+  "einheit": "175 g",
+  "kat": "Süßigkeiten",
+  "richtpreis": 1.39,
+  "marke": true,
+  "syn": "Gummibärchen"
+ },
+ {
+  "id": "butterkekse-200-g",
+  "name": "Butterkekse",
+  "einheit": "200 g",
+  "kat": "Süßigkeiten",
+  "richtpreis": 0.89,
+  "marke": false,
+  "syn": "Kekse"
+ },
+ {
+  "id": "kartoffelchips-paprika-175-g",
+  "name": "Kartoffelchips Paprika",
+  "einheit": "175 g",
+  "kat": "Snacks & Knabbern",
+  "richtpreis": 1.19,
+  "marke": false,
+  "syn": "Chips"
+ },
+ {
+  "id": "salzstangen-250-g",
+  "name": "Salzstangen",
+  "einheit": "250 g",
+  "kat": "Snacks & Knabbern",
+  "richtpreis": 0.79,
+  "marke": false,
+  "syn": "Knabbern"
+ },
+ {
+  "id": "erdnuesse-geroestet-200-g",
+  "name": "Erdnüsse geröstet",
+  "einheit": "200 g",
+  "kat": "Snacks & Knabbern",
+  "richtpreis": 1.49,
+  "marke": false,
+  "syn": "Nüsse"
+ },
+ {
+  "id": "mineralwasser-still-1-5-l",
+  "name": "Mineralwasser still",
+  "einheit": "1,5 l",
+  "kat": "Getränke",
+  "richtpreis": 0.25,
+  "marke": false,
+  "syn": "Wasser"
+ },
+ {
+  "id": "mineralwasser-classic-6-1-5-l",
+  "name": "Mineralwasser classic",
+  "einheit": "6 × 1,5 l",
+  "kat": "Getränke",
+  "richtpreis": 1.59,
+  "marke": false,
+  "syn": "Wasser Sprudel"
+ },
+ {
+  "id": "cola-1-5-l",
+  "name": "Cola",
+  "einheit": "1,5 l",
+  "kat": "Getränke",
+  "richtpreis": 0.69,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "coca-cola-1-25-l",
+  "name": "Coca-Cola",
+  "einheit": "1,25 l",
+  "kat": "Getränke",
+  "richtpreis": 1.59,
+  "marke": true,
+  "syn": "Cola"
+ },
+ {
+  "id": "orangensaft-1-l",
+  "name": "Orangensaft",
+  "einheit": "1 l",
+  "kat": "Getränke",
+  "richtpreis": 1.49,
+  "marke": false,
+  "syn": "Saft O-Saft"
+ },
+ {
+  "id": "apfelsaft-klar-1-l",
+  "name": "Apfelsaft klar",
+  "einheit": "1 l",
+  "kat": "Getränke",
+  "richtpreis": 1.19,
+  "marke": false,
+  "syn": "Saft"
+ },
+ {
+  "id": "pils-0-5-l-dose",
+  "name": "Pils",
+  "einheit": "0,5 l Dose",
+  "kat": "Getränke",
+  "richtpreis": 0.69,
+  "marke": false,
+  "syn": "Bier"
+ },
+ {
+  "id": "pils-kasten-20-0-5-l",
+  "name": "Pils",
+  "einheit": "Kasten 20 × 0,5 l",
+  "kat": "Getränke",
+  "richtpreis": 11.99,
+  "marke": false,
+  "syn": "Bier Kiste"
+ },
+ {
+  "id": "rotwein-trocken-0-75-l",
+  "name": "Rotwein trocken",
+  "einheit": "0,75 l",
+  "kat": "Getränke",
+  "richtpreis": 2.99,
+  "marke": false,
+  "syn": "Wein"
+ },
+ {
+  "id": "zahnpasta-75-ml",
+  "name": "Zahnpasta",
+  "einheit": "75 ml",
+  "kat": "Drogerie & Hygiene",
+  "richtpreis": 0.65,
+  "marke": false,
+  "syn": "Zahncreme"
+ },
+ {
+  "id": "zahnbuersten-2-stueck",
+  "name": "Zahnbürsten",
+  "einheit": "2 Stück",
+  "kat": "Drogerie & Hygiene",
+  "richtpreis": 1.29,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "duschgel-250-ml",
+  "name": "Duschgel",
+  "einheit": "250 ml",
+  "kat": "Drogerie & Hygiene",
+  "richtpreis": 0.89,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "shampoo-300-ml",
+  "name": "Shampoo",
+  "einheit": "300 ml",
+  "kat": "Drogerie & Hygiene",
+  "richtpreis": 0.99,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "deospray-200-ml",
+  "name": "Deospray",
+  "einheit": "200 ml",
+  "kat": "Drogerie & Hygiene",
+  "richtpreis": 1.29,
+  "marke": false,
+  "syn": "Deo"
+ },
+ {
+  "id": "fluessigseife-500-ml",
+  "name": "Flüssigseife",
+  "einheit": "500 ml",
+  "kat": "Drogerie & Hygiene",
+  "richtpreis": 0.79,
+  "marke": false,
+  "syn": "Seife Handseife"
+ },
+ {
+  "id": "toilettenpapier-3-lagig-8-rollen",
+  "name": "Toilettenpapier 3-lagig",
+  "einheit": "8 Rollen",
+  "kat": "Drogerie & Hygiene",
+  "richtpreis": 2.99,
+  "marke": false,
+  "syn": "Klopapier Klorollen"
+ },
+ {
+  "id": "kuechentuecher-4-rollen",
+  "name": "Küchentücher",
+  "einheit": "4 Rollen",
+  "kat": "Drogerie & Hygiene",
+  "richtpreis": 1.99,
+  "marke": false,
+  "syn": "Küchenrolle"
+ },
+ {
+  "id": "taschentuecher-15-paeckchen",
+  "name": "Taschentücher",
+  "einheit": "15 Päckchen",
+  "kat": "Drogerie & Hygiene",
+  "richtpreis": 0.99,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "wattepads-120-stueck",
+  "name": "Wattepads",
+  "einheit": "120 Stück",
+  "kat": "Drogerie & Hygiene",
+  "richtpreis": 0.79,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "sonnenmilch-lsf-30-200-ml",
+  "name": "Sonnenmilch LSF 30",
+  "einheit": "200 ml",
+  "kat": "Drogerie & Hygiene",
+  "richtpreis": 3.49,
+  "marke": false,
+  "syn": "Sonnencreme"
+ },
+ {
+  "id": "windeln-groesse-4-42-stueck",
+  "name": "Windeln Größe 4",
+  "einheit": "42 Stück",
+  "kat": "Baby",
+  "richtpreis": 7.99,
+  "marke": false,
+  "syn": "Windeln Baby"
+ },
+ {
+  "id": "feuchttuecher-80-stueck",
+  "name": "Feuchttücher",
+  "einheit": "80 Stück",
+  "kat": "Baby",
+  "richtpreis": 0.99,
+  "marke": false,
+  "syn": "Baby"
+ },
+ {
+  "id": "spuelmittel-500-ml",
+  "name": "Spülmittel",
+  "einheit": "500 ml",
+  "kat": "Haushalt & Putzen",
+  "richtpreis": 0.69,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "colorwaschmittel-fluessig-20-wl",
+  "name": "Colorwaschmittel flüssig",
+  "einheit": "20 WL",
+  "kat": "Haushalt & Putzen",
+  "richtpreis": 3.49,
+  "marke": false,
+  "syn": "Waschmittel"
+ },
+ {
+  "id": "vollwaschmittel-pulver-20-wl",
+  "name": "Vollwaschmittel Pulver",
+  "einheit": "20 WL",
+  "kat": "Haushalt & Putzen",
+  "richtpreis": 3.49,
+  "marke": false,
+  "syn": "Waschpulver Waschmittel"
+ },
+ {
+  "id": "weichspueler-1-l",
+  "name": "Weichspüler",
+  "einheit": "1 l",
+  "kat": "Haushalt & Putzen",
+  "richtpreis": 1.29,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "spuelmaschinentabs-40-stueck",
+  "name": "Spülmaschinentabs",
+  "einheit": "40 Stück",
+  "kat": "Haushalt & Putzen",
+  "richtpreis": 3.99,
+  "marke": false,
+  "syn": "Tabs Geschirrspültabs"
+ },
+ {
+  "id": "allzweckreiniger-1-l",
+  "name": "Allzweckreiniger",
+  "einheit": "1 l",
+  "kat": "Haushalt & Putzen",
+  "richtpreis": 0.89,
+  "marke": false,
+  "syn": "Reiniger Putzmittel"
+ },
+ {
+  "id": "muellbeutel-35-l-30-stueck",
+  "name": "Müllbeutel 35 l",
+  "einheit": "30 Stück",
+  "kat": "Haushalt & Putzen",
+  "richtpreis": 1.49,
+  "marke": false,
+  "syn": "Mülltüten"
+ },
+ {
+  "id": "alufolie-30-m",
+  "name": "Alufolie",
+  "einheit": "30 m",
+  "kat": "Haushalt & Putzen",
+  "richtpreis": 1.79,
+  "marke": false,
+  "syn": ""
+ },
+ {
+  "id": "spuelschwaemme-10-stueck",
+  "name": "Spülschwämme",
+  "einheit": "10 Stück",
+  "kat": "Haushalt & Putzen",
+  "richtpreis": 0.99,
+  "marke": false,
+  "syn": "Schwamm"
+ },
+ {
+  "id": "batterien-aa-8-stueck",
+  "name": "Batterien AA",
+  "einheit": "8 Stück",
+  "kat": "Haushalt & Putzen",
+  "richtpreis": 2.99,
+  "marke": false,
+  "syn": "Mignon"
+ }
+]

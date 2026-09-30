@@ -1,0 +1,1459 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0b6b5d"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" type="image/png" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"></head><body>
+<title>Wochenkorb</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: links der Zettel (Ladenwahl, Eingabe, Tour mit Stationen, Posten nach Laufweg), rechts der Kassenbon als Papierstreifen; mobil gestapelt mit fester Summenleiste unten */
+:root{
+  --bg:#edf1ef; --surface:#ffffff; --surface-2:#f4f7f5; --ink:#15201c; --muted:#5a6964; --line:#d7dfdb;
+  --accent:#0b6b5d; --accent-ink:#ffffff; --accent-soft:#d9eee8;
+  --tag:#ffd84a; --tag-ink:#241b00; --deal:#c42b2b; --deal-ink:#ffffff; --good:#157a3c;
+  --paper:#fffefa; --paper-ink:#262621; --paper-line:#cfcabb;
+  --shadow:0 12px 32px rgb(15 30 25 / .16);
+  --f-display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --f-body:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1412; --surface:#161f1c; --surface-2:#1c2723; --ink:#e6eeea; --muted:#97a8a1; --line:#2a3732;
+    --accent:#43bba2; --accent-ink:#05201a; --accent-soft:#173b33;
+    --tag:#f4cd3a; --tag-ink:#1f1700; --deal:#ff7a70; --deal-ink:#2b0503; --good:#56d98a;
+    --paper:#1d2522; --paper-ink:#e2e8e4; --paper-line:#3a4641;
+    --shadow:0 12px 32px rgb(0 0 0 / .5);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1412; --surface:#161f1c; --surface-2:#1c2723; --ink:#e6eeea; --muted:#97a8a1; --line:#2a3732;
+  --accent:#43bba2; --accent-ink:#05201a; --accent-soft:#173b33;
+  --tag:#f4cd3a; --tag-ink:#1f1700; --deal:#ff7a70; --deal-ink:#2b0503; --good:#56d98a;
+  --paper:#1d2522; --paper-ink:#e2e8e4; --paper-line:#3a4641;
+  --shadow:0 12px 32px rgb(0 0 0 / .5);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.45 var(--f-body);-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+button:disabled{cursor:default;opacity:.4}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+a{color:var(--accent)}
+.app{max-width:1140px;margin:0 auto;padding-inline:16px;padding-block:12px 128px}
+@media (min-width:900px){.app{padding-block:20px 48px}}
+
+/* Kopf */
+.kopf{display:flex;align-items:center;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;padding-block:4px 8px}
+.marke{display:flex;align-items:center;gap:12px}
+.logo{width:42px;height:42px;border-radius:11px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;flex:none}
+h1{font:800 32px/1 var(--f-display);letter-spacing:.02em;margin:0;text-transform:uppercase}
+.kw{margin:3px 0 0;color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.sync{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.sync::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--muted)}
+.sync.konto::before{background:var(--good)}
+.sync.fehler::before{background:var(--deal)}
+
+/* Reiter */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;gap:6px;background:var(--bg);padding-block:8px;margin-bottom:6px;overflow-x:auto;scrollbar-width:none}
+.tab{flex:1 0 auto;display:flex;align-items:center;justify-content:center;gap:6px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 16px;font-weight:600;font-size:15px;color:var(--muted)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tab .zahl{font:600 12px var(--f-mono);background:var(--tag);color:var(--tag-ink);border-radius:999px;padding:0 6px;min-width:20px}
+@media (max-width:460px){.tab{flex:1 1 auto;padding:8px 10px;font-size:14px;gap:4px}.tabs{gap:4px}}
+
+/* Liste-Layout */
+.liste-layout{display:grid;gap:24px;align-items:start}
+@media (min-width:900px){.liste-layout{grid-template-columns:minmax(0,1fr) 350px}}
+.zettel{min-width:0}
+h2{font:700 20px/1.1 var(--f-display);text-transform:uppercase;letter-spacing:.04em;margin:0}
+.abschnitt-kopf{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-block:10px 8px}
+.klein{font-size:13px;color:var(--muted)}
+
+/* Ladenwahl */
+.wahl{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:8px}
+.chip{display:flex;flex-direction:column;align-items:flex-start;gap:1px;border:1.5px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 10px;text-align:left;min-width:0}
+.chip .n{display:flex;align-items:center;gap:6px;font-weight:600;font-size:14px;white-space:nowrap}
+.chip .b{font:600 16px var(--f-mono);font-variant-numeric:tabular-nums}
+.chip .u{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.chip .u.gut{color:var(--good);font-weight:600}
+.chip .u.fehlt{color:var(--deal)}
+.chip[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft);box-shadow:inset 0 0 0 1px var(--accent)}
+.chip.kombi .n{color:var(--accent)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none;display:inline-block}
+.dot.stern{background:none;width:12px;height:12px;color:var(--accent)}
+
+/* Eingabe */
+.suche{position:relative;margin-block:16px 4px}
+.suche > svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+.suche input{width:100%;padding:14px 14px 14px 46px;border:1.5px solid var(--line);border-radius:12px;background:var(--surface);font-size:17px}
+.suche input:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px var(--accent-soft)}
+.vorschlaege{position:absolute;left:0;right:0;top:calc(100% + 6px);background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);z-index:30;max-height:380px;overflow:auto;padding:4px}
+.vs{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;padding:10px 12px;border:0;background:none;text-align:left;border-radius:8px}
+.vs[aria-selected="true"],.vs:hover{background:var(--surface-2)}
+.vs .vs-n{min-width:0}
+.vs .vs-n small{display:block;color:var(--muted);font-size:13px;font-weight:400}
+.vs .vs-p{font:500 14px var(--f-mono);white-space:nowrap;text-align:right}
+.vs .vs-p small{display:block;font:400 12px var(--f-body);color:var(--muted)}
+.vs.eigen .vs-n{color:var(--accent);font-weight:600}
+.eingabe-tipp{font-size:13px;color:var(--muted);margin:0 0 4px}
+
+/* Tour */
+.tour-kopf{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-top:22px}
+.tour-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tour-tabs button{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:600}
+.tour-tabs button b{font:800 16px/1 var(--f-display)}
+.tour-tabs button small{font:500 12px var(--f-mono);color:var(--muted)}
+.tour-tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tour-tabs button[aria-pressed="true"] small{color:inherit;opacity:.8}
+.station{margin-top:22px}
+.station-kopf{display:flex;align-items:center;gap:10px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.nr{width:32px;height:32px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:800 19px/1 var(--f-display);flex:none}
+.station.erledigt .nr{background:var(--accent);color:var(--accent-ink)}
+.st-titel{flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px}
+.st-titel strong{font:700 23px/1 var(--f-display);text-transform:uppercase;letter-spacing:.03em;display:inline-flex;align-items:center;gap:6px}
+.st-titel .klein{width:100%}
+.st-akt{display:flex;gap:4px;align-items:center;flex:none}
+.st-balken{height:5px;background:var(--line);border-radius:3px;margin-top:8px;overflow:hidden}
+.st-balken i{display:block;height:100%;background:var(--accent);border-radius:3px}
+.laufweg-zeile{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-top:18px;font-size:14px;color:var(--muted)}
+.laufweg-zeile strong{color:var(--ink)}
+.knopf.klein-k{padding:5px 10px;font-size:13px}
+
+/* Posten */
+.gang{margin-top:16px}
+.gang-kopf{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:0 2px 6px;font:700 13px var(--f-body);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.gang-kopf .gl{display:flex;align-items:center;gap:8px}
+.gang-kopf .gs{font:500 13px var(--f-mono);letter-spacing:0;text-transform:none}
+.gnr{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 5px;border-radius:6px;background:var(--surface);border:1px solid var(--line);color:var(--ink);font:600 12px var(--f-mono);letter-spacing:0}
+.posten{list-style:none;margin:0;padding:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.pos{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px 12px;align-items:center;padding:10px 12px;border-top:1px solid var(--line)}
+.pos:first-child{border-top:0}
+.pos.offen{background:var(--surface-2)}
+.haken{width:28px;height:28px;border-radius:50%;border:2px solid var(--line);background:none;display:grid;place-items:center;color:transparent;padding:0}
+.haken:hover{border-color:var(--accent)}
+.pos.ok .haken{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.pos.ok .name{text-decoration:line-through;color:var(--muted)}
+.pos.ok .preis{color:var(--muted)}
+.txt{border:0;background:none;padding:2px 0;margin:0;text-align:left;min-width:0;width:100%;display:block;border-radius:6px}
+.name{display:block;font-weight:600;overflow-wrap:anywhere;line-height:1.25}
+.meta{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:2px 10px;align-items:center;margin-top:2px}
+.fest{display:inline-flex;align-items:center;gap:5px;font-weight:600;color:var(--ink)}
+.tipp{color:var(--good);font-weight:600}
+.fehlt{color:var(--deal);font-weight:600}
+.tag{background:var(--tag);color:var(--tag-ink);font-weight:700;font-size:12px;padding:1px 6px;border-radius:4px}
+.rechts{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.preis{border:0;background:none;padding:2px 4px;margin:-2px -4px;border-radius:6px;font:600 16px var(--f-mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+button.preis:hover{background:var(--surface-2)}
+.preis s{display:block;font-size:12px;color:var(--muted);font-weight:400}
+.preis.offen{color:var(--accent);font-family:var(--f-body)}
+.preis-edit{width:88px;padding:6px 8px;border:1.5px solid var(--accent);border-radius:8px;background:var(--surface);font:600 15px var(--f-mono);text-align:right}
+.menge{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+.menge button{width:32px;height:30px;border:0;background:none;font-size:18px;line-height:1;display:grid;place-items:center;border-radius:999px;color:var(--ink)}
+.menge button:hover{background:var(--surface-2)}
+.menge span{min-width:18px;text-align:center;font:600 14px var(--f-mono)}
+.details{grid-column:1 / -1;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.details-akt{grid-column:1 / -1;display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+.leer{background:var(--surface);border:1.5px dashed var(--line);border-radius:12px;padding:28px 20px;text-align:center;color:var(--muted);margin-top:18px}
+.leer strong{display:block;color:var(--ink);font:700 22px var(--f-display);text-transform:uppercase;letter-spacing:.03em;margin-bottom:4px}
+.aktionen{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.knopf{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 14px;font-weight:600;font-size:14px}
+.knopf:hover{border-color:var(--accent)}
+.knopf.haupt{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.knopf.warn{color:var(--deal)}
+.knopf.warn[data-sicher="1"]{background:var(--deal);color:var(--deal-ink);border-color:var(--deal)}
+.kopiertext{width:100%;min-height:140px;margin-top:8px;border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--surface);font:13px var(--f-mono)}
+.banner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px;background:var(--accent-soft);border-radius:12px;padding:10px 14px;margin-block:6px 4px;font-size:14px}
+.banner .aktionen{margin:0}
+
+/* Kassenbon */
+.bon{background:var(--paper);color:var(--paper-ink);font:400 13.5px/1.55 var(--f-mono);font-variant-numeric:tabular-nums;padding:22px 20px 34px;
+  --zz:9px;-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/calc(2*var(--zz)) 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/calc(2*var(--zz)) 100%;
+  border-radius:3px 3px 0 0;scroll-margin-top:70px}
+@media (min-width:900px){.bon{position:sticky;top:70px}}
+.bon-kopf{text-align:center;margin-bottom:10px}
+.bon-kopf strong{display:block;font:800 26px/1 var(--f-display);letter-spacing:.14em}
+.bon-kopf span{font-size:12px;letter-spacing:.06em}
+.bon hr{border:0;border-top:1.5px dashed var(--paper-line);margin:10px 0}
+.z{display:flex;justify-content:space-between;gap:12px}
+.z > span:last-child{text-align:right}
+.z.gespart{color:var(--good)}
+.z.klein{font-size:12.5px;opacity:.85}
+.summe{display:flex;justify-content:space-between;align-items:baseline;gap:8px;border-top:2px solid var(--paper-ink);border-bottom:2px solid var(--paper-ink);padding:8px 0;margin:10px 0 8px;font-weight:600}
+.summe b{font:800 30px/1 var(--f-display);letter-spacing:.02em}
+.bon h4{margin:4px 0 8px;font:600 12px var(--f-mono);letter-spacing:.14em}
+.vg{display:grid;grid-template-columns:74px minmax(0,1fr) 62px;gap:8px;align-items:center;width:100%;border:0;background:none;padding:3px 4px;margin:0 -4px;border-radius:4px;text-align:left;color:inherit;font:inherit}
+.vg:hover{background:rgb(127 127 127 / .12)}
+.vg[aria-pressed="true"]{outline:1.5px solid var(--paper-ink)}
+.vg .vn{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vg .vb{text-align:right}
+.balken{height:10px;background:rgb(127 127 127 / .14);border-radius:2px;overflow:hidden}
+.balken i{display:block;height:100%;border-radius:2px}
+.balken i.teil{background-image:repeating-linear-gradient(45deg,rgb(255 255 255 / .55) 0 3px,transparent 3px 6px)}
+.vg-notiz{grid-column:2 / -1;font-size:11.5px;margin-top:-2px}
+.vg-notiz.gut{color:var(--good);font-weight:600}
+.vg-notiz.fehlt{color:var(--deal)}
+.kombi-box{margin-top:12px;padding:10px;border:1.5px dashed var(--paper-line);font-size:12.5px}
+.kombi-box b{font-weight:600}
+.bon-fuss{margin-top:14px;font-size:11.5px;text-align:center;opacity:.75}
+
+/* Summenleiste mobil */
+.leiste{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;align-items:center;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);box-shadow:0 -6px 20px rgb(0 0 0 / .18)}
+.leiste .lb{font:800 28px/1 var(--f-display)}
+.leiste .ll{font-size:12px;text-transform:uppercase;letter-spacing:.08em;opacity:.8}
+.leiste .lo{flex:1;min-width:0;font-size:13px;opacity:.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.leiste button{border:0;background:var(--tag);color:var(--tag-ink);font-weight:700;border-radius:999px;padding:8px 14px;flex:none}
+@media (min-width:900px){.leiste{display:none}}
+
+/* Bereiche: Angebote, Preise, Laeden */
+.bereich{display:grid;gap:16px;min-width:0}
+.info{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:15px}
+.info p{margin:0 0 8px;max-width:70ch}
+.info p:last-child{margin-bottom:0}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.links a{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:600;text-decoration:none;color:var(--ink);background:var(--surface-2)}
+.links a:hover{border-color:var(--accent)}
+.formular{background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.formular summary{padding:12px 16px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.formular summary::-webkit-details-marker{display:none}
+.formular summary::after{content:"+";font:600 22px/1 var(--f-mono);color:var(--accent)}
+.formular[open] summary::after{content:"–"}
+.felder{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;padding:0 16px 16px}
+.feld{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:600;color:var(--muted);min-width:0}
+.feld.breit{grid-column:1 / -1}
+.feld input,.feld select,.filterzeile input,.filterzeile select{padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);font-size:16px;font-weight:400;color:var(--ink);min-width:0;width:100%}
+.feld input:focus,.feld select:focus,.filterzeile input:focus,.filterzeile select:focus{border-color:var(--accent);outline:none}
+.felder .knopf{align-self:end;padding:11px 16px}
+.fehlermeldung{grid-column:1 / -1;color:var(--deal);font-size:14px;margin:0}
+.filterzeile{display:flex;flex-wrap:wrap;gap:8px}
+.filterzeile > *{flex:1 1 180px}
+.filter{display:flex;flex-wrap:wrap;gap:6px}
+.filter button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.filter button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+.angebote{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.schild{background:var(--tag);color:var(--tag-ink);border-radius:10px;padding:12px 14px 12px;display:flex;flex-direction:column;gap:4px;position:relative;min-width:0}
+.schild.eigen{box-shadow:inset 0 0 0 2px var(--tag-ink)}
+.s-kopf{display:flex;align-items:center;gap:6px;font:700 12px var(--f-body);text-transform:uppercase;letter-spacing:.08em;padding-right:64px}
+.s-kopf .bsp{font-weight:600;letter-spacing:.04em;border:1px solid currentColor;border-radius:4px;padding:0 4px;font-size:10.5px;opacity:.75}
+.rabatt{position:absolute;top:10px;right:10px;background:var(--deal);color:var(--deal-ink);font:800 17px/1 var(--f-display);padding:4px 8px;border-radius:6px;transform:rotate(3deg)}
+.pn{font-weight:600;line-height:1.25;overflow-wrap:anywhere;margin-top:2px}
+.pn small{display:block;font-weight:400;font-size:13px;opacity:.8}
+.s-preis{display:flex;align-items:flex-end;gap:10px;margin-top:2px}
+.gross{font:800 44px/.9 var(--f-display);letter-spacing:-.01em}
+.gross sup{font-size:.5em;vertical-align:.75em;margin-left:1px}
+.s-preis s{font:500 14px var(--f-mono);opacity:.75;padding-bottom:4px}
+.s-fuss{font-size:13px;opacity:.85}
+.s-fuss a{color:inherit}
+.zelle.echt::after{content:"✓";font:700 10px var(--f-body);color:var(--good);margin-left:2px;vertical-align:super}
+.s-akt{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+.s-akt button{border:1.5px solid var(--tag-ink);background:none;color:var(--tag-ink);border-radius:999px;padding:5px 10px;font-weight:700;font-size:13px}
+.s-akt button.voll{background:var(--tag-ink);color:var(--tag)}
+.s-akt button:disabled{opacity:.55}
+
+.tabelle-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.tab-preise{border-collapse:collapse;width:100%;font-size:14px}
+.tab-preise th,.tab-preise td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+.tab-preise thead th{position:sticky;top:0;background:var(--surface);font-size:13px;z-index:1}
+.tab-preise th:first-child,.tab-preise td:first-child{text-align:left;position:sticky;left:0;background:var(--surface);white-space:normal;min-width:170px;max-width:240px;z-index:2}
+.tab-preise tr.kat th{background:var(--surface-2);font:700 12px var(--f-body);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);text-align:left;padding-top:10px}
+.art{display:flex;align-items:flex-start;gap:8px}
+.art small{display:block;color:var(--muted);font-size:12.5px}
+.mini{flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);background:var(--surface-2);font-weight:700;line-height:1;padding:0;color:var(--accent);display:inline-grid;place-items:center}
+.mini:hover:not(:disabled){border-color:var(--accent)}
+.zelle{border:0;background:none;font:500 14px var(--f-mono);padding:4px 6px;border-radius:6px;font-variant-numeric:tabular-nums}
+.zelle:hover{background:var(--surface-2)}
+td.best .zelle{background:var(--accent-soft);color:var(--accent);font-weight:700}
+.zelle.eigen{box-shadow:inset 0 -2px 0 var(--deal)}
+.zelle .ang{display:block;font-size:10.5px;color:var(--deal);font-family:var(--f-body);font-weight:700}
+td.nv{color:var(--muted)}
+.leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted)}
+.leg span{display:inline-flex;align-items:center;gap:6px}
+.leg i{display:inline-block;width:18px;height:12px;border-radius:3px}
+
+.laeden{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.ladenkarte{background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.ladenkarte.an{border-color:var(--accent)}
+.lk-kopf{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.lk-name{display:flex;align-items:center;gap:8px;font:700 22px/1 var(--f-display);text-transform:uppercase;letter-spacing:.03em}
+.lk-name .dot{width:14px;height:14px;border-radius:4px}
+.lk-art{font-size:13px;color:var(--muted)}
+.lk-weg{font-size:13px;background:var(--surface-2);border-radius:8px;padding:8px 10px}
+.lk-weg b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.lk-akt{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:2px}
+.lk-akt a{font-size:14px;font-weight:600}
+.schalter{position:relative;width:48px;height:28px;border-radius:999px;border:0;background:var(--line);padding:0;flex:none}
+.schalter::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:var(--surface);transition:transform .15s}
+.schalter[aria-checked="true"]{background:var(--accent)}
+.schalter[aria-checked="true"]::after{transform:translateX(20px)}
+
+/* Laufweg-Dialog */
+.overlay{position:fixed;inset:0;z-index:60;background:rgb(0 0 0 / .45);display:grid;place-items:center;padding:calc(16px + env(safe-area-inset-top,0px)) 16px calc(16px + env(safe-area-inset-bottom,0px))}
+.dialog{background:var(--surface);color:var(--ink);border-radius:16px;width:100%;max-width:470px;max-height:100%;overflow:auto;padding:18px;box-shadow:var(--shadow)}
+.dialog h2{display:flex;align-items:center;gap:8px}
+.dialog p{margin:6px 0 0}
+.lw-liste{list-style:none;margin:14px 0 4px;padding:0;display:grid;gap:6px}
+.lw-liste li{display:grid;grid-template-columns:auto auto minmax(0,1fr) auto auto;gap:8px;align-items:center;padding:6px 8px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.lw-liste li.hat{border-color:var(--accent);background:var(--accent-soft)}
+.lw-liste li.zieht{box-shadow:var(--shadow);border-color:var(--accent);position:relative;z-index:1}
+.griff{cursor:grab;touch-action:none;user-select:none;color:var(--muted);font-size:18px;line-height:1;padding:6px 4px;letter-spacing:-2px}
+.lw-nr{font:600 13px var(--f-mono);color:var(--muted);min-width:18px;text-align:right}
+.lw-k{font-weight:600;min-width:0}
+.lw-k small{display:block;font-weight:500;font-size:12px;color:var(--accent)}
+
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:70;max-width:calc(100vw - 32px);text-align:center}
+.toast.an{opacity:1;transform:translate(-50%,0)}
+@media (min-width:900px){.toast{bottom:28px}}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+
+<div class="app">
+  <header class="kopf">
+    <div class="marke">
+      <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18l-2.1 10.2a2 2 0 0 1-2 1.8H7.1a2 2 0 0 1-2-1.8L3 9z"/><path d="M8 9l4-6 4 6"/><path d="M9 13v4M12 13v4M15 13v4"/></svg></span>
+      <div><h1>Wochenkorb</h1><p class="kw" id="kw"></p></div>
+    </div>
+    <span class="sync" id="sync">Auf diesem Gerät gespeichert</span>
+  </header>
+  <nav class="tabs" role="tablist" aria-label="Bereiche">
+    <button class="tab" role="tab" data-act="tab" data-id="liste" id="tab-liste">Liste</button>
+    <button class="tab" role="tab" data-act="tab" data-id="angebote" id="tab-angebote">Angebote <span class="zahl" id="zahl-ang"></span></button>
+    <button class="tab" role="tab" data-act="tab" data-id="preise" id="tab-preise">Preise</button>
+    <button class="tab" role="tab" data-act="tab" data-id="laeden" id="tab-laeden">Läden</button>
+  </nav>
+  <main id="ansicht"></main>
+</div>
+<div class="leiste" id="leiste"></div>
+<div class="overlay" id="overlay" hidden><div class="dialog" id="lw-inhalt" role="dialog" aria-modal="true" aria-labelledby="lw-titel" tabindex="-1"></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+'use strict';
+
+/* ---------- Stammdaten ---------- */
+const LAEDEN = [
+  {id:'aldi',     name:'Aldi',     art:'Discounter', farbe:'#2458c6', url:'https://www.aldi-nord.de/prospekte.html'},
+  {id:'lidl',     name:'Lidl',     art:'Discounter', farbe:'#e9b308', url:'https://www.lidl.de/c/online-prospekte/s10005610'},
+  {id:'netto',    name:'Netto',    art:'Discounter', farbe:'#e8571e', url:'https://www.netto-online.de/filialangebote'},
+  {id:'kaufland', name:'Kaufland', art:'SB-Warenhaus', farbe:'#8c5a2b', url:'https://filiale.kaufland.de/angebote/uebersicht.html'},
+  {id:'combi',    name:'Combi',    art:'Supermarkt', farbe:'#1f9d55', url:'https://www.combi.de/angebote'},
+  {id:'edeka',    name:'Edeka',    art:'Supermarkt', farbe:'#6d4bd1', url:'https://www.edeka.de/eh/angebote.jsp'},
+  {id:'rewe',     name:'Rewe',     art:'Supermarkt', farbe:'#d11f35', url:'https://www.rewe.de/angebote/'},
+  {id:'rossmann', name:'Rossmann', art:'Drogerie',   farbe:'#c0266d', url:'https://www.rossmann.de/de/angebote'}
+];
+const LMAP = Object.fromEntries(LAEDEN.map(l => [l.id, l]));
+const ROSSMANN_KAT = new Set(['Nudeln, Reis & Konserven','Öl, Gewürze & Backen','Frühstück & Aufstriche','Kaffee & Tee','Süßigkeiten','Snacks & Knabbern','Drogerie & Hygiene','Baby','Haushalt & Putzen']);
+const NONFOOD = new Set(['Drogerie & Hygiene','Baby','Haushalt & Putzen']);
+const UMWEG = 1.5; // ein zweiter Laden muss mindestens so viel sparen
+
+// [Name, Einheit, Richtpreis Discounter in EUR, Flags (b = Preiseinstieg ueberall gleich, m = Marke, x = nicht bei Rossmann), Pfand, Suchwoerter]
+// Name + Einheit ergeben die Produkt-ID: nicht umbenennen, sonst verwaisen gespeicherte Preise.
+const DATEN = {
+  'Obst': [
+    ['Bananen','1 kg',1.39,'b'], ['Äpfel','1 kg',2.29,'b',0,'Apfel'], ['Zitronen','500 g',1.29], ['Orangen','1,5 kg',2.49,'',0,'Apfelsinen'],
+    ['Weintrauben hell','500 g',2.29,'',0,'Trauben'], ['Erdbeeren','500 g',2.99], ['Heidelbeeren','250 g',2.49,'',0,'Blaubeeren'],
+    ['Avocado','Stück',0.99]
+  ],
+  'Gemüse': [
+    ['Tomaten','500 g',1.49,'b'], ['Rispentomaten','1 kg',2.99], ['Salatgurke','Stück',0.69,'b',0,'Gurke'], ['Paprika-Mix','500 g',1.99,'b',0,'Paprika'],
+    ['Kartoffeln festkochend','2,5 kg',2.99,'b'], ['Zwiebeln','1 kg',1.19,'b'], ['Möhren','1 kg',1.09,'b',0,'Karotten Wurzeln'],
+    ['Knoblauch','200 g',0.99], ['Eisbergsalat','Stück',1.19,'b',0,'Salat'], ['Champignons','400 g',1.79,'',0,'Pilze'], ['Brokkoli','500 g',1.49]
+  ],
+  'Brot & Backwaren': [
+    ['Buttertoast','500 g',1.19,'b',0,'Toast Toastbrot'], ['Vollkorntoast','500 g',1.29,'b',0,'Toast Toastbrot'],
+    ['Mischbrot','750 g',1.79,'b',0,'Brot'], ['Aufbackbrötchen','10 Stück',1.29,'b',0,'Brötchen Semmeln'],
+    ['Weizenbrötchen frisch','Stück',0.25,'b',0,'Brötchen Semmel'], ['Laugenbrezel','Stück',0.49,'',0,'Brezel Breze'],
+    ['Butter-Croissant','Stück',0.59], ['Knäckebrot','250 g',0.99], ['Tortilla-Wraps','6 Stück',1.49,'',0,'Wraps']
+  ],
+  'Milch, Käse & Eier': [
+    ['Vollmilch 3,5 %','1 l',1.09,'b',0,'Milch Frischmilch'], ['Fettarme Milch 1,5 %','1 l',0.99,'b',0,'Milch'],
+    ['H-Milch 1,5 %','1 l',0.99,'b',0,'Milch haltbar'], ['Haferdrink','1 l',1.19,'b',0,'Hafermilch'],
+    ['Deutsche Markenbutter','250 g',1.99,'b',0,'Butter'], ['Joghurt natur 3,5 %','500 g',0.89,'b'],
+    ['Fruchtjoghurt','250 g',0.59,'',0,'Joghurt'], ['Speisequark Magerstufe','500 g',1.29,'b',0,'Quark'],
+    ['Skyr natur','450 g',1.29], ['Schlagsahne 30 %','200 g',1.09,'b',0,'Sahne'], ['Schmand','200 g',0.89],
+    ['Gouda jung in Scheiben','400 g',2.99,'b',0,'Käse Scheiben'], ['Emmentaler gerieben','200 g',1.79,'',0,'Reibekäse Käse'],
+    ['Mozzarella','125 g',0.89,'b',0,'Käse'], ['Feta','200 g',1.49,'',0,'Schafskäse Käse'], ['Frischkäse','200 g',1.19,'',0,'Käse'],
+    ['Eier Freilandhaltung','10 Stück',2.79,'b',0,'Eier']
+  ],
+  'Fleisch, Wurst & Fisch': [
+    ['Hähnchenbrustfilet','400 g',4.69,'',0,'Hähnchen Huhn Geflügel'], ['Hackfleisch gemischt','500 g',4.29,'b',0,'Hack Gehacktes'],
+    ['Rinderhackfleisch','400 g',4.79,'',0,'Hack Gehacktes'], ['Schweineschnitzel','500 g',4.99,'',0,'Schnitzel'],
+    ['Grobe Bratwurst','400 g',2.99,'',0,'Würstchen Grillwurst'], ['Wiener Würstchen','6 Stück',2.49,'',0,'Würstchen'],
+    ['Salami in Scheiben','100 g',1.29,'',0,'Aufschnitt Wurst'], ['Kochschinken','200 g',1.99,'',0,'Schinken Aufschnitt'],
+    ['Lachsfilet','250 g',4.99,'',0,'Lachs Fisch']
+  ],
+  'Tiefkühl': [
+    ['Steinofenpizza Salami','350 g',1.79,'',0,'Pizza TK'], ['Pommes frites','1 kg',1.69,'b',0,'Pommes TK'],
+    ['Rahmspinat','450 g',1.19,'',0,'Spinat TK'], ['Erbsen','1 kg',1.99,'',0,'TK Gemüse'], ['Fischstäbchen','15 Stück',2.49,'',0,'Fisch TK'],
+    ['Vanilleeis','1 l',1.89,'',0,'Eis Speiseeis'], ['Beerenmischung','750 g',3.29,'',0,'TK Beeren Früchte']
+  ],
+  'Nudeln, Reis & Konserven': [
+    ['Spaghetti','500 g',0.79,'b',0,'Nudeln Pasta'], ['Penne','500 g',0.79,'b',0,'Nudeln Pasta'], ['Langkornreis','1 kg',1.59,'b',0,'Reis'],
+    ['Basmatireis','1 kg',2.49,'',0,'Reis'], ['Passierte Tomaten','500 g',0.59,'b',0,'Tomatensoße Passata'],
+    ['Gehackte Tomaten','400 g',0.55,'bx',0,'Dose Tomaten'], ['Tomatenmark','200 g',0.59], ['Kidneybohnen','400 g',0.69,'x',0,'Bohnen Dose'],
+    ['Gemüsemais','285 g',0.79,'x',0,'Mais Dose'], ['Thunfisch in eigenem Saft','150 g',1.49,'x',0,'Thunfisch Dose Fisch'],
+    ['Pesto alla Genovese','190 g',1.59,'',0,'Pesto']
+  ],
+  'Öl, Gewürze & Backen': [
+    ['Weizenmehl Type 405','1 kg',0.69,'b',0,'Mehl'], ['Zucker','1 kg',0.99,'b'], ['Speisesalz','500 g',0.29,'bx',0,'Salz'],
+    ['Sonnenblumenöl','1 l',1.69,'b',0,'Öl Speiseöl'], ['Olivenöl nativ extra','750 ml',5.99,'',0,'Öl'],
+    ['Gemüsebrühe','250 g',1.29,'',0,'Brühe Bouillon'], ['Tomatenketchup','500 ml',1.29,'',0,'Ketchup'],
+    ['Mayonnaise','500 ml',1.49,'',0,'Mayo'], ['Senf mittelscharf','200 ml',0.49,'x']
+  ],
+  'Frühstück & Aufstriche': [
+    ['Haferflocken','500 g',0.69,'b'], ['Knuspermüsli','750 g',2.29,'',0,'Müsli'], ['Cornflakes','750 g',1.79,'',0,'Flakes'],
+    ['Nuss-Nougat-Creme','400 g',1.99,'',0,'Schokocreme Nutella'], ['Nutella','450 g',3.99,'m',0,'Schokocreme'],
+    ['Erdbeerkonfitüre','450 g',1.49,'',0,'Marmelade'], ['Blütenhonig','500 g',3.49,'',0,'Honig']
+  ],
+  'Kaffee & Tee': [
+    ['Röstkaffee gemahlen','500 g',6.99,'',0,'Kaffee Filterkaffee'], ['Kaffeebohnen Crema','1 kg',13.99,'',0,'Kaffee Bohnen'],
+    ['Kaffeepads','16 Stück',1.99,'',0,'Kaffee Pads'], ['Schwarzer Tee','25 Beutel',0.99,'',0,'Tee'], ['Kräutertee','20 Beutel',0.89,'',0,'Tee Pfefferminz']
+  ],
+  'Süßigkeiten': [
+    ['Vollmilchschokolade','100 g',1.19,'b',0,'Schokolade'], ['Milka Alpenmilch','100 g',1.99,'m',0,'Schokolade'],
+    ['Fruchtgummi','200 g',0.89,'',0,'Gummibärchen'], ['Haribo Goldbären','175 g',1.39,'m',0,'Gummibärchen'],
+    ['Butterkekse','200 g',0.89,'',0,'Kekse']
+  ],
+  'Snacks & Knabbern': [
+    ['Kartoffelchips Paprika','175 g',1.19,'',0,'Chips'], ['Salzstangen','250 g',0.79,'',0,'Knabbern'], ['Erdnüsse geröstet','200 g',1.49,'',0,'Nüsse']
+  ],
+  'Getränke': [
+    ['Mineralwasser still','1,5 l',0.25,'b',0.25,'Wasser'], ['Mineralwasser classic','6 × 1,5 l',1.59,'b',1.50,'Wasser Sprudel'],
+    ['Cola','1,5 l',0.69,'',0.25], ['Coca-Cola','1,25 l',1.59,'m',0.25,'Cola'], ['Orangensaft','1 l',1.49,'b',0,'Saft O-Saft'],
+    ['Apfelsaft klar','1 l',1.19,'b',0,'Saft'], ['Pils','0,5 l Dose',0.69,'',0.25,'Bier'],
+    ['Pils','Kasten 20 × 0,5 l',11.99,'',3.10,'Bier Kiste'], ['Rotwein trocken','0,75 l',2.99,'',0,'Wein']
+  ],
+  'Drogerie & Hygiene': [
+    ['Zahnpasta','75 ml',0.65,'b',0,'Zahncreme'], ['Zahnbürsten','2 Stück',1.29], ['Duschgel','250 ml',0.89,'b'],
+    ['Shampoo','300 ml',0.99,'b'], ['Deospray','200 ml',1.29,'',0,'Deo'], ['Flüssigseife','500 ml',0.79,'b',0,'Seife Handseife'],
+    ['Toilettenpapier 3-lagig','8 Rollen',2.99,'b',0,'Klopapier Klorollen'], ['Küchentücher','4 Rollen',1.99,'b',0,'Küchenrolle'],
+    ['Taschentücher','15 Päckchen',0.99,'b'], ['Wattepads','120 Stück',0.79], ['Sonnenmilch LSF 30','200 ml',3.49,'',0,'Sonnencreme']
+  ],
+  'Baby': [
+    ['Windeln Größe 4','42 Stück',7.99,'',0,'Windeln Baby'], ['Feuchttücher','80 Stück',0.99,'',0,'Baby']
+  ],
+  'Haushalt & Putzen': [
+    ['Spülmittel','500 ml',0.69,'b'], ['Colorwaschmittel flüssig','20 WL',3.49,'',0,'Waschmittel'],
+    ['Vollwaschmittel Pulver','20 WL',3.49,'',0,'Waschpulver Waschmittel'], ['Weichspüler','1 l',1.29],
+    ['Spülmaschinentabs','40 Stück',3.99,'',0,'Tabs Geschirrspültabs'], ['Allzweckreiniger','1 l',0.89,'b',0,'Reiniger Putzmittel'],
+    ['Müllbeutel 35 l','30 Stück',1.49,'',0,'Mülltüten'], ['Alufolie','30 m',1.79], ['Spülschwämme','10 Stück',0.99,'',0,'Schwamm'],
+    ['Batterien AA','8 Stück',2.99,'',0,'Mignon']
+  ]
+};
+const KATS = Object.keys(DATEN);
+const ALLE_KATS = [...KATS, 'Sonstiges'];
+// Typischer Laufweg: frisch am Eingang, Trockenes in der Mitte, Kühl- und Tiefkühlware zum Schluss
+const STANDARD_GANG = ['Obst','Gemüse','Brot & Backwaren','Frühstück & Aufstriche','Kaffee & Tee','Nudeln, Reis & Konserven','Öl, Gewürze & Backen',
+  'Süßigkeiten','Snacks & Knabbern','Drogerie & Hygiene','Baby','Haushalt & Putzen','Getränke','Milch, Käse & Eier','Fleisch, Wurst & Fisch','Tiefkühl','Sonstiges'];
+const ROSSMANN_GANG = ['Drogerie & Hygiene','Baby','Haushalt & Putzen','Süßigkeiten','Snacks & Knabbern','Kaffee & Tee','Frühstück & Aufstriche',
+  'Nudeln, Reis & Konserven','Öl, Gewürze & Backen','Getränke','Sonstiges'];
+
+// Stichwoerter fuer Artikel, die nicht in der Preisliste stehen (normalisiert: ae/oe/ue/ss)
+const RATEN = Object.entries({
+  'Obst': 'obst frucht apfel aepfel birne banane kiwi mango ananas pfirsich nektarine pflaume kirsche melone beere beeren traube trauben zitrone limette orange mandarine clementine grapefruit feige dattel',
+  'Gemüse': 'gemuese salat gurke tomate tomaten paprika zucchini aubergine kohl kraut spinat lauch porree sellerie moehre moehren karotte kartoffel kartoffeln zwiebel knoblauch pilze champignon brokkoli blumenkohl mais erbsen radieschen rucola ingwer kraeuter petersilie schnittlauch basilikum kuerbis spargel fenchel',
+  'Brot & Backwaren': 'brot broetchen semmel toast baguette brezel croissant kuchen torte knaecke zwieback berliner',
+  'Milch, Käse & Eier': 'milch joghurt quark sahne butter kaese gouda mozzarella eier schmand pudding kefir buttermilch margarine',
+  'Fleisch, Wurst & Fisch': 'fleisch hack wurst schinken salami steak schnitzel haehnchen huhn pute rind schwein speck fisch lachs garnelen frikadelle bratwurst gyros',
+  'Tiefkühl': 'tk tiefkuehl pizza pommes eis',
+  'Nudeln, Reis & Konserven': 'nudeln pasta spaghetti reis dose konserve linsen bohnen couscous suppe',
+  'Öl, Gewürze & Backen': 'oel essig salz pfeffer gewuerz mehl zucker hefe backpulver ketchup senf mayo bruehe sosse sauce vanillezucker',
+  'Frühstück & Aufstriche': 'muesli cornflakes marmelade konfituere honig aufstrich haferflocken',
+  'Kaffee & Tee': 'kaffee tee espresso kakao cappuccino',
+  'Süßigkeiten': 'schokolade schoko bonbon bonbons gummi suessigkeiten kekse keks praline pralinen riegel lakritz kaugummi',
+  'Snacks & Knabbern': 'chips flips nuesse erdnuesse salzstangen popcorn cracker knabberzeug',
+  'Getränke': 'wasser sprudel saft cola limo limonade bier wein sekt schorle getraenke eistee radler energy',
+  'Drogerie & Hygiene': 'zahnpasta zahnbuerste shampoo duschgel seife deo creme rasierer klopapier toilettenpapier taschentuecher watte pflaster tampons binden kosmetik',
+  'Baby': 'windel windeln baby feuchttuecher schnuller',
+  'Haushalt & Putzen': 'spuelmittel waschmittel reiniger putzmittel muellbeutel folie schwamm batterie batterien kerze gluehbirne tabs'
+}).map(([k, w]) => [k, w.split(' ')]);
+
+const norm = s => String(s).toLowerCase().replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss').replace(/[^a-z0-9]+/g,' ').trim();
+const slug = s => norm(s).replace(/ /g,'-');
+const PRODUKTE = [];
+KATS.forEach(kat => DATEN[kat].forEach(([name, einheit, preis, fl = '', pfand = 0, syn = '']) => {
+  PRODUKTE.push({ id: slug(name + ' ' + einheit), idx: PRODUKTE.length, kat, name, einheit, basis: preis,
+    basic: fl.includes('b'), marke: fl.includes('m'), pfand: pfand || 0,
+    ross: ROSSMANN_KAT.has(kat) && !fl.includes('x'), kern: norm(name + ' ' + syn), such: norm(name + ' ' + syn + ' ' + kat) });
+}));
+const PMAP = Object.fromEntries(PRODUKTE.map(p => [p.id, p]));
+
+/* ---------- Richtpreise ---------- */
+function hash(s){ let h = 2166136261; for (let i = 0; i < s.length; i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return (h >>> 0) / 4294967295; }
+function rund(p){ const r = Math.round(p * 10) / 10 - 0.01; return Math.max(0.09, Math.round(r * 100) / 100); }
+// Online gepruefte Preise und Prospekt-Angebote kommen aus daten/preise.json (woechentlich aktualisiert)
+let ECHT = {}, LIVE = [], DATEN_INFO = null;
+const referenz = p => { const e = ECHT[p.id]; return (e && (e.aldi ?? e.lidl)) ?? p.basis; };
+function schaetzung(p, lid){
+  if (lid === 'rossmann' && !p.ross) return null;
+  const n = hash(p.id + '|' + lid) * 2 - 1, b = referenz(p);
+  let f;
+  if (lid === 'rossmann') f = NONFOOD.has(p.kat) ? (p.basic ? 0.97 : 0.96 + n * 0.03) : 1.12 + n * 0.06;
+  else if (lid === 'aldi' || lid === 'lidl'){ if (p.basic) return b; f = 1 + n * 0.035; }
+  else if (lid === 'netto'){ if (p.basic) return b; f = 1.02 + n * 0.035; }
+  else { if (p.basic) return b; const auf = {kaufland:0.04, combi:0.09, rewe:0.15, edeka:0.17}[lid]; f = 1 + (p.marke ? auf * 0.5 : auf) + n * 0.05; }
+  return rund(b * f);
+}
+const SCHAETZ = {};
+const istEcht = (pid, lid) => ECHT[pid] != null && ECHT[pid][lid] != null;
+function berechneSchaetzungen(){
+  PRODUKTE.forEach(p => { SCHAETZ[p.id] = {}; LAEDEN.forEach(l => { SCHAETZ[p.id][l.id] = istEcht(p.id, l.id) ? ECHT[p.id][l.id] : schaetzung(p, l.id); }); });
+}
+berechneSchaetzungen();
+
+/* ---------- Datum ---------- */
+const HEUTE = new Date();
+const isoTag = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+const HEUTE_STR = isoTag(HEUTE);
+function kalenderwoche(d){ const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate())); const tag = t.getUTCDay() || 7; t.setUTCDate(t.getUTCDate() + 4 - tag); const j = new Date(Date.UTC(t.getUTCFullYear(), 0, 1)); return Math.ceil(((t - j) / 864e5 + 1) / 7); }
+const KW = kalenderwoche(HEUTE);
+function samstag(d){ const x = new Date(d); x.setDate(x.getDate() + ((6 - x.getDay() + 7) % 7)); return x; }
+const SAMSTAG_STR = isoTag(samstag(HEUTE));
+function tagKurz(s){ const [y,m,d] = s.split('-').map(Number); const dt = new Date(y, m - 1, d); return ['So','Mo','Di','Mi','Do','Fr','Sa'][dt.getDay()] + ' ' + d + '.' + m + '.'; }
+
+/* ---------- Helfer ---------- */
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const zahl = n => n.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
+const euro = n => zahl(n) + ' €';
+const komma = n => n == null ? '' : zahl(n);
+const uid = () => Math.random().toString(36).slice(2, 8) + Date.now().toString(36).slice(-4);
+const gross = s => s.charAt(0).toUpperCase() + s.slice(1);
+const leseZahl = s => { const v = parseFloat(String(s).replace(/[^\d,.-]/g,'').replace(',', '.')); return isFinite(v) && v >= 0 ? Math.round(v * 100) / 100 : null; };
+const dot = lid => `<span class="dot" style="background:${LMAP[lid].farbe}"></span>`;
+const ICON = {
+  check: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+  muell: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3"/></svg>',
+  stern: '<svg class="dot stern" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21l1.6-7L2 9.2l7.1-.6z"/></svg>',
+  plus: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>'
+};
+
+/* ---------- Suche und Einsortieren ---------- */
+// feld 'such' = Name, Suchwoerter und Gang (fuer die Vorschlagsliste); 'kern' = ohne Gang (fuer automatisches Zuordnen)
+function suche(text, max = 8, feld = 'such'){
+  const t = norm(text).split(' ').filter(Boolean);
+  if (!t.length) return [];
+  const res = [];
+  for (const p of PRODUKTE){
+    const s = p[feld];
+    if (!t.every(w => s.includes(w))) continue;
+    const woerter = s.split(' ');
+    let sc = p.idx / 10000;
+    if (norm(p.name).startsWith(t[0])) sc -= 10;
+    if (woerter.includes(t[0])) sc -= 5; else if (woerter.some(x => x.startsWith(t[0]))) sc -= 4;
+    res.push([sc, p]);
+  }
+  return res.sort((a, b) => a[0] - b[0]).slice(0, max).map(x => x[1]);
+}
+function besterTreffer(text){
+  const t0 = norm(text).split(' ')[0];
+  if (!t0) return null;
+  const p = suche(text, 1, 'kern')[0];
+  return p && p.kern.split(' ').some(w => w.startsWith(t0)) ? p : null;
+}
+function rateKat(text){
+  const p = besterTreffer(text);
+  if (p) return p.kat;
+  const woerter = norm(text).split(' ').filter(Boolean);
+  let best = null;
+  for (const [k, stems] of RATEN) for (const s of stems) for (const w of woerter){
+    let sc = 0;
+    if (w === s) sc = 300 + s.length;
+    else if (s.length >= 3 && w.endsWith(s)) sc = 200 + s.length;
+    else if (s.length >= 4 && w.startsWith(s)) sc = 100 + s.length;
+    if (sc && (!best || sc > best.sc)) best = {k, sc};
+  }
+  return best ? best.k : 'Sonstiges';
+}
+function katVon(it){ return it.kat || (it.pid && PMAP[it.pid] ? PMAP[it.pid].kat : rateKat(it.name)); }
+
+/* ---------- Zustand ---------- */
+const SCHLUESSEL = 'wochenkorb.v1';
+function beispielListe(){
+  const f = (name, menge = 1, laden = null) => { const p = PRODUKTE.find(x => x.name === name); return {id: uid(), pid: p.id, name: p.name, einheit: p.einheit, menge, ok: false, preis: null, laden, kat: null}; };
+  return [f('Vollmilch 3,5 %', 2), f('Bananen'), f('Buttertoast'), f('Gouda jung in Scheiben'), f('Hackfleisch gemischt'),
+    f('Spaghetti'), f('Passierte Tomaten', 2), f('Röstkaffee gemahlen'), f('Mineralwasser classic'), f('Vollmilchschokolade'),
+    f('Toilettenpapier 3-lagig', 1, 'rossmann'), f('Zahnpasta', 1, 'rossmann'),
+    {id: uid(), pid: null, name: 'Blumenstrauß', einheit: '', menge: 1, ok: false, preis: 4.99, laden: null, kat: 'Sonstiges'}];
+}
+function neuerZustand(){ return {v:3, aktiv: LAEDEN.map(l => l.id), modus: 'kombi', liste: beispielListe(), beispielListe: true, preise: {}, angebote: [], beispieleAus: false, gangfolge: {}, tour: [], geaendert: 0}; }
+function bereinige(z){
+  const n = neuerZustand(), r = Object.assign(n, z || {});
+  if (!Array.isArray(r.liste)) r.liste = [];
+  r.liste = r.liste.filter(i => i && i.id && i.name).map(i => Object.assign({menge:1, ok:false, preis:null, einheit:'', pid:null, laden:null, kat:null}, i));
+  if (!Array.isArray(r.aktiv)) r.aktiv = [];
+  if (z && (z.v || 1) < 3) r.aktiv.push('kaufland'); // Kaufland kam in Version 3 dazu
+  r.v = 3;
+  r.aktiv = LAEDEN.map(l => l.id).filter(id => r.aktiv.includes(id));
+  if (!r.aktiv.length) r.aktiv = LAEDEN.map(l => l.id);
+  if (!r.preise || typeof r.preise !== 'object') r.preise = {};
+  if (!Array.isArray(r.angebote)) r.angebote = [];
+  if (!r.gangfolge || typeof r.gangfolge !== 'object') r.gangfolge = {};
+  if (!Array.isArray(r.tour)) r.tour = [];
+  return r;
+}
+let state = (() => { try { const raw = localStorage.getItem(SCHLUESSEL); if (raw) return bereinige(JSON.parse(raw)); } catch (e) {} return neuerZustand(); })();
+
+function lokalSpeichern(){ try { localStorage.setItem(SCHLUESSEL, JSON.stringify(state)); } catch (e) {} }
+function aendern(fn){ fn(); state.geaendert = Date.now(); lokalSpeichern(); dbPlanen(); aktualisiere(); }
+
+function gangfolge(lid){
+  const basis = state.gangfolge[lid] || (lid === 'rossmann' ? ROSSMANN_GANG : STANDARD_GANG);
+  const out = basis.filter(k => ALLE_KATS.includes(k));
+  STANDARD_GANG.forEach(k => { if (!out.includes(k)) out.push(k); });
+  return out;
+}
+
+/* ---------- Konto-Sync (nur im veroeffentlichten Artifact) ---------- */
+let dbDoc = null, dbTimer = 0, dbLaeuft = false, dbNochmal = false;
+function setSync(s){
+  const el = $('#sync'); el.className = 'sync ' + s;
+  el.textContent = s === 'konto' ? 'Mit deinem Konto synchronisiert' : s === 'fehler' ? 'Sync gestört, auf diesem Gerät gespeichert' : 'Auf diesem Gerät gespeichert';
+}
+function dbPlanen(){ if (!dbDoc) return; clearTimeout(dbTimer); dbTimer = setTimeout(dbSchreiben, 800); }
+async function dbSchreiben(){
+  if (!dbDoc) return;
+  if (dbLaeuft){ dbNochmal = true; return; }
+  dbLaeuft = true;
+  try { await dbDoc.set(JSON.parse(JSON.stringify(state))); setSync('konto'); } catch (e) { setSync('fehler'); }
+  dbLaeuft = false;
+  if (dbNochmal){ dbNochmal = false; dbSchreiben(); }
+}
+function uebernehme(d){
+  if (!d || !(d.geaendert > state.geaendert)) return;
+  bereitsGemountet = null; state = bereinige(JSON.parse(JSON.stringify(d))); lokalSpeichern(); zeigeAnsicht();
+}
+async function syncStarten(){
+  const c = window.claude;
+  if (!c || typeof c.use !== 'function') return;
+  try {
+    const [db, user] = await Promise.all([c.use('db'), c.use('user')]);
+    if (!db || !user) return;
+    const id = await user.id();
+    if (!id) return;
+    dbDoc = db.doc('data/users/' + id + '/wochenkorb');
+    const snap = await dbDoc.get();
+    if (snap.exists){ uebernehme(snap.data()); setSync('konto'); }
+    else if (state.geaendert > 0) dbSchreiben();
+    dbDoc.onSnapshot(s => { if (s.exists && !s.metadata.hasPendingWrites){ uebernehme(s.data()); setSync('konto'); } }, () => setSync('fehler'));
+  } catch (e) { dbDoc = null; }
+}
+
+/* ---------- Angebote ---------- */
+function regulaer(pid, lid){ const o = state.preise[pid]; if (o && o[lid] != null) return o[lid]; return SCHAETZ[pid] ? SCHAETZ[pid][lid] : null; }
+function mulberry(a){ return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+function beispielAngebote(){
+  const rnd = mulberry(HEUTE.getFullYear() * 100 + KW);
+  const pool = PRODUKTE.slice();
+  for (let i = pool.length - 1; i > 0; i--){ const j = Math.floor(rnd() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
+  const out = [];
+  for (const p of pool){
+    if (out.length >= 16) break;
+    const moeglich = LAEDEN.filter(l => regulaer(p.id, l.id) != null);
+    const l = moeglich[Math.floor(rnd() * moeglich.length)];
+    const alt = regulaer(p.id, l.id), preis = rund(alt * (1 - (0.18 + rnd() * 0.24)));
+    if (preis >= alt) continue;
+    out.push({id: 'bsp-' + p.id + '-' + l.id, laden: l.id, pid: p.id, name: p.name, einheit: p.einheit, preis, alt, bis: SAMSTAG_STR, beispiel: true});
+  }
+  return out;
+}
+let ANGEBOTE = [], ANG_IDX = new Map();
+const angSchluessel = (lid, pid, name) => lid + '|' + (pid ? pid : 'n:' + norm(name));
+function angeboteNeu(){
+  const beispiele = state.beispieleAus || LIVE.length ? [] : beispielAngebote();
+  ANGEBOTE = [...state.angebote, ...LIVE, ...beispiele].filter(a => a.bis >= HEUTE_STR && (!a.ab || a.ab <= HEUTE_STR) && LMAP[a.laden]);
+  ANG_IDX = new Map();
+  for (const a of ANGEBOTE){
+    if (a.beispiel || !state.aktiv.includes(a.laden)) continue; // Beispiele nur zeigen, nie einrechnen
+    const k = angSchluessel(a.laden, a.pid, a.name), alt = ANG_IDX.get(k);
+    if (!alt || a.preis < alt.preis) ANG_IDX.set(k, a);
+  }
+}
+
+/* ---------- Rechnen ---------- */
+function posten(it, lid){
+  const ang = ANG_IDX.get(angSchluessel(lid, it.pid, it.name));
+  if (it.pid && PMAP[it.pid]){
+    const reg = regulaer(it.pid, lid);
+    if (reg == null && !ang) return {fehlt: true};
+    const r = reg == null ? ang.preis : reg;
+    const nimmAng = ang && ang.preis < r;
+    return {preis: nimmAng ? ang.preis : r, reg: r, ang: nimmAng ? ang : null, pfand: PMAP[it.pid].pfand};
+  }
+  if (ang){ const reg = it.preis ?? ang.alt ?? ang.preis; return {preis: Math.min(ang.preis, reg), reg, ang: ang.preis < reg ? ang : null, pfand: 0}; }
+  if (it.preis == null) return {preis: 0, reg: 0, ang: null, pfand: 0, ohne: true};
+  return {preis: it.preis, reg: it.preis, ang: null, pfand: 0};
+}
+const festLaden = it => it.laden && state.aktiv.includes(it.laden) ? it.laden : null;
+function tourSortiert(ids){
+  const ord = l => { const i = state.tour.indexOf(l); return i < 0 ? 100 + LAEDEN.findIndex(x => x.id === l) : i; };
+  return ids.slice().sort((a, b) => ord(a) - ord(b));
+}
+// ls = Laeden fuer automatisch zugeordnete Artikel; fest zugeordnete Artikel bleiben in ihrem Laden
+function rechne(ls){
+  const r = {basis: ls, artikel: 0, pfand: 0, gespart: 0, fehlt: [], ohne: 0, wagen: 0, offen: 0, stueck: 0, fest: 0, zu: {}};
+  const benutzt = new Set();
+  for (const it of state.liste){
+    const fl = festLaden(it);
+    let bl = null, bp = null;
+    if (fl){ r.fest++; const p = posten(it, fl); if (!p.fehlt){ bl = fl; bp = p; } }
+    else { let bv = Infinity; for (const l of ls){ const p = posten(it, l); if (p.fehlt) continue; const v = p.preis + p.pfand; if (v < bv - 1e-9){ bv = v; bl = l; bp = p; } } }
+    if (!bp){ r.fehlt.push(it); continue; }
+    const m = it.menge, zeile = (bp.preis + bp.pfand) * m;
+    r.zu[it.id] = {l: bl, p: bp, fest: !!fl};
+    benutzt.add(bl);
+    r.artikel += bp.preis * m; r.pfand += bp.pfand * m; r.stueck += m;
+    if (bp.ang) r.gespart += (bp.reg - bp.preis) * m;
+    if (bp.ohne) r.ohne++;
+    if (it.ok) r.wagen += zeile; else r.offen += zeile;
+  }
+  r.stationen = tourSortiert([...benutzt]);
+  r.summe = r.artikel + r.pfand;
+  return r;
+}
+const orte = r => r.stationen.length ? r.stationen : r.basis.slice(0, 1);
+function besteKombi(){
+  const akt = state.aktiv, kand = [];
+  akt.forEach((a, i) => { kand.push([a]); akt.slice(i + 1).forEach(b => kand.push([a, b])); });
+  let best = null;
+  for (const ls of kand){
+    const r = rechne(ls), wert = r.fehlt.length * 1000 + r.summe + Math.max(0, r.stationen.length - 1) * UMWEG;
+    if (!best || wert < best.wert - 1e-9) best = Object.assign(r, {wert});
+  }
+  return best;
+}
+function billiger(it, lid, jetzt){
+  let best = null;
+  for (const l of state.aktiv){ if (l === lid) continue; const p = posten(it, l); if (p.fehlt || p.ohne) continue; const v = p.preis + p.pfand; if (!best || v < best.v) best = {l, v}; }
+  return best && jetzt - best.v >= 0.10 ? best : null;
+}
+let R = null, VERGLEICH = [], KOMBI = null;
+function berechneAlles(){
+  if (state.modus !== 'kombi' && !state.aktiv.includes(state.modus)) state.modus = 'kombi';
+  angeboteNeu();
+  VERGLEICH = state.aktiv.map(l => ({l, r: rechne([l])})).sort((a, b) => (a.r.fehlt.length - b.r.fehlt.length) || (a.r.summe - b.r.summe));
+  KOMBI = besteKombi();
+  R = state.modus === 'kombi' ? KOMBI : VERGLEICH.find(v => v.l === state.modus).r;
+}
+const ladenNamen = ls => ls.map(l => LMAP[l].name).join(' + ');
+const imLaden = l => state.liste.filter(it => R.zu[it.id] && R.zu[it.id].l === l);
+const summeVon = items => items.reduce((s, it) => { const z = R.zu[it.id]; return s + (z ? (z.p.preis + z.p.pfand) * it.menge : 0); }, 0);
+
+/* ---------- Ansichten ---------- */
+let reiter = 'liste', bereitsGemountet = null, bearbeite = null, offenId = null, tourFilter = 'alle', lwLaden = null;
+const aufgeklappt = new Set();
+try { const t = localStorage.getItem('wochenkorb.reiter'); if (['liste','angebote','preise','laeden'].includes(t)) reiter = t; } catch (e) {}
+
+const ANSICHTEN = {};
+
+ANSICHTEN.liste = {
+  mount(){
+    $('#ansicht').innerHTML = `
+      <div class="liste-layout">
+        <section class="zettel" aria-label="Einkaufsliste">
+          <div id="hinweis"></div>
+          <div class="abschnitt-kopf"><h2>Einkaufen bei</h2><span class="klein">Summe je Laden, ca.</span></div>
+          <div class="wahl" id="wahl"></div>
+          <p class="eingabe-tipp" id="fest-hinweis" style="margin-top:8px" hidden></p>
+          <div class="suche">
+            ${ICON.plus}
+            <input id="eingabe" type="text" autocomplete="off" enterkeyhint="done" placeholder="Artikel hinzufügen, z. B. 2 Milch, Brot, Bier" aria-label="Artikel hinzufügen" aria-autocomplete="list" aria-controls="vorschlaege">
+            <div class="vorschlaege" id="vorschlaege" role="listbox" hidden></div>
+          </div>
+          <p class="eingabe-tipp">Mehrere Artikel mit Komma trennen, die Zahl davor ist die Menge. Alles wird automatisch in Gänge einsortiert. Tippe einen Artikel an, um Gang oder Laden zu ändern.</p>
+          <div id="posten"></div>
+          <div class="aktionen" id="aktionen"></div>
+        </section>
+        <aside class="bon" id="bon" aria-label="Kassenbon"></aside>
+      </div>`;
+    const ein = $('#eingabe');
+    ein.addEventListener('input', () => { vsIndex = 0; zeigeVorschlaege(); });
+    ein.addEventListener('focus', zeigeVorschlaege);
+    ein.addEventListener('paste', e => {
+      const t = (e.clipboardData || window.clipboardData).getData('text') || '';
+      if (/\n/.test(t.trim())){ e.preventDefault(); mehrereHinzufuegen(t); ein.value = ''; schliesseVorschlaege(); }
+    });
+    ein.addEventListener('keydown', e => {
+      const box = $('#vorschlaege');
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp'){ if (box.hidden) return; e.preventDefault(); vsIndex = (vsIndex + (e.key === 'ArrowDown' ? 1 : -1) + vsTreffer.length) % vsTreffer.length; zeichneVorschlaege(); }
+      else if (e.key === 'Enter'){ e.preventDefault(); if (vsTreffer.length) waehle(vsIndex); }
+      else if (e.key === 'Escape'){ schliesseVorschlaege(); }
+    });
+  },
+  update(){
+    $('#hinweis').innerHTML = state.beispielListe && state.liste.length ? `<div class="banner"><span>Das ist eine Beispielliste. So sieht dein Einkauf mit Preisen aus.</span><div class="aktionen"><button class="knopf haupt" data-act="beispiel-leeren">Leere Liste starten</button><button class="knopf" data-act="beispiel-behalten">Behalten</button></div></div>` : '';
+    const fh = $('#fest-hinweis');
+    fh.hidden = !R.fest;
+    fh.textContent = R.fest ? `${R.fest} ${R.fest === 1 ? 'Artikel ist' : 'Artikel sind'} fest einem Laden zugeordnet. Die Wahl oben gilt für den Rest.` : '';
+    zeichneWahl(); zeichnePosten(); zeichneAktionen(); zeichneBon();
+  }
+};
+
+function zeichneWahl(){
+  const bestKomplett = VERGLEICH.find(v => !v.r.fehlt.length);
+  let html = `<button class="chip kombi" data-act="modus" data-id="kombi" aria-pressed="${state.modus === 'kombi'}"><span class="n">${ICON.stern}Beste Wahl</span><span class="b">${zahl(KOMBI.summe)}</span><span class="u">${esc(ladenNamen(orte(KOMBI)))}</span></button>`;
+  for (const l of state.aktiv){
+    const r = VERGLEICH.find(x => x.l === l).r;
+    let u;
+    if (r.fehlt.length) u = `<span class="u fehlt">${r.fehlt.length} fehlt</span>`;
+    else if (bestKomplett && bestKomplett.l === l) u = `<span class="u gut">günstigster</span>`;
+    else u = `<span class="u">+${zahl(r.summe - (bestKomplett ? bestKomplett.r.summe : 0))}</span>`;
+    html += `<button class="chip" data-act="modus" data-id="${l}" aria-pressed="${state.modus === l}"><span class="n">${dot(l)}${LMAP[l].name}</span><span class="b">${zahl(r.summe)}</span>${u}</button>`;
+  }
+  $('#wahl').innerHTML = html;
+}
+
+function detailsHTML(it){
+  const aktKat = katVon(it);
+  const autoName = state.modus === 'kombi' ? 'Beste Wahl' : LMAP[state.modus].name;
+  const opts = state.aktiv.map(l => { const p = posten(it, l); return `<option value="${l}"${it.laden === l ? ' selected' : ''}>${LMAP[l].name}${p.fehlt ? ' (nicht gelistet)' : p.ohne ? '' : ' · ' + euro(p.preis)}</option>`; }).join('');
+  return `<div class="details">
+    <label class="feld">Gang<select id="d-kat-${it.id}" data-feld="kat" data-id="${it.id}">${ALLE_KATS.map(k => `<option${k === aktKat ? ' selected' : ''}>${esc(k)}</option>`).join('')}</select></label>
+    <label class="feld">Kaufen bei<select id="d-laden-${it.id}" data-feld="laden" data-id="${it.id}"><option value="">Automatisch (${autoName})</option>${opts}</select></label>
+    <div class="details-akt"><button class="knopf warn" data-act="entfernen" data-id="${it.id}">Entfernen</button><button class="knopf haupt" data-act="details" data-id="${it.id}">Fertig</button></div>
+  </div>`;
+}
+
+function zeileHTML(it){
+  const z = R.zu[it.id], m = it.menge, fl = festLaden(it);
+  const meta = [`<span>${it.einheit ? esc(it.einheit) : 'eigener Artikel'}</span>`];
+  let preisHTML;
+  if (!z){
+    meta.push(`<span class="fehlt">nicht bei ${esc(fl ? LMAP[fl].name : ladenNamen(R.basis))}</span>`);
+    preisHTML = `<span class="preis">–</span>`;
+  } else {
+    const p = z.p;
+    if (z.fest) meta.push(`<span class="fest">${dot(z.l)}fest: ${LMAP[z.l].name}</span>`);
+    if (p.ang) meta.push(`<span class="tag">Angebot −${Math.round((1 - p.preis / p.reg) * 100)} %</span>`);
+    if (p.pfand) meta.push(`<span>+ ${euro(p.pfand * m)} Pfand</span>`);
+    if (state.modus !== 'kombi' && !it.ok && !z.fest){ const b = billiger(it, z.l, p.preis + p.pfand); if (b) meta.push(`<span class="tipp">bei ${LMAP[b.l].name} ${euro((p.preis + p.pfand - b.v) * m)} günstiger</span>`); }
+    if (bearbeite && bearbeite.art === 'liste' && bearbeite.id === it.id)
+      preisHTML = `<input class="preis-edit" id="pe-${it.id}" inputmode="decimal" value="${p.ohne ? '' : komma(p.ang ? p.reg : p.preis)}" placeholder="0,00" aria-label="Stückpreis ${esc(it.name)} bei ${LMAP[z.l].name}">`;
+    else if (p.ohne) preisHTML = `<button class="preis offen" data-act="preis" data-id="${it.id}" data-l="${z.l}">Preis?</button>`;
+    else preisHTML = `<button class="preis" data-act="preis" data-id="${it.id}" data-l="${z.l}" title="Stückpreis ändern">${euro(p.preis * m)}${p.ang ? `<s>${euro(p.reg * m)}</s>` : ''}</button>`;
+  }
+  const offen = offenId === it.id;
+  return `<li class="pos${it.ok ? ' ok' : ''}${offen ? ' offen' : ''}">
+    <button class="haken" data-act="ok" data-id="${it.id}" aria-pressed="${it.ok}" aria-label="${esc(it.name)} ${it.ok ? 'wieder offen' : 'im Wagen'}">${ICON.check}</button>
+    <button class="txt" data-act="details" data-id="${it.id}" aria-expanded="${offen}"><span class="name">${esc(it.name)}</span><span class="meta">${meta.join('')}</span></button>
+    <div class="rechts">${preisHTML}<div class="menge"><button data-act="minus" data-id="${it.id}" aria-label="${m > 1 ? 'Einen weniger' : 'Entfernen'}">${m > 1 ? '−' : ICON.muell}</button><span>${m}</span><button data-act="plus" data-id="${it.id}" aria-label="Einen mehr">+</button></div></div>
+    ${offen ? detailsHTML(it) : ''}
+  </li>`;
+}
+
+// Artikel eines Ladens nach seinem Laufweg in Gaenge gruppiert
+function gaengeHTML(items, lid){
+  const folge = gangfolge(lid), gruppen = new Map();
+  for (const it of items){ const k = katVon(it); if (!gruppen.has(k)) gruppen.set(k, []); gruppen.get(k).push(it); }
+  return [...gruppen.entries()].sort((a, b) => folge.indexOf(a[0]) - folge.indexOf(b[0])).map(([k, its], i) => {
+    its.sort((a, b) => a.ok - b.ok);
+    return `<div class="gang"><div class="gang-kopf"><span class="gl"><span class="gnr">${i + 1}</span>${esc(k)}</span><span class="gs">${its.length} · ${euro(summeVon(its))}</span></div><ul class="posten">${its.map(zeileHTML).join('')}</ul></div>`;
+  }).join('');
+}
+
+function stationHTML(l, i, anzahl, items){
+  const n = items.length, fertig = items.filter(x => x.ok).length, erledigt = n > 0 && fertig === n;
+  const zeigen = !erledigt || aufgeklappt.has(l);
+  return `<section class="station${erledigt ? ' erledigt' : ''}" aria-label="${LMAP[l].name}">
+    <div class="station-kopf">
+      <span class="nr">${erledigt ? '✓' : i + 1}</span>
+      <div class="st-titel"><strong>${dot(l)}${LMAP[l].name}</strong><span class="klein">${erledigt ? 'erledigt' : `${fertig} von ${n} im Wagen`} · ${euro(summeVon(items))}</span></div>
+      <div class="st-akt">
+        <button class="mini" data-act="tour-hoch" data-id="${l}" ${i === 0 ? 'disabled' : ''} aria-label="${LMAP[l].name} früher besuchen">↑</button>
+        <button class="mini" data-act="tour-runter" data-id="${l}" ${i === anzahl - 1 ? 'disabled' : ''} aria-label="${LMAP[l].name} später besuchen">↓</button>
+        <button class="knopf klein-k" data-act="laufweg" data-id="${l}">Laufweg</button>
+      </div>
+    </div>
+    <div class="st-balken"><i style="width:${n ? (fertig / n * 100).toFixed(0) : 0}%"></i></div>
+    ${zeigen ? gaengeHTML(items, l) : `<div class="aktionen" style="margin-top:10px"><button class="knopf" data-act="aufklappen" data-id="${l}">${n} Artikel zeigen</button></div>`}
+  </section>`;
+}
+
+function zeichnePosten(){
+  const el = $('#posten');
+  if (!state.liste.length){
+    el.innerHTML = `<div class="leer"><strong>Der Zettel ist leer</strong>Tipp oben ein, was du brauchst, zum Beispiel „2 Milch, Brot, Bier“. Die Artikel landen sortiert in ihren Gängen, die Summe rechnet sich sofort aus.</div>`;
+    return;
+  }
+  const st = R.stationen, html = [];
+  if (st.length <= 1){
+    const lid = st[0] || R.basis[0];
+    html.push(`<div class="laufweg-zeile"><span>Sortiert nach deinem Laufweg bei <strong>${LMAP[lid].name}</strong></span><button class="knopf klein-k" data-act="laufweg" data-id="${lid}">Laufweg ändern</button></div>`);
+    html.push(gaengeHTML(imLaden(lid), lid));
+  } else {
+    if (tourFilter !== 'alle' && !st.includes(tourFilter)) tourFilter = 'alle';
+    html.push(`<div class="tour-kopf"><h2>Deine Tour</h2><span class="klein">${st.length} Läden · Reihenfolge mit ↑ ↓</span></div>`);
+    html.push(`<div class="tour-tabs"><button data-act="tour-filter" data-id="alle" aria-pressed="${tourFilter === 'alle'}">Ganze Tour</button>` +
+      st.map((l, i) => { const its = imLaden(l), f = its.filter(x => x.ok).length; return `<button data-act="tour-filter" data-id="${l}" aria-pressed="${tourFilter === l}"><b>${i + 1}</b>${dot(l)}${LMAP[l].name}<small>${f}/${its.length}</small></button>`; }).join('') + `</div>`);
+    st.forEach((l, i) => { if (tourFilter === 'alle' || tourFilter === l) html.push(stationHTML(l, i, st.length, imLaden(l))); });
+  }
+  if (R.fehlt.length && (st.length <= 1 || tourFilter === 'alle'))
+    html.push(`<div class="gang"><div class="gang-kopf"><span class="gl fehlt">Nicht erhältlich</span><span class="gs">${R.fehlt.length}</span></div><ul class="posten">${R.fehlt.map(zeileHTML).join('')}</ul></div>`);
+  el.innerHTML = html.join('');
+  if (bearbeite && bearbeite.art === 'liste'){ const inp = $('#pe-' + bearbeite.id); if (inp){ inp.focus(); inp.select(); } }
+}
+
+function zeichneAktionen(){
+  const erledigt = state.liste.filter(i => i.ok).length;
+  $('#aktionen').innerHTML = state.liste.length ? `
+    <button class="knopf" data-act="kopieren">Liste als Text kopieren</button>
+    ${erledigt ? `<button class="knopf" data-act="erledigte">Erledigte entfernen (${erledigt})</button>` : ''}
+    <button class="knopf warn" data-act="leeren">Liste leeren</button>` : '';
+}
+
+function zeichneBon(){
+  const el = $('#bon'); if (!el) return;
+  const r = R, maxS = Math.max(0.01, ...VERGLEICH.map(v => v.r.summe));
+  const bestKomplett = VERGLEICH.find(v => !v.r.fehlt.length);
+  const zeilen = VERGLEICH.map(v => {
+    const unv = v.r.fehlt.length > 0;
+    let notiz = '';
+    if (unv) notiz = `<span class="vg-notiz fehlt">${v.r.fehlt.length} ${v.r.fehlt.length === 1 ? 'Artikel fehlt' : 'Artikel fehlen'}, Summe unvollständig</span>`;
+    else if (bestKomplett && v.l === bestKomplett.l && VERGLEICH.length > 1) notiz = `<span class="vg-notiz gut">günstigster Laden</span>`;
+    return `<button class="vg" data-act="modus" data-id="${v.l}" aria-pressed="${state.modus === v.l}"><span class="vn">${LMAP[v.l].name}</span><span class="balken"><i class="${unv ? 'teil' : ''}" style="width:${(v.r.summe / maxS * 100).toFixed(1)}%;background-color:${LMAP[v.l].farbe}"></i></span><span class="vb">${zahl(v.r.summe)}</span>${notiz}</button>`;
+  }).join('');
+  let kombiText = '';
+  if (state.liste.length){
+    const ko = orte(KOMBI);
+    if (bestKomplett && !KOMBI.fehlt.length){
+      if (ko.length > 1) kombiText = `<b>Beste Wahl:</b> ${esc(ladenNamen(ko))} für ${euro(KOMBI.summe)}.${bestKomplett.r.summe - KOMBI.summe >= 0.01 ? ` Spart ${euro(bestKomplett.r.summe - KOMBI.summe)} gegenüber ${LMAP[bestKomplett.l].name}.` : ''}`;
+      else kombiText = `<b>Beste Wahl:</b> alles bei ${LMAP[ko[0]].name}. Ein zweiter Laden spart weniger als ${euro(UMWEG)}.`;
+    } else kombiText = `<b>Beste Wahl:</b> ${esc(ladenNamen(ko))}${KOMBI.fehlt.length ? `, ${KOMBI.fehlt.length} Artikel gibt es in keinem Laden` : ''}.`;
+  }
+  const stationZeilen = r.stationen.length > 1 ? r.stationen.map((l, i) => { const its = imLaden(l); return `<div class="z klein"><span>${i + 1}. ${LMAP[l].name} (${its.reduce((s, x) => s + x.menge, 0)})</span><span>${zahl(summeVon(its))}</span></div>`; }).join('') : '';
+  el.innerHTML = `
+    <div class="bon-kopf"><strong>WOCHENKORB</strong><span>KW ${KW} · ${HEUTE.toLocaleDateString('de-DE')}</span></div>
+    <div class="z"><span>Einkauf bei</span><span>${esc(ladenNamen(orte(r)).toUpperCase())}</span></div>
+    ${stationZeilen}
+    <hr>
+    <div class="z"><span>${r.stueck} Artikel</span><span>${zahl(r.artikel)}</span></div>
+    ${r.pfand ? `<div class="z"><span>Pfand</span><span>${zahl(r.pfand)}</span></div>` : ''}
+    ${r.gespart ? `<div class="z gespart"><span>Angebote gespart</span><span>−${zahl(r.gespart)}</span></div>` : ''}
+    <div class="summe"><span>SUMME ca.</span><b>${euro(r.summe)}</b></div>
+    <div class="z klein"><span>davon im Wagen</span><span>${zahl(r.wagen)}</span></div>
+    <div class="z klein"><span>noch zu holen</span><span>${zahl(r.offen)}</span></div>
+    ${r.fehlt.length ? `<div class="z klein" style="color:var(--deal)"><span>nicht erhältlich</span><span>${r.fehlt.length}</span></div>` : ''}
+    ${r.ohne ? `<div class="z klein" style="color:var(--deal)"><span>ohne Preis</span><span>${r.ohne}</span></div>` : ''}
+    <hr>
+    <h4>PREISVERGLEICH</h4>
+    ${zeilen}
+    ${kombiText ? `<div class="kombi-box">${kombiText}</div>` : ''}
+    <div class="bon-fuss">${bonHerkunft()}<br>Preis antippen, um ihn zu korrigieren.</div>`;
+}
+
+function bonHerkunft(){
+  const posten = state.liste.filter(it => R.zu[it.id] && it.pid);
+  const geprueft = posten.filter(it => istEcht(it.pid, R.zu[it.id].l) || R.zu[it.id].p.ang).length;
+  if (!geprueft) return 'Richtpreise, geschätzt. Im Laden kann es abweichen.';
+  return `${geprueft} von ${posten.length} Preisen online geprüft${DATEN_INFO && DATEN_INFO.stand ? ' (' + tagKurz(DATEN_INFO.stand) + ')' : ''}, Rest geschätzt.`;
+}
+
+function zeichneLeiste(){
+  $('#leiste').innerHTML = `<div><div class="ll">Summe ca.</div><div class="lb">${euro(R.summe)}</div></div><div class="lo">bei ${esc(ladenNamen(orte(R)))}<br>${R.stueck} Artikel · noch ${euro(R.offen)}</div><button data-act="zumbon">Bon</button>`;
+}
+
+/* ---------- Laufweg-Dialog ---------- */
+function oeffneLaufweg(lid){ lwLaden = lid; $('#overlay').hidden = false; zeichneLaufweg(); const d = $('#lw-inhalt'); d.scrollTop = 0; d.focus({preventScroll: true}); }
+function schliesseLaufweg(){ lwLaden = null; $('#overlay').hidden = true; }
+function setzeGangfolge(lid, folge){ aendern(() => { state.gangfolge[lid] = folge; }); }
+function zeichneLaufweg(){
+  if (!lwLaden) return;
+  const folge = gangfolge(lwLaden);
+  const anz = k => state.liste.filter(it => !it.ok && R.zu[it.id] && R.zu[it.id].l === lwLaden && katVon(it) === k).length;
+  $('#lw-inhalt').innerHTML = `
+    <h2 id="lw-titel">${dot(lwLaden)}Laufweg bei ${LMAP[lwLaden].name}</h2>
+    <p class="klein">Bring die Gänge in die Reihenfolge, in der du durch den Laden läufst. Zieh am Griff oder nimm die Pfeile. Deine Liste sortiert sich sofort danach. Markiert sind Gänge mit Artikeln auf deiner Liste.</p>
+    <ol class="lw-liste" id="lw-liste">${folge.map((k, i) => { const n = anz(k); return `<li data-kat="${esc(k)}" class="${n ? 'hat' : ''}"><span class="griff" aria-hidden="true">⋮⋮</span><span class="lw-nr">${i + 1}</span><span class="lw-k">${esc(k)}${n ? `<small>${n} auf der Liste</small>` : ''}</span><button class="mini" data-act="lw-hoch" data-id="${esc(k)}" aria-label="${esc(k)} nach oben" ${i === 0 ? 'disabled' : ''}>↑</button><button class="mini" data-act="lw-runter" data-id="${esc(k)}" aria-label="${esc(k)} nach unten" ${i === folge.length - 1 ? 'disabled' : ''}>↓</button></li>`; }).join('')}</ol>
+    <div class="aktionen"><button class="knopf" data-act="lw-alle">Für alle Läden übernehmen</button><button class="knopf" data-act="lw-standard">Standard</button><button class="knopf haupt" data-act="lw-zu">Fertig</button></div>`;
+}
+let zug = null;
+document.addEventListener('pointerdown', e => {
+  const g = e.target.closest && e.target.closest('.griff');
+  if (!g) return;
+  e.preventDefault();
+  const li = g.closest('li');
+  zug = {li, liste: li.parentElement};
+  li.classList.add('zieht');
+  try { g.setPointerCapture(e.pointerId); } catch (x) {}
+});
+document.addEventListener('pointermove', e => {
+  if (!zug) return;
+  for (const anderes of zug.liste.children){
+    if (anderes === zug.li) continue;
+    const b = anderes.getBoundingClientRect();
+    if (e.clientY < b.top || e.clientY > b.bottom) continue;
+    if (e.clientY < b.top + b.height / 2){ if (anderes.previousElementSibling !== zug.li) zug.liste.insertBefore(zug.li, anderes); }
+    else if (anderes.nextElementSibling !== zug.li) zug.liste.insertBefore(zug.li, anderes.nextElementSibling);
+    break;
+  }
+});
+function zugEnde(){
+  if (!zug) return;
+  const folge = [...zug.liste.children].map(li => li.dataset.kat);
+  zug.li.classList.remove('zieht'); zug = null;
+  setzeGangfolge(lwLaden, folge);
+}
+document.addEventListener('pointerup', zugEnde);
+document.addEventListener('pointercancel', zugEnde);
+
+/* ---------- Vorschlaege und Eintragen ---------- */
+let vsTreffer = [], vsIndex = 0;
+const TRENNER = /[,;\n]/;
+function zerlege(q){ const m = q.trim().match(/^(\d{1,2})\s*(?:x|×|stk\.?|stück)?\s+(.+)$/i); return m ? {menge: Math.max(1, +m[1]), text: m[2].trim()} : {menge: 1, text: q.trim()}; }
+function preisHinweis(pid){
+  const it = {pid, name: PMAP[pid].name};
+  let best = null;
+  for (const l of state.aktiv){ const p = posten(it, l); if (p.fehlt) continue; if (!best || p.preis < best.p.preis) best = {l, p}; }
+  return best;
+}
+function zeigeVorschlaege(){
+  const ein = $('#eingabe'); if (!ein) return;
+  if (TRENNER.test(ein.value)){
+    const teile = ein.value.split(/[,;\n]+/).map(s => s.trim()).filter(Boolean);
+    vsTreffer = teile.length ? [{typ: 'mehrere', teile}] : [];
+    vsIndex = 0;
+    if (vsTreffer.length) zeichneVorschlaege(); else schliesseVorschlaege();
+    return;
+  }
+  const {text} = zerlege(ein.value);
+  if (!text){ schliesseVorschlaege(); return; }
+  vsTreffer = suche(text).map(p => ({typ: 'p', p}));
+  vsTreffer.push({typ: 'eigen', name: text});
+  if (vsIndex >= vsTreffer.length) vsIndex = 0;
+  zeichneVorschlaege();
+}
+function zeichneVorschlaege(){
+  const box = $('#vorschlaege');
+  box.innerHTML = vsTreffer.map((t, i) => {
+    const sel = `aria-selected="${i === vsIndex}"`;
+    if (t.typ === 'mehrere'){
+      const vorschau = t.teile.map(s => { const {text} = zerlege(s); const p = besterTreffer(text); return `${esc(text)} → ${esc(p ? p.kat : rateKat(text))}`; }).join(' · ');
+      return `<button class="vs eigen" role="option" data-act="vs" data-i="${i}" ${sel}><span class="vs-n">${t.teile.length} Artikel auf einmal einsortieren<small>${vorschau}</small></span></button>`;
+    }
+    if (t.typ === 'eigen') return `<button class="vs eigen" role="option" data-act="vs" data-i="${i}" ${sel}><span class="vs-n">„${esc(t.name)}“ als eigenen Artikel hinzufügen<small>Gang: ${esc(rateKat(t.name))}</small></span></button>`;
+    const b = preisHinweis(t.p.id);
+    const rechts = b ? `${euro(b.p.preis)}<small>${b.p.ang ? '<span class="tag">Angebot</span> ' : ''}bei ${LMAP[b.l].name}</small>` : '<small>in deinen Läden nicht gelistet</small>';
+    return `<button class="vs" role="option" data-act="vs" data-i="${i}" ${sel}><span class="vs-n">${esc(t.p.name)}<small>${esc(t.p.einheit)} · ${esc(t.p.kat)}</small></span><span class="vs-p">${rechts}</span></button>`;
+  }).join('');
+  box.hidden = false;
+  const s = box.querySelector('[aria-selected="true"]'); if (s) s.scrollIntoView({block: 'nearest'});
+}
+function schliesseVorschlaege(){ const box = $('#vorschlaege'); if (box) box.hidden = true; }
+function waehle(i){
+  const t = vsTreffer[i], ein = $('#eingabe'); if (!t) return;
+  if (t.typ === 'mehrere') mehrereHinzufuegen(ein.value);
+  else {
+    const {menge} = zerlege(ein.value);
+    if (t.typ === 'p') hinzufuegen({pid: t.p.id, name: t.p.name, einheit: t.p.einheit}, menge);
+    else hinzufuegen({pid: null, name: gross(t.name), einheit: ''}, menge);
+  }
+  ein.value = ''; vsTreffer = []; schliesseVorschlaege();
+  if (!(bearbeite && bearbeite.art === 'liste')) ein.focus();
+}
+// nur innerhalb von aendern() aufrufen
+function neuerPosten({pid, name, einheit}, menge){
+  const da = state.liste.find(i => !i.ok && (pid ? i.pid === pid : (!i.pid && norm(i.name) === norm(name))));
+  if (da){ da.menge += menge; return {it: da, neu: false}; }
+  const it = {id: uid(), pid: pid || null, name, einheit: einheit || '', menge, ok: false, preis: null, laden: null, kat: pid ? null : rateKat(name)};
+  state.liste.push(it);
+  return {it, neu: true};
+}
+function hinzufuegen(art, menge = 1){
+  let r = null;
+  aendern(() => { r = neuerPosten(art, menge); });
+  toast(`${menge > 1 ? menge + ' × ' : ''}${art.name} → ${katVon(r.it)}`);
+  if (r.neu && !r.it.pid && reiter === 'liste' && R.zu[r.it.id]){ bearbeite = {art: 'liste', id: r.it.id, l: R.zu[r.it.id].l}; zeichnePosten(); }
+}
+function mehrereHinzufuegen(text){
+  const teile = text.split(/[,;\n]+/).map(s => s.trim()).filter(Boolean);
+  if (!teile.length) return;
+  const kats = new Set();
+  aendern(() => {
+    for (const t of teile){
+      const {menge, text: tx} = zerlege(t);
+      const p = besterTreffer(tx);
+      const r = neuerPosten(p ? {pid: p.id, name: p.name, einheit: p.einheit} : {pid: null, name: gross(tx), einheit: ''}, menge);
+      kats.add(katVon(r.it));
+    }
+  });
+  toast(`${teile.length} Artikel in ${kats.size} ${kats.size === 1 ? 'Gang' : 'Gänge'} einsortiert`);
+}
+
+/* ---------- Angebote-Ansicht ---------- */
+let angFilter = 'alle';
+ANSICHTEN.angebote = {
+  mount(){
+    const opts = PRODUKTE.map(p => `<option value="${esc(p.name + ' · ' + p.einheit)}"></option>`).join('');
+    $('#ansicht').innerHTML = `
+      <section class="bereich">
+        <div class="info">
+          <p><strong>Woher kommen die Angebote?</strong> Aldi, Lidl und Co. geben ihre Prospekte nicht als offene Daten heraus. Schau in den Prospekt deines Ladens und trag die Angebote hier ein. Sie gelten sofort in deiner Liste und im Preisvergleich, bis zum eingetragenen Datum.</p>
+          <div class="links" id="prospekte"></div>
+        </div>
+        <details class="formular" id="ang-box">
+          <summary>Angebot aus dem Prospekt eintragen</summary>
+          <form id="ang-form" class="felder" novalidate>
+            <label class="feld breit">Artikel<input id="ang-name" list="ang-produkte" autocomplete="off" placeholder="z. B. Butter oder Kaffee"></label>
+            <datalist id="ang-produkte">${opts}</datalist>
+            <label class="feld">Laden<select id="ang-laden"></select></label>
+            <label class="feld">Angebotspreis €<input id="ang-preis" inputmode="decimal" placeholder="1,49"></label>
+            <label class="feld">Normalpreis €<input id="ang-alt" inputmode="decimal" placeholder="optional"></label>
+            <label class="feld">Gültig bis<input id="ang-bis" type="date"></label>
+            <p class="fehlermeldung" id="ang-fehler" hidden></p>
+            <button class="knopf haupt" type="submit">Angebot speichern</button>
+          </form>
+        </details>
+        <div class="filterzeile"><input id="ang-suche" type="search" placeholder="Angebote durchsuchen, z. B. Kaffee" aria-label="Angebote durchsuchen" value="${esc(angSuche)}"></div>
+        <div class="filter" id="ang-filter"></div>
+        <div id="ang-bsp"></div>
+        <div class="angebote" id="ang-liste"></div>
+        <div class="aktionen" id="ang-mehr" style="margin:0"></div>
+      </section>`;
+    $('#ang-suche').addEventListener('input', e => { angSuche = e.target.value; angLimit = 60; ANSICHTEN.angebote.update(); });
+    $('#ang-bis').value = SAMSTAG_STR;
+    const altVorschlag = () => { const p = produktAusText($('#ang-name').value), l = $('#ang-laden').value; const reg = p ? regulaer(p.id, l) : null; $('#ang-alt').placeholder = reg != null ? komma(reg) + ' (Richtpreis)' : 'optional'; };
+    $('#ang-name').addEventListener('change', altVorschlag);
+    $('#ang-laden').addEventListener('change', altVorschlag);
+    $('#ang-form').addEventListener('submit', e => { e.preventDefault(); angebotSpeichern(); });
+  },
+  update(){
+    $('#prospekte').innerHTML = state.aktiv.map(l => `<a href="${LMAP[l].url}" target="_blank" rel="noopener">${dot(l)}Prospekt ${LMAP[l].name} ↗</a>`).join('');
+    const sel = $('#ang-laden'), alt = sel.value;
+    sel.innerHTML = state.aktiv.map(l => `<option value="${l}">${LMAP[l].name}</option>`).join('');
+    if (state.aktiv.includes(alt)) sel.value = alt;
+    if (angFilter !== 'alle' && angFilter !== 'meine' && !state.aktiv.includes(angFilter)) angFilter = 'alle';
+    const sichtbar = ANGEBOTE.filter(a => state.aktiv.includes(a.laden));
+    const meine = sichtbar.filter(passtZurListe);
+    $('#ang-filter').innerHTML = `<button data-act="ang-filter" data-id="alle" aria-pressed="${angFilter === 'alle'}">Alle (${sichtbar.length})</button>` +
+      `<button data-act="ang-filter" data-id="meine" aria-pressed="${angFilter === 'meine'}">${ICON.stern}Passt zu meiner Liste (${meine.length})</button>` +
+      state.aktiv.map(l => { const n = sichtbar.filter(a => a.laden === l).length; return `<button data-act="ang-filter" data-id="${l}" aria-pressed="${angFilter === l}">${dot(l)}${LMAP[l].name} (${n})</button>`; }).join('');
+    if (LIVE.length) $('#ang-bsp').innerHTML = `<div class="banner"><span>${LIVE.length} Angebote aus den aktuellen Prospekten, automatisch geladen${DATEN_INFO && DATEN_INFO.stand ? ' (Stand ' + tagKurz(DATEN_INFO.stand) + ')' : ''}. Passende Angebote zählen sofort in deiner Summe.</span></div>`;
+    else $('#ang-bsp').innerHTML = !state.beispieleAus ? `<div class="banner"><span>Die Karten mit „Beispiel“ zeigen, wie Angebote aussehen. Das sind keine echten Prospektpreise, deshalb zählen sie nicht in deiner Summe. Nur selbst eingetragene Angebote zählen.</span><div class="aktionen"><button class="knopf" data-act="bsp-aus">Beispiele ausblenden</button></div></div>`
+      : `<div class="aktionen" style="margin:0"><button class="knopf" data-act="bsp-an">Beispiel-Angebote wieder zeigen</button></div>`;
+    const q = norm(angSuche).split(' ').filter(Boolean);
+    const liste = sichtbar
+      .filter(a => angFilter === 'alle' || (angFilter === 'meine' ? passtZurListe(a) : a.laden === angFilter))
+      .filter(a => !q.length || q.every(w => norm(a.name + ' ' + (a.pid ? PMAP[a.pid].kern : '')).includes(w)))
+      .map(a => ({a, rab: a.alt ? 1 - a.preis / a.alt : 0, meins: passtZurListe(a)}))
+      .sort((x, y) => (angRang(x.a) - angRang(y.a)) || (y.meins - x.meins) || (y.rab - x.rab));
+    $('#ang-liste').innerHTML = liste.length ? liste.slice(0, angLimit).map(({a, rab}) => schildHTML(a, rab)).join('')
+      : `<div class="leer" style="grid-column:1/-1"><strong>Keine Angebote</strong>${q.length ? 'Nichts gefunden. Probier einen anderen Begriff.' : 'Trag oben ein Angebot aus dem Prospekt ein.'}</div>`;
+    $('#ang-mehr').innerHTML = liste.length > angLimit ? `<button class="knopf" data-act="ang-mehr">Weitere zeigen (${liste.length - angLimit} übrig)</button>` : '';
+  }
+};
+let angSuche = '', angLimit = 60;
+const angRang = a => a.beispiel ? 2 : a.live ? 1 : 0; // eigene zuerst, dann Prospekt, dann Beispiele
+function passtZurListe(a){ return state.liste.some(i => !i.ok && (a.pid ? i.pid === a.pid : norm(i.name) === norm(a.name))); }
+function preisSchild(p){ const e = Math.floor(p + 1e-9), c = Math.round((p - e) * 100); return `${e > 0 ? e : '-'}.<sup>${String(c).padStart(2, '0')}</sup>`; }
+function schildHTML(a, rab){
+  const aufListe = state.liste.some(i => !i.ok && (a.pid ? i.pid === a.pid : norm(i.name) === norm(a.name)));
+  const eigen = !a.beispiel && !a.live;
+  return `<article class="schild${eigen ? ' eigen' : ''}">
+    <div class="s-kopf">${dot(a.laden)}${LMAP[a.laden].name}<span class="bsp">${a.beispiel ? 'Beispiel' : a.live ? 'Prospekt' : 'Eigenes'}</span></div>
+    ${rab >= 0.01 ? `<div class="rabatt">−${Math.round(rab * 100)} %</div>` : ''}
+    <div class="pn">${esc(a.name)}<small>${esc(a.einheit || '')}</small></div>
+    <div class="s-preis"><span class="gross">${preisSchild(a.preis)}</span>${a.alt ? `<s>${zahl(a.alt)}</s>` : ''}</div>
+    <div class="s-fuss">gültig bis ${tagKurz(a.bis)}${/^https:\/\//.test(a.quelle || '') ? ` · <a href="${esc(a.quelle)}" target="_blank" rel="noopener">Quelle ↗</a>` : ''}</div>
+    <div class="s-akt">
+      <button class="voll" data-act="ang-liste" data-id="${esc(a.id)}" ${aufListe ? 'disabled' : ''}>${aufListe ? 'Auf der Liste' : '+ Auf die Liste'}</button>
+      ${eigen ? `<button data-act="ang-weg" data-id="${esc(a.id)}">Entfernen</button>` : ''}
+    </div>
+  </article>`;
+}
+function produktAusText(v){
+  const s = norm(v); if (!s) return null;
+  return PRODUKTE.find(p => norm(p.name + ' · ' + p.einheit) === s) || PRODUKTE.find(p => norm(p.name) === s) || null;
+}
+function angebotSpeichern(){
+  const fehler = $('#ang-fehler'), name = $('#ang-name').value.trim(), laden = $('#ang-laden').value;
+  const preis = leseZahl($('#ang-preis').value), altEing = leseZahl($('#ang-alt').value), bis = $('#ang-bis').value || SAMSTAG_STR;
+  const zeige = t => { fehler.textContent = t; fehler.hidden = false; };
+  if (!name) return zeige('Bitte einen Artikel eintragen.');
+  if (!preis) return zeige('Bitte den Angebotspreis eintragen, z. B. 1,49.');
+  if (bis < HEUTE_STR) return zeige('Das Datum liegt in der Vergangenheit.');
+  fehler.hidden = true;
+  const p = produktAusText(name);
+  const alt = altEing || (p ? regulaer(p.id, laden) : null);
+  aendern(() => state.angebote.push({id: 'a' + uid(), laden, pid: p ? p.id : null, name: p ? p.name : name, einheit: p ? p.einheit : '', preis, alt: alt && alt > preis ? alt : null, bis}));
+  $('#ang-name').value = ''; $('#ang-preis').value = ''; $('#ang-alt').value = ''; $('#ang-alt').placeholder = 'optional';
+  toast('Angebot gespeichert');
+}
+
+/* ---------- Preise-Ansicht ---------- */
+let prSuche = '', prKat = '';
+ANSICHTEN.preise = {
+  mount(){
+    $('#ansicht').innerHTML = `
+      <section class="bereich">
+        <div class="info"><p id="pr-info"></p></div>
+        <div class="filterzeile">
+          <input id="pr-suche" type="search" placeholder="Artikel suchen" aria-label="Artikel suchen" value="${esc(prSuche)}">
+          <select id="pr-kat" aria-label="Gang"><option value="">Alle Gänge</option>${KATS.map(k => `<option${k === prKat ? ' selected' : ''}>${esc(k)}</option>`).join('')}</select>
+        </div>
+        <div class="leg"><span><i style="background:var(--accent-soft);box-shadow:inset 0 0 0 1px var(--accent)"></i>günstigster Preis</span><span><i style="box-shadow:inset 0 -2px 0 var(--deal)"></i>eigener Preis</span><span><b style="color:var(--good)">✓</b>online geprüft</span><span><b class="mini" style="width:18px;height:18px;font-size:12px">+</b>setzt den Artikel auf die Liste</span></div>
+        <div class="tabelle-wrap" id="pr-tabelle"></div>
+      </section>`;
+    $('#pr-suche').addEventListener('input', e => { prSuche = e.target.value; zeichneTabelle(); });
+    $('#pr-kat').addEventListener('change', e => { prKat = e.target.value; zeichneTabelle(); });
+  },
+  update(){
+    const gesamt = PRODUKTE.length * state.aktiv.length;
+    const echt = PRODUKTE.reduce((s, p) => s + state.aktiv.filter(l => istEcht(p.id, l)).length, 0);
+    $('#pr-info').textContent = (echt ? `${echt} von ${gesamt} Preisen sind online geprüft (Stand ${DATEN_INFO && DATEN_INFO.stand ? tagKurz(DATEN_INFO.stand) : 'unbekannt'}), der Rest ist geschätzt. ` : `Richtpreise für ${PRODUKTE.length} Artikel, geschätzt nach typischen Preisen der Eigenmarken. `) +
+      'Discounter und die Preiseinstiegsmarken der Supermärkte liegen oft gleich auf. Tippe auf einen Preis, um ihn mit dem Preis aus deinem Laden zu ersetzen. Ein leeres Feld stellt den ursprünglichen Preis wieder her.';
+    zeichneTabelle();
+  }
+};
+function zeichneTabelle(){
+  const akt = state.aktiv;
+  const liste = prSuche.trim() ? suche(prSuche, 999) : PRODUKTE;
+  const gefiltert = liste.filter(p => !prKat || p.kat === prKat);
+  const kopf = `<thead><tr><th>Artikel</th>${akt.map(l => `<th>${dot(l)} ${LMAP[l].name}</th>`).join('')}</tr></thead>`;
+  let body = '', letzteKat = null;
+  const sortiert = prSuche.trim() ? gefiltert : gefiltert.slice().sort((a, b) => KATS.indexOf(a.kat) - KATS.indexOf(b.kat));
+  for (const p of sortiert){
+    if (!prSuche.trim() && p.kat !== letzteKat){ body += `<tr class="kat"><th colspan="${akt.length + 1}">${esc(p.kat)}</th></tr>`; letzteKat = p.kat; }
+    const it = {pid: p.id, name: p.name};
+    const werte = akt.map(l => ({l, x: posten(it, l)}));
+    const vorhanden = werte.filter(w => !w.x.fehlt).map(w => w.x.preis);
+    const min = Math.max(...vorhanden) - Math.min(...vorhanden) < 0.005 ? -1 : Math.min(...vorhanden); // alle gleich: nichts hervorheben
+    const zellen = werte.map(({l, x}) => {
+      if (bearbeite && bearbeite.art === 'tab' && bearbeite.pid === p.id && bearbeite.l === l)
+        return `<td><input class="preis-edit" id="pt-edit" inputmode="decimal" value="${komma(regulaer(p.id, l))}" placeholder="0,00" aria-label="Preis ${esc(p.name)} bei ${LMAP[l].name}"></td>`;
+      if (x.fehlt) return `<td class="nv"><button class="zelle" data-act="zelle" data-id="${p.id}" data-l="${l}" title="Preis eintragen">–</button></td>`;
+      const eigen = state.preise[p.id] && state.preise[p.id][l] != null;
+      return `<td class="${x.preis <= min + 1e-9 && akt.length > 1 ? 'best' : ''}"><button class="zelle${eigen ? ' eigen' : istEcht(p.id, l) ? ' echt' : ''}" data-act="zelle" data-id="${p.id}" data-l="${l}">${zahl(x.preis)}${x.ang ? '<span class="ang">Angebot</span>' : ''}</button></td>`;
+    }).join('');
+    body += `<tr><td><div class="art"><button class="mini" data-act="plus-produkt" data-id="${p.id}" aria-label="${esc(p.name)} zur Liste">+</button><div>${esc(p.name)}<small>${esc(p.einheit)}${p.pfand ? ' + ' + zahl(p.pfand) + ' Pfand' : ''}</small></div></div></td>${zellen}</tr>`;
+  }
+  $('#pr-tabelle').innerHTML = sortiert.length ? `<table class="tab-preise">${kopf}<tbody>${body}</tbody></table>` : `<div class="leer" style="margin:0;border:0">Kein Artikel gefunden.</div>`;
+  if (bearbeite && bearbeite.art === 'tab'){ const inp = $('#pt-edit'); if (inp){ inp.focus(); inp.select(); } }
+}
+
+/* ---------- Laeden-Ansicht ---------- */
+ANSICHTEN.laeden = {
+  mount(){
+    $('#ansicht').innerHTML = `
+      <section class="bereich">
+        <div class="info"><p>Wähle die Läden, in denen du einkaufst. Nur diese erscheinen im Preisvergleich, bei den Angeboten und in der Preisliste. Für jeden Laden legst du fest, in welcher Reihenfolge du die Gänge abläufst.</p></div>
+        <div class="laeden" id="laeden"></div>
+        <div class="info" id="daten"></div>
+      </section>`;
+  },
+  update(){
+    $('#laeden').innerHTML = LAEDEN.map(l => {
+      const an = state.aktiv.includes(l.id);
+      const anzahl = PRODUKTE.filter(p => SCHAETZ[p.id][l.id] != null).length;
+      const notiz = l.id === 'rossmann' ? 'Drogerie, Haushalt und Trockensortiment, keine Frischware.' : l.id === 'kaufland' ? 'Sehr großes Sortiment, Eigenmarke K-Classic auf Discounter-Niveau.' : l.art === 'Discounter' ? 'Günstige Eigenmarken, kleineres Sortiment.' : 'Große Auswahl. Die Preiseinstiegsmarken kosten so viel wie beim Discounter, der Rest meist mehr.';
+      const weg = gangfolge(l.id);
+      return `<div class="ladenkarte${an ? ' an' : ''}">
+        <div class="lk-kopf"><span class="lk-name">${dot(l.id)}${l.name}</span><button class="schalter" role="switch" aria-checked="${an}" data-act="laden-an" data-id="${l.id}" aria-label="${l.name} verwenden"></button></div>
+        <div class="lk-art">${l.art} · ${anzahl} Artikel mit Richtpreis</div>
+        <div class="klein">${notiz}</div>
+        <div class="lk-weg"><b>${state.gangfolge[l.id] ? 'Dein Laufweg' : 'Laufweg (Standard)'}</b>${esc(weg.slice(0, 4).join(' → '))} …</div>
+        <div class="lk-akt"><button class="knopf klein-k" data-act="laufweg" data-id="${l.id}">Laufweg festlegen</button><a href="${l.url}" target="_blank" rel="noopener">Prospekt ↗</a></div>
+      </div>`;
+    }).join('');
+    const eigene = Object.values(state.preise).reduce((s, o) => s + Object.keys(o).length, 0);
+    $('#daten').innerHTML = `
+      <p><strong>Deine Daten.</strong> ${$('#sync').textContent}. Eigene Preise: ${eigene}. Eigene Angebote: ${state.angebote.length}. Eigene Laufwege: ${Object.keys(state.gangfolge).length}.</p>
+      <div class="aktionen">
+        ${eigene ? `<button class="knopf warn" data-act="preise-reset">Eigene Preise zurücksetzen</button>` : ''}
+        ${state.angebote.length ? `<button class="knopf warn" data-act="angebote-reset">Eigene Angebote löschen</button>` : ''}
+        <button class="knopf warn" data-act="alles-reset">Alles zurücksetzen</button>
+      </div>`;
+  }
+};
+
+/* ---------- Steuerung ---------- */
+function zeigeAnsicht(){
+  document.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-selected', t.dataset.id === reiter));
+  if (bereitsGemountet !== reiter){ bearbeite = null; offenId = null; ANSICHTEN[reiter].mount(); bereitsGemountet = reiter; }
+  aktualisiere();
+}
+function aktualisiere(){
+  berechneAlles();
+  $('#kw').textContent = `KW ${KW} · Angebote bis ${tagKurz(SAMSTAG_STR)}`;
+  const n = ANGEBOTE.filter(a => state.aktiv.includes(a.laden)).length;
+  $('#zahl-ang').textContent = n || '';
+  $('#zahl-ang').hidden = !n;
+  ANSICHTEN[reiter].update();
+  zeichneLeiste();
+  if (lwLaden) zeichneLaufweg();
+}
+let toastTimer = 0;
+function toast(t){ const el = $('#toast'); el.textContent = t; el.classList.add('an'); clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('an'), 2200); }
+function sicher(btn, text){
+  if (btn.dataset.sicher === '1') return true;
+  btn.dataset.sicher = '1'; btn.dataset.alt = btn.textContent; btn.textContent = text;
+  setTimeout(() => { if (btn.isConnected){ btn.dataset.sicher = ''; btn.textContent = btn.dataset.alt; } }, 3500);
+  return false;
+}
+const finde = id => state.liste.find(i => i.id === id);
+
+function listeAlsText(){
+  const zeilen = [];
+  const st = orte(R);
+  for (const l of st){
+    const folge = gangfolge(l);
+    const its = imLaden(l).sort((a, b) => folge.indexOf(katVon(a)) - folge.indexOf(katVon(b)));
+    if (!its.length) continue;
+    if (st.length > 1) zeilen.push('', `== ${LMAP[l].name} ==`);
+    let letzte = null;
+    for (const it of its){
+      const k = katVon(it); if (k !== letzte){ zeilen.push(`-- ${k}`); letzte = k; }
+      const z = R.zu[it.id];
+      zeilen.push(`${it.ok ? '[x]' : '[ ]'} ${it.menge > 1 ? it.menge + ' × ' : ''}${it.name}${it.einheit ? ' (' + it.einheit + ')' : ''}: ${euro((z.p.preis + z.p.pfand) * it.menge)}`);
+    }
+  }
+  R.fehlt.forEach(it => zeilen.push(`[ ] ${it.name}: nicht erhältlich`));
+  return `Einkaufsliste KW ${KW}, bei ${ladenNamen(st)}\n${zeilen.join('\n').trim()}\nSumme ca. ${euro(R.summe)}`;
+}
+
+function preisUebernehmen(inp){
+  if (!bearbeite) return;
+  const b = bearbeite; bearbeite = null;
+  const v = inp.value.trim() === '' ? null : leseZahl(inp.value);
+  if (b.art === 'liste'){
+    const it = finde(b.id);
+    if (it){
+      if (it.pid && PMAP[it.pid]) aendern(() => setzePreis(it.pid, b.l, v));
+      else aendern(() => { it.preis = v; });
+      return;
+    }
+  } else if (b.art === 'tab'){ aendern(() => setzePreis(b.pid, b.l, v)); return; }
+  aktualisiere();
+}
+function setzePreis(pid, l, v){
+  if (!state.preise[pid]) state.preise[pid] = {};
+  if (v == null || v === SCHAETZ[pid][l]) delete state.preise[pid][l]; else state.preise[pid][l] = v;
+  if (!Object.keys(state.preise[pid]).length) delete state.preise[pid];
+}
+function schiebeGang(kat, richtung){
+  const f = gangfolge(lwLaden), i = f.indexOf(kat), j = i + richtung;
+  if (i < 0 || j < 0 || j >= f.length) return;
+  [f[i], f[j]] = [f[j], f[i]];
+  setzeGangfolge(lwLaden, f);
+  const btn = document.querySelector(`#lw-liste li[data-kat="${CSS.escape(kat)}"] [data-act="${richtung < 0 ? 'lw-hoch' : 'lw-runter'}"]`);
+  if (btn && !btn.disabled) btn.focus();
+}
+function hakenGesetzt(it){
+  const z = R.zu[it.id]; if (!z) return;
+  const l = z.l, st = R.stationen;
+  if (!imLaden(l).every(x => x.ok)) return;
+  if (st.length < 2){ toast('Alles im Wagen'); return; }
+  const weiter = st.find(s => s !== l && imLaden(s).some(x => !x.ok));
+  toast(weiter ? `${LMAP[l].name} erledigt. Weiter zu ${LMAP[weiter].name}` : 'Tour erledigt, alles im Wagen');
+  if (tourFilter === l){ tourFilter = weiter || 'alle'; zeichnePosten(); }
+}
+
+document.addEventListener('click', e => {
+  if (e.target.id === 'overlay'){ schliesseLaufweg(); return; }
+  const b = e.target.closest('[data-act]');
+  if (!e.target.closest('.suche')) schliesseVorschlaege();
+  if (!b || b.disabled) return;
+  const act = b.dataset.act, id = b.dataset.id;
+  switch (act){
+    case 'tab': reiter = id; try { localStorage.setItem('wochenkorb.reiter', id); } catch (x) {} zeigeAnsicht(); window.scrollTo({top: 0}); break;
+    case 'modus': aendern(() => { state.modus = id; }); break;
+    case 'vs': waehle(+b.dataset.i); break;
+    case 'ok': { const it = finde(id); if (!it) break; aendern(() => { it.ok = !it.ok; }); if (it.ok) hakenGesetzt(it); break; }
+    case 'plus': aendern(() => { const it = finde(id); if (it) it.menge++; }); break;
+    case 'minus': aendern(() => { const it = finde(id); if (!it) return; if (it.menge > 1) it.menge--; else state.liste = state.liste.filter(x => x !== it); }); break;
+    case 'details': offenId = offenId === id ? null : id; zeichnePosten(); break;
+    case 'entfernen': offenId = null; aendern(() => { state.liste = state.liste.filter(x => x.id !== id); }); break;
+    case 'preis': bearbeite = {art: 'liste', id, l: b.dataset.l}; zeichnePosten(); break;
+    case 'zelle': bearbeite = {art: 'tab', pid: id, l: b.dataset.l}; zeichneTabelle(); break;
+    case 'plus-produkt': { const p = PMAP[id]; hinzufuegen({pid: p.id, name: p.name, einheit: p.einheit}); break; }
+    case 'tour-filter': tourFilter = id; zeichnePosten(); break;
+    case 'aufklappen': aufgeklappt.add(id); zeichnePosten(); break;
+    case 'tour-hoch': case 'tour-runter': {
+      const st = R.stationen.slice(), i = st.indexOf(id), j = act === 'tour-hoch' ? i - 1 : i + 1;
+      if (i < 0 || j < 0 || j >= st.length) break;
+      [st[i], st[j]] = [st[j], st[i]];
+      aendern(() => { state.tour = [...st, ...state.tour.filter(l => !st.includes(l))]; });
+      break;
+    }
+    case 'laufweg': oeffneLaufweg(id); break;
+    case 'lw-hoch': schiebeGang(id, -1); break;
+    case 'lw-runter': schiebeGang(id, 1); break;
+    case 'lw-standard': aendern(() => { delete state.gangfolge[lwLaden]; }); toast('Standard-Laufweg wiederhergestellt'); break;
+    case 'lw-alle': { const f = gangfolge(lwLaden); aendern(() => { LAEDEN.forEach(l => { state.gangfolge[l.id] = f.slice(); }); }); toast('Laufweg für alle Läden übernommen'); break; }
+    case 'lw-zu': schliesseLaufweg(); break;
+    case 'beispiel-leeren': aendern(() => { state.liste = []; state.beispielListe = false; }); $('#eingabe') && $('#eingabe').focus(); break;
+    case 'beispiel-behalten': aendern(() => { state.beispielListe = false; }); break;
+    case 'erledigte': aendern(() => { state.liste = state.liste.filter(i => !i.ok); }); break;
+    case 'leeren': if (sicher(b, 'Wirklich leeren?')) aendern(() => { state.liste = []; state.beispielListe = false; }); break;
+    case 'kopieren': {
+      const text = listeAlsText();
+      const zeigeFeld = () => { const t = document.createElement('textarea'); t.className = 'kopiertext'; t.readOnly = true; t.value = text; $('#aktionen').appendChild(t); t.select(); };
+      try { navigator.clipboard.writeText(text).then(() => toast('Liste kopiert, sortiert nach Laufweg'), zeigeFeld); } catch (x) { zeigeFeld(); }
+      break;
+    }
+    case 'zumbon':
+      if (reiter !== 'liste'){ reiter = 'liste'; zeigeAnsicht(); }
+      $('#bon').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'});
+      break;
+    case 'ang-filter': angFilter = id; angLimit = 60; aktualisiere(); break;
+    case 'ang-mehr': angLimit += 60; aktualisiere(); break;
+    case 'ang-liste': { const a = ANGEBOTE.find(x => x.id === id); if (a) hinzufuegen({pid: a.pid, name: a.name, einheit: a.einheit}); break; }
+    case 'ang-weg': aendern(() => { state.angebote = state.angebote.filter(a => a.id !== id); }); break;
+    case 'bsp-aus': aendern(() => { state.beispieleAus = true; }); break;
+    case 'bsp-an': aendern(() => { state.beispieleAus = false; }); break;
+    case 'laden-an':
+      if (state.aktiv.includes(id) && state.aktiv.length === 1){ toast('Mindestens ein Laden muss aktiv bleiben'); break; }
+      aendern(() => { state.aktiv = state.aktiv.includes(id) ? state.aktiv.filter(x => x !== id) : LAEDEN.map(l => l.id).filter(x => x === id || state.aktiv.includes(x)); });
+      break;
+    case 'preise-reset': if (sicher(b, 'Wirklich zurücksetzen?')) aendern(() => { state.preise = {}; }); break;
+    case 'angebote-reset': if (sicher(b, 'Wirklich löschen?')) aendern(() => { state.angebote = []; }); break;
+    case 'alles-reset': if (sicher(b, 'Alles löschen?')) aendern(() => { const n = neuerZustand(); n.liste = []; n.beispielListe = false; state = n; }); break;
+  }
+});
+document.addEventListener('change', e => {
+  const s = e.target.closest && e.target.closest('select[data-feld]');
+  if (!s) return;
+  const it = finde(s.dataset.id); if (!it) return;
+  if (s.dataset.feld === 'kat'){
+    const std = it.pid && PMAP[it.pid] ? PMAP[it.pid].kat : null;
+    aendern(() => { it.kat = s.value === std ? null : s.value; });
+    toast(`${it.name} → ${s.value}`);
+  } else {
+    aendern(() => { it.laden = s.value || null; });
+    toast(s.value ? `${it.name} kaufst du jetzt bei ${LMAP[s.value].name}` : `${it.name} wieder automatisch zugeordnet`);
+  }
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && lwLaden){ schliesseLaufweg(); return; }
+  if (!e.target.classList || !e.target.classList.contains('preis-edit')) return;
+  if (e.key === 'Enter'){ e.preventDefault(); preisUebernehmen(e.target); }
+  else if (e.key === 'Escape'){ bearbeite = null; aktualisiere(); }
+});
+document.addEventListener('focusout', e => {
+  if (e.target.classList && e.target.classList.contains('preis-edit')) preisUebernehmen(e.target);
+});
+
+async function datenLaden(){
+  try {
+    const r = await fetch('daten/preise.json', {cache: 'no-cache'});
+    if (!r.ok) return;
+    const d = await r.json();
+    ECHT = d.preise && typeof d.preise === 'object' ? d.preise : {};
+    LIVE = (Array.isArray(d.angebote) ? d.angebote : []).filter(a => a && LMAP[a.laden] && a.preis > 0 && a.name).map((a, i) => ({
+      id: 'live-' + i, laden: a.laden, pid: a.pid && PMAP[a.pid] ? a.pid : null, name: a.name, einheit: a.einheit || a.menge || '',
+      preis: a.preis, alt: a.alt > a.preis ? a.alt : null, ab: a.ab || null, bis: a.bis || SAMSTAG_STR, quelle: a.quelle || '', live: true}));
+    DATEN_INFO = {stand: d.stand || '', anzahl: Object.values(ECHT).reduce((s, o) => s + Object.keys(o).length, 0)};
+    berechneSchaetzungen();
+    aktualisiere();
+  } catch (e) { /* ohne Datendatei (lokal geoeffnet) rechnet die App mit Richtpreisen */ }
+}
+
+zeigeAnsicht();
+datenLaden();
+syncStarten();
+if ('serviceWorker' in navigator && /^(https:|http:\/\/localhost)/.test(location.href) && !/claude/.test(location.hostname))
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+})();
+</script>
+
+</body></html>

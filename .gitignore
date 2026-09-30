@@ -1,0 +1,8 @@
+# lokal, nicht veroeffentlichen
+.claude/
+CLAUDE.md
+daten/AUFTRAG.md
+daten/preise-*.json
+_site/
+__pycache__/
+_cache_marktguru.json
