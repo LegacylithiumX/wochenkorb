@@ -1088,7 +1088,7 @@ ANSICHTEN.angebote = {
     $('#ansicht').innerHTML = `
       <section class="bereich">
         <div class="info">
-          <p><strong>Woher kommen die Angebote?</strong> Aldi, Lidl und Co. geben ihre Prospekte nicht als offene Daten heraus. Schau in den Prospekt deines Ladens und trag die Angebote hier ein. Sie gelten sofort in deiner Liste und im Preisvergleich, bis zum eingetragenen Datum.</p>
+          <p id="ang-info"></p>
           <div class="links" id="prospekte"></div>
         </div>
         <details class="formular" id="ang-box">
@@ -1118,7 +1118,10 @@ ANSICHTEN.angebote = {
     $('#ang-form').addEventListener('submit', e => { e.preventDefault(); angebotSpeichern(); });
   },
   update(){
-    $('#prospekte').innerHTML = state.aktiv.map(l => `<a href="${LMAP[l].url}" target="_blank" rel="noopener">${dot(l)}Prospekt ${LMAP[l].name} ↗</a>`).join('');
+    $('#ang-info').innerHTML = LIVE.length
+      ? '<strong>Die Angebote kommen automatisch</strong> aus den aktuellen Prospekten und werden montags und donnerstags neu geladen. Fehlt eins, trag es unten selbst ein.'
+      : '<strong>Woher kommen die Angebote?</strong> Aldi, Lidl und Co. geben ihre Prospekte nicht als offene Daten heraus. Schau in den Prospekt deines Ladens und trag die Angebote hier ein. Sie gelten sofort in deiner Liste und im Preisvergleich, bis zum eingetragenen Datum.';
+    $('#prospekte').innerHTML =state.aktiv.map(l => `<a href="${LMAP[l].url}" target="_blank" rel="noopener">${dot(l)}Prospekt ${LMAP[l].name} ↗</a>`).join('');
     const sel = $('#ang-laden'), alt = sel.value;
     sel.innerHTML = state.aktiv.map(l => `<option value="${l}">${LMAP[l].name}</option>`).join('');
     if (state.aktiv.includes(alt)) sel.value = alt;
