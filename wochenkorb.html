@@ -156,7 +156,7 @@ button.preis:hover{background:var(--surface-2)}
 .leer{background:var(--surface);border:1.5px dashed var(--line);border-radius:12px;padding:28px 20px;text-align:center;color:var(--muted);margin-top:18px}
 .leer strong{display:block;color:var(--ink);font:700 22px var(--f-display);text-transform:uppercase;letter-spacing:.03em;margin-bottom:4px}
 .aktionen{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.knopf{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 14px;font-weight:600;font-size:14px}
+.knopf{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 14px;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:var(--ink)}
 .knopf:hover{border-color:var(--accent)}
 .knopf.haupt{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .knopf.warn{color:var(--deal)}
@@ -202,6 +202,8 @@ button.preis:hover{background:var(--surface-2)}
 .leiste .ll{font-size:12px;text-transform:uppercase;letter-spacing:.08em;opacity:.8}
 .leiste .lo{flex:1;min-width:0;font-size:13px;opacity:.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .leiste button{border:0;background:var(--tag);color:var(--tag-ink);font-weight:700;border-radius:999px;padding:8px 14px;flex:none}
+.leiste .l-teilen{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:var(--bg);border:1.5px solid currentColor;opacity:.9}
+.leiste .l-teilen svg{width:20px;height:20px}
 @media (min-width:900px){.leiste{display:none}}
 
 /* Bereiche: Angebote, Preise, Laeden */
@@ -525,7 +527,8 @@ const ICON = {
   check: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
   muell: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3"/></svg>',
   stern: '<svg class="dot stern" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21l1.6-7L2 9.2l7.1-.6z"/></svg>',
-  plus: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>'
+  plus: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>',
+  chat: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 21l2.1-5.6A8.4 8.4 0 1 1 21 11.5z"/></svg>'
 };
 
 /* ---------- Suche und Einsortieren ---------- */
@@ -893,9 +896,14 @@ function zeichnePosten(){
   if (bearbeite && bearbeite.art === 'liste'){ const inp = $('#pe-' + bearbeite.id); if (inp){ inp.focus(); inp.select(); } }
 }
 
+const APP_URL = 'https://legacylithiumx.github.io/wochenkorb/';
+const whatsappLink = () => 'https://wa.me/?text=' + encodeURIComponent(listeFuerWhatsApp());
+const whatsappKnopf = () => `<a class="knopf haupt wa" data-act="whatsapp" href="${esc(whatsappLink())}" target="_blank" rel="noopener">${ICON.chat}Per WhatsApp teilen</a>`;
+
 function zeichneAktionen(){
   const erledigt = state.liste.filter(i => i.ok).length;
   $('#aktionen').innerHTML = state.liste.length ? `
+    ${whatsappKnopf()}
     <button class="knopf" data-act="kopieren">Liste als Text kopieren</button>
     ${erledigt ? `<button class="knopf" data-act="erledigte">Erledigte entfernen (${erledigt})</button>` : ''}
     <button class="knopf warn" data-act="leeren">Liste leeren</button>` : '';
@@ -949,7 +957,9 @@ function bonHerkunft(){
 }
 
 function zeichneLeiste(){
-  $('#leiste').innerHTML = `<div><div class="ll">Summe ca.</div><div class="lb">${euro(R.summe)}</div></div><div class="lo">bei ${esc(ladenNamen(orte(R)))}<br>${R.stueck} Artikel · noch ${euro(R.offen)}</div><button data-act="zumbon">Bon</button>`;
+  $('#leiste').innerHTML = `<div><div class="ll">Summe ca.</div><div class="lb">${euro(R.summe)}</div></div><div class="lo">bei ${esc(ladenNamen(orte(R)))}<br>${R.stueck} Artikel · noch ${euro(R.offen)}</div>` +
+    (state.liste.length ? `<a class="l-teilen" data-act="whatsapp" href="${esc(whatsappLink())}" target="_blank" rel="noopener" aria-label="Liste per WhatsApp teilen">${ICON.chat}</a>` : '') +
+    `<button data-act="zumbon">Bon</button>`;
 }
 
 /* ---------- Laufweg-Dialog ---------- */
@@ -1313,6 +1323,31 @@ function listeAlsText(){
   return `Einkaufsliste KW ${KW}, bei ${ladenNamen(st)}\n${zeilen.join('\n').trim()}\nSumme ca. ${euro(R.summe)}`;
 }
 
+// Nachricht fuer WhatsApp: nur offene Artikel (alle, wenn schon alles im Wagen), nach Laden und Laufweg, *fett* und _kursiv_ nach WhatsApp-Art
+function listeFuerWhatsApp(){
+  const st = orte(R), zeilen = [];
+  const offen = state.liste.some(it => !it.ok);
+  const zeige = it => !offen || !it.ok;
+  const zeile = (it, z) => `☐ ${it.menge > 1 ? it.menge + ' × ' : ''}${it.name}${it.einheit ? ' (' + it.einheit + ')' : ''}${z ? ' – ' + euro((z.p.preis + z.p.pfand) * it.menge) + (z.p.ang ? ' Angebot' : '') : ''}`;
+  let summe = 0;
+  for (const l of st){
+    const folge = gangfolge(l);
+    const its = imLaden(l).filter(zeige).sort((a, b) => folge.indexOf(katVon(a)) - folge.indexOf(katVon(b)));
+    if (!its.length) continue;
+    const s = summeVon(its); summe += s;
+    zeilen.push('', `*${LMAP[l].name}*${st.length > 1 ? ' (ca. ' + euro(s) + ')' : ''}`);
+    let letzte = null;
+    for (const it of its){
+      const k = katVon(it);
+      if (k !== letzte){ zeilen.push(`_${k}_`); letzte = k; }
+      zeilen.push(zeile(it, R.zu[it.id]));
+    }
+  }
+  const rest = R.fehlt.filter(zeige);
+  if (rest.length){ zeilen.push('', '*Woanders besorgen*'); rest.forEach(it => zeilen.push(zeile(it, null))); }
+  return [`🛒 *Einkaufsliste KW ${KW}*`, `Summe ca. *${euro(summe)}* bei ${ladenNamen(st)}`, ...zeilen, '', `Wochenkorb: ${APP_URL}`].join('\n');
+}
+
 function preisUebernehmen(inp){
   if (!bearbeite) return;
   const b = bearbeite; bearbeite = null;
@@ -1387,6 +1422,11 @@ document.addEventListener('click', e => {
     case 'beispiel-behalten': aendern(() => { state.beispielListe = false; }); break;
     case 'erledigte': aendern(() => { state.liste = state.liste.filter(i => !i.ok); }); break;
     case 'leeren': if (sicher(b, 'Wirklich leeren?')) aendern(() => { state.liste = []; state.beispielListe = false; }); break;
+    case 'whatsapp':
+      // In der Android-App direkt an WhatsApp uebergeben, sonst oeffnet der Link wa.me
+      if (window.WochenkorbApp && typeof window.WochenkorbApp.teilen === 'function'){ e.preventDefault(); window.WochenkorbApp.teilen(listeFuerWhatsApp()); }
+      else b.href = whatsappLink();
+      break;
     case 'kopieren': {
       const text = listeAlsText();
       const zeigeFeld = () => { const t = document.createElement('textarea'); t.className = 'kopiertext'; t.readOnly = true; t.value = text; $('#aktionen').appendChild(t); t.select(); };
