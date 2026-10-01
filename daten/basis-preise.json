@@ -1,5 +1,5 @@
 {
- "stand": "2026-09-30",
+ "stand": "2026-10-01",
  "preise": {
   "bananen-1-kg": {
    "aldi": 1.29,
@@ -547,6 +547,2009 @@
   "batterien-aa-8-stueck": {
    "aldi": 1.27,
    "rossmann": 1.11
+  },
+  "aepfel-elstar-1-kg": {
+   "netto": 2.49
+  },
+  "aepfel-pink-lady-1-kg": {
+   "rewe": 3.29
+  },
+  "aepfel-jonagold-1-kg": {
+   "netto": 1.79
+  },
+  "tafelaepfel-2-kg-beutel": {
+   "netto": 2.99,
+   "kaufland": 3.19
+  },
+  "wetteraepfel-3-kg": {
+   "aldi": 2.29
+  },
+  "birnen-conference-1-kg": {
+   "netto": 1.69
+  },
+  "bio-bananen-1-kg": {
+   "lidl": 1.79
+  },
+  "pomelo-stueck": {
+   "aldi": 2.19
+  },
+  "suesskirschen-500-g": {
+   "rewe": 3.54
+  },
+  "feigen-frisch-stueck": {
+   "aldi": 0.49
+  },
+  "wassermelone-1-kg": {
+   "rewe": 0.99
+  },
+  "kiwi-gold-stueck": {
+   "aldi": 0.59,
+   "rewe": 0.79
+  },
+  "datteln-getrocknet-entsteint-200-g": {
+   "kaufland": 1.91,
+   "lidl": 1.69
+  },
+  "feigen-getrocknet-200-g": {
+   "aldi": 2.39
+  },
+  "aprikosen-getrocknet-200-g": {
+   "aldi": 2.49
+  },
+  "cranberries-getrocknet-200-g": {
+   "aldi": 1.99,
+   "kaufland": 1.99
+  },
+  "trockenpflaumen-500-g": {
+   "aldi": 4.99
+  },
+  "walnuesse-in-der-schale-1-kg": {
+   "aldi": 4.99
+  },
+  "mini-romatomaten-250-g": {
+   "edeka": 1.29,
+   "rewe": 0.75
+  },
+  "paprika-rot-500-g": {
+   "netto": 1.35,
+   "rewe": 1.59
+  },
+  "snack-gurken-250-g": {
+   "lidl": 1.69
+  },
+  "speisekartoffeln-festkochend-1-5-kg": {
+   "aldi": 1.49
+  },
+  "pommes-kartoffeln-1-5-kg": {
+   "aldi": 1.49
+  },
+  "bio-kartoffeln-festkochend-1-5-kg": {
+   "kaufland": 2.99
+  },
+  "bio-knoblauch-150-g": {
+   "netto": 1.49
+  },
+  "bio-moehren-1-kg": {
+   "lidl": 1.29
+  },
+  "snackmoehren-200-g": {
+   "kaufland": 0.99
+  },
+  "staudensellerie-stueck": {
+   "lidl": 0.99
+  },
+  "spitzkohl-1-kg": {
+   "aldi": 1.29
+  },
+  "spargel-gruen-500-g": {
+   "netto": 4.16
+  },
+  "pfluecksalat-125-g": {
+   "aldi": 1.29
+  },
+  "grillmais-3-stueck": {
+   "edeka": 1.99
+  },
+  "bio-champignons-250-g": {
+   "lidl": 1.89
+  },
+  "koriander-bund": {
+   "rewe": 0.99
+  },
+  "weltmeisterbrot-750-g": {
+   "aldi": 1.79
+  },
+  "weltmeisterbrot-dinkel-750-g": {
+   "aldi": 1.99
+  },
+  "krustenbrot-1-kg": {
+   "aldi": 1.65
+  },
+  "landbrot-1-kg": {
+   "aldi": 1.59
+  },
+  "bauernschnitten-brot-geschnitten-500-g": {
+   "aldi": 0.99
+  },
+  "mildes-brot-weizenmischbrot-geschnitten-500-g": {
+   "aldi": 0.99
+  },
+  "mehrkornschnitten-500-g": {
+   "aldi": 1.19
+  },
+  "vital-fit-brot-mehrkorn-500-g": {
+   "aldi": 1.19
+  },
+  "harry-vital-fit-mehrkornbrot-500-g": {
+   "rewe": 1.69
+  },
+  "proteinbrot-eiweissbrot-500-g": {
+   "aldi": 1.99
+  },
+  "aerzener-haferbrot-das-pure-400-g": {
+   "aldi": 1.75
+  },
+  "american-sandwich-toast-750-g": {
+   "aldi": 1.19,
+   "netto": 1.19,
+   "rewe": 1.99
+  },
+  "golden-toast-butter-toast-500-g": {
+   "netto": 1.99
+  },
+  "golden-toast-vollkorn-toast-500-g": {
+   "netto": 1.99
+  },
+  "koerner-sandwich-750-g": {
+   "aldi": 1.59
+  },
+  "dinkel-sandwich-750-g": {
+   "kaufland": 1.69
+  },
+  "vollkorn-sandwich-750-g": {
+   "rewe": 1.09,
+   "netto": 1.09
+  },
+  "dinkel-toastbroetchen-6-stueck": {
+   "aldi": 0.99,
+   "rewe": 0.99
+  },
+  "mehrkorn-toastbroetchen-6-stueck": {
+   "aldi": 0.99,
+   "kaufland": 0.99,
+   "rewe": 0.99
+  },
+  "weizenbroetchen-zum-aufbacken-540-g": {
+   "aldi": 1.29,
+   "kaufland": 1.29
+  },
+  "baguettebroetchen-zum-aufbacken-300-g": {
+   "aldi": 0.69
+  },
+  "mehrkornbroetchen-zum-aufbacken-540-g": {
+   "aldi": 1.39
+  },
+  "bio-landbroetchen-zum-fertigbacken-4-stueck": {
+   "aldi": 1.29
+  },
+  "rosenbroetchen-zum-aufbacken-6-stueck": {
+   "aldi": 1.59,
+   "netto": 1.59
+  },
+  "milchbroetchen-480-g": {
+   "aldi": 1.89,
+   "netto": 1.94,
+   "edeka": 1.89
+  },
+  "schokobroetchen-360-g": {
+   "aldi": 1.99,
+   "kaufland": 1.99,
+   "edeka": 1.99,
+   "netto": 2.49
+  },
+  "buttercroissants-4-stueck": {
+   "aldi": 1.29,
+   "kaufland": 1.39
+  },
+  "nuss-nougat-croissant-stueck": {
+   "aldi": 0.75
+  },
+  "butterlaugenecke-stueck": {
+   "aldi": 0.85
+  },
+  "rosenbroetchen-stueck": {
+   "aldi": 0.39
+  },
+  "walnussbroetchen-stueck": {
+   "aldi": 0.59
+  },
+  "fitnessbroetchen-stueck": {
+   "aldi": 0.39
+  },
+  "chia-broetchen-weltmeisterbroetchen-stueck": {
+   "aldi": 0.39
+  },
+  "kuerbiskern-kartoffel-broetchen-stueck": {
+   "aldi": 0.49
+  },
+  "brioche-knoten-stueck": {
+   "aldi": 0.45
+  },
+  "bauernvesper-500-g": {
+   "aldi": 0.99
+  },
+  "weizenbrot-das-weizenmilde-750-g": {
+   "aldi": 1.39
+  },
+  "schweizer-kruste-400-g": {
+   "aldi": 1.49
+  },
+  "zwiebelbaguette-300-g": {
+   "aldi": 0.99
+  },
+  "steinofenbaguette-250-g": {
+   "aldi": 1.19,
+   "netto": 1.19,
+   "kaufland": 1.39,
+   "rewe": 1.69
+  },
+  "kraeuterbutter-baguette-175-g": {
+   "aldi": 0.99
+  },
+  "pinsa-230-g": {
+   "aldi": 1.99
+  },
+  "vollkorn-wraps-370-g": {
+   "aldi": 1.19
+  },
+  "protein-wraps-320-g": {
+   "kaufland": 1.49
+  },
+  "brioche-burger-buns-4-stueck": {
+   "aldi": 1.69,
+   "netto": 1.69
+  },
+  "laugen-brioche-stangen-402-g": {
+   "aldi": 1.99,
+   "netto": 1.99
+  },
+  "laugen-burger-buns-4-stueck": {
+   "netto": 1.69
+  },
+  "wasa-knaeckebrot-sesam-vollkorn-200-g": {
+   "netto": 2.39
+  },
+  "wasa-selection-knaeckebrot-mohn-meersalz-245-g": {
+   "rewe": 2.49
+  },
+  "pumpernickel-500-g": {
+   "rewe": 1.29
+  },
+  "kuerbiskernbrot-geschnitten-500-g": {
+   "rewe": 2.29
+  },
+  "harry-knolli-kartoffelbrot-500-g": {
+   "rewe": 1.89
+  },
+  "harry-anno-1688-weizenmischbrot-500-g": {
+   "edeka": 2.49,
+   "rewe": 2.49
+  },
+  "harry-anno-1688-dinkelbrot-450-g": {
+   "rewe": 2.49
+  },
+  "harry-eiweiss-sandwich-375-g": {
+   "rewe": 1.99
+  },
+  "lieken-urkorn-vitaminbrot-400-g": {
+   "edeka": 1.99,
+   "netto": 1.89
+  },
+  "lieken-urkorn-lieblingsbrot-dinkel-400-g": {
+   "edeka": 1.99
+  },
+  "glutenfreies-brot-400-g": {
+   "aldi": 2.29
+  },
+  "poensgen-rosinenbrot-400-g": {
+   "rewe": 4.49
+  },
+  "marmorkuchen-400-g": {
+   "netto": 1.69
+  },
+  "mini-muffins-225-g": {
+   "aldi": 1.89
+  },
+  "pagen-gifflar-zimtschnecken-260-g": {
+   "aldi": 2.49
+  },
+  "butterstreusel-400-g": {
+   "netto": 2.79
+  },
+  "dresdner-christstollen-1-kg": {
+   "aldi": 9.99,
+   "netto": 9.99
+  },
+  "butter-mandel-stollen-750-g": {
+   "aldi": 4.99
+  },
+  "baumkuchen-300-g": {
+   "aldi": 4.49
+  },
+  "fertige-pfannkuchen-300-g": {
+   "lidl": 2.49
+  },
+  "coppenrath-wiese-goldstuecke-dinkelbroetchen-420-g": {
+   "edeka": 3.49
+  },
+  "koelln-schoko-hafer-muesli-450-g": {
+   "edeka": 2.99,
+   "netto": 3.79
+  },
+  "koelln-zartes-bircher-hafer-muesli-500-g": {
+   "edeka": 2.49,
+   "rewe": 3.79
+  },
+  "koelln-fruechte-hafer-muesli-500-g": {
+   "netto": 3.79
+  },
+  "dr-oetker-vitalis-schoko-muesli-klassisch-450-g": {
+   "rewe": 3.99
+  },
+  "seitenbacher-muesli-fitness-mischung-750-g": {
+   "edeka": 5.99
+  },
+  "alnatura-basis-muesli-750-g": {
+   "edeka": 2.79
+  },
+  "weetabix-swiss-style-muesli-560-g": {
+   "netto": 2.49
+  },
+  "schoko-muesli-750-g": {
+   "netto": 2.59,
+   "lidl": 2.49,
+   "kaufland": 2.49,
+   "aldi": 2.49
+  },
+  "fruechtemuesli-750-g": {
+   "aldi": 2.49,
+   "kaufland": 2.49,
+   "netto": 2.39
+  },
+  "knuspermuesli-schoko-750-g": {
+   "kaufland": 2.49,
+   "aldi": 2.49
+  },
+  "premium-muesli-trauben-nuss-500-g": {
+   "aldi": 2.79
+  },
+  "bio-muesli-500-g": {
+   "aldi": 3.29,
+   "kaufland": 2.65,
+   "rewe": 2.79
+  },
+  "high-protein-knuspermuesli-350-g": {
+   "aldi": 2.79
+  },
+  "granola-500-g": {
+   "aldi": 3.45
+  },
+  "superfood-muesli-500-g": {
+   "lidl": 3.29
+  },
+  "knuspermuesli-honig-nuss-500-g": {
+   "netto": 2.59
+  },
+  "rosinen-nuss-muesli-1-kg": {
+   "lidl": 2.59
+  },
+  "bio-haferflocken-zart-500-g": {
+   "aldi": 0.85,
+   "lidl": 0.85,
+   "rewe": 0.85
+  },
+  "haferflocken-extra-zart-1-kg": {
+   "netto": 1.19
+  },
+  "bio-porridge-basis-500-g": {
+   "rewe": 2.79
+  },
+  "kellogg-s-frosties-400-g": {
+   "netto": 4.49
+  },
+  "kellogg-s-choco-krispies-420-g": {
+   "netto": 4.49
+  },
+  "kellogg-s-tresor-choco-nut-410-g": {
+   "netto": 4.49
+  },
+  "nestl-cini-minis-360-g": {
+   "rewe": 2.49
+  },
+  "nestl-cookie-crisp-375-g": {
+   "rewe": 3.79
+  },
+  "nougat-bits-cerealien-750-g": {
+   "aldi": 2.79,
+   "netto": 2.79,
+   "rewe": 1.99
+  },
+  "honey-wheat-cerealien-750-g": {
+   "aldi": 2.79
+  },
+  "honey-nut-flakes-750-g": {
+   "aldi": 2.79
+  },
+  "dinkel-gepufft-mit-honig-200-g": {
+   "rewe": 1.79
+  },
+  "nutella-nuss-nougat-creme-750-g": {
+   "aldi": 5.79,
+   "rewe": 5.49
+  },
+  "nutella-plant-based-350-g": {
+   "kaufland": 3.99
+  },
+  "milka-haselnusscreme-350-g": {
+   "kaufland": 3.69
+  },
+  "ovomaltine-crunchy-cream-380-g": {
+   "netto": 4.49
+  },
+  "erdnussbutter-crunchy-350-g": {
+   "netto": 1.8,
+   "aldi": 1.75
+  },
+  "bio-erdnussmus-250-g": {
+   "lidl": 1.85
+  },
+  "aprikosenkonfituere-450-g": {
+   "netto": 1.49
+  },
+  "himbeerkonfituere-450-g": {
+   "aldi": 1.79
+  },
+  "heidelbeerkonfituere-450-g": {
+   "aldi": 1.79
+  },
+  "waldfruchtkonfituere-450-g": {
+   "aldi": 1.79,
+   "netto": 1.49
+  },
+  "fruchtaufstrich-fein-fruchtig-300-g": {
+   "aldi": 1.29
+  },
+  "bonne-maman-erdbeer-konfituere-370-g": {
+   "edeka": 2.59
+  },
+  "waldhonig-500-g": {
+   "aldi": 2.69
+  },
+  "bio-bluetenhonig-500-g": {
+   "aldi": 3.65,
+   "netto": 3.99
+  },
+  "langnese-flotte-biene-wildbluetenhonig-250-g": {
+   "netto": 2.99
+  },
+  "bihophar-bluetenhonig-1-kg": {
+   "netto": 7.99
+  },
+  "agavendicksaft-360-ml": {
+   "aldi": 2.35
+  },
+  "popp-brotaufstrich-150-g": {
+   "netto": 1.89,
+   "edeka": 1.12,
+   "kaufland": 1.89
+  },
+  "caff-crema-dolce-ganze-bohnen-1-kg": {
+   "aldi": 10.99
+  },
+  "caff-crema-aroma-ganze-bohnen-1-kg": {
+   "aldi": 10.99
+  },
+  "espresso-cremoso-ganze-bohnen-1-kg": {
+   "aldi": 10.99,
+   "lidl": 13.99
+  },
+  "bio-caff-crema-ganze-bohnen-fairtrade-1-kg": {
+   "aldi": 13.95,
+   "kaufland": 15.45
+  },
+  "mahlkaffee-gold-500-g": {
+   "aldi": 5.49,
+   "netto": 5.49
+  },
+  "mahlkaffee-mild-500-g": {
+   "aldi": 5.49
+  },
+  "mahlkaffee-classic-500-g": {
+   "aldi": 4.49
+  },
+  "entkoffeinierter-kaffee-gemahlen-500-g": {
+   "aldi": 5.49
+  },
+  "bio-kaffee-fairtrade-gemahlen-500-g": {
+   "aldi": 7.45
+  },
+  "kaffeepads-crema-280-g": {
+   "aldi": 4.79
+  },
+  "kaffeepads-decaf-entkoffeiniert-280-g": {
+   "aldi": 4.79
+  },
+  "kaffeekapseln-espresso-104-g": {
+   "aldi": 3.99
+  },
+  "loeslicher-kaffee-gold-nachfuellbeutel-100-g": {
+   "aldi": 2.79
+  },
+  "loeslicher-kaffee-gold-entkoffeiniert-100-g": {
+   "aldi": 2.99
+  },
+  "family-cappuccino-500-g": {
+   "aldi": 3.49
+  },
+  "family-cappuccino-schoko-500-g": {
+   "aldi": 3.49
+  },
+  "krueger-family-cappuccino-classico-500-g": {
+   "rossmann": 4.99
+  },
+  "3-in-1-kaffeesticks-10-stueck": {
+   "netto": 1.99
+  },
+  "nescaf-gold-loeslicher-kaffee-100-g": {
+   "rossmann": 6.99
+  },
+  "jacobs-cronat-gold-loeslicher-kaffee-100-g": {
+   "rossmann": 6.49
+  },
+  "caf-hag-loeslicher-kaffee-entkoffeiniert-100-g": {
+   "rossmann": 6.99
+  },
+  "jacobs-kroenung-filterkaffee-gemahlen-500-g": {
+   "aldi": 9.99,
+   "netto": 9.99
+  },
+  "jacobs-meister-roestung-gemahlen-500-g": {
+   "netto": 8.49
+  },
+  "jacobs-kroenung-entkoffeiniert-gemahlen-500-g": {
+   "rewe": 9.99
+  },
+  "dallmayr-classic-gemahlen-500-g": {
+   "rossmann": 8.99
+  },
+  "lavazza-espresso-italiano-classico-gemahlen-250-g": {
+   "rewe": 4.49,
+   "rossmann": 6.99
+  },
+  "lavazza-crema-e-gusto-gemahlen-250-g": {
+   "rossmann": 6.49
+  },
+  "melitta-bellacrema-la-crema-ganze-bohnen-1-kg": {
+   "rossmann": 19.99
+  },
+  "melitta-bellacrema-speciale-ganze-bohnen-1-kg": {
+   "rossmann": 19.99
+  },
+  "kimbo-caff-crema-classico-ganze-bohnen-1-kg": {
+   "edeka": 24.99
+  },
+  "starbucks-kaffeekapseln-fuer-nespresso-10-kapseln": {
+   "rewe": 4.19
+  },
+  "teekanne-pfefferminze-20-beutel": {
+   "netto": 2.19
+  },
+  "teekanne-kamille-20-beutel": {
+   "netto": 2.19
+  },
+  "teekanne-fenchel-anis-kuemmel-20-beutel": {
+   "netto": 2.19
+  },
+  "teekanne-ingwer-zitrone-20-beutel": {
+   "netto": 2.19
+  },
+  "teekanne-waldbeere-20-beutel": {
+   "netto": 2.19
+  },
+  "messmer-pfefferminze-25-beutel": {
+   "netto": 2.35
+  },
+  "messmer-kamille-25-beutel": {
+   "netto": 2.35
+  },
+  "messmer-earl-grey-25-beutel": {
+   "kaufland": 2.35
+  },
+  "pfefferminztee-25-beutel": {
+   "aldi": 0.89
+  },
+  "hagebuttentee-20-beutel": {
+   "aldi": 1.19
+  },
+  "ingwertee-20-beutel": {
+   "aldi": 1.19
+  },
+  "rooibostee-karamell-20-beutel": {
+   "netto": 1.19
+  },
+  "instant-teegetraenk-zitrone-400-g": {
+   "aldi": 1.89
+  },
+  "trinkschokolade-400-g": {
+   "aldi": 2.99,
+   "netto": 2.99
+  },
+  "nesquik-kakaopulver-350-g": {
+   "netto": 3.29
+  },
+  "caotina-blanc-500-g": {
+   "edeka": 7.99
+  },
+  "kaffeeweisser-250-g": {
+   "aldi": 1.59,
+   "lidl": 1.59
+  },
+  "frische-bio-vollmilch-3-8-1-l": {
+   "edeka": 1.47,
+   "aldi": 1.35
+  },
+  "haltbare-bio-vollmilch-1-l": {
+   "aldi": 1.25,
+   "lidl": 1.25,
+   "kaufland": 1.25
+  },
+  "weidemilch-frisch-3-8-1-l": {
+   "netto": 0.95,
+   "aldi": 1.19
+  },
+  "frische-landmilch-3-8-1-l": {
+   "kaufland": 1.19,
+   "aldi": 1.19
+  },
+  "laktosefreie-vollmilch-h-milch-3-5-1-l": {
+   "edeka": 1.14,
+   "aldi": 1.15
+  },
+  "weihenstephan-haltbare-alpenmilch-1-5-1-l": {
+   "rewe": 1.59,
+   "aldi": 1.11
+  },
+  "kondensmilch-4-340-g": {
+   "aldi": 0.69
+  },
+  "kondensmilch-7-5-340-g": {
+   "aldi": 0.84
+  },
+  "kakao-milchdrink-500-ml": {
+   "aldi": 0.89
+  },
+  "latte-macchiato-milchkaffee-250-ml": {
+   "aldi": 0.75
+  },
+  "skyr-drink-330-ml": {
+   "aldi": 1.49
+  },
+  "high-protein-drink-kakao-330-ml": {
+   "aldi": 1.19
+  },
+  "trinkjoghurt-frucht-500-g": {
+   "aldi": 0.95,
+   "rewe": 0.95
+  },
+  "ayran-500-ml": {
+   "aldi": 1.29
+  },
+  "barista-haferdrink-1-l": {
+   "aldi": 1.25
+  },
+  "oatly-haferdrink-barista-edition-1-l": {
+   "netto": 2.54
+  },
+  "alpro-sojadrink-natur-1-l": {
+   "netto": 2.99
+  },
+  "alpro-haferdrink-not-milk-1-l": {
+   "netto": 1.99
+  },
+  "alpro-barista-haferdrink-1-l": {
+   "rewe": 2.49
+  },
+  "alpro-mandeldrink-original-1-l": {
+   "netto": 2.99
+  },
+  "laktosefreie-schlagsahne-30-200-g": {
+   "aldi": 0.99
+  },
+  "kerrygold-original-irische-butter-250-g": {
+   "rewe": 3.49,
+   "edeka": 3.49
+  },
+  "meggle-kraeuter-butter-original-100-g": {
+   "netto": 2.29
+  },
+  "irische-butter-250-g": {
+   "aldi": 1.79
+  },
+  "bio-suessrahmbutter-250-g": {
+   "aldi": 2.69,
+   "rewe": 2.69
+  },
+  "butter-streichfein-250-g": {
+   "netto": 1.11,
+   "aldi": 1.19
+  },
+  "alsan-bio-margarine-250-g": {
+   "edeka": 1.79
+  },
+  "halbfettmargarine-500-g": {
+   "aldi": 1.19
+  },
+  "frucht-joghurt-becher-150-g": {
+   "aldi": 0.59,
+   "kaufland": 0.45
+  },
+  "sahnejoghurt-150-g": {
+   "aldi": 0.39
+  },
+  "fruchtjoghurt-grosspackung-1-kg": {
+   "aldi": 2.49,
+   "kaufland": 2.49,
+   "netto": 2.49
+  },
+  "joghurt-mild-3-8-1-kg": {
+   "aldi": 1.99,
+   "rewe": 1.79,
+   "kaufland": 1.79,
+   "netto": 2.49
+  },
+  "bio-joghurt-mild-3-8-500-g": {
+   "rewe": 1.19,
+   "edeka": 1.19
+  },
+  "weihenstephan-joghurt-mild-1-5-500-g": {
+   "netto": 0.99
+  },
+  "weihenstephan-cremig-quarkig-500-g": {
+   "netto": 1.99
+  },
+  "landliebe-fruchtjoghurt-500-g": {
+   "rewe": 0.99
+  },
+  "griechischer-joghurt-10-fett-500-g": {
+   "netto": 1.59,
+   "aldi": 1.59
+  },
+  "laktosefreier-joghurt-mild-500-g": {
+   "aldi": 0.89
+  },
+  "joghurt-crisp-175-g": {
+   "aldi": 0.45
+  },
+  "ehrmann-almighurt-fruchtjoghurt-150-g": {
+   "aldi": 0.89
+  },
+  "ehrmann-grand-dessert-200-g": {
+   "aldi": 1.19,
+   "rewe": 1.19
+  },
+  "ehrmann-high-protein-pudding-200-g": {
+   "edeka": 1.04,
+   "kaufland": 1.0
+  },
+  "ehrmann-high-protein-mousse-200-g": {
+   "edeka": 1.99,
+   "lidl": 1.29
+  },
+  "ehrmann-skyr-vanille-450-g": {
+   "lidl": 1.49
+  },
+  "zott-monte-maxi-milchcreme-schoko-nuss-4-x-100-g": {
+   "netto": 2.99,
+   "aldi": 2.99
+  },
+  "zott-sahne-joghurt-140-g": {
+   "lidl": 0.39
+  },
+  "high-protein-joghurt-frucht-200-g": {
+   "aldi": 0.79,
+   "lidl": 0.79
+  },
+  "high-protein-skyr-150-g": {
+   "aldi": 0.79
+  },
+  "high-protein-fruchtjoghurt-1-kg": {
+   "aldi": 2.99
+  },
+  "skyr-frucht-500-g": {
+   "aldi": 1.44
+  },
+  "arla-skyr-natur-450-g": {
+   "netto": 1.99
+  },
+  "vly-ackerbohnen-joghurt-alternative-natur-400-g": {
+   "rewe": 1.7
+  },
+  "soja-joghurt-natur-500-g": {
+   "aldi": 0.99,
+   "netto": 0.99
+  },
+  "speisequark-40-fett-250-g": {
+   "aldi": 0.64,
+   "netto": 0.69
+  },
+  "bio-speisequark-250-g": {
+   "aldi": 0.99,
+   "lidl": 0.99
+  },
+  "kraeuterquark-200-g": {
+   "netto": 0.65,
+   "rewe": 0.65,
+   "aldi": 0.65
+  },
+  "milram-buttermilchquark-250-g": {
+   "rewe": 1.49
+  },
+  "leckermaeulchen-milchquark-6-x-50-g": {
+   "netto": 2.15
+  },
+  "konditorquark-500-g": {
+   "netto": 1.29
+  },
+  "high-protein-quark-creme-400-g": {
+   "lidl": 1.79
+  },
+  "high-protein-pudding-200-g": {
+   "aldi": 0.89,
+   "lidl": 0.94
+  },
+  "high-protein-griesspudding-500-g": {
+   "aldi": 1.59,
+   "lidl": 1.69
+  },
+  "sahnepudding-vanille-500-g": {
+   "aldi": 1.39
+  },
+  "pudding-dessert-schoko-vanille-1-kg": {
+   "aldi": 2.49
+  },
+  "milchreis-becher-500-g": {
+   "aldi": 0.99
+  },
+  "griesspudding-mit-frucht-160-g": {
+   "aldi": 0.59
+  },
+  "sahnepudding-locker-200-g": {
+   "aldi": 0.49
+  },
+  "rote-gruetze-500-g": {
+   "aldi": 2.29
+  },
+  "tiramisu-500-g": {
+   "netto": 2.99
+  },
+  "frischer-goetterspeise-becher-150-g": {
+   "aldi": 0.39
+  },
+  "g-ramont-cremig-zarte-scheiben-150-g": {
+   "netto": 3.49
+  },
+  "milram-benjamin-scheiben-jung-mild-150-g": {
+   "kaufland": 2.69
+  },
+  "gruenlaender-kaese-mild-nussig-140-g": {
+   "rewe": 1.67,
+   "kaufland": 2.69
+  },
+  "edamer-in-scheiben-400-g": {
+   "aldi": 2.45
+  },
+  "daenischer-schnittkaese-200-g": {
+   "aldi": 2.29
+  },
+  "weichkaese-scheiben-franzoesisch-200-g": {
+   "aldi": 2.89
+  },
+  "schweizer-kaesescheiben-150-g": {
+   "aldi": 3.89
+  },
+  "bio-kaesescheiben-200-g": {
+   "aldi": 1.99
+  },
+  "gouda-mittelalt-300-g": {
+   "aldi": 2.69
+  },
+  "gouda-jung-am-stueck-450-g": {
+   "aldi": 3.79
+  },
+  "gouda-am-stueck-250-g": {
+   "aldi": 1.72
+  },
+  "schnittkaese-am-stueck-250-g": {
+   "aldi": 1.65
+  },
+  "emmentaler-am-stueck-400-g": {
+   "aldi": 3.49
+  },
+  "bergkaese-350-g": {
+   "aldi": 3.99
+  },
+  "parmigiano-reggiano-200-g": {
+   "aldi": 4.79
+  },
+  "kaese-snack-in-wuerfeln-220-g": {
+   "aldi": 2.69
+  },
+  "handkaese-200-g": {
+   "aldi": 1.99,
+   "kaufland": 1.29
+  },
+  "harzer-kaese-200-g": {
+   "lidl": 1.99,
+   "aldi": 1.99
+  },
+  "back-camembert-300-g": {
+   "aldi": 2.69
+  },
+  "franzoesischer-weichkaese-200-g": {
+   "aldi": 1.79
+  },
+  "bavaria-blu-150-g": {
+   "aldi": 1.79
+  },
+  "mozzarella-maxi-rolle-330-g": {
+   "aldi": 1.29
+  },
+  "mozzarella-minis-255-g": {
+   "aldi": 1.29
+  },
+  "bio-mozzarella-200-g": {
+   "aldi": 1.29
+  },
+  "hirtenkaese-in-wuerfeln-350-g": {
+   "aldi": 2.69
+  },
+  "philadelphia-original-195-g": {
+   "rewe": 2.29
+  },
+  "philadelphia-huettenkaese-cottage-cheese-200-g": {
+   "rewe": 1.79
+  },
+  "bresso-feine-kraeuter-150-g": {
+   "lidl": 1.19
+  },
+  "exquisa-koerniger-frischkaese-200-g": {
+   "rewe": 1.89
+  },
+  "gervais-huettenkaese-light-200-g": {
+   "rewe": 1.99
+  },
+  "frischkaese-becher-150-g": {
+   "aldi": 0.99
+  },
+  "frischkaese-im-fass-200-g": {
+   "aldi": 1.49
+  },
+  "bio-reibekaese-150-g": {
+   "aldi": 1.59
+  },
+  "bio-eier-10er-packung-10-stueck": {
+   "aldi": 3.99,
+   "rewe": 3.99,
+   "netto": 3.99,
+   "lidl": 3.39
+  },
+  "bio-eier-6er-packung-6-stueck": {
+   "aldi": 2.89
+  },
+  "eier-bodenhaltung-18er-packung-18-stueck": {
+   "lidl": 3.39
+  },
+  "haehnchen-innenfilets-400-g": {
+   "aldi": 4.99
+  },
+  "haehnchen-minutenschnitzel-400-g": {
+   "aldi": 4.99
+  },
+  "haehnchen-minischnitzel-500-g": {
+   "aldi": 3.99,
+   "rewe": 3.99
+  },
+  "haehnchenkeulen-mit-rueckenstueck-1-1-kg": {
+   "aldi": 5.29
+  },
+  "haehnchenbrustfilet-grosspackung-1-kg": {
+   "aldi": 9.99
+  },
+  "haehnchen-steaks-mariniert-550-g": {
+   "aldi": 6.29
+  },
+  "chicken-wings-750-g": {
+   "aldi": 4.49
+  },
+  "haehnchen-cordon-bleu-500-g": {
+   "aldi": 4.99
+  },
+  "chicken-nuggets-xxl-1-kg": {
+   "aldi": 6.99
+  },
+  "chicken-stripes-400-g": {
+   "aldi": 3.99
+  },
+  "crunchy-chicken-burger-patties-400-g": {
+   "aldi": 3.45
+  },
+  "puten-geschnetzeltes-350-g": {
+   "aldi": 3.99
+  },
+  "puten-ministeaks-400-g": {
+   "aldi": 4.99
+  },
+  "puten-hackfleisch-400-g": {
+   "aldi": 2.79,
+   "kaufland": 2.79
+  },
+  "barbarie-entenkeule-400-g": {
+   "aldi": 4.49
+  },
+  "schweinefilet-450-g": {
+   "aldi": 5.85
+  },
+  "schweine-minutensteaks-400-g": {
+   "aldi": 2.99,
+   "netto": 2.99
+  },
+  "mini-knusper-schnitzel-400-g": {
+   "aldi": 3.79
+  },
+  "schnitzel-paniert-500-g": {
+   "aldi": 4.99
+  },
+  "schnitzel-wiener-art-750-g": {
+   "aldi": 5.99
+  },
+  "marinierte-nackensteaks-600-g": {
+   "aldi": 4.49
+  },
+  "schweine-nackensteaks-xxl-800-g": {
+   "aldi": 6.69
+  },
+  "rueckensteaks-400-g": {
+   "aldi": 3.29
+  },
+  "frikadellen-500-g": {
+   "aldi": 2.99
+  },
+  "frikadellen-baellchen-600-g": {
+   "aldi": 2.79
+  },
+  "bauchspeck-geraeuchert-300-g": {
+   "aldi": 2.59
+  },
+  "rinderhackfleisch-fettreduziert-400-g": {
+   "aldi": 5.49
+  },
+  "rinderhackfleisch-xxl-800-g": {
+   "aldi": 8.79
+  },
+  "gemischtes-hackfleisch-xxl-800-g": {
+   "aldi": 6.49
+  },
+  "rumpsteak-240-g": {
+   "aldi": 6.48
+  },
+  "hueftsteaks-375-g": {
+   "aldi": 8.25
+  },
+  "black-angus-burger-260-g": {
+   "aldi": 3.79
+  },
+  "suppenfleisch-rind-500-g": {
+   "aldi": 7.79
+  },
+  "rostbratwurst-540-g": {
+   "aldi": 3.79,
+   "kaufland": 3.79
+  },
+  "schinken-bockwurst-500-g": {
+   "aldi": 3.49
+  },
+  "hot-dog-wuerstchen-550-g": {
+   "aldi": 2.49
+  },
+  "mini-wuerstchen-320-g": {
+   "aldi": 2.49
+  },
+  "bratwurst-xxl-1-kg": {
+   "aldi": 5.49
+  },
+  "wiener-wuerstchen-grosspackung-640-g": {
+   "aldi": 2.99
+  },
+  "gefluegel-wiener-400-g": {
+   "aldi": 3.45,
+   "edeka": 3.45
+  },
+  "gefluegel-fleischwurst-500-g": {
+   "aldi": 2.69
+  },
+  "herta-fleischwurst-500-g": {
+   "edeka": 2.79
+  },
+  "currywurst-220-g": {
+   "aldi": 1.49
+  },
+  "kabanos-200-g": {
+   "aldi": 2.29
+  },
+  "mini-kabanossi-250-g": {
+   "aldi": 2.79
+  },
+  "bifi-original-120-g": {
+   "netto": 2.99
+  },
+  "salami-sticks-100-g": {
+   "netto": 2.09
+  },
+  "muenchner-weisswuerste-280-g": {
+   "edeka": 2.23
+  },
+  "tulip-fruehstuecksfleisch-340-g": {
+   "aldi": 2.49,
+   "kaufland": 1.99
+  },
+  "haehnchenbrust-aufschnitt-150-g": {
+   "aldi": 2.49,
+   "edeka": 2.49,
+   "netto": 1.94
+  },
+  "gefluegelsalami-130-g": {
+   "aldi": 1.99
+  },
+  "schinkenwurst-200-g": {
+   "rewe": 0.89
+  },
+  "schinken-zwiebel-mettwurst-200-g": {
+   "edeka": 2.18
+  },
+  "delikatess-streichwurst-125-g": {
+   "aldi": 0.99,
+   "kaufland": 0.99
+  },
+  "prosciutto-cotto-200-g": {
+   "aldi": 2.39
+  },
+  "kochschinken-grosspackung-300-g": {
+   "aldi": 1.99
+  },
+  "haehnchenbrust-filetstreifen-gegart-150-g": {
+   "aldi": 2.39,
+   "netto": 2.39,
+   "lidl": 2.39
+  },
+  "mini-haehnchenbrust-filetstuecke-150-g": {
+   "aldi": 1.99,
+   "lidl": 1.99
+  },
+  "vegane-nuggets-300-g": {
+   "aldi": 1.99
+  },
+  "vegane-schnitzel-200-g": {
+   "aldi": 1.99
+  },
+  "veganes-hack-270-g": {
+   "rewe": 2.39
+  },
+  "vegane-salami-80-g": {
+   "aldi": 1.29
+  },
+  "ruegenwalder-muehle-vegane-muehlen-salami-80-g": {
+   "edeka": 1.59,
+   "kaufland": 1.59
+  },
+  "ruegenwalder-muehle-vegane-muehlen-bratwurst-180-g": {
+   "rewe": 3.29
+  },
+  "ruegenwalder-muehle-veganer-schinken-spicker-80-g": {
+   "rewe": 1.11,
+   "edeka": 1.59
+  },
+  "forellenfilets-geraeuchert-125-g": {
+   "aldi": 2.49
+  },
+  "lachsforelle-geraeuchert-100-g": {
+   "aldi": 2.49
+  },
+  "lachsforellenfilet-180-g": {
+   "aldi": 3.79
+  },
+  "skandinavischer-raeucherlachs-90-g": {
+   "aldi": 2.49
+  },
+  "bio-raeucherlachs-100-g": {
+   "aldi": 3.99
+  },
+  "grill-und-ofenlachs-200-g": {
+   "aldi": 4.19
+  },
+  "lachsfilet-portion-195-g": {
+   "aldi": 3.99
+  },
+  "heringsfilets-in-sahnesauce-380-g": {
+   "aldi": 3.49
+  },
+  "matjeshappen-nordischer-art-200-g": {
+   "netto": 1.99
+  },
+  "garnelen-gekocht-200-g": {
+   "aldi": 3.79
+  },
+  "party-garnelen-100-g": {
+   "netto": 1.79,
+   "lidl": 1.99
+  },
+  "shrimps-salat-200-g": {
+   "aldi": 2.19
+  },
+  "dr-oetker-ristorante-pizza-salame-320-g": {
+   "aldi": 3.49
+  },
+  "dr-oetker-ristorante-pizza-tonno-355-g": {
+   "aldi": 3.49
+  },
+  "dr-oetker-die-ofenfrische-salami-390-g": {
+   "aldi": 3.69
+  },
+  "dr-oetker-die-ofenfrische-speciale-415-g": {
+   "netto": 2.22,
+   "rewe": 1.79
+  },
+  "dr-oetker-die-ofenfrische-vier-kaese-410-g": {
+   "aldi": 3.69
+  },
+  "original-wagner-steinofen-pizza-salami-320-g": {
+   "netto": 3.49,
+   "aldi": 3.49
+  },
+  "original-wagner-steinofen-pizza-speciale-350-g": {
+   "netto": 3.49
+  },
+  "original-wagner-steinofen-pizza-kaesequartett-350-g": {
+   "netto": 3.49
+  },
+  "original-wagner-big-city-pizza-430-g": {
+   "edeka": 1.99
+  },
+  "original-wagner-piccolinis-salami-270-g": {
+   "aldi": 3.69
+  },
+  "original-wagner-die-backfrische-pizza-350-g": {
+   "rewe": 3.49
+  },
+  "original-wagner-flammkuchen-bauernart-320-g": {
+   "netto": 3.49
+  },
+  "gustavo-gusto-pizza-margherita-410-g": {
+   "netto": 4.69,
+   "rewe": 4.99
+  },
+  "steinofenpizza-vier-kaese-680-g": {
+   "aldi": 3.49,
+   "netto": 3.49
+  },
+  "steinofenpizza-thunfisch-710-g": {
+   "aldi": 3.49,
+   "netto": 3.49
+  },
+  "vegane-pizza-verdura-400-g": {
+   "lidl": 1.89
+  },
+  "pizzabroetchen-250-g": {
+   "aldi": 1.99
+  },
+  "frosta-huehner-frikassee-500-g": {
+   "edeka": 2.99,
+   "kaufland": 4.79
+  },
+  "frosta-butter-chicken-500-g": {
+   "kaufland": 4.79
+  },
+  "frosta-haehnchen-paella-500-g": {
+   "kaufland": 4.79
+  },
+  "frosta-wildlachs-in-kraeuterrahm-450-g": {
+   "kaufland": 4.79
+  },
+  "frosta-rahmgeschnetzeltes-mit-haehnchen-und-spaetzle-375-g": {
+   "netto": 3.59
+  },
+  "frosta-rotes-curry-mit-haehnchen-und-reis-375-g": {
+   "netto": 3.59
+  },
+  "frosta-hackbaellchen-pfanne-450-g": {
+   "kaufland": 4.79
+  },
+  "frosta-bratkartoffel-haehnchen-pfanne-500-g": {
+   "kaufland": 4.79
+  },
+  "iglo-pasta-bolognese-750-g": {
+   "netto": 4.99
+  },
+  "iglo-tagliatelle-pilz-pfanne-450-g": {
+   "edeka": 3.49,
+   "kaufland": 2.99
+  },
+  "iglo-ravioli-mit-dem-blubb-450-g": {
+   "edeka": 3.49
+  },
+  "nasi-goreng-750-g": {
+   "kaufland": 3.69
+  },
+  "bami-goreng-750-g": {
+   "kaufland": 3.69
+  },
+  "haehnchen-tikka-masala-mit-reis-750-g": {
+   "kaufland": 3.69
+  },
+  "gyros-reispfanne-750-g": {
+   "kaufland": 3.69
+  },
+  "paella-pfanne-750-g": {
+   "kaufland": 3.69
+  },
+  "iglo-koenigsgemuese-700-g": {
+   "edeka": 3.39
+  },
+  "rahmgemuese-500-g": {
+   "aldi": 1.99
+  },
+  "rahmspinat-grosspackung-750-g": {
+   "aldi": 3.49
+  },
+  "iglo-gemuesestaebchen-15-stueck": {
+   "lidl": 2.99,
+   "kaufland": 2.99
+  },
+  "suesskartoffel-pommes-500-g": {
+   "aldi": 1.99
+  },
+  "mccain-chef-frites-750-g": {
+   "edeka": 2.49
+  },
+  "mccain-airfryer-pommes-500-g": {
+   "rewe": 2.79
+  },
+  "reibekuchen-300-g": {
+   "edeka": 2.29
+  },
+  "bio-heidelbeeren-300-g": {
+   "netto": 3.79
+  },
+  "wildlachsfilets-250-g": {
+   "aldi": 3.79
+  },
+  "knusperfilets-400-g": {
+   "aldi": 3.49
+  },
+  "zanderfilets-450-g": {
+   "aldi": 6.99
+  },
+  "kabeljaufilet-540-g": {
+   "aldi": 7.99
+  },
+  "alaska-seelachsfilets-800-g": {
+   "aldi": 5.99
+  },
+  "ofen-backfisch-240-g": {
+   "aldi": 2.49,
+   "netto": 1.79
+  },
+  "pangasiusfilet-540-g": {
+   "aldi": 3.49
+  },
+  "backfischstaebchen-405-g": {
+   "aldi": 2.99
+  },
+  "iglo-fischstaebchen-original-15-stueck": {
+   "netto": 4.88
+  },
+  "ruegenwalder-muehle-vegane-muehlen-fischstaebchen-180-g": {
+   "edeka": 3.29
+  },
+  "coppenrath-wiese-weltmeister-broetchen-6-stueck": {
+   "rewe": 1.99
+  },
+  "weizenbroetchen-zum-aufbacken-450-g": {
+   "lidl": 2.29
+  },
+  "langnese-cremissimo-bourbon-vanille-1300-ml": {
+   "aldi": 3.99
+  },
+  "magnum-mini-classic-6-x-55-ml": {
+   "netto": 5.49,
+   "lidl": 5.49
+  },
+  "magnum-mini-mandel-6-x-55-ml": {
+   "edeka": 4.49
+  },
+  "langnese-flutschfinger-8-x-64-ml": {
+   "edeka": 3.99
+  },
+  "langnese-capri-6-stueck": {
+   "edeka": 3.99
+  },
+  "langnese-cuja-mara-split-6-stueck": {
+   "edeka": 3.99
+  },
+  "schoeller-bum-bum-4-x-52-g": {
+   "netto": 3.99
+  },
+  "eisschale-familienpackung-2-5-l": {
+   "aldi": 3.29
+  },
+  "eiscreme-rich-creamy-500-ml": {
+   "aldi": 2.79
+  },
+  "american-style-eis-500-ml": {
+   "aldi": 2.79
+  },
+  "skyr-natur-grosspackung-1-kg": {
+   "lidl": 2.49
+  },
+  "joghurt-multipack-4-x-150-g": {
+   "aldi": 0.89
+  },
+  "aktiv-joghurt-probiotisch-4-x-125-g": {
+   "aldi": 1.49
+  },
+  "kaese-aufschnitt-gemischt-250-g": {
+   "aldi": 1.89
+  },
+  "hollaender-gouda-am-stueck-450-g": {
+   "aldi": 4.49
+  },
+  "gefluegel-hacksteak-400-g": {
+   "aldi": 3.99
+  },
+  "haehnchen-knusperdinos-400-g": {
+   "aldi": 3.29
+  },
+  "schinken-paprika-geschnetzeltes-500-g": {
+   "aldi": 3.49
+  },
+  "saletti-mini-salami-50-g": {
+   "aldi": 0.87
+  },
+  "salametti-100-g": {
+   "aldi": 2.19
+  },
+  "frosta-gemuese-asiatische-art-300-g": {
+   "rewe": 3.79
+  },
+  "spaghettini-500-g": {
+   "netto": 1.39
+  },
+  "linguine-500-g": {
+   "rewe": 1.49
+  },
+  "eiernudeln-500-g": {
+   "aldi": 0.99
+  },
+  "glasnudeln-100-g": {
+   "lidl": 0.39,
+   "rewe": 1.19
+  },
+  "mie-nudeln-250-g": {
+   "rewe": 0.89
+  },
+  "udon-nudeln-200-g": {
+   "rewe": 1.29
+  },
+  "gnocchi-500-g": {
+   "kaufland": 1.89
+  },
+  "schupfnudeln-500-g": {
+   "edeka": 1.89
+  },
+  "barilla-fusilli-n-98-500-g": {
+   "kaufland": 1.79
+  },
+  "barilla-maccheroni-n-44-500-g": {
+   "rewe": 1.99
+  },
+  "barilla-spaghetti-al-bronzo-500-g": {
+   "rewe": 2.49
+  },
+  "barilla-integrale-fusilli-vollkorn-500-g": {
+   "rewe": 2.69
+  },
+  "barilla-lasagne-500-g": {
+   "kaufland": 2.49,
+   "rewe": 2.69
+  },
+  "3-glocken-spaghetti-500-g": {
+   "netto": 0.99
+  },
+  "3-glocken-korkenzieher-500-g": {
+   "netto": 0.99
+  },
+  "sushireis-500-g": {
+   "rewe": 1.79,
+   "kaufland": 1.79
+  },
+  "wildreis-mischung-500-g": {
+   "netto": 1.99
+  },
+  "ben-s-original-express-reis-basmati-220-g": {
+   "netto": 2.29
+  },
+  "ben-s-original-express-reis-langkorn-natur-220-g": {
+   "netto": 2.29
+  },
+  "ben-s-original-express-reis-mediterran-220-g": {
+   "netto": 2.29
+  },
+  "reis-fit-express-reis-mediterran-250-g": {
+   "netto": 2.79
+  },
+  "polenta-maisgriess-500-g": {
+   "kaufland": 1.15
+  },
+  "brechbohnen-425-ml": {
+   "netto": 0.99,
+   "rewe": 0.99
+  },
+  "prinzessbohnen-425-ml": {
+   "aldi": 1.19
+  },
+  "erbsen-in-der-dose-425-ml": {
+   "aldi": 0.89
+  },
+  "weisse-riesenbohnen-im-glas-295-g": {
+   "aldi": 0.99
+  },
+  "linsen-mit-suppengruen-530-g": {
+   "kaufland": 1.19
+  },
+  "baked-beans-400-g": {
+   "kaufland": 0.99
+  },
+  "heinz-baked-beans-415-g": {
+   "kaufland": 2.49
+  },
+  "chili-bohnen-pinto-240-g": {
+   "kaufland": 0.99
+  },
+  "maiskoelbchen-425-ml": {
+   "netto": 0.99
+  },
+  "champignons-ganze-koepfe-170-g": {
+   "netto": 1.19
+  },
+  "stangenspargel-im-glas-370-ml": {
+   "aldi": 1.99
+  },
+  "gruenkohl-im-glas-720-ml": {
+   "aldi": 1.39
+  },
+  "cornichons-720-ml": {
+   "aldi": 1.29
+  },
+  "spreewaldhof-spreelinge-gewuerzgurken-360-g": {
+   "netto": 2.59
+  },
+  "jalape-os-gruen-in-scheiben-190-g": {
+   "netto": 0.99
+  },
+  "kapern-106-ml": {
+   "aldi": 0.79,
+   "netto": 0.99
+  },
+  "getrocknete-tomaten-in-oel-280-g": {
+   "aldi": 1.49,
+   "netto": 1.49
+  },
+  "gruene-oliven-370-ml": {
+   "aldi": 1.99
+  },
+  "schwarze-oliven-entsteint-200-g": {
+   "netto": 1.29
+  },
+  "gruene-oliven-gefuellt-mit-paprikapaste-200-g": {
+   "netto": 1.29
+  },
+  "passata-rustica-690-g": {
+   "aldi": 1.39
+  },
+  "oro-di-parma-tomaten-stueckig-400-g": {
+   "lidl": 1.99,
+   "rewe": 1.99
+  },
+  "mutti-pizzasauce-aromatica-400-g": {
+   "rewe": 2.19
+  },
+  "sauerkirschen-entsteint-680-g": {
+   "aldi": 3.69
+  },
+  "kaiserkirschen-suess-680-g": {
+   "aldi": 2.79
+  },
+  "pfirsiche-halbe-frucht-850-ml": {
+   "aldi": 1.99
+  },
+  "mandarinen-leicht-gezuckert-314-ml": {
+   "aldi": 0.99
+  },
+  "birnen-halbe-frucht-700-g": {
+   "netto": 2.99
+  },
+  "erbseneintopf-800-g": {
+   "aldi": 1.79
+  },
+  "linseneintopf-800-g": {
+   "aldi": 1.89
+  },
+  "huehnernudeltopf-800-g": {
+   "aldi": 1.89
+  },
+  "chili-con-carne-800-g": {
+   "aldi": 2.29
+  },
+  "ravioli-in-tomatensauce-800-g": {
+   "aldi": 1.79
+  },
+  "gulaschsuppe-400-ml": {
+   "aldi": 1.79
+  },
+  "tomatenrahmsuppe-400-ml": {
+   "aldi": 1.39
+  },
+  "erasco-erbseneintopf-800-g": {
+   "netto": 3.29
+  },
+  "erasco-huehner-nudel-topf-800-g": {
+   "netto": 3.29
+  },
+  "maggi-ravioli-bolognese-800-g": {
+   "edeka": 2.99
+  },
+  "thunfisch-in-pikanter-gemuesesauce-185-g": {
+   "kaufland": 1.29
+  },
+  "sardinen-in-oel-125-g": {
+   "netto": 1.19
+  },
+  "makrelenfilets-in-tomatensauce-125-g": {
+   "netto": 1.59
+  },
+  "heringsfilets-in-tomatensauce-200-g": {
+   "lidl": 0.99
+  },
+  "lee-kum-kee-austernsauce-255-g": {
+   "rewe": 2.89
+  },
+  "teriyaki-sauce-250-ml": {
+   "rewe": 1.49
+  },
+  "hoisinsauce-200-ml": {
+   "rewe": 3.29
+  },
+  "pad-thai-sauce-200-ml": {
+   "rewe": 3.29
+  },
+  "satay-sauce-200-g": {
+   "rewe": 2.99
+  },
+  "sweet-chili-sauce-700-ml": {
+   "lidl": 1.79
+  },
+  "sriracha-chilisauce-455-ml": {
+   "netto": 4.49,
+   "edeka": 4.49
+  },
+  "wasabi-paste-43-g": {
+   "kaufland": 3.19
+  },
+  "yum-yum-instantnudeln-huhn-60-g": {
+   "lidl": 0.69,
+   "netto": 0.69
+  },
+  "nissin-cup-noodles-soba-teriyaki-90-g": {
+   "lidl": 1.79
+  },
+  "nongshim-shin-cup-spicy-nudelsuppe-68-g": {
+   "netto": 1.49
+  },
+  "udon-ramen-miso-nudelbecher-243-g": {
+   "lidl": 1.99
+  },
+  "maggi-magic-asia-gebratene-nudeln-huhn-120-g": {
+   "edeka": 1.69
+  },
+  "maggi-5-minuten-terrine-nudeln-in-rahmsauce-61-g": {
+   "netto": 1.49
+  },
+  "nudeltopf-in-rahmsauce-5-minuten-60-g": {
+   "rewe": 0.99,
+   "netto": 0.99
+  },
+  "beutelsuppe-tomate-70-g": {
+   "aldi": 0.59
+  },
+  "maggi-fix-fuer-geschnetzeltes-zuericher-art-50-g": {
+   "netto": 1.09
+  },
+  "maggi-fix-fuer-kartoffelgratin-42-g": {
+   "netto": 1.09
+  },
+  "miracoli-spaghetti-mit-tomatensauce-klassiker-610-g": {
+   "netto": 4.49
+  },
+  "barilla-pasta-sauce-basilico-400-g": {
+   "netto": 1.99
+  },
+  "barilla-pasta-sauce-arrabbiata-400-g": {
+   "netto": 1.99
+  },
+  "barilla-pasta-sauce-napoletana-400-g": {
+   "netto": 1.99
+  },
+  "bertolli-pasta-sauce-basilico-400-g": {
+   "kaufland": 2.79
+  },
+  "pesto-rosso-190-g": {
+   "kaufland": 0.99,
+   "edeka": 0.99
+  },
+  "pesto-alla-calabrese-190-g": {
+   "edeka": 1.29,
+   "lidl": 0.99
+  },
+  "weisse-pasta-sauce-400-ml": {
+   "aldi": 1.99
+  },
+  "bio-tomatensauce-325-ml": {
+   "aldi": 1.25
+  },
+  "brat-olivenoel-spray-200-ml": {
+   "aldi": 2.99
+  },
+  "leinoel-250-ml": {
+   "aldi": 1.35
+  },
+  "frittieroel-2-l": {
+   "aldi": 4.49
+  },
+  "weissweinessig-500-ml": {
+   "rewe": 1.99
+  },
+  "essigessenz-400-ml": {
+   "netto": 0.79
+  },
+  "reisessig-250-ml": {
+   "lidl": 1.29
+  },
+  "zitronensaft-200-ml": {
+   "aldi": 0.79
+  },
+  "bad-reichenhaller-alpen-jodsalz-500-g": {
+   "aldi": 0.85,
+   "netto": 0.85
+  },
+  "bad-reichenhaller-alpen-salz-ohne-jod-500-g": {
+   "aldi": 0.75,
+   "netto": 0.75
+  },
+  "meersalz-grob-1-kg": {
+   "netto": 1.99
+  },
+  "ostmann-knoblauchsalz-60-g": {
+   "rewe": 2.49
+  },
+  "kreuzkuemmel-gemahlen-35-g": {
+   "aldi": 0.85
+  },
+  "lorbeerblaetter-7-5-g": {
+   "aldi": 0.69
+  },
+  "chili-gemahlen-40-g": {
+   "aldi": 0.75
+  },
+  "kurkuma-gemahlen-50-g": {
+   "aldi": 0.75
+  },
+  "knoblauch-granuliert-70-g": {
+   "aldi": 0.75
+  },
+  "weisser-pfeffer-gemahlen-50-g": {
+   "aldi": 0.75
+  },
+  "paprika-scharf-gemahlen-50-g": {
+   "aldi": 0.75
+  },
+  "fuchs-zimtstangen-ceylon-3-stueck": {
+   "edeka": 3.29
+  },
+  "bio-gemuesebruehe-im-glas-126-g": {
+   "aldi": 1.39
+  },
+  "gefluegelfond-400-ml": {
+   "kaufland": 1.39
+  },
+  "thomy-les-sauces-hollandaise-250-ml": {
+   "netto": 1.69,
+   "edeka": 1.69,
+   "kaufland": 1.69
+  },
+  "heinz-tomato-ketchup-400-ml": {
+   "lidl": 2.79,
+   "aldi": 2.79
+  },
+  "werder-premium-tomatenketchup-450-ml": {
+   "netto": 2.29,
+   "aldi": 2.29
+  },
+  "bio-tomatenketchup-500-ml": {
+   "rewe": 2.29,
+   "netto": 2.29
+  },
+  "curry-gewuerzketchup-500-ml": {
+   "aldi": 1.99
+  },
+  "hela-curry-gewuerz-ketchup-delikat-300-ml": {
+   "edeka": 2.29
+  },
+  "hela-curry-gewuerz-ketchup-800-ml": {
+   "kaufland": 3.39
+  },
+  "bautz-ner-senf-mittelscharf-200-ml": {
+   "lidl": 0.55,
+   "netto": 0.55,
+   "kaufland": 0.39
+  },
+  "bautz-ner-senf-scharf-200-ml": {
+   "netto": 0.55
+  },
+  "loewensenf-extra-scharf-250-ml": {
+   "edeka": 1.89
+  },
+  "heinz-mayonnaise-das-original-800-ml": {
+   "netto": 3.89
+  },
+  "thomy-delikatess-remoulade-500-ml": {
+   "netto": 2.79,
+   "rewe": 2.99
+  },
+  "miracel-whip-original-500-ml": {
+   "netto": 1.49
+  },
+  "barbecue-sauce-250-ml": {
+   "netto": 0.99
+  },
+  "homann-hot-dog-sauce-sweet-onion-430-ml": {
+   "netto": 2.59
+  },
+  "tabasco-pepper-sauce-60-ml": {
+   "netto": 3.49
+  },
+  "worcestersauce-150-ml": {
+   "netto": 1.49
+  },
+  "meerrettich-im-glas-212-ml": {
+   "aldi": 1.29
+  },
+  "sauce-hollandaise-300-ml": {
+   "aldi": 1.15
+  },
+  "salatkroenung-kraeuter-5-beutel": {
+   "aldi": 1.59
+  },
+  "salatfix-kraeuter-40-g": {
+   "aldi": 0.49
+  },
+  "weizenmehl-type-550-1-kg": {
+   "rewe": 0.79,
+   "edeka": 0.85
+  },
+  "kathi-weizenmehl-type-405-1-kg": {
+   "rewe": 1.39,
+   "netto": 1.39
+  },
+  "dinkelmehl-type-1050-1-kg": {
+   "edeka": 1.35
+  },
+  "pizzamehl-tipo-00-1-kg": {
+   "aldi": 0.99,
+   "netto": 0.99,
+   "rewe": 1.29
+  },
+  "wuerfelzucker-1-kg": {
+   "aldi": 1.39
+  },
+  "gelierzucker-2-1-500-g": {
+   "netto": 0.99
+  },
+  "diamant-brauner-kandis-zucker-500-g": {
+   "rewe": 1.79
+  },
+  "erythrit-500-g": {
+   "aldi": 3.65
+  },
+  "suessstofftabletten-1200-stueck": {
+   "aldi": 0.95
+  },
+  "dr-oetker-vanillin-zucker-10-x-8-g": {
+   "rewe": 1.29
+  },
+  "dr-oetker-bourbon-vanille-zucker-3-x-8-g": {
+   "rewe": 2.29
+  },
+  "bourbon-vanilleschoten-2-stueck": {
+   "netto": 1.79,
+   "kaufland": 1.49,
+   "aldi": 1.99
+  },
+  "vanillepaste-50-g": {
+   "netto": 2.79
+  },
+  "frischhefe-wuerfel-42-g": {
+   "aldi": 0.15,
+   "edeka": 0.19,
+   "lidl": 0.15,
+   "rewe": 0.15,
+   "netto": 0.15
+  },
+  "dr-oetker-trockenhefe-3-x-7-g": {
+   "rewe": 1.29
+  },
+  "dr-oetker-natron-5-beutel": {
+   "rewe": 0.89
+  },
+  "dr-oetker-sahnesteif-5-beutel": {
+   "netto": 0.79
+  },
+  "dr-oetker-goetterspeise-zitrone-12-g": {
+   "edeka": 1.39
+  },
+  "dr-oetker-paradiescreme-sahne-karamell-65-g": {
+   "rewe": 1.29
+  },
+  "kathi-zitronenkuchen-backmischung-400-g": {
+   "netto": 2.69
+  },
+  "cr-pe-backmischung-185-g": {
+   "aldi": 1.29
+  },
+  "kuvertuere-zartbitter-200-g": {
+   "aldi": 1.99
+  },
+  "kuvertuere-vollmilch-200-g": {
+   "netto": 2.29
+  },
+  "dr-oetker-kuchenglasur-dunkel-150-g": {
+   "rewe": 2.29
+  },
+  "kuchenglasur-vollmilch-100-g": {
+   "rewe": 0.99
+  },
+  "dr-oetker-raspelschokolade-100-g": {
+   "rewe": 2.99
+  },
+  "schokoladenstreusel-400-g": {
+   "aldi": 2.99
+  },
+  "bensdorp-kakao-zum-backen-125-g": {
+   "rewe": 2.79
+  },
+  "marzipan-rohmasse-200-g": {
+   "aldi": 1.89,
+   "netto": 1.89,
+   "rewe": 1.89,
+   "kaufland": 1.89
   },
   "windeln-groesse-4-42-stueck": {
    "lidl": 5.18,
@@ -1135,666 +3138,6 @@
    "ab": "2026-09-28",
    "bis": "2026-10-02",
    "quelle": "https://www.prospektangebote.de/geschaefte/combi/angebote",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "avocado-stueck",
-   "name": "Peruan./südafrik. Avocado, lose",
-   "einheit": "Stück",
-   "preis": 0.49,
-   "alt": 1.49,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "bananen-1-kg",
-   "name": "CHIQUITA Costa-rican. Bananen",
-   "einheit": "kg",
-   "preis": 1.99,
-   "alt": 2.49,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "heidelbeeren-250-g",
-   "name": "Peruan. Kulturheidelbeeren",
-   "einheit": "300 g Schale",
-   "preis": 3.99,
-   "alt": 4.99,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "erdbeeren-500-g",
-   "name": "Dtsch. Erdbeeren",
-   "einheit": "400 g Pack.",
-   "preis": 2.49,
-   "alt": 2.99,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "zitronen-500-g",
-   "name": "Peruan./span. Bio-Zitronen",
-   "einheit": "500 g Netz",
-   "preis": 1.79,
-   "alt": 2.29,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "brokkoli-500-g",
-   "name": "Dtsch. Broccoli",
-   "einheit": "500 g Packg.",
-   "preis": 1.29,
-   "alt": 1.79,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "kartoffeln-festkochend-2-5-kg",
-   "name": "Dtsch. Speisekartoffeln XXL",
-   "einheit": "5 kg Sack",
-   "preis": 2.99,
-   "alt": null,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "zwiebeln-1-kg",
-   "name": "Dtsch. Zwiebeln XXL",
-   "einheit": "5 kg Sack",
-   "preis": 2.99,
-   "alt": null,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "moehren-1-kg",
-   "name": "Dtsch. Möhren XXL",
-   "einheit": "3 kg Beutel",
-   "preis": 1.99,
-   "alt": null,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "rispentomaten-1-kg",
-   "name": "Niederl./belg. Rispentomaten, lose",
-   "einheit": "kg",
-   "preis": 1.99,
-   "alt": 2.49,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "aepfel-1-kg",
-   "name": "Bioland dtsch. Tafeläpfel",
-   "einheit": "1 kg Packg.",
-   "preis": 2.49,
-   "alt": 3.79,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "aepfel-1-kg",
-   "name": "Dtsch./ital. Tafeläpfel XXL",
-   "einheit": "5 kg Karton",
-   "preis": 4.99,
-   "alt": null,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "weintrauben-hell-500-g",
-   "name": "SANLUCAR Ital./span. Tafeltrauben, hell oder rot",
-   "einheit": "600 g Packg.",
-   "preis": 2.49,
-   "alt": 3.49,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "schweineschnitzel-500-g",
-   "name": "K-WERTSCHÄTZE Schweineschnitzel",
-   "einheit": "100 g",
-   "preis": 0.99,
-   "alt": 1.29,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "hackfleisch-gemischt-500-g",
-   "name": "K-WERTSCHÄTZE Hackfleisch gemischt von Schwein und Rind",
-   "einheit": "100 g",
-   "preis": 0.99,
-   "alt": 1.29,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "rinderhackfleisch-400-g",
-   "name": "K-PURLAND WERTSCHÄTZE Rinderhackfleisch",
-   "einheit": "500 g Packg.",
-   "preis": 4.99,
-   "alt": 5.79,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "haehnchenbrustfilet-400-g",
-   "name": "K-WERTSCHÄTZE Hähnchenbrustfilet Teilstücke",
-   "einheit": "100 g",
-   "preis": 1.39,
-   "alt": 1.59,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "wiener-wuerstchen-6-stueck",
-   "name": "K-WERTSCHÄTZE Wiener",
-   "einheit": "100 g",
-   "preis": 0.89,
-   "alt": 1.59,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "wiener-wuerstchen-6-stueck",
-   "name": "K-CLASSIC Mini-Wiener oder -Puten-Wiener",
-   "einheit": "12 St. = 320 g Packg.",
-   "preis": 1.99,
-   "alt": 2.49,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "salami-in-scheiben-100-g",
-   "name": "MONTORSI Ital. Salami",
-   "einheit": "100 g Packg.",
-   "preis": 2.0,
-   "alt": 3.49,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "salami-in-scheiben-100-g",
-   "name": "GUTSMEISTER Salami",
-   "einheit": "100 g",
-   "preis": 1.49,
-   "alt": 2.19,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "fischstaebchen-15-stueck",
-   "name": "IGLO Fischstäbchen",
-   "einheit": "360 - 450 g Packg.",
-   "preis": 2.99,
-   "alt": 4.89,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "joghurt-natur-3-5-500-g",
-   "name": "WEIHENSTEPHAN Joghurt mild",
-   "einheit": "500 g Becher",
-   "preis": 1.0,
-   "alt": 1.49,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "joghurt-natur-3-5-500-g",
-   "name": "K-FREE LAKTOSEFREI Joghurt mild",
-   "einheit": "500 g Becher",
-   "preis": 0.89,
-   "alt": null,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "vollmilch-3-5-1-l",
-   "name": "ARLA Bio-Weidemilch 3,8 % Fett",
-   "einheit": "1 l Packg.",
-   "preis": 1.29,
-   "alt": 1.99,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "fettarme-milch-1-5-1-l",
-   "name": "ARLA Bio-Weidemilch 1,5 % Fett",
-   "einheit": "1 l Packg.",
-   "preis": 1.29,
-   "alt": 1.89,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "mozzarella-125-g",
-   "name": "ZOTT Zottarella Mini",
-   "einheit": "250 g Packg.",
-   "preis": 1.69,
-   "alt": 2.29,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "frischkaese-200-g",
-   "name": "PHILADELPHIA Frischkäsezubereitung",
-   "einheit": "100 - 195 g Packg.",
-   "preis": 1.0,
-   "alt": 2.29,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "feta-200-g",
-   "name": "K-BIO Bioland Hirtenkäse",
-   "einheit": "200 g Packg.",
-   "preis": 4.0,
-   "alt": 5.67,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "fruchtjoghurt-250-g",
-   "name": "EHRMANN Almighurt",
-   "einheit": "150 g Becher",
-   "preis": 0.25,
-   "alt": 0.89,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "erbsen-1-kg",
-   "name": "K-BIO Bioland Erbsen oder Karottenmix",
-   "einheit": "750 g Beutel",
-   "preis": 1.99,
-   "alt": 2.69,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "steinofenpizza-salami-350-g",
-   "name": "DR. OETKER Die Ofenfrische oder Pizza Tradizionale",
-   "einheit": "385 - 415 g Packg.",
-   "preis": 2.0,
-   "alt": 3.69,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "tomatenmark-200-g",
-   "name": "K-BIO Bio-Tomatenmark",
-   "einheit": "200 g Tube",
-   "preis": 0.79,
-   "alt": 0.95,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "mayonnaise-500-ml",
-   "name": "K-CLASSIC Vegane Mayonnaise",
-   "einheit": "500 ml Fl.",
-   "preis": 1.29,
-   "alt": 1.69,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "sonnenblumenoel-1-l",
-   "name": "K-CLASSIC Sonnenblumenöl",
-   "einheit": "1 l Fl.",
-   "preis": 1.49,
-   "alt": 1.89,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "haferflocken-500-g",
-   "name": "K-CLASSIC Haferflocken",
-   "einheit": "500 g Packg.",
-   "preis": 0.49,
-   "alt": 0.69,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "weizenmehl-type-405-1-kg",
-   "name": "FRIESSINGER MÜHLE Haushaltsmehl",
-   "einheit": "1 kg Packg.",
-   "preis": 0.79,
-   "alt": 0.99,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "spaghetti-500-g",
-   "name": "BARILLA Classic Pasta",
-   "einheit": "500 g Packg.",
-   "preis": 1.59,
-   "alt": 1.99,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "mischbrot-750-g",
-   "name": "Weltmeisterbrot",
-   "einheit": "750 g Stück",
-   "preis": 1.49,
-   "alt": 1.99,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "roestkaffee-gemahlen-500-g",
-   "name": "MÖVENPICK Kaffee",
-   "einheit": "500 g Packg.",
-   "preis": 5.99,
-   "alt": 9.99,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "kaffeebohnen-crema-1-kg",
-   "name": "EDUSCHO Kaffee",
-   "einheit": "1 kg Beutel",
-   "preis": 12.99,
-   "alt": null,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "kaffeebohnen-crema-1-kg",
-   "name": "KÄFER Caffè Crema Lungo oder Espresso Forte",
-   "einheit": "1 kg Packg.",
-   "preis": 9.99,
-   "alt": 14.99,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "kraeutertee-20-beutel",
-   "name": "TEEKANNE Kräuter- oder Früchtetee- Klassiker",
-   "einheit": "18 - 20 Btl. = 30 - 60 g Packg.",
-   "preis": 1.0,
-   "alt": 2.19,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "milka-alpenmilch-100-g",
-   "name": "MILKA Schokolade",
-   "einheit": "85 - 100 g Tafel",
-   "preis": 0.88,
-   "alt": 1.99,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "salzstangen-250-g",
-   "name": "LORENZ Saltletts",
-   "einheit": "175 - 250 g Packg.",
-   "preis": 1.11,
-   "alt": 2.29,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "cola-1-5-l",
-   "name": "PEPSI oder SCHWIP SCHWAP Erfrischungsgetränk",
-   "einheit": "1,25 l PET-Fl.",
-   "preis": 0.69,
-   "alt": 1.49,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "pils-kasten-20-0-5-l",
-   "name": "HASSERÖDER Premium Pils",
-   "einheit": "Ka. 20 x 0,5 l Fl.",
-   "preis": 7.99,
-   "alt": 17.89,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "duschgel-250-ml",
-   "name": "FA Duschgel",
-   "einheit": "250 ml Fl.",
-   "preis": 0.88,
-   "alt": 1.35,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "shampoo-300-ml",
-   "name": "L'ORÉAL PARIS Elvital Shampoo oder Spülung",
-   "einheit": "250 - 300 ml Fl.",
-   "preis": 2.99,
-   "alt": 3.99,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "toilettenpapier-3-lagig-8-rollen",
-   "name": "HAKLE Toilettenpapier Traumweich",
-   "einheit": "Packg. 8 x 130 Blatt",
-   "preis": 2.99,
-   "alt": 3.95,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "kuechentuecher-4-rollen",
-   "name": "DICK & DURSTIG Küchentücher",
-   "einheit": "4 x 43 Blatt",
-   "preis": 2.22,
-   "alt": 2.69,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "weichspueler-1-l",
-   "name": "KUSCHELWEICH Weichspüler Luxury Moments oder Oriental",
-   "einheit": "1 l Fl.",
-   "preis": 2.22,
-   "alt": 2.99,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "spuelmaschinentabs-40-stueck",
-   "name": "FROSCH All-in-1-Spültabs",
-   "einheit": "30 St. = 540 g Packg.",
-   "preis": 4.99,
-   "alt": 5.95,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "zahnbuersten-2-stueck",
-   "name": "DR. BEST Zahnbürste Hoch-Tief",
-   "einheit": "3 St. Packg.",
-   "preis": 2.99,
-   "alt": 3.85,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
-   "q": "recherche"
-  },
-  {
-   "laden": "kaufland",
-   "pid": "fluessigseife-500-ml",
-   "name": "PALMOLIVE Flüssigseife",
-   "einheit": "300 ml Fl.",
-   "preis": 1.0,
-   "alt": 1.45,
-   "ab": null,
-   "bis": "2026-09-30",
-   "quelle": "https://filiale.kaufland.de/angebote/uebersicht.html",
    "q": "recherche"
   },
   {

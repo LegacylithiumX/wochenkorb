@@ -1808,5 +1808,1530 @@
   "slug": "premium-dental-snacks-1033040",
   "seite": "/sortiment/tierbedarf-tierfutter/hundefutter",
   "faktor": 1
+ },
+ "wetteraepfel-3-kg": {
+  "slug": "wetteraepfel-2067",
+  "seite": "/sortiment/obst-gemuese/frisch",
+  "faktor": 1
+ },
+ "pomelo-stueck": {
+  "slug": "pomelo-6136",
+  "seite": "/sortiment/obst-gemuese/frisch",
+  "faktor": 1
+ },
+ "feigen-frisch-stueck": {
+  "slug": "feige-1745",
+  "seite": "/sortiment/obst-gemuese/frisch",
+  "faktor": 1
+ },
+ "kiwi-gold-stueck": {
+  "slug": "sungold-kiwi-61600000003",
+  "seite": "/sortiment/obst-gemuese/frisch",
+  "faktor": 1.1695
+ },
+ "feigen-getrocknet-200-g": {
+  "slug": "feigen-1022583",
+  "seite": "/sortiment/snacks-suessigkeiten/nuesse-trockenfruechte",
+  "faktor": 1
+ },
+ "aprikosen-getrocknet-200-g": {
+  "slug": "aprikosen-1024814",
+  "seite": "/sortiment/snacks-suessigkeiten/nuesse-trockenfruechte",
+  "faktor": 1
+ },
+ "cranberries-getrocknet-200-g": {
+  "slug": "cranberries-2265",
+  "seite": "/sortiment/snacks-suessigkeiten/nuesse-trockenfruechte",
+  "faktor": 1
+ },
+ "trockenpflaumen-500-g": {
+  "slug": "trockenpflaumen-2271",
+  "seite": "/sortiment/snacks-suessigkeiten/nuesse-trockenfruechte",
+  "faktor": 1
+ },
+ "walnuesse-in-der-schale-1-kg": {
+  "slug": "walnuesse-1002720",
+  "seite": "/sortiment/snacks-suessigkeiten/nuesse-trockenfruechte",
+  "faktor": 1
+ },
+ "speisekartoffeln-festkochend-1-5-kg": {
+  "slug": "speisekartoffeln-la-vie-1041207",
+  "seite": "/sortiment/obst-gemuese/frisch",
+  "faktor": 1
+ },
+ "pommes-kartoffeln-1-5-kg": {
+  "slug": "pommes-kartoffeln-1042560",
+  "seite": "/sortiment/obst-gemuese/frisch",
+  "faktor": 1
+ },
+ "spitzkohl-1-kg": {
+  "slug": "spitzkohl-6159",
+  "seite": "/sortiment/obst-gemuese/frisch",
+  "faktor": 1
+ },
+ "pfluecksalat-125-g": {
+  "slug": "pfluecksalat-2051",
+  "seite": "/sortiment/obst-gemuese/frisch",
+  "faktor": 1
+ },
+ "weltmeisterbrot-dinkel-750-g": {
+  "slug": "weltmeisterbrot-mit-dinkel-7269",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/frische-backwaren",
+  "faktor": 1
+ },
+ "krustenbrot-1-kg": {
+  "slug": "krustenbrot-7256",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/frische-backwaren",
+  "faktor": 1
+ },
+ "landbrot-1-kg": {
+  "slug": "landbrot-714",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brot-toast",
+  "faktor": 1
+ },
+ "mildes-brot-weizenmischbrot-geschnitten-500-g": {
+  "slug": "das-milde-7389",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brot-toast",
+  "faktor": 1
+ },
+ "mehrkornschnitten-500-g": {
+  "slug": "mehrkornschnitte-7505",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brot-toast",
+  "faktor": 1
+ },
+ "vital-fit-brot-mehrkorn-500-g": {
+  "slug": "vital-und-fit-3234",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brot-toast",
+  "faktor": 1
+ },
+ "proteinbrot-eiweissbrot-500-g": {
+  "slug": "proteinbrot-257",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brot-toast",
+  "faktor": 1
+ },
+ "aerzener-haferbrot-das-pure-400-g": {
+  "slug": "das-pure-haferbrot-mit-oelsaaten-1005443",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brot-toast",
+  "faktor": 1
+ },
+ "american-sandwich-toast-750-g": {
+  "slug": "sandwichtoast-7409",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brot-toast",
+  "faktor": 1
+ },
+ "koerner-sandwich-750-g": {
+  "slug": "koerner-balance-sandwich-1014540",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brot-toast",
+  "faktor": 1
+ },
+ "dinkel-toastbroetchen-6-stueck": {
+  "slug": "toastbroetchen-dinkel-1018286",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brot-toast",
+  "faktor": 1
+ },
+ "mehrkorn-toastbroetchen-6-stueck": {
+  "slug": "toastbroetchen-mehrkorn-4846",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/broetchen-croissants",
+  "faktor": 1
+ },
+ "weizenbroetchen-zum-aufbacken-540-g": {
+  "slug": "weizenbroetchen-1031616",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/broetchen-croissants",
+  "faktor": 1
+ },
+ "baguettebroetchen-zum-aufbacken-300-g": {
+  "slug": "weizen-baguettebroetchen-1720",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brot-toast",
+  "faktor": 1
+ },
+ "mehrkornbroetchen-zum-aufbacken-540-g": {
+  "slug": "vital-und-fit-mehrkornbroetchen-6584",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/broetchen-croissants",
+  "faktor": 1
+ },
+ "bio-landbroetchen-zum-fertigbacken-4-stueck": {
+  "slug": "bio-landbroetchen-kernig-10182360001",
+  "seite": "/sortiment/sortiment-highlights/produkte-mit-auszeichnung",
+  "faktor": 1
+ },
+ "rosenbroetchen-zum-aufbacken-6-stueck": {
+  "slug": "rosenbroetchen-1004024",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/broetchen-croissants",
+  "faktor": 1
+ },
+ "buttercroissants-4-stueck": {
+  "slug": "buttercroissants-1013374",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/broetchen-croissants",
+  "faktor": 1.0388
+ },
+ "nuss-nougat-croissant-stueck": {
+  "slug": "nuss-nougat-croissant-2089",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/frische-backwaren",
+  "faktor": 1
+ },
+ "butterlaugenecke-stueck": {
+  "slug": "butterlaugenecke-9456",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/frische-backwaren",
+  "faktor": 1
+ },
+ "rosenbroetchen-stueck": {
+  "slug": "rosenbroetchen-hell-9499",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/frische-backwaren",
+  "faktor": 1
+ },
+ "walnussbroetchen-stueck": {
+  "slug": "walnussbroetchen-2831",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/frische-backwaren",
+  "faktor": 1
+ },
+ "fitnessbroetchen-stueck": {
+  "slug": "fitnessbroetchen-4161",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/frische-backwaren",
+  "faktor": 1
+ },
+ "chia-broetchen-weltmeisterbroetchen-stueck": {
+  "slug": "weltmeister-chia-broetchen-7250",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/frische-backwaren",
+  "faktor": 1
+ },
+ "kuerbiskern-kartoffel-broetchen-stueck": {
+  "slug": "kuerbiskern-kartoffel-broetchen-7259",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/broetchen-croissants",
+  "faktor": 1
+ },
+ "brioche-knoten-stueck": {
+  "slug": "brioche-knoten-3222",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/frische-backwaren",
+  "faktor": 1
+ },
+ "bauernvesper-500-g": {
+  "slug": "bauernvesper-7275",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/frische-backwaren",
+  "faktor": 1
+ },
+ "schweizer-kruste-400-g": {
+  "slug": "schweizer-kruste-1024851",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/frische-backwaren",
+  "faktor": 1
+ },
+ "zwiebelbaguette-300-g": {
+  "slug": "zwiebelbaguette-7276",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/frische-backwaren",
+  "faktor": 1
+ },
+ "steinofenbaguette-250-g": {
+  "slug": "franzoesisches-steinofen-baguette-715",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brot-toast",
+  "faktor": 1.084
+ },
+ "kraeuterbutter-baguette-175-g": {
+  "slug": "kraeuterbutter-baguette-64810000001",
+  "seite": "/sortiment/sortiment-highlights/produkte-mit-auszeichnung",
+  "faktor": 1
+ },
+ "vollkorn-wraps-370-g": {
+  "slug": "vollkorn-wraps-1035523",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brot-toast",
+  "faktor": 1
+ },
+ "brioche-burger-buns-4-stueck": {
+  "slug": "brioche-burger-buns-classic-1010626",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/broetchen-croissants",
+  "faktor": 1
+ },
+ "laugen-brioche-stangen-402-g": {
+  "slug": "laugen-briochestangen-1028971",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brot-toast",
+  "faktor": 1
+ },
+ "glutenfreies-brot-400-g": {
+  "slug": "glutenfreies-brot-1012139",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brot-toast",
+  "faktor": 1
+ },
+ "mini-muffins-225-g": {
+  "slug": "gefuellte-mini-muffins-877",
+  "seite": "/sortiment/eis-kuchen-desserts/kuchen-gebaeck",
+  "faktor": 1
+ },
+ "pagen-gifflar-zimtschnecken-260-g": {
+  "slug": "gifflar-zimtschnecken-1018849",
+  "seite": "/sortiment/eis-kuchen-desserts/kuchen-gebaeck",
+  "faktor": 1
+ },
+ "dresdner-christstollen-1-kg": {
+  "slug": "dresdner-christstollen-5018",
+  "seite": "/sortiment/weihnachten-silvester/lebkuchen-weihnachtsgebaeck",
+  "faktor": 1
+ },
+ "butter-mandel-stollen-750-g": {
+  "slug": "butter-mandel-stollen-4909",
+  "seite": "/sortiment/weihnachten-silvester/lebkuchen-weihnachtsgebaeck",
+  "faktor": 1
+ },
+ "baumkuchen-300-g": {
+  "slug": "baumkuchen-1731",
+  "seite": "/sortiment/weihnachten-silvester/lebkuchen-weihnachtsgebaeck",
+  "faktor": 1
+ },
+ "premium-muesli-trauben-nuss-500-g": {
+  "slug": "premium-muesli-1717",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/muesli-haferflocken",
+  "faktor": 1
+ },
+ "bio-muesli-500-g": {
+  "slug": "bio-muesli-1037400",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/muesli-haferflocken",
+  "faktor": 0.848
+ },
+ "high-protein-knuspermuesli-350-g": {
+  "slug": "high-protein-knuspermuesli-1038566",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/muesli-haferflocken",
+  "faktor": 1
+ },
+ "granola-500-g": {
+  "slug": "granola-1035763",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/muesli-haferflocken",
+  "faktor": 1
+ },
+ "bio-haferflocken-zart-500-g": {
+  "slug": "zarte-bio-haferflocken-1037402",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/muesli-haferflocken",
+  "faktor": 1
+ },
+ "nougat-bits-cerealien-750-g": {
+  "slug": "nougat-bits-3590",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/cornflakes-cerealien",
+  "faktor": 1
+ },
+ "honey-wheat-cerealien-750-g": {
+  "slug": "honey-wheat-3100",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/cornflakes-cerealien",
+  "faktor": 1
+ },
+ "honey-nut-flakes-750-g": {
+  "slug": "nut-flakes-1057",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/cornflakes-cerealien",
+  "faktor": 1
+ },
+ "nutella-nuss-nougat-creme-750-g": {
+  "slug": "nutella-4012",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brotaufstrich",
+  "faktor": 0.9741
+ },
+ "fruchtaufstrich-fein-fruchtig-300-g": {
+  "slug": "fruchtaufstrich-fein-und-fruchtig-1082",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brotaufstrich",
+  "faktor": 1
+ },
+ "bio-bluetenhonig-500-g": {
+  "slug": "bio-honig-1034090",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brotaufstrich",
+  "faktor": 1.0466
+ },
+ "agavendicksaft-360-ml": {
+  "slug": "agavendicksaft-1027019",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/brotaufstrich",
+  "faktor": 1
+ },
+ "caff-crema-dolce-ganze-bohnen-1-kg": {
+  "slug": "caffe-crema-dolce-1029567",
+  "seite": "/sortiment/getraenke-heissgetraenke/kaffee",
+  "faktor": 1
+ },
+ "caff-crema-aroma-ganze-bohnen-1-kg": {
+  "slug": "caffe-crema-und-aroma-1029443",
+  "seite": "/sortiment/getraenke-heissgetraenke/kaffee",
+  "faktor": 1
+ },
+ "espresso-cremoso-ganze-bohnen-1-kg": {
+  "slug": "espresso-cremoso-1029445",
+  "seite": "/sortiment/getraenke-heissgetraenke/kaffee",
+  "faktor": 1.1365
+ },
+ "bio-caff-crema-ganze-bohnen-fairtrade-1-kg": {
+  "slug": "bio-fairtrade-caffe-crema-1029566",
+  "seite": "/sortiment/getraenke-heissgetraenke/kaffee",
+  "faktor": 1.0538
+ },
+ "mahlkaffee-gold-500-g": {
+  "slug": "mahlkaffee-gold-1029440",
+  "seite": "/sortiment/getraenke-heissgetraenke/kaffee",
+  "faktor": 1
+ },
+ "mahlkaffee-mild-500-g": {
+  "slug": "mahlkaffee-mild-1029442",
+  "seite": "/sortiment/getraenke-heissgetraenke/kaffee",
+  "faktor": 1
+ },
+ "entkoffeinierter-kaffee-gemahlen-500-g": {
+  "slug": "gold-entkoffeiniert-1029545",
+  "seite": "/sortiment/getraenke-heissgetraenke/kaffee",
+  "faktor": 1
+ },
+ "bio-kaffee-fairtrade-gemahlen-500-g": {
+  "slug": "bio-kaffee-fairtrade-1029559",
+  "seite": "/sortiment/getraenke-heissgetraenke/kaffee",
+  "faktor": 1
+ },
+ "kaffeepads-crema-280-g": {
+  "slug": "kaffeepads-crema-1029561",
+  "seite": "/sortiment/getraenke-heissgetraenke/kaffee",
+  "faktor": 1
+ },
+ "kaffeepads-decaf-entkoffeiniert-280-g": {
+  "slug": "kaffeepads-decaf-1029560",
+  "seite": "/sortiment/getraenke-heissgetraenke/kaffee",
+  "faktor": 1
+ },
+ "kaffeekapseln-espresso-104-g": {
+  "slug": "kaffeekapseln-espresso-1029424",
+  "seite": "/sortiment/getraenke-heissgetraenke/kaffee",
+  "faktor": 1
+ },
+ "loeslicher-kaffee-gold-nachfuellbeutel-100-g": {
+  "slug": "gold-1031895",
+  "seite": "/sortiment/getraenke-heissgetraenke/kaffee",
+  "faktor": 1
+ },
+ "loeslicher-kaffee-gold-entkoffeiniert-100-g": {
+  "slug": "gold-entkoffeiniert-1031896",
+  "seite": "/sortiment/getraenke-heissgetraenke/kaffee",
+  "faktor": 1
+ },
+ "family-cappuccino-500-g": {
+  "slug": "family-cappuccino-1038139",
+  "seite": "/sortiment/getraenke-heissgetraenke/kaffee",
+  "faktor": 1
+ },
+ "family-cappuccino-schoko-500-g": {
+  "slug": "family-cappuccino-schoko-1037301",
+  "seite": "/sortiment/getraenke-heissgetraenke/kaffee",
+  "faktor": 1
+ },
+ "jacobs-kroenung-filterkaffee-gemahlen-500-g": {
+  "slug": "kroenung-1015157",
+  "seite": "/sortiment/getraenke-heissgetraenke/kaffee",
+  "faktor": 1
+ },
+ "pfefferminztee-25-beutel": {
+  "slug": "pfefferminztee-181",
+  "seite": "/sortiment/getraenke-heissgetraenke/tee-kakao",
+  "faktor": 1
+ },
+ "hagebuttentee-20-beutel": {
+  "slug": "hagebutten-tee-3356",
+  "seite": "/sortiment/getraenke-heissgetraenke/tee-kakao",
+  "faktor": 1
+ },
+ "ingwertee-20-beutel": {
+  "slug": "ingwer-tee-1028811",
+  "seite": "/sortiment/getraenke-heissgetraenke/tee-kakao",
+  "faktor": 1
+ },
+ "instant-teegetraenk-zitrone-400-g": {
+  "slug": "instant-kruemeltee-zitrone-waldfrucht-pfirsich-1031268",
+  "seite": "/sortiment/getraenke-heissgetraenke/tee-kakao",
+  "faktor": 1
+ },
+ "kaffeeweisser-250-g": {
+  "slug": "kaffeeweisser-640",
+  "seite": "/sortiment/milchprodukte/butter-sahne-sauerrahm",
+  "faktor": 1
+ },
+ "frische-bio-vollmilch-3-8-1-l": {
+  "slug": "frische-bio-vollmilch-1025143",
+  "seite": "/sortiment/milchprodukte/milch-milchgetraenke",
+  "faktor": 1.044
+ },
+ "haltbare-bio-vollmilch-1-l": {
+  "slug": "haltbare-bio-vollmilch-1026210",
+  "seite": "/sortiment/milchprodukte/milch-milchgetraenke",
+  "faktor": 1
+ },
+ "weidemilch-frisch-3-8-1-l": {
+  "slug": "tierwohl-weidemilch-5122",
+  "seite": "/sortiment/milchprodukte/milch-milchgetraenke",
+  "faktor": 0.899
+ },
+ "frische-landmilch-3-8-1-l": {
+  "slug": "frische-landmilch-1026636",
+  "seite": "/sortiment/milchprodukte/milch-milchgetraenke",
+  "faktor": 1
+ },
+ "laktosefreie-vollmilch-h-milch-3-5-1-l": {
+  "slug": "laktosefreie-h-milch-1019006",
+  "seite": "/sortiment/milchprodukte/milch-milchgetraenke",
+  "faktor": 1
+ },
+ "kondensmilch-4-340-g": {
+  "slug": "teilentrahmte-kondensmilch-642",
+  "seite": "/sortiment/milchprodukte/milch-milchgetraenke",
+  "faktor": 1
+ },
+ "kondensmilch-7-5-340-g": {
+  "slug": "kondensmilch-641",
+  "seite": "/sortiment/milchprodukte/milch-milchgetraenke",
+  "faktor": 1.063
+ },
+ "kakao-milchdrink-500-ml": {
+  "slug": "milch-drink-1026632",
+  "seite": "/sortiment/milchprodukte/milch-milchgetraenke",
+  "faktor": 1
+ },
+ "latte-macchiato-milchkaffee-250-ml": {
+  "slug": "latte-macchiato-1028973",
+  "seite": "/sortiment/milchprodukte/milch-milchgetraenke",
+  "faktor": 1
+ },
+ "skyr-drink-330-ml": {
+  "slug": "skyr-drink-1042630",
+  "seite": "/sortiment/milchprodukte/milch-milchgetraenke",
+  "faktor": 1
+ },
+ "high-protein-drink-kakao-330-ml": {
+  "slug": "high-protein-drink-1026640",
+  "seite": "/sortiment/milchprodukte/milch-milchgetraenke",
+  "faktor": 1
+ },
+ "trinkjoghurt-frucht-500-g": {
+  "slug": "trinkjoghurt-1026634",
+  "seite": "/sortiment/milchprodukte/milch-milchgetraenke",
+  "faktor": 1
+ },
+ "ayran-500-ml": {
+  "slug": "kalinka-kefir-ayran-1030495",
+  "seite": "/sortiment/milchprodukte/milch-milchgetraenke",
+  "faktor": 1
+ },
+ "barista-haferdrink-1-l": {
+  "slug": "barista-haferdrink-1015957",
+  "seite": "/sortiment/vegane-produkte/milchersatz-kaeseersatz",
+  "faktor": 1
+ },
+ "laktosefreie-schlagsahne-30-200-g": {
+  "slug": "haltbare-sahne-laktosefrei-1683",
+  "seite": "/sortiment/milchprodukte/butter-sahne-sauerrahm",
+  "faktor": 1
+ },
+ "irische-butter-250-g": {
+  "slug": "irische-butter-5070",
+  "seite": "/sortiment/milchprodukte/butter-sahne-sauerrahm",
+  "faktor": 1
+ },
+ "bio-suessrahmbutter-250-g": {
+  "slug": "bio-butter-783",
+  "seite": "/sortiment/milchprodukte/butter-sahne-sauerrahm",
+  "faktor": 1
+ },
+ "butter-streichfein-250-g": {
+  "slug": "streichfein-ungesalzen-9617",
+  "seite": "/sortiment/milchprodukte/butter-sahne-sauerrahm",
+  "faktor": 0.966
+ },
+ "halbfettmargarine-500-g": {
+  "slug": "looping-halbfettmargarine-814",
+  "seite": "/sortiment/milchprodukte/butter-sahne-sauerrahm",
+  "faktor": 1
+ },
+ "frucht-joghurt-becher-150-g": {
+  "slug": "frucht-joghurt-792",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 0.881
+ },
+ "sahnejoghurt-150-g": {
+  "slug": "sahnejoghurt-6504",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "fruchtjoghurt-grosspackung-1-kg": {
+  "slug": "fruchtjoghurt-6496",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "joghurt-mild-3-8-1-kg": {
+  "slug": "joghurt-1042797",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 0.95
+ },
+ "griechischer-joghurt-10-fett-500-g": {
+  "slug": "joghurt-griechische-art-honigheidelbeere-1006085",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "laktosefreier-joghurt-mild-500-g": {
+  "slug": "laktosefreier-joghurt-mild-1001600",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "joghurt-crisp-175-g": {
+  "slug": "joghurt-crisp-6456",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "ehrmann-almighurt-fruchtjoghurt-150-g": {
+  "slug": "almighurt-1003944",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "ehrmann-grand-dessert-200-g": {
+  "slug": "grand-dessert-1009614",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "zott-monte-maxi-milchcreme-schoko-nuss-4-x-100-g": {
+  "slug": "monte-1006088",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "high-protein-joghurt-frucht-200-g": {
+  "slug": "joghurterzeugnis-1039619",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "high-protein-skyr-150-g": {
+  "slug": "high-protein-skyr-1040956",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "high-protein-fruchtjoghurt-1-kg": {
+  "slug": "high-protein-fruchtjoghurt-1039023",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "skyr-frucht-500-g": {
+  "slug": "skyr-frucht-4464",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 0.966
+ },
+ "soja-joghurt-natur-500-g": {
+  "slug": "sojaghurt-7494",
+  "seite": "/sortiment/vegane-produkte/milchersatz-kaeseersatz",
+  "faktor": 1
+ },
+ "speisequark-40-fett-250-g": {
+  "slug": "speisequark-1032329",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 0.971
+ },
+ "bio-speisequark-250-g": {
+  "slug": "bio-quark-791",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "kraeuterquark-200-g": {
+  "slug": "gewuerzquark-6540",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "high-protein-pudding-200-g": {
+  "slug": "high-protein-pudding-1005467",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1.034
+ },
+ "high-protein-griesspudding-500-g": {
+  "slug": "high-protein-griesspudding-1012011",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1.031
+ },
+ "sahnepudding-vanille-500-g": {
+  "slug": "sahnepudding-1030470",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "pudding-dessert-schoko-vanille-1-kg": {
+  "slug": "pudding-dessert-1037499",
+  "seite": "/sortiment/eis-kuchen-desserts/desserts-suessspeisen",
+  "faktor": 1
+ },
+ "griesspudding-mit-frucht-160-g": {
+  "slug": "griesspudding-mit-frucht-1039090",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "sahnepudding-locker-200-g": {
+  "slug": "lockerer-sahnepudding-6512",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "rote-gruetze-500-g": {
+  "slug": "fruchtgruetze-1016098",
+  "seite": "/sortiment/eis-kuchen-desserts/desserts-suessspeisen",
+  "faktor": 1
+ },
+ "frischer-goetterspeise-becher-150-g": {
+  "slug": "goetterspeise-1035923",
+  "seite": "/sortiment/eis-kuchen-desserts/desserts-suessspeisen",
+  "faktor": 1
+ },
+ "edamer-in-scheiben-400-g": {
+  "slug": "schnittkaese-6580",
+  "seite": "/sortiment/milchprodukte/scheibenkaese-geriebener-kaese",
+  "faktor": 1
+ },
+ "daenischer-schnittkaese-200-g": {
+  "slug": "daenischer-schnittkaese-6530",
+  "seite": "/sortiment/milchprodukte/scheibenkaese-geriebener-kaese",
+  "faktor": 1
+ },
+ "weichkaese-scheiben-franzoesisch-200-g": {
+  "slug": "franzoesische-weichkaesescheiben-6396",
+  "seite": "/sortiment/milchprodukte/scheibenkaese-geriebener-kaese",
+  "faktor": 1
+ },
+ "schweizer-kaesescheiben-150-g": {
+  "slug": "schweizer-kaesescheiben-5042",
+  "seite": "/sortiment/milchprodukte/scheibenkaese-geriebener-kaese",
+  "faktor": 1
+ },
+ "bio-kaesescheiben-200-g": {
+  "slug": "bio-kaesescheiben-1027964",
+  "seite": "/sortiment/milchprodukte/scheibenkaese-geriebener-kaese",
+  "faktor": 1
+ },
+ "gouda-mittelalt-300-g": {
+  "slug": "gouda-mittelalt-9144",
+  "seite": "/sortiment/milchprodukte/scheibenkaese-geriebener-kaese",
+  "faktor": 1
+ },
+ "gouda-jung-am-stueck-450-g": {
+  "slug": "gouda-jung-am-stueck-220",
+  "seite": "/sortiment/milchprodukte/hartkaese-kaese-am-stueck",
+  "faktor": 1
+ },
+ "gouda-am-stueck-250-g": {
+  "slug": "gouda-1019969",
+  "seite": "/sortiment/milchprodukte/scheibenkaese-geriebener-kaese",
+  "faktor": 0.961
+ },
+ "schnittkaese-am-stueck-250-g": {
+  "slug": "schnittkaese-1012189",
+  "seite": "/sortiment/milchprodukte/scheibenkaese-geriebener-kaese",
+  "faktor": 1
+ },
+ "emmentaler-am-stueck-400-g": {
+  "slug": "emmentaler-6488",
+  "seite": "/sortiment/milchprodukte/hartkaese-kaese-am-stueck",
+  "faktor": 1
+ },
+ "bergkaese-350-g": {
+  "slug": "bergkaese-1027301",
+  "seite": "/sortiment/milchprodukte/hartkaese-kaese-am-stueck",
+  "faktor": 1
+ },
+ "parmigiano-reggiano-200-g": {
+  "slug": "parmigiano-reggiano-1026002",
+  "seite": "/sortiment/milchprodukte/hartkaese-kaese-am-stueck",
+  "faktor": 1
+ },
+ "kaese-snack-in-wuerfeln-220-g": {
+  "slug": "kaese-snack-in-wuerfeln-5034",
+  "seite": "/sortiment/milchprodukte/hartkaese-kaese-am-stueck",
+  "faktor": 1
+ },
+ "handkaese-200-g": {
+  "slug": "bauernhandkaese-6590",
+  "seite": "/sortiment/milchprodukte/frischkaese-weichkaese",
+  "faktor": 0.824
+ },
+ "harzer-kaese-200-g": {
+  "slug": "harzer-kaese-6556",
+  "seite": "/sortiment/milchprodukte/hartkaese-kaese-am-stueck",
+  "faktor": 1
+ },
+ "back-camembert-300-g": {
+  "slug": "back-camembert-6900",
+  "seite": "/sortiment/milchprodukte/frischkaese-weichkaese",
+  "faktor": 1
+ },
+ "franzoesischer-weichkaese-200-g": {
+  "slug": "franzoesischer-weichkaese-6527",
+  "seite": "/sortiment/milchprodukte/frischkaese-weichkaese",
+  "faktor": 1
+ },
+ "bavaria-blu-150-g": {
+  "slug": "almzeit-bavaria-blu-1005530",
+  "seite": "/sortiment/milchprodukte/frischkaese-weichkaese",
+  "faktor": 1
+ },
+ "mozzarella-maxi-rolle-330-g": {
+  "slug": "mozzarella-maxi-rolle-1013618",
+  "seite": "/sortiment/milchprodukte/frischkaese-weichkaese",
+  "faktor": 1
+ },
+ "mozzarella-minis-255-g": {
+  "slug": "mozzarella-minis-6838",
+  "seite": "/sortiment/milchprodukte/frischkaese-weichkaese",
+  "faktor": 1
+ },
+ "bio-mozzarella-200-g": {
+  "slug": "bio-mozzarella-1026119",
+  "seite": "/sortiment/milchprodukte/frischkaese-weichkaese",
+  "faktor": 1
+ },
+ "frischkaese-becher-150-g": {
+  "slug": "fraicho-7736",
+  "seite": "/sortiment/milchprodukte/frischkaese-weichkaese",
+  "faktor": 1
+ },
+ "frischkaese-im-fass-200-g": {
+  "slug": "frischkaese-fass-1012194",
+  "seite": "/sortiment/milchprodukte/frischkaese-weichkaese",
+  "faktor": 1
+ },
+ "bio-reibekaese-150-g": {
+  "slug": "bio-reibekaese-1027532",
+  "seite": "/sortiment/milchprodukte/scheibenkaese-geriebener-kaese",
+  "faktor": 1
+ },
+ "bio-eier-10er-packung-10-stueck": {
+  "slug": "bio-eier-1007664",
+  "seite": "/sortiment/sortiment-highlights/proteinreiche-lebensmittel",
+  "faktor": 1
+ },
+ "bio-eier-6er-packung-6-stueck": {
+  "slug": "bio-eier-1031662",
+  "seite": "/sortiment/sortiment-highlights/proteinreiche-lebensmittel",
+  "faktor": 1
+ },
+ "haehnchen-innenfilets-400-g": {
+  "slug": "haehnchen-innenfilets-3574",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "haehnchen-minutenschnitzel-400-g": {
+  "slug": "haehnchen-minutenschnitzel-3700",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "haehnchen-minischnitzel-500-g": {
+  "slug": "haehnchen-mini-schnitzel-6915",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "haehnchenkeulen-mit-rueckenstueck-1-1-kg": {
+  "slug": "haehnchenschenkel-mit-rueckenstueck-3182",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "haehnchenbrustfilet-grosspackung-1-kg": {
+  "slug": "haehnchenbrustfilet-teilstuecke-xxl-4668",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "haehnchen-steaks-mariniert-550-g": {
+  "slug": "marinierte-haehnchensteaks-6428",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "chicken-wings-750-g": {
+  "slug": "chicken-wings-7217",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "haehnchen-cordon-bleu-500-g": {
+  "slug": "haehnchen-cordon-bleu-6800",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "chicken-nuggets-xxl-1-kg": {
+  "slug": "chicken-nuggets-1036289",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "chicken-stripes-400-g": {
+  "slug": "chicken-stripes-1040890",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "crunchy-chicken-burger-patties-400-g": {
+  "slug": "crunchy-chicken-burger-patties-1037077",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "puten-geschnetzeltes-350-g": {
+  "slug": "puten-geschnetzeltes-1043590",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "puten-ministeaks-400-g": {
+  "slug": "puten-ministeaks-1016481",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "puten-hackfleisch-400-g": {
+  "slug": "puten-hackfleisch-1003531",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "barbarie-entenkeule-400-g": {
+  "slug": "barbarie-entenkeule-1042724",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "schweinefilet-450-g": {
+  "slug": "schweinefilet-8687",
+  "seite": "/sortiment/fleisch-wurst/schwein",
+  "faktor": 1
+ },
+ "schweine-minutensteaks-400-g": {
+  "slug": "minutensteaks-8682",
+  "seite": "/sortiment/fleisch-wurst/schwein",
+  "faktor": 1
+ },
+ "mini-knusper-schnitzel-400-g": {
+  "slug": "mini-knusper-schnitzel-cordon-bleu-8132",
+  "seite": "/sortiment/fleisch-wurst/schwein",
+  "faktor": 1
+ },
+ "schnitzel-paniert-500-g": {
+  "slug": "schnitzel-paniert-cordon-bleu-680",
+  "seite": "/sortiment/fleisch-wurst/schwein",
+  "faktor": 1
+ },
+ "schnitzel-wiener-art-750-g": {
+  "slug": "schnitzel-wiener-art-1016561",
+  "seite": "/sortiment/fleisch-wurst/schwein",
+  "faktor": 1
+ },
+ "marinierte-nackensteaks-600-g": {
+  "slug": "marinierte-nackensteaks-6792",
+  "seite": "/sortiment/fleisch-wurst/schwein",
+  "faktor": 1
+ },
+ "schweine-nackensteaks-xxl-800-g": {
+  "slug": "schweine-nackensteaks-xxl-3899",
+  "seite": "/sortiment/fleisch-wurst/schwein",
+  "faktor": 1
+ },
+ "rueckensteaks-400-g": {
+  "slug": "rueckensteaks-1011717",
+  "seite": "/sortiment/fleisch-wurst/schwein",
+  "faktor": 1
+ },
+ "frikadellen-500-g": {
+  "slug": "frikadellen-6720",
+  "seite": "/sortiment/fleisch-wurst/schwein",
+  "faktor": 1
+ },
+ "bauchspeck-geraeuchert-300-g": {
+  "slug": "bauchspeck-1017916",
+  "seite": "/sortiment/fleisch-wurst/schwein",
+  "faktor": 1
+ },
+ "rinderhackfleisch-fettreduziert-400-g": {
+  "slug": "fettreduziertes-rinderhackfleisch-6411",
+  "seite": "/sortiment/fleisch-wurst/rind",
+  "faktor": 1
+ },
+ "rinderhackfleisch-xxl-800-g": {
+  "slug": "rinderhackfleisch-xxl-1008973",
+  "seite": "/sortiment/fleisch-wurst/rind",
+  "faktor": 1
+ },
+ "gemischtes-hackfleisch-xxl-800-g": {
+  "slug": "gemischtes-hackfleisch-xxl-1003525",
+  "seite": "/sortiment/fleisch-wurst/gemischtes-hackfleisch",
+  "faktor": 1
+ },
+ "rumpsteak-240-g": {
+  "slug": "rumpsteak-1015415",
+  "seite": "/sortiment/fleisch-wurst/rind",
+  "faktor": 1
+ },
+ "hueftsteaks-375-g": {
+  "slug": "hueftsteaks-3293",
+  "seite": "/sortiment/fleisch-wurst/rind",
+  "faktor": 1
+ },
+ "black-angus-burger-260-g": {
+  "slug": "black-angus-burger-1012665",
+  "seite": "/sortiment/fleisch-wurst/rind",
+  "faktor": 1
+ },
+ "suppenfleisch-rind-500-g": {
+  "slug": "suppenfleisch-8661",
+  "seite": "/sortiment/fleisch-wurst/rind",
+  "faktor": 1
+ },
+ "rostbratwurst-540-g": {
+  "slug": "rostbratwurst-6704",
+  "seite": "/sortiment/fleisch-wurst/wuerstchen-snackwurst",
+  "faktor": 1
+ },
+ "schinken-bockwurst-500-g": {
+  "slug": "schinkenbockwurst-6410",
+  "seite": "/sortiment/fleisch-wurst/wuerstchen-snackwurst",
+  "faktor": 1
+ },
+ "hot-dog-wuerstchen-550-g": {
+  "slug": "hot-dogs-1019258",
+  "seite": "/sortiment/fleisch-wurst/wuerstchen-snackwurst",
+  "faktor": 1
+ },
+ "mini-wuerstchen-320-g": {
+  "slug": "mini-wuerstchen-7450",
+  "seite": "/sortiment/fleisch-wurst/wuerstchen-snackwurst",
+  "faktor": 1
+ },
+ "bratwurst-xxl-1-kg": {
+  "slug": "bratwurst-xxl-330",
+  "seite": "/sortiment/fleisch-wurst/wuerstchen-snackwurst",
+  "faktor": 1
+ },
+ "wiener-wuerstchen-grosspackung-640-g": {
+  "slug": "wiener-wuerstchen-1021441",
+  "seite": "/sortiment/fleisch-wurst/wuerstchen-snackwurst",
+  "faktor": 1
+ },
+ "gefluegel-wiener-400-g": {
+  "slug": "gefluegel-wiener-1011469",
+  "seite": "/sortiment/fleisch-wurst/wuerstchen-snackwurst",
+  "faktor": 1
+ },
+ "gefluegel-fleischwurst-500-g": {
+  "slug": "gefluegel-fleischwurst-1002796",
+  "seite": "/sortiment/fleisch-wurst/wuerstchen-snackwurst",
+  "faktor": 1
+ },
+ "currywurst-220-g": {
+  "slug": "currywurst-6798",
+  "seite": "/sortiment/fertiggerichte/pfannengerichte-mikrowellengerichte",
+  "faktor": 1
+ },
+ "kabanos-200-g": {
+  "slug": "kabanos-1022238",
+  "seite": "/sortiment/fleisch-wurst/wuerstchen-snackwurst",
+  "faktor": 1
+ },
+ "mini-kabanossi-250-g": {
+  "slug": "mini-kabanossi-1021658",
+  "seite": "/sortiment/fleisch-wurst/wuerstchen-snackwurst",
+  "faktor": 1
+ },
+ "tulip-fruehstuecksfleisch-340-g": {
+  "slug": "fruehstuecks-fleisch-1022075",
+  "seite": "/sortiment/fleisch-wurst/wurstaufschnitt-streichwurst",
+  "faktor": 0.9
+ },
+ "haehnchenbrust-aufschnitt-150-g": {
+  "slug": "haehnchenbrustfilet-6723",
+  "seite": "/sortiment/fleisch-wurst/wurstaufschnitt-streichwurst",
+  "faktor": 1
+ },
+ "gefluegelsalami-130-g": {
+  "slug": "gefluegelsalami-1010459",
+  "seite": "/sortiment/fleisch-wurst/schinken-salami",
+  "faktor": 1
+ },
+ "delikatess-streichwurst-125-g": {
+  "slug": "delikatess-streichwurst-1021593",
+  "seite": "/sortiment/fleisch-wurst/wurstaufschnitt-streichwurst",
+  "faktor": 1
+ },
+ "prosciutto-cotto-200-g": {
+  "slug": "prosciutto-cotto-7445",
+  "seite": "/sortiment/fleisch-wurst/schinken-salami",
+  "faktor": 1
+ },
+ "kochschinken-grosspackung-300-g": {
+  "slug": "koch-hinterschinken-1024493",
+  "seite": "/sortiment/fleisch-wurst/schinken-salami",
+  "faktor": 1
+ },
+ "haehnchenbrust-filetstreifen-gegart-150-g": {
+  "slug": "gefluegel-streifen-6769",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "mini-haehnchenbrust-filetstuecke-150-g": {
+  "slug": "haehnchenbrust-filetstuecke-8642",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "vegane-nuggets-300-g": {
+  "slug": "vegane-nuggets-schnitzel-1011695",
+  "seite": "/sortiment/vegane-produkte/fleischersatz-fischersatz",
+  "faktor": 1
+ },
+ "vegane-schnitzel-200-g": {
+  "slug": "vegane-schnitzel-cordon-bleu-4735",
+  "seite": "/sortiment/vegane-produkte/fleischersatz-fischersatz",
+  "faktor": 1
+ },
+ "vegane-salami-80-g": {
+  "slug": "vegane-salami-1027248",
+  "seite": "/sortiment/fleisch-wurst/schinken-salami",
+  "faktor": 1
+ },
+ "forellenfilets-geraeuchert-125-g": {
+  "slug": "forellenfilets-6615",
+  "seite": "/sortiment/fisch-meeresfruechte/frischer-fisch",
+  "faktor": 1
+ },
+ "lachsforelle-geraeuchert-100-g": {
+  "slug": "lachsforelle-6647",
+  "seite": "/sortiment/fisch-meeresfruechte/frischer-fisch",
+  "faktor": 1
+ },
+ "lachsforellenfilet-180-g": {
+  "slug": "lachsforellenfilet-1010643",
+  "seite": "/sortiment/fisch-meeresfruechte/frischer-fisch",
+  "faktor": 1
+ },
+ "skandinavischer-raeucherlachs-90-g": {
+  "slug": "skandinavischer-raeucherlachs-1007912",
+  "seite": "/sortiment/fisch-meeresfruechte/frischer-fisch",
+  "faktor": 1
+ },
+ "bio-raeucherlachs-100-g": {
+  "slug": "bio-raeucherlachs-6651",
+  "seite": "/sortiment/fisch-meeresfruechte/frischer-fisch",
+  "faktor": 1
+ },
+ "grill-und-ofenlachs-200-g": {
+  "slug": "grill-und-ofenlachs-1036578",
+  "seite": "/sortiment/fisch-meeresfruechte/frischer-fisch",
+  "faktor": 1
+ },
+ "lachsfilet-portion-195-g": {
+  "slug": "lachsfiletportion-1031806",
+  "seite": "/sortiment/fisch-meeresfruechte/frischer-fisch",
+  "faktor": 1
+ },
+ "heringsfilets-in-sahnesauce-380-g": {
+  "slug": "sahne-heringsfilets-1017223",
+  "seite": "/sortiment/fisch-meeresfruechte/frischer-fisch",
+  "faktor": 1
+ },
+ "garnelen-gekocht-200-g": {
+  "slug": "garnelen-1007462",
+  "seite": "/sortiment/fisch-meeresfruechte/meeresfruechte",
+  "faktor": 1
+ },
+ "shrimps-salat-200-g": {
+  "slug": "shrimps-salat-6614",
+  "seite": "/sortiment/fisch-meeresfruechte/meeresfruechte",
+  "faktor": 1
+ },
+ "dr-oetker-ristorante-pizza-salame-320-g": {
+  "slug": "ristorante-pizza-salame-1782",
+  "seite": "/sortiment/fertiggerichte/tiefkuehlpizza",
+  "faktor": 1
+ },
+ "dr-oetker-ristorante-pizza-tonno-355-g": {
+  "slug": "ristorante-pizza-tonno-1789",
+  "seite": "/sortiment/fertiggerichte/tiefkuehlpizza",
+  "faktor": 1
+ },
+ "dr-oetker-die-ofenfrische-salami-390-g": {
+  "slug": "die-ofenfrische-salami-1797",
+  "seite": "/sortiment/fertiggerichte/tiefkuehlpizza",
+  "faktor": 1
+ },
+ "dr-oetker-die-ofenfrische-vier-kaese-410-g": {
+  "slug": "die-ofenfrische-vier-kaese-1026736",
+  "seite": "/sortiment/fertiggerichte/tiefkuehlpizza",
+  "faktor": 1
+ },
+ "original-wagner-steinofen-pizza-salami-320-g": {
+  "slug": "steinofen-pizza-salami-2282",
+  "seite": "/sortiment/fertiggerichte/tiefkuehlpizza",
+  "faktor": 1
+ },
+ "original-wagner-piccolinis-salami-270-g": {
+  "slug": "piccolinis-salami-1285",
+  "seite": "/sortiment/fertiggerichte/tiefkuehlpizza",
+  "faktor": 1
+ },
+ "steinofenpizza-vier-kaese-680-g": {
+  "slug": "pizza-vier-kaese-6876",
+  "seite": "/sortiment/fertiggerichte/tiefkuehlpizza",
+  "faktor": 1
+ },
+ "steinofenpizza-thunfisch-710-g": {
+  "slug": "pizza-tonno-6880",
+  "seite": "/sortiment/fertiggerichte/tiefkuehlpizza",
+  "faktor": 1
+ },
+ "pizzabroetchen-250-g": {
+  "slug": "pizzabroetchen-540",
+  "seite": "/sortiment/backwaren-aufstriche-cerealien/broetchen-croissants",
+  "faktor": 1
+ },
+ "rahmgemuese-500-g": {
+  "slug": "rahmgemuese-971",
+  "seite": "/sortiment/obst-gemuese/tk-obst-gemuese",
+  "faktor": 1
+ },
+ "rahmspinat-grosspackung-750-g": {
+  "slug": "rahm-spinat-9275",
+  "seite": "/sortiment/obst-gemuese/tk-obst-gemuese",
+  "faktor": 1
+ },
+ "suesskartoffel-pommes-500-g": {
+  "slug": "suesskartoffel-pommes-9169",
+  "seite": "/sortiment/fertiggerichte/kartoffelprodukte",
+  "faktor": 1
+ },
+ "wildlachsfilets-250-g": {
+  "slug": "wildlachsfilets-4388",
+  "seite": "/sortiment/fisch-meeresfruechte/tiefkuehlfisch-dosenfisch",
+  "faktor": 1
+ },
+ "knusperfilets-400-g": {
+  "slug": "knusperfilets-7152",
+  "seite": "/sortiment/fisch-meeresfruechte/tiefkuehlfisch-dosenfisch",
+  "faktor": 1
+ },
+ "zanderfilets-450-g": {
+  "slug": "zanderfilets-tiefgefroren-1267",
+  "seite": "/sortiment/fisch-meeresfruechte/tiefkuehlfisch-dosenfisch",
+  "faktor": 1
+ },
+ "kabeljaufilet-540-g": {
+  "slug": "kabeljaufilet-1037296",
+  "seite": "/sortiment/fisch-meeresfruechte/tiefkuehlfisch-dosenfisch",
+  "faktor": 1
+ },
+ "alaska-seelachsfilets-800-g": {
+  "slug": "alaska-seelachsfilets-1020930",
+  "seite": "/sortiment/fisch-meeresfruechte/tiefkuehlfisch-dosenfisch",
+  "faktor": 1
+ },
+ "ofen-backfisch-240-g": {
+  "slug": "ofen-backfisch-1019367",
+  "seite": "/sortiment/fisch-meeresfruechte/tiefkuehlfisch-dosenfisch",
+  "faktor": 1.075
+ },
+ "pangasiusfilet-540-g": {
+  "slug": "pangasius-1017627",
+  "seite": "/sortiment/fisch-meeresfruechte/tiefkuehlfisch-dosenfisch",
+  "faktor": 1
+ },
+ "backfischstaebchen-405-g": {
+  "slug": "backfischstaebchen-2212",
+  "seite": "/sortiment/aldi-eigenmarken/golden-seafood",
+  "faktor": 1
+ },
+ "langnese-cremissimo-bourbon-vanille-1300-ml": {
+  "slug": "cremissimo-vanille-1037311",
+  "seite": "/sortiment/eis-kuchen-desserts/eisbecher-toppings",
+  "faktor": 1
+ },
+ "eisschale-familienpackung-2-5-l": {
+  "slug": "eisschale-5201",
+  "seite": "/sortiment/eis-kuchen-desserts/eisbecher-toppings",
+  "faktor": 1
+ },
+ "eiscreme-rich-creamy-500-ml": {
+  "slug": "supreme-rich-und-creamy-eis-5257",
+  "seite": "/sortiment/eis-kuchen-desserts/eisbecher-toppings",
+  "faktor": 1
+ },
+ "american-style-eis-500-ml": {
+  "slug": "funky-american-eis-7423",
+  "seite": "/sortiment/eis-kuchen-desserts/eisbecher-toppings",
+  "faktor": 1
+ },
+ "joghurt-multipack-4-x-150-g": {
+  "slug": "joghurt-6524",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "aktiv-joghurt-probiotisch-4-x-125-g": {
+  "slug": "aktiv-joghurt-780",
+  "seite": "/sortiment/milchprodukte/joghurt-quark-milchdesserts",
+  "faktor": 1
+ },
+ "kaese-aufschnitt-gemischt-250-g": {
+  "slug": "kaese-aufschnitt-6523",
+  "seite": "/sortiment/milchprodukte/scheibenkaese-geriebener-kaese",
+  "faktor": 1
+ },
+ "hollaender-gouda-am-stueck-450-g": {
+  "slug": "gouda-holland-am-stueck-241",
+  "seite": "/sortiment/milchprodukte/hartkaese-kaese-am-stueck",
+  "faktor": 1
+ },
+ "gefluegel-hacksteak-400-g": {
+  "slug": "gefluegel-hacksteak-1043340",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "haehnchen-knusperdinos-400-g": {
+  "slug": "haehnchen-knusperdinos-1024461",
+  "seite": "/sortiment/fleisch-wurst/gefluegel",
+  "faktor": 1
+ },
+ "schinken-paprika-geschnetzeltes-500-g": {
+  "slug": "paprika-schinkengeschnetzeltes-1035771",
+  "seite": "/sortiment/fleisch-wurst/schwein",
+  "faktor": 1
+ },
+ "saletti-mini-salami-50-g": {
+  "slug": "saletti-1021651",
+  "seite": "/sortiment/fleisch-wurst/wuerstchen-snackwurst",
+  "faktor": 0.978
+ },
+ "salametti-100-g": {
+  "slug": "salametti-1316",
+  "seite": "/sortiment/fleisch-wurst/wuerstchen-snackwurst",
+  "faktor": 1
+ },
+ "eiernudeln-500-g": {
+  "slug": "frischei-nudeln-1994",
+  "seite": "/sortiment/vorraete/nudeln",
+  "faktor": 1
+ },
+ "prinzessbohnen-425-ml": {
+  "slug": "prinzessbohnen-4318",
+  "seite": "/sortiment/vorraete/gemuesekonserven",
+  "faktor": 1
+ },
+ "erbsen-in-der-dose-425-ml": {
+  "slug": "erbsen-4323",
+  "seite": "/sortiment/vegane-produkte/vegane-fertigprodukte-vorraete",
+  "faktor": 1
+ },
+ "weisse-riesenbohnen-im-glas-295-g": {
+  "slug": "weisse-riesenbohnen-1041630",
+  "seite": "/sortiment/sortiment-highlights/proteinreiche-lebensmittel",
+  "faktor": 1
+ },
+ "stangenspargel-im-glas-370-ml": {
+  "slug": "stangenspargel-4313",
+  "seite": "/sortiment/vegane-produkte/vegane-fertigprodukte-vorraete",
+  "faktor": 1
+ },
+ "gruenkohl-im-glas-720-ml": {
+  "slug": "gruenkohl-4362",
+  "seite": "/sortiment/aldi-eigenmarken/all-seasons",
+  "faktor": 1
+ },
+ "cornichons-720-ml": {
+  "slug": "cornichons-4413",
+  "seite": "/sortiment/vegane-produkte/vegane-fertigprodukte-vorraete",
+  "faktor": 1
+ },
+ "kapern-106-ml": {
+  "slug": "kapern-2039",
+  "seite": "/sortiment/vegane-produkte/vegane-fertigprodukte-vorraete",
+  "faktor": 1.1266
+ },
+ "getrocknete-tomaten-in-oel-280-g": {
+  "slug": "getrocknete-tomaten-1031657",
+  "seite": "/sortiment/grillen/grill-beilagen",
+  "faktor": 1
+ },
+ "gruene-oliven-370-ml": {
+  "slug": "gruene-oliven-2060",
+  "seite": "/sortiment/vorraete/gemuesekonserven",
+  "faktor": 1
+ },
+ "passata-rustica-690-g": {
+  "slug": "passata-rustica-609",
+  "seite": "/sortiment/vegane-produkte/vegane-fertigprodukte-vorraete",
+  "faktor": 1
+ },
+ "pfirsiche-halbe-frucht-850-ml": {
+  "slug": "pfirsiche-4114",
+  "seite": "/sortiment/vorraete/obstkonserven",
+  "faktor": 1
+ },
+ "mandarinen-leicht-gezuckert-314-ml": {
+  "slug": "mandarin-orangen-4105",
+  "seite": "/sortiment/vegane-produkte/vegane-fertigprodukte-vorraete",
+  "faktor": 1
+ },
+ "erbseneintopf-800-g": {
+  "slug": "erbseneintopf-2154",
+  "seite": "/sortiment/fertiggerichte/suppen-eintoepfe",
+  "faktor": 1
+ },
+ "linseneintopf-800-g": {
+  "slug": "bohnen-linseneintopf-2151",
+  "seite": "/sortiment/fertiggerichte/suppen-eintoepfe",
+  "faktor": 1
+ },
+ "huehnernudeltopf-800-g": {
+  "slug": "huehnernudeltopf-2152",
+  "seite": "/sortiment/fertiggerichte/suppen-eintoepfe",
+  "faktor": 1
+ },
+ "chili-con-carne-800-g": {
+  "slug": "chili-con-sin-carne-1012815",
+  "seite": "/sortiment/fertiggerichte/suppen-eintoepfe",
+  "faktor": 1
+ },
+ "ravioli-in-tomatensauce-800-g": {
+  "slug": "ravioli-1011599",
+  "seite": "/sortiment/fertiggerichte/suppen-eintoepfe",
+  "faktor": 1
+ },
+ "gulaschsuppe-400-ml": {
+  "slug": "gulaschsuppe-2111",
+  "seite": "/sortiment/fertiggerichte/suppen-eintoepfe",
+  "faktor": 1
+ },
+ "tomatenrahmsuppe-400-ml": {
+  "slug": "tomatenrahmsuppe-1005846",
+  "seite": "/sortiment/fertiggerichte/suppen-eintoepfe",
+  "faktor": 1
+ },
+ "beutelsuppe-tomate-70-g": {
+  "slug": "saisonale-beutelsuppen-1008046",
+  "seite": "/sortiment/fertiggerichte/suppen-eintoepfe",
+  "faktor": 1
+ },
+ "weisse-pasta-sauce-400-ml": {
+  "slug": "weisse-pasta-sauce-1037741",
+  "seite": "/sortiment/vorraete/dips-saucen-dressings",
+  "faktor": 1
+ },
+ "bio-tomatensauce-325-ml": {
+  "slug": "bio-tomatensauce-2053",
+  "seite": "/sortiment/vorraete/dips-saucen-dressings",
+  "faktor": 1
+ },
+ "brat-olivenoel-spray-200-ml": {
+  "slug": "brat-olivenoel-spray-9290",
+  "seite": "/sortiment/sortiment-highlights/heissluftfritteuse",
+  "faktor": 1
+ },
+ "leinoel-250-ml": {
+  "slug": "leinoel-1002315",
+  "seite": "/sortiment/vegane-produkte/vegane-fertigprodukte-vorraete",
+  "faktor": 1
+ },
+ "frittieroel-2-l": {
+  "slug": "frittieroel-xxl-1008801",
+  "seite": "/sortiment/vorraete/fett-oele-essig",
+  "faktor": 1
+ },
+ "zitronensaft-200-ml": {
+  "slug": "zitrone-plus-1012898",
+  "seite": "/sortiment/vorraete/fett-oele-essig",
+  "faktor": 1
+ },
+ "bad-reichenhaller-alpen-jodsalz-500-g": {
+  "slug": "bad-reichenhaller-alpen-jodsalz-1008634",
+  "seite": "/sortiment/sortiment-highlights/markenprodukte",
+  "faktor": 1
+ },
+ "bad-reichenhaller-alpen-salz-ohne-jod-500-g": {
+  "slug": "bad-reichenhaller-alpen-salz-1008633",
+  "seite": "/sortiment/sortiment-highlights/markenprodukte",
+  "faktor": 1
+ },
+ "kreuzkuemmel-gemahlen-35-g": {
+  "slug": "kreuzkuemmel-1024640",
+  "seite": "/sortiment/vorraete/gewuerze-kraeuter",
+  "faktor": 1
+ },
+ "lorbeerblaetter-7-5-g": {
+  "slug": "lorbeerblaetter-1006281",
+  "seite": "/sortiment/vorraete/gewuerze-kraeuter",
+  "faktor": 1
+ },
+ "chili-gemahlen-40-g": {
+  "slug": "chili-1006279",
+  "seite": "/sortiment/vorraete/gewuerze-kraeuter",
+  "faktor": 1
+ },
+ "kurkuma-gemahlen-50-g": {
+  "slug": "kurkuma-1006278",
+  "seite": "/sortiment/vorraete/gewuerze-kraeuter",
+  "faktor": 1
+ },
+ "knoblauch-granuliert-70-g": {
+  "slug": "knoblauch-1006275",
+  "seite": "/sortiment/vorraete/gewuerze-kraeuter",
+  "faktor": 1
+ },
+ "weisser-pfeffer-gemahlen-50-g": {
+  "slug": "weisser-pfeffer-1006148",
+  "seite": "/sortiment/vorraete/gewuerze-kraeuter",
+  "faktor": 1
+ },
+ "paprika-scharf-gemahlen-50-g": {
+  "slug": "paprika-scharf-1006149",
+  "seite": "/sortiment/vorraete/gewuerze-kraeuter",
+  "faktor": 1
+ },
+ "bio-gemuesebruehe-im-glas-126-g": {
+  "slug": "bio-bruehen-1036358",
+  "seite": "/sortiment/vorraete/gewuerze-kraeuter",
+  "faktor": 1
+ },
+ "heinz-tomato-ketchup-400-ml": {
+  "slug": "tomato-ketchup-1037770",
+  "seite": "/sortiment/sortiment-highlights/markenprodukte",
+  "faktor": 1
+ },
+ "meerrettich-im-glas-212-ml": {
+  "slug": "meerrettich-1003843",
+  "seite": "/sortiment/vorraete/dips-saucen-dressings",
+  "faktor": 1
+ },
+ "sauce-hollandaise-300-ml": {
+  "slug": "sauce-hollandaise-1035537",
+  "seite": "/sortiment/vorraete/dips-saucen-dressings",
+  "faktor": 1
+ },
+ "salatkroenung-kraeuter-5-beutel": {
+  "slug": "salatkroenung-1006166",
+  "seite": "/sortiment/sortiment-highlights/markenprodukte",
+  "faktor": 1
+ },
+ "salatfix-kraeuter-40-g": {
+  "slug": "salatfix-2083",
+  "seite": "/sortiment/vorraete/gewuerze-kraeuter",
+  "faktor": 1
+ },
+ "pizzamehl-tipo-00-1-kg": {
+  "slug": "pizzamehl-1035065",
+  "seite": "/sortiment/vorraete/mehl-zucker",
+  "faktor": 1
+ },
+ "wuerfelzucker-1-kg": {
+  "slug": "wuerfelzucker-503",
+  "seite": "/sortiment/sortiment-highlights/markenprodukte",
+  "faktor": 1
+ },
+ "erythrit-500-g": {
+  "slug": "erythrit-1027609",
+  "seite": "/sortiment/vorraete/mehl-zucker",
+  "faktor": 1
+ },
+ "suessstofftabletten-1200-stueck": {
+  "slug": "suessstofftabletten-3002",
+  "seite": "/sortiment/vorraete/mehl-zucker",
+  "faktor": 1
+ },
+ "bourbon-vanilleschoten-2-stueck": {
+  "slug": "bourbon-vanille-schoten-2396",
+  "seite": "/sortiment/aldi-eigenmarken/back-family",
+  "faktor": 0.8995
+ },
+ "frischhefe-wuerfel-42-g": {
+  "slug": "frischbackhefe-6593",
+  "seite": "/sortiment/vorraete/backzutaten-backmischungen",
+  "faktor": 1
+ },
+ "kuvertuere-zartbitter-200-g": {
+  "slug": "kuvertuere-3512",
+  "seite": "/sortiment/vorraete/backzutaten-backmischungen",
+  "faktor": 1
+ },
+ "schokoladenstreusel-400-g": {
+  "slug": "schokoladenstreusel-1006891",
+  "seite": "/sortiment/eis-kuchen-desserts/eisbecher-toppings",
+  "faktor": 1
+ },
+ "marzipan-rohmasse-200-g": {
+  "slug": "marzipan-rohmasse-3158",
+  "seite": "/sortiment/vegane-produkte/vegane-fertigprodukte-vorraete",
+  "faktor": 1
  }
 }
