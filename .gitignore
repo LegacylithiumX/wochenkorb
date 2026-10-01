@@ -18,3 +18,6 @@ build/
 .gradle/
 android/tools/_vorschau.png
 Wochenkorb.apk
+
+# Rohdaten fuer Katalog-Ausbau (gross, lokal)
+rohdaten/
